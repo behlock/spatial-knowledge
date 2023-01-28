@@ -1,5 +1,27 @@
 .container {
   width: 100%;
   position: absolute;
-  top: 30%;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: var(--gap);
+  padding: 0 var(--gap);
+  padding: mobile-vw(24px) 0;
+  text-transform: uppercase;
+  height: 60px;
+  margin-left: 20px;
+
+  @include mobile {
+    row-gap: mobile-vw(48px);
+  }
+
+  @include desktop {
+    padding: desktop-vw(16px) 0 desktop-vw(24px) 0;
+  }
+}
+
+.title {
+  font-weight: 700;
 }
