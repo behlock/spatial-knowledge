@@ -30,7 +30,7 @@ export function Layout({
         {/* {isTouchDevice === false && <Cursor />} */}
         <Header title="collective creation games" />
         <main className={s.main}>{children}</main>
-        <Footer links={footerLinks} />
+        {/* <Footer links={footerLinks} /> */}
       </div>
     </>
   )
