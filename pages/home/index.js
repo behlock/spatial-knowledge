@@ -15,31 +15,55 @@ export default function Home({ footer }) {
   return (
     <Layout footerLinks={footer.links}>
       {/* {!isDesktop ? <LayoutMobile  /> : <ClientOnly />} */}
+      <ClientOnly />
       <ForceGraph2D
         graphData={miserables}
-        nodeId="id"
-        nodeVal="group"
-        nodeTitle="id"
-        linkWidth="value"
-        width={1152}
-        height={600}
-        nodeColor={(node) => {}}
-        linkDirectionalParticles={2}
-        linkDirectionalParticleWidth={1}
-        linkDirectionalParticleSpeed={0.01}
-        linkDirectionalParticleColor={(link) => {
+        // width={1152}
+        // height={600}
+        backgroundColor="white"
+        nodeColor={(node) => {
+          if (node.group === 1) {
+            return 'red'
+          } else {
+            return 'blue'
+          }
+        }}
+        nodeRelSize={4}
+        linkWidth={1}
+        linkColor={(link) => {
           if (link.value > 0.5) {
             return 'red'
           } else {
             return 'blue'
           }
         }}
+        onNodeClick={(node) => {
+          console.log(node)
+        }}
+        nodeVal={(node) => {
+          node.group
+        }}
         nodeLabel={(node) => {
           return node.id
         }}
+        // // nodeTitle={(node) => {
+        // //   ;`${node.id}\n${node.group}`
+        // // }}
+        // linkWidth={(link) => {
+        //   Math.sqrt(link.value)
+        // }}
+        // nodeColor={(node) => {}}
+        // linkDirectionalParticles={2}
+        // linkDirectionalParticleWidth={1}
+        // linkDirectionalParticleSpeed={0.01}
+        // linkDirectionalParticleColor={(link) => {
+        //   if (link.value > 0.5) {
+        //     return 'red'
+        //   } else {
+        //     return 'blue'
+        //   }
+        // }}
       />
-
-      <ClientOnly />
     </Layout>
   )
 }

@@ -14,11 +14,7 @@ export function Layout({
   seo = {
     title: 'collectivecreationgames',
     description: 'Space to share experiments',
-    keywords: [
-      'rami',
-      'chahine',
-      'games'
-    ],
+    keywords: ['rami', 'chahine', 'games'],
   },
   children,
   theme = 'dark',

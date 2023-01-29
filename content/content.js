@@ -1,19 +1,11 @@
 const footerLinks = [
   {
-    text: 'twitter',
-    url: '',
+    text: 'youtube',
+    url: 'https://www.youtube.com/@ramichahine8875',
   },
   {
-    text: 'github',
-    url: '',
-  },
-  {
-    text: 'read.cv',
-    url: '',
-  },
-  {
-    text: 'behlocks@gmail.com',
-    url: 'mailto:behlocks@gmail.com',
+    text: 'rami.o.chahine@gmail.com',
+    url: 'mailto:rami.o.chahine@gmail.com',
   },
 ]
 

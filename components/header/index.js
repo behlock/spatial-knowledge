@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import s from './header.module.scss'
 
 export const Header = () => {
@@ -7,9 +8,9 @@ export const Header = () => {
   return (
     <header className={s.container}>
       <div className={s.title}>
-        <a href="/">
+        <Link href="/">
           <h3>Collective Creation Games</h3>
-        </a>
+        </Link>
       </div>
       {/* <div className={s.nav}>
         <ul>

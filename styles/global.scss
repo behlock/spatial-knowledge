@@ -24,6 +24,7 @@ html {
   background-color: var(--theme-primary);
   color: var(--theme-secondary);
   scrollbar-width: thin;
+  overflow: hidden;
 
   &.nav {
     overflow: hidden;
@@ -38,18 +39,6 @@ body {
 body {
   min-height: 100vh;
 }
-
-// custom cursor
-// html.has-custom-cursor {
-//   &,
-//   * {
-//     &,
-//     &::before,
-//     &::after {
-//       cursor: none !important;
-//     }
-//   }
-// }
 
 a,
 button,

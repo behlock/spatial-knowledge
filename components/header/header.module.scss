@@ -1,16 +1,11 @@
 .container {
   width: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: var(--gap);
+  display: flex;
+  align-items: center;
   padding: 0 var(--gap);
   padding: mobile-vw(24px) 0;
-  text-transform: uppercase;
-  height: 60px;
+  // text-transform: uppercase;
+  // height: 60px;
   margin-left: 20px;
 
   @include mobile {
