@@ -46,23 +46,6 @@ export default function Home({ footer }) {
         nodeLabel={(node) => {
           return node.id
         }}
-        // // nodeTitle={(node) => {
-        // //   ;`${node.id}\n${node.group}`
-        // // }}
-        // linkWidth={(link) => {
-        //   Math.sqrt(link.value)
-        // }}
-        // nodeColor={(node) => {}}
-        // linkDirectionalParticles={2}
-        // linkDirectionalParticleWidth={1}
-        // linkDirectionalParticleSpeed={0.01}
-        // linkDirectionalParticleColor={(link) => {
-        //   if (link.value > 0.5) {
-        //     return 'red'
-        //   } else {
-        //     return 'blue'
-        //   }
-        // }}
       />
     </Layout>
   )
