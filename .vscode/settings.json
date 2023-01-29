@@ -6,7 +6,8 @@
     "source.fixAll.eslint": true
   },
   "files.associations": {
-    "*.js": "javascriptreact"
+    "*.js": "javascriptreact",
+    "*.scss": "postcss"
   },
   "prettier.enable": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode"
