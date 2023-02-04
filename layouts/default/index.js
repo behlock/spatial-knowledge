@@ -12,7 +12,7 @@ const Footer = dynamic(() => import('components/footer').then(({ Footer }) => Fo
 
 export function Layout({
   seo = {
-    title: 'collectivecreationgames',
+    title: 'Collective Creation Games',
     description: 'Space to share experiments',
     keywords: ['rami', 'chahine', 'games'],
   },

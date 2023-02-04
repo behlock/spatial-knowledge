@@ -44,7 +44,7 @@ specifiers:
 dependencies:
   '@babel/core': 7.20.12
   '@next/env': 13.1.6
-  '@react-three/drei': 9.56.15_5uchuvk6p5l7cuc5shezogvpz4
+  '@react-three/drei': 9.56.16_5uchuvk6p5l7cuc5shezogvpz4
   '@react-three/fiber': 8.10.4_xor7byvqlg4baqj6ymfbcmaax4
   '@studio-freight/hamo': 0.6.12_biqbaboplfbrettd7655fr4n2y
   '@types/three': 0.149.0
@@ -1611,8 +1611,8 @@ packages:
     resolution: {integrity: sha512-POu8Mk0hIU3lRXB3bGIGe4VHIwwDsQyoD1F394OK7STTiX9w4dG3cTLljjYswkQN+hDSHRrj4O36kuVa7KPU8Q==}
     dev: false
 
-  /@react-three/drei/9.56.15_5uchuvk6p5l7cuc5shezogvpz4:
-    resolution: {integrity: sha512-p9HMU1dIBy296dhOc1YxWYCd1aciZ2KQ7aEuGFpVuxjhWZ+BKlg1Y5+z83ln9fujF/XMm1lGPeuiamBDBpW2lw==}
+  /@react-three/drei/9.56.16_5uchuvk6p5l7cuc5shezogvpz4:
+    resolution: {integrity: sha512-B3jeTUYKH7CusVM8TnJ6YNn7ID/9KQEUhR3CmbbFVdW8VS9SVIZpsdH+Fz68J0wrIuSixjWPnSF1QcBEf2UjaA==}
     peerDependencies:
       '@react-three/fiber': '>=8.0'
       react: '>=18.0'

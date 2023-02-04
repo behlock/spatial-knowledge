@@ -2,7 +2,7 @@ import { NextSeo } from 'next-seo'
 import NextHead from 'next/head'
 
 export function CustomHead({
-  title = 'collectivecreationgames',
+  title = 'Collective Creation Games',
   // TODO: Fill image in for SEO
   image = { url: 'https://collectivecreationgames/image.svg' },
   description,
