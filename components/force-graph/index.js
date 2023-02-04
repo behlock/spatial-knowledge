@@ -6,14 +6,21 @@ const ForceGraph3D = dynamic(() => import('react-force-graph-3d'), {
   ssr: false,
 })
 
-export const ForceGraph = ({ graphData, hiddenNodes, setHiddenNodes }) => (
+const getNodeChildren = (node, links) =>
+  links
+    .filter((l) => {
+      return l.source.id === node.id
+    })
+    .map((l) => l.target.id)
+
+export const ForceGraph = ({ graphData, visibleNodes, setVisibleNodes, expandedNodes, setExpandedNodes }) => (
   <ForceGraph3D
     // DATA
     graphData={graphData}
     // CONTAINER
     backgroundColor="black"
     // NODES
-    nodeRelSize={8}
+    nodeRelSize={4}
     nodeVal={(node) => {
       node.group
     }}
@@ -26,20 +33,17 @@ export const ForceGraph = ({ graphData, hiddenNodes, setHiddenNodes }) => (
     }}
     nodeAutoColorBy="group"
     onNodeClick={(node) => {
-      if (hiddenNodes.includes(node.id)) {
-        setHiddenNodes(hiddenNodes.filter((id) => id !== node.id))
+      if (expandedNodes.includes(node.id)) {
+        const children = getNodeChildren(node, graphData.links)
+        setExpandedNodes(expandedNodes.filter((id) => id !== node.id))
+        setVisibleNodes(visibleNodes.filter((id) => !children.includes(id)))
       } else {
-        setHiddenNodes([...hiddenNodes, node.id])
+        setExpandedNodes([...expandedNodes, node.id])
+        setVisibleNodes(visibleNodes.concat(getNodeChildren(node, graphData.links)))
       }
     }}
-    nodeVisibility={(node) => {
-      return !hiddenNodes.includes(node.id)
-    }}
-    // LINKS
-    // linkWidth={2}
-    linkColor="black"
-    linkDirectionalArrowLength={3.5}
-    linkDirectionalArrowRelPos={1}
-    linkCurvature={0.25}
+    // nodeVisibility={(node) => {
+    //   return visibleNodes.includes(node.id)
+    // }}
   />
 )

@@ -11,13 +11,20 @@ export default function Home({ footer }) {
 
   // store state of hidden nodes
 
-  const [hiddenNodes, setHiddenNodes] = useState([])
+  const [visibleNodes, setVisibleNodes] = useState(['Valjean', 'Blacheville', 'Zephine'])
+  const [expandedNodes, setExpandedNodes] = useState([])
 
   return (
     <Layout footerLinks={footer.links}>
       {/* {!isDesktop ? <LayoutMobile  /> : <ClientOnly />} */}
       <ClientOnly />
-      <ForceGraph graphData={miserables} hiddenNodes={hiddenNodes} setHiddenNodes={setHiddenNodes} />
+      <ForceGraph
+        graphData={miserables}
+        visibleNodes={visibleNodes}
+        setVisibleNodes={setVisibleNodes}
+        expandedNodes={expandedNodes}
+        setExpandedNodes={setExpandedNodes}
+      />
     </Layout>
   )
 }
