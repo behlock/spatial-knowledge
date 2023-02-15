@@ -6,9 +6,6 @@ import s from './layout.module.scss'
 const Header = dynamic(() => import('components/header').then(({ Header }) => Header), {
   ssr: false,
 })
-const Footer = dynamic(() => import('components/footer').then(({ Footer }) => Footer), {
-  ssr: false,
-})
 
 export function Layout({
   seo = {
@@ -19,19 +16,16 @@ export function Layout({
   children,
   theme = 'dark',
   className,
-  principles,
-  footerLinks,
 }) {
-  // const isTouchDevice = useIsTouchDevice()
   return (
     <>
       <CustomHead {...seo} />
       <div className={cn(`theme-${theme}`, s.layout, className)}>
-        {/* {isTouchDevice === false && <Cursor />} */}
         <Header title="collective creation games" />
         <main className={s.main}>{children}</main>
-        {/* <Footer links={footerLinks} /> */}
       </div>
     </>
   )
 }
+
+
