@@ -6,48 +6,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta charSet="UTF-8" />
-        <link
-          href="/fonts/NeueMontreal-Light.woff2"
-          as="font"
-          rel="preload prefetch"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="/fonts/NeueMontreal-Bold.woff2"
-          as="font"
-          rel="preload prefetch"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="/fonts/NeueMontreal-Regular.woff2"
-          as="font"
-          rel="preload prefetch"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="/fonts/GTAlpina-ThIt.woff2"
-          as="font"
-          rel="preload prefetch"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="/fonts/MessinaSansMono-Regular.woff2"
-          as="font"
-          rel="preload prefetch"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="/fonts/MessinaSansMono-SemiBold.woff2"
-          as="font"
-          rel="preload prefetch"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+        <link href="/fonts/Inter-Thin.ttf" as="font" rel="preload prefetch" type="font/ttf" crossOrigin="anonymous" />
       </Head>
       <body>
         <Main />

@@ -12,6 +12,10 @@
   "dependencies": {
     "@babel/core": ">=7.0.0 <8.0.0",
     "@next/env": "*",
+    "@radix-ui/colors": "^0.1.8",
+    "@radix-ui/react-icons": "^1.1.1",
+    "@radix-ui/react-popover": "^1.0.3",
+    "@radix-ui/react-slider": "^1.1.0",
     "@react-three/drei": "^9.56.15",
     "@react-three/fiber": "^8.10.4",
     "@types/three": "^0.149.0",
@@ -26,6 +30,7 @@
     "react-dom": "18.2.0",
     "react-force-graph-3d": "^1.21.19",
     "sass": "^1.57.1",
+    "tailwindcss-radix": "^2.7.0",
     "three": "^0.149.0",
     "three-spritetext": "^1.6.5",
     "three-stdlib": "^2.21.8",

@@ -1,0 +1,139 @@
+{
+  "nodes": [
+    { "id": "In session", "tags": ["In session"], "isVideo": false },
+    { "id": "Street intervention", "tags": ["In session", "Street intervention"], "isVideo": false },
+    { "id": "Setup", "tags": ["In session", "Street intervention", "Setup"], "isVideo": false },
+    {
+      "id": "Make intervention area obvious",
+      "tags": ["In session", "Street intervention", "Setup"],
+      "isVideo": false
+    },
+    {
+      "id": "Position adequately on sidewalk",
+      "tags": ["In session", "Street intervention", "Setup"],
+      "isVideo": false
+    },
+    { "id": "Layout of support and tools", "tags": ["In session", "Street intervention", "Setup"], "isVideo": false },
+    {
+      "id": "Adapt to specificities of location",
+      "tags": ["In session", "Street intervention", "Setup"],
+      "isVideo": false
+    },
+    { "id": "Communication", "tags": ["In session", "Street intervention"], "isVideo": false },
+    { "id": "Communicate prompt to passersby", "tags": ["In session", "Street intervention"], "isVideo": false },
+    { "id": "Connect with nearby shop keepers", "tags": ["In session", "Street intervention"], "isVideo": false },
+    { "id": "Social role", "tags": ["In session", "Street intervention"], "isVideo": false },
+    { "id": "Find adequate formulation", "tags": ["In session", "Street intervention"], "isVideo": false },
+    { "id": "Adapt to passerby", "tags": ["In session", "Street intervention"], "isVideo": false },
+    { "id": "Explain purpose/meaning", "tags": ["In session", "Street intervention"], "isVideo": false },
+    { "id": "Social role", "tags": ["In session", "Street intervention"], "isVideo": false },
+    { "id": "Open space for diversity", "tags": ["In session", "Street intervention", "Benefits"], "isVideo": false },
+    {
+      "id": "Embrace the meaning participants give this encounter",
+      "tags": ["In session", "Street intervention", "Transformation"],
+      "isVideo": false
+    },
+    { "id": "Open for helping hands", "tags": ["In session", "Street intervention", "Benefits"], "isVideo": false },
+    { "id": "Open for conversations", "tags": ["In session", "Street intervention", "Benefits"], "isVideo": false },
+    { "id": "Creation", "tags": ["In session", "Street intervention", "Creative act"], "isVideo": false },
+    {
+      "id": "Be attentive to phases of evolution",
+      "tags": ["In session", "Street intervention", "Creative act"],
+      "isVideo": false
+    },
+    { "id": "Take part of the act", "tags": ["In session", "Street intervention", "Creative act"], "isVideo": false },
+    {
+      "id": "Help piece come together",
+      "tags": ["In session", "Street intervention", "Creative act"],
+      "isVideo": false
+    },
+    {
+      "id": "Balance quality of actions with passersby's",
+      "tags": ["In session", "Street intervention", "Creative act"],
+      "isVideo": false
+    },
+    {
+      "id": "Take note of synchronicities",
+      "tags": ["In session", "Street intervention", "Creative act", "Chaos"],
+      "isVideo": false
+    },
+    {
+      "id": "Actions which put work out of balance",
+      "tags": ["In session", "Street intervention", "Creative act"],
+      "isVideo": false
+    },
+    {
+      "id": "Actions which bring it together",
+      "tags": ["In session", "Street intervention", "Creative act"],
+      "isVideo": false
+    },
+    {
+      "id": "Actions which transmit to others'",
+      "tags": ["In session", "Street intervention", "Creative act"],
+      "isVideo": false
+    },
+    {
+      "id": "Moments which mark a transformation",
+      "tags": ["In session", "Street intervention", "Creative act", "Chaos"],
+      "isVideo": false
+    },
+    {
+      "id": "Listen to changes in passersby's remarks",
+      "tags": ["In session", "Street intervention", "Creative act"],
+      "isVideo": false
+    },
+    {
+      "id": "Adjust prompt in relation to evolution",
+      "tags": ["In session", "Street intervention", "Creative act", "Chaos"],
+      "isVideo": false
+    },
+    { "id": "Workshops with groups", "tags": ["In session", "Workshop", "Program"], "isVideo": false }
+  ],
+
+  "links": [
+    { "source": "In session", "target": "Street intervention", "portalTo": "" },
+    { "source": "Street intervention", "target": "Setup", "portalTo": "" },
+    { "source": "Setup", "target": "Make intervention area obvious", "portalTo": "" },
+    { "source": "Setup", "target": "Position adequately on sidewalk", "portalTo": "" },
+    { "source": "Setup", "target": "Adapt to specificities of location", "portalTo": "" },
+    { "source": "Setup", "target": "Layout of support and tools", "portalTo": "" },
+    { "source": "Communication", "target": "Communicate prompt to passersby", "portalTo": "" },
+    { "source": "Communication", "target": "Connect with nearby shop keepers", "portalTo": "" },
+    { "source": "Communication", "target": "Social role", "portalTo": "" },
+    { "source": "Communicate prompt to passersby", "target": "Find adequate formulation", "portalTo": "" },
+    { "source": "Communicate prompt to passersby", "target": "Adapt to passerby", "portalTo": "" },
+    { "source": "Communicate prompt to passersby", "target": "Explain purpose/meaning", "portalTo": "" },
+    { "source": "Social role", "target": "Open space for diversity", "portalTo": "" },
+    { "source": "Social role", "target": "Embrace the meaning participants give this encounter", "portalTo": "" },
+    { "source": "Social role", "target": "Open for helping hands", "portalTo": "" },
+    { "source": "Social role", "target": "Open for conversations", "portalTo": "" },
+    { "source": "Street intervention", "target": "Creation", "portalTo": "" },
+    { "source": "Creation", "target": "Be attentive to phases of evolution", "portalTo": "" },
+    { "source": "Creation", "target": "Take part of the act", "portalTo": "" },
+    { "source": "Take part of the act", "target": "Help piece come together", "portalTo": "" },
+    { "source": "Take part of the act", "target": "Balance quality of actions with passersby's", "portalTo": "" },
+    { "source": "Be attentive to phases of evolution", "target": "Take note of synchronicities", "portalTo": "" },
+    {
+      "source": "Be attentive to phases of evolution",
+      "target": "Actions which put work out of balance",
+      "portalTo": ""
+    },
+    { "source": "Be attentive to phases of evolution", "target": "Actions which transmit to others'", "portalTo": "" },
+    {
+      "source": "Be attentive to phases of evolution",
+      "target": "Moments which mark a transformation",
+      "portalTo": ""
+    },
+    {
+      "source": "Be attentive to phases of evolution",
+      "target": "Listen to changes in passersby's remarks",
+      "portalTo": ""
+    },
+    { "source": "Be attentive to phases of evolution", "target": "Actions which bring it together", "portalTo": "" },
+    {
+      "source": "Be attentive to phases of evolution",
+      "target": "Adjust prompt in relation to evolution",
+      "portalTo": "Communicate prompt to passersby"
+    }
+  ]
+}

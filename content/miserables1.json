@@ -1,0 +1,8 @@
+{
+  "nodes": [
+    { "id": "Rules", "tags": ["Boundaries", "Planning"], "isVideo": false },
+    { "id": "Actions", "tags": ["Boundaries", "Planning"], "isVideo": false },
+    { "id": "Material", "tags": ["Boundaries", "Planning"], "isVideo": false }
+  ],
+  "links": [{ "source": "Rules", "target": "Actions", "portalTo": "Material" }]
+}

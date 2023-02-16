@@ -1,23 +1,12 @@
-import { useState } from 'react'
-
 import { ForceGraph } from 'components/force-graph'
-import miserables from 'content/miserables.json'
+import mindmap from 'content/mindmap.json'
 import { Layout } from 'layouts/default'
+import s from './home.module.scss'
 
 export default function Home({ footer }) {
-  // store state of hidden nodes
-  const [visibleNodes, setVisibleNodes] = useState(['Valjean', 'Blacheville', 'Zephine'])
-  const [expandedNodes, setExpandedNodes] = useState([])
-
   return (
-    <Layout>
-      <ForceGraph
-        graphData={miserables}
-        visibleNodes={visibleNodes}
-        setVisibleNodes={setVisibleNodes}
-        expandedNodes={expandedNodes}
-        setExpandedNodes={setExpandedNodes}
-      />
+    <Layout className={s.home}>
+      <ForceGraph graphData={mindmap} />
     </Layout>
   )
 }
