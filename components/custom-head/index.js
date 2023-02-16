@@ -46,7 +46,7 @@ export function CustomHead({
           title,
           description,
           type: 'website',
-          locale: 'en_US',
+          locale: 'en_UK',
           images: [
             {
               url: image.url,

@@ -2,7 +2,7 @@ import * as SliderPrimitive from '@radix-ui/react-slider'
 import { clsx } from 'clsx'
 
 interface SliderProps {
-  defaultValue?: [number]
+  value?: [number]
   min?: number
   max?: number
   step?: number
@@ -12,7 +12,7 @@ interface SliderProps {
 const Slider = (props: SliderProps) => {
   return (
     <SliderPrimitive.Root
-      defaultValue={props.defaultValue}
+      value={props.value}
       min={props.min}
       max={props.max}
       step={props.step}

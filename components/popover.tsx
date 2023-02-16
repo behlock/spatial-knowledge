@@ -40,7 +40,7 @@ const Popover = (props: PopoverProps) => {
                 {'Levels'}
               </label>
               <Slider
-                defaultValue={props.layers}
+                value={props.layers}
                 min={1}
                 max={props.maxDepth}
                 step={1}
