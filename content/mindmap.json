@@ -1,93 +1,167 @@
 {
   "nodes": [
-    { "id": "In session", "tags": ["In session"], "isVideo": false },
-    { "id": "Street intervention", "tags": ["In session", "Street intervention"], "isVideo": false },
-    { "id": "Setup", "tags": ["In session", "Street intervention", "Setup"], "isVideo": false },
+    { "id": "In session", "tags": ["In session"], "isVideo": false, "color": "#FF7106" },
+    {
+      "id": "Street intervention",
+      "tags": ["In session", "Street intervention"],
+      "isVideo": false,
+      "color": "#FF7106"
+    },
+    { "id": "Setup", "tags": ["In session", "Street intervention", "Setup"], "isVideo": false, "color": "#FF7106" },
     {
       "id": "Make intervention area obvious",
       "tags": ["In session", "Street intervention", "Setup"],
-      "isVideo": false
+      "isVideo": false,
+      "color": "#FF7106"
     },
     {
       "id": "Position adequately on sidewalk",
       "tags": ["In session", "Street intervention", "Setup"],
-      "isVideo": false
+      "isVideo": false,
+      "color": "#FF7106"
     },
-    { "id": "Layout of support and tools", "tags": ["In session", "Street intervention", "Setup"], "isVideo": false },
+    {
+      "id": "Layout of support and tools",
+      "tags": ["In session", "Street intervention", "Setup"],
+      "isVideo": false,
+      "color": "#FF7106"
+    },
     {
       "id": "Adapt to specificities of location",
       "tags": ["In session", "Street intervention", "Setup"],
-      "isVideo": false
+      "isVideo": false,
+      "color": "#FF7106"
     },
-    { "id": "Communication", "tags": ["In session", "Street intervention"], "isVideo": false },
-    { "id": "Communicate prompt to passersby", "tags": ["In session", "Street intervention"], "isVideo": false },
-    { "id": "Connect with nearby shop keepers", "tags": ["In session", "Street intervention"], "isVideo": false },
-    { "id": "Social role", "tags": ["In session", "Street intervention"], "isVideo": false },
-    { "id": "Find adequate formulation", "tags": ["In session", "Street intervention"], "isVideo": false },
-    { "id": "Adapt to passerby", "tags": ["In session", "Street intervention"], "isVideo": false },
-    { "id": "Explain purpose/meaning", "tags": ["In session", "Street intervention"], "isVideo": false },
-    { "id": "Social role", "tags": ["In session", "Street intervention"], "isVideo": false },
-    { "id": "Open space for diversity", "tags": ["In session", "Street intervention", "Benefits"], "isVideo": false },
+    { "id": "Communication", "tags": ["In session", "Street intervention"], "isVideo": false, "color": "#FF7106" },
+    {
+      "id": "Communicate prompt to passersby",
+      "tags": ["In session", "Street intervention"],
+      "isVideo": false,
+      "color": "#4EB42D"
+    },
+    {
+      "id": "Connect with nearby shop keepers",
+      "tags": ["In session", "Street intervention"],
+      "isVideo": false,
+      "color": "#4EB42D"
+    },
+    { "id": "Social role", "tags": ["In session", "Street intervention"], "isVideo": false, "color": "#4EB42D" },
+    {
+      "id": "Find adequate formulation",
+      "tags": ["In session", "Street intervention"],
+      "isVideo": false,
+      "color": "#4EB42D"
+    },
+    { "id": "Adapt to passerby", "tags": ["In session", "Street intervention"], "isVideo": false, "color": "#4EB42D" },
+    {
+      "id": "Explain purpose/meaning",
+      "tags": ["In session", "Street intervention"],
+      "isVideo": false,
+      "color": "#4EB42D"
+    },
+    { "id": "Social role", "tags": ["In session", "Street intervention"], "isVideo": false, "color": "#4EB42D" },
+    {
+      "id": "Open space for diversity",
+      "tags": ["In session", "Street intervention", "Benefits"],
+      "isVideo": false,
+      "color": "#ED0B88"
+    },
     {
       "id": "Embrace the meaning participants give this encounter",
       "tags": ["In session", "Street intervention", "Transformation"],
-      "isVideo": false
+      "isVideo": false,
+      "color": "#ED0B88"
     },
-    { "id": "Open for helping hands", "tags": ["In session", "Street intervention", "Benefits"], "isVideo": false },
-    { "id": "Open for conversations", "tags": ["In session", "Street intervention", "Benefits"], "isVideo": false },
-    { "id": "Creation", "tags": ["In session", "Street intervention", "Creative act"], "isVideo": false },
+    {
+      "id": "Open for helping hands",
+      "tags": ["In session", "Street intervention", "Benefits"],
+      "isVideo": false,
+      "color": "#ED0B88"
+    },
+    {
+      "id": "Open for conversations",
+      "tags": ["In session", "Street intervention", "Benefits"],
+      "isVideo": false,
+      "color": "#ED0B88"
+    },
+    {
+      "id": "Creation",
+      "tags": ["In session", "Street intervention", "Creative act"],
+      "isVideo": false,
+      "color": "#ED0B88"
+    },
     {
       "id": "Be attentive to phases of evolution",
       "tags": ["In session", "Street intervention", "Creative act"],
-      "isVideo": false
+      "isVideo": false,
+      "color": "#ED0B88"
     },
-    { "id": "Take part of the act", "tags": ["In session", "Street intervention", "Creative act"], "isVideo": false },
+    {
+      "id": "Take part of the act",
+      "tags": ["In session", "Street intervention", "Creative act"],
+      "isVideo": false,
+      "color": "#184FC0"
+    },
     {
       "id": "Help piece come together",
       "tags": ["In session", "Street intervention", "Creative act"],
-      "isVideo": false
+      "isVideo": false,
+      "color": "#184FC0"
     },
     {
       "id": "Balance quality of actions with passersby's",
       "tags": ["In session", "Street intervention", "Creative act"],
-      "isVideo": false
+      "isVideo": false,
+      "color": "#184FC0"
     },
     {
       "id": "Take note of synchronicities",
       "tags": ["In session", "Street intervention", "Creative act", "Chaos"],
-      "isVideo": false
+      "isVideo": false,
+      "color": "#184FC0"
     },
     {
       "id": "Actions which put work out of balance",
       "tags": ["In session", "Street intervention", "Creative act"],
-      "isVideo": false
+      "isVideo": false,
+      "color": "#184FC0"
     },
     {
       "id": "Actions which bring it together",
       "tags": ["In session", "Street intervention", "Creative act"],
-      "isVideo": false
+      "isVideo": false,
+      "color": "#184FC0"
     },
     {
       "id": "Actions which transmit to others'",
       "tags": ["In session", "Street intervention", "Creative act"],
-      "isVideo": false
+      "isVideo": false,
+      "color": "#184FC0"
     },
     {
       "id": "Moments which mark a transformation",
       "tags": ["In session", "Street intervention", "Creative act", "Chaos"],
-      "isVideo": false
+      "isVideo": false,
+      "color": "#184FC0"
     },
     {
       "id": "Listen to changes in passersby's remarks",
       "tags": ["In session", "Street intervention", "Creative act"],
-      "isVideo": false
+      "isVideo": false,
+      "color": "#184FC0"
     },
     {
       "id": "Adjust prompt in relation to evolution",
       "tags": ["In session", "Street intervention", "Creative act", "Chaos"],
-      "isVideo": false
+      "isVideo": false,
+      "color": "#184FC0"
     },
-    { "id": "Workshops with groups", "tags": ["In session", "Workshop", "Program"], "isVideo": false }
+    {
+      "id": "Workshops with groups",
+      "tags": ["In session", "Workshop", "Program"],
+      "isVideo": false,
+      "color": "#184FC0"
+    }
   ],
 
   "links": [

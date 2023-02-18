@@ -47,12 +47,12 @@ export const ForceGraph = ({ graphData }) => {
   const visibleNodes = (graphData) =>
     graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id)
 
-  const nodeOpacity = (node) => {
-    if (visibleNodes(graphData).includes(node.id)) {
-      return 1
-    } else {
-      return 0.5
-    }
+  const isTooLightYIQ = (hexcolor) => {
+    let r = parseInt(hexcolor.substr(0, 2), 16)
+    let g = parseInt(hexcolor.substr(2, 2), 16)
+    let b = parseInt(hexcolor.substr(4, 2), 16)
+    let yiq = (r * 299 + g * 587 + b * 114) / 1000
+    return yiq >= 128
   }
 
   return (
@@ -72,7 +72,7 @@ export const ForceGraph = ({ graphData }) => {
         backgroundColor="black"
         showNavInfo={false}
         // NODES
-        nodeRelSize={6}
+        nodeRelSize={10}
         nodeVal={(node) => {
           node.group
         }}
@@ -80,13 +80,13 @@ export const ForceGraph = ({ graphData }) => {
         nodeThreeObject={(node) => {
           const nodeEl = document.createElement('div')
           nodeEl.textContent = node.id
-          // nodeEl.style.color = node.color
-          nodeEl.style.opacity = nodeOpacity(node)
+          nodeEl.style.color = isTooLightYIQ(node.color) ? '#000' : '#fff'
           nodeEl.className = s.nodeLabel
           return new CSS2DObject(nodeEl)
         }}
-        nodeAutoColorBy={(node) => node.tags[0]}
+        nodeAutoColorBy={(node) => node.color}
         nodeThreeObjectExtend={true}
+        nodeVisibility={(node) => visibleNodes(graphData).includes(node.id)}
       />
     </>
   )
