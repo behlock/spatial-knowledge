@@ -28,6 +28,23 @@ const graphDepth = (node, links) => {
 const maxDepth = (graphData) =>
   graphData.nodes.map((node) => graphDepth(node, graphData.links)).reduce((a, b) => Math.max(a, b), -Infinity)
 
+const nodeAncestors = (node, links) => {
+  const parents = links.filter((l) => l.target.id === node.id)
+  if (parents.length === 0) {
+    return []
+  }
+
+  return parents.map((p) => p.source).concat(parents.flatMap((p) => nodeAncestors(p.source, links)))
+}
+
+const maxAncestors = (graphData) =>
+  graphData.nodes
+    .map((node) => {
+      let ancestors = nodeAncestors(node, graphData.links)
+      return ancestors.length + 1
+    })
+    .reduce((a, b) => Math.max(a, b), -Infinity)
+
 //MAIN
 export const ForceGraph = ({ graphData }) => {
   // STATE
@@ -36,14 +53,11 @@ export const ForceGraph = ({ graphData }) => {
     setExtraRenderers([new CSS2DRenderer()])
   }, [])
 
-  const [layers, setLayers] = useState([])
-  useEffect(() => {
-    // TODO
-    setLayers([5])
-  }, [])
+  const [layers, setLayers] = useState([4])
 
   // VISIBILITY
-  const isVisible = (node, links) => graphDepth(node, links) <= layers[0]
+  const isVisible = (node, links) => nodeAncestors(node, links).length <= layers[0]
+
   const visibleNodes = (graphData) =>
     graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id)
 
@@ -58,7 +72,7 @@ export const ForceGraph = ({ graphData }) => {
   return (
     <>
       <div className={s.popover}>
-        <Popover layers={layers} setLayers={setLayers} maxDepth={maxDepth(graphData)} />
+        <Popover layers={layers} setLayers={setLayers} maxDepth={4} />
       </div>
       <ForceGraph3D
         // RENDERING

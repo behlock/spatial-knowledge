@@ -2,11 +2,11 @@ import * as SliderPrimitive from '@radix-ui/react-slider'
 import { clsx } from 'clsx'
 
 interface SliderProps {
-  value?: [number]
-  min?: number
-  max?: number
-  step?: number
-  onValueChange?: (value: number) => void
+  value: [number]
+  min: number
+  max: number
+  step: number
+  onValueChange: (value: [number]) => void
 }
 
 const Slider = (props: SliderProps) => {

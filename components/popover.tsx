@@ -6,7 +6,7 @@ import Slider from './slider'
 
 interface PopoverProps {
   layers: [number]
-  setLayers: (layers: number) => void
+  setLayers: (layers: [number]) => void
   maxDepth: number
 }
 
@@ -32,7 +32,7 @@ const Popover = (props: PopoverProps) => {
           <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100">Filters</h3>
 
           <form className="mt-4 space-y-2">
-            <fieldset key={`popover-items-layers`} className="flex items-center">
+            <fieldset key={`popover-items-layers`} className="flex align-middle ">
               <label
                 htmlFor={'layers'}
                 className="mr-4 shrink-0 grow text-xs font-medium text-gray-700 dark:text-gray-400"
@@ -41,7 +41,7 @@ const Popover = (props: PopoverProps) => {
               </label>
               <Slider
                 value={props.layers}
-                min={1}
+                min={0}
                 max={props.maxDepth}
                 step={1}
                 onValueChange={props.setLayers}
