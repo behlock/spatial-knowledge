@@ -70,7 +70,7 @@ export const ForceGraph = ({ graphData }) => {
   // STATE
   const [extraRenderers, setExtraRenderers] = useState([])
   const [layers, setLayers] = useState([4])
-  const [selectedTags, setSelectedTags] = useState(getTags(graphData))
+  const [selectedTags, setSelectedTags] = useState([])
 
   // HOOKS
   useEffect(() => {
@@ -79,7 +79,7 @@ export const ForceGraph = ({ graphData }) => {
 
   // VISIBILITY
   const isVisible = (node, links) =>
-    nodeAncestors(node, links).length <= layers[0] && selectedTags.some((t) => node.tags.includes(t))
+    nodeAncestors(node, links).length <= layers[0] && selectedTags.every((t) => node.tags.includes(t))
 
   const visibleNodes = (graphData) =>
     graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id)
@@ -98,6 +98,7 @@ export const ForceGraph = ({ graphData }) => {
         <Popover
           layers={layers}
           setLayers={setLayers}
+          // TODO
           maxDepth={4}
           allTags={getTags(graphData)}
           selectedTags={selectedTags}
@@ -125,13 +126,34 @@ export const ForceGraph = ({ graphData }) => {
           const nodeEl = document.createElement('div')
           nodeEl.textContent = node.id
           nodeEl.style.color = isTooLightYIQ(node.color) ? '#000' : '#fff'
+          nodeEl.style.fontSize = '0.5rem'
+          nodeEl.style.userSelect = 'none'
+          nodeEl.style.textAlign = 'center'
+          nodeEl.style.width = '100px'
           nodeEl.className = s.nodeLabel
           return new CSS2DObject(nodeEl)
         }}
-        nodeAutoColorBy={(node) => node.color}
         nodeThreeObjectExtend={true}
+        nodeAutoColorBy={(node) => node.color}
         nodeVisibility={(node) => visibleNodes(graphData).includes(node.id)}
         nodeOpacity={1}
+        nodeResolution={32}
+        // onNodeClick={(node) => {
+        //   // Aim at node from outside it
+        //   const distance = 40
+        //   const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z)
+
+        //   const newPos =
+        //     node.x || node.y || node.z
+        //       ? { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio }
+        //       : { x: 0, y: 0, z: distance } // special case if node is in (0,0,0)
+
+        //   this.cameraPosition(
+        //     newPos, // new position
+        //     node, // lookAt ({ x, y, z })
+        //     3000 // ms transition duration
+        //   )
+        // }}
       />
     </>
   )
