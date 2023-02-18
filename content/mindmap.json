@@ -1,6 +1,6 @@
 {
   "nodes": [
-    { "id": "In session", "tags": ["In session"], "color": "#ff0000", "portalTo": "", "isVideo": false },
+    { "id": "In session", "tags": [""], "color": "#ff0000", "portalTo": "", "isVideo": false },
     {
       "id": "Street intervention",
       "tags": ["In session", "Street intervention"],
@@ -100,7 +100,7 @@
       "isVideo": false
     },
     {
-      "id": "Embrace the meaning participants give this encounter",
+      "id": "Embrace meaning participants give to this encounter",
       "tags": ["In session", "Street intervention", "Transformation"],
       "color": "#b69b37",
       "portalTo": "",
@@ -357,7 +357,7 @@
       "id": "Balance level of intervention",
       "tags": ["In session", "Workshop", "Program", "Facilitation", "Creative act"],
       "color": "#10646f",
-      "portalTo": "",
+      "portalTo": "How tight are the rules?",
       "isVideo": false
     },
     {
@@ -564,7 +564,7 @@
       "isVideo": false
     },
     {
-      "id": "Participants in session",
+      "id": "Participants during session",
       "tags": ["In session", "Workshop", "Program", "Game"],
       "color": "#10646f",
       "portalTo": "",
@@ -599,6 +599,13 @@
       "isVideo": false
     },
     {
+      "id": "Keep momentum of session",
+      "tags": ["In session", "Workshop", "Program", "Facilitation", "Time"],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
       "id": "Major importance of reflection",
       "tags": ["In session", "Workshop", "Program", "Facilitation"],
       "color": "#10646f",
@@ -606,7 +613,7 @@
       "isVideo": false
     },
     {
-      "id": "Looking and listening to each other",
+      "id": "Looking at and listening to each other",
       "tags": ["In session", "Workshop", "Program", "Facilitation", "Collective work"],
       "color": "#10646f",
       "portalTo": "",
@@ -642,7 +649,7 @@
     },
     {
       "id": "Human connection",
-      "tags": ["In session", "Workshop", "Program", "Facilitation"],
+      "tags": ["In session", "Workshop", "Program", "Facilitation", "Collective work"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
@@ -653,11 +660,68 @@
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
+    },
+    {
+      "id": "Give space for their initiatives",
+      "tags": ["In session", "Workshop", "Program", "Facilitation"],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Intervene to keep boundaries clear",
+      "tags": ["In session", "Workshop", "Program", "Facilitation"],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Play if needed",
+      "tags": ["In session", "Workshop", "Program", "Facilitation"],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Never enforce personal idea or plan",
+      "tags": ["In session", "Workshop", "Program", "Facilitation"],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Prepare participants to use tools and materials",
+      "tags": ["In session", "Workshop", "Program", "Warm-up"],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Behavior/Approach",
+      "tags": ["In session", "Workshop", "Program", "Warm-up"],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Individual creation",
+      "tags": ["In session", "Workshop", "Program", "Warm-up"],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Prepare participants to use tools and materials",
+      "tags": ["In session", "Workshop", "Program", "Warm-up"],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
     }
   ],
 
   "links": [
     { "source": "In session", "target": "Street intervention" },
+    { "source": "In session", "target": "During workshops with groups" },
     { "source": "Street intervention", "target": "Setup" },
     { "source": "Setup", "target": "Make intervention area obvious" },
     { "source": "Setup", "target": "Position adequately on sidewalk" },
@@ -670,7 +734,7 @@
     { "source": "Communicate prompt to passersby", "target": "Adapt to passerby" },
     { "source": "Communicate prompt to passersby", "target": "Explain purpose/meaning" },
     { "source": "Social role", "target": "Open space for diversity" },
-    { "source": "Social role", "target": "Embrace the meaning participants give this encounter" },
+    { "source": "Social role", "target": "Embrace meaning participants give to this encounter" },
     { "source": "Social role", "target": "Open for helping hands" },
     { "source": "Social role", "target": "Open for conversations" },
     { "source": "Street intervention", "target": "Creation" },
@@ -692,6 +756,7 @@
     { "source": "During workshops with groups", "target": "Guide warm-up" },
     { "source": "During workshops with groups", "target": "Cultivate facilitator mindset" },
     { "source": "During workshops with groups", "target": "Facilitate session" },
+    { "source": "During workshops with groups", "target": "Facilitate reflection" },
     { "source": "Ground setting", "target": "Welcome them while waiting for others" },
     { "source": "Ground setting", "target": "Explain purpose of session" },
     { "source": "Ground setting", "target": "Ask questions related to past session" },
@@ -699,6 +764,7 @@
     { "source": "Facilitate session", "target": "Guide session flow" },
     { "source": "Facilitate session", "target": "Hold the space" },
     { "source": "Facilitate session", "target": "Speak from the heart" },
+    { "source": "Facilitate session", "target": "Cultivate facilitator mindset" },
     { "source": "Cultivate facilitator mindset", "target": "See session as evolutionary creative process" },
     { "source": "Cultivate facilitator mindset", "target": "Presence" },
     { "source": "Cultivate facilitator mindset", "target": "Experimentalist: what if we tried?.." },
@@ -724,6 +790,7 @@
     { "source": "Communicate game boundaries", "target": "Game description" },
     { "source": "Communicate game boundaries", "target": "Game play" },
     { "source": "Communicate game boundaries", "target": "Environment/Setup" },
+    { "source": "Communicate game boundaries", "target": "Who designed the game?" },
     { "source": "Game description", "target": "Self-identification" },
     { "source": "Game description", "target": "Type of game" },
     { "source": "Game description", "target": "Theme" },
@@ -735,17 +802,27 @@
     { "source": "Game play", "target": "Time signature" },
     { "source": "Environment/Setup", "target": "Materials" },
     { "source": "Environment/Setup", "target": "Game setting" },
+    { "source": "Who designed the game?", "target": "Facilitator" },
+    { "source": "Who designed the game?", "target": "Participants during session" },
     { "source": "Guide session flow", "target": "Adjust plan according to emerging situation" },
     { "source": "Guide session flow", "target": "Alternate exercises, games and reflections" },
     { "source": "Guide session flow", "target": "Adequate actions/materials to phases of session" },
     { "source": "Guide session flow", "target": "Time different phases of reflection/action" },
+    { "source": "Guide session flow", "target": "Keep momentum of session" },
     { "source": "Agree on ethics and habits of session", "target": "Major importance of reflection" },
-    { "source": "Agree on ethics and habits of session", "target": "Looking and listening to each other" },
+    { "source": "Agree on ethics and habits of session", "target": "Looking at and listening to each other" },
     { "source": "Agree on ethics and habits of session", "target": "Add don't cancel" },
     {
       "source": "Agree on ethics and habits of session",
       "target": "There are appropriate times for propositions and others for action"
     },
-    { "source": "Agree on ethics and habits of session", "target": "Keep chaos constructive" }
+    { "source": "Agree on ethics and habits of session", "target": "Keep chaos constructive" },
+    { "source": "Hold the space", "target": "Facilitate dialogue" },
+    { "source": "Hold the space", "target": "Human connection" },
+    { "source": "Hold the space", "target": "Stay attuned to creative process" },
+    { "source": "Balance level of intervention", "target": "Give space for their initiatives" },
+    { "source": "Balance level of intervention", "target": "Intervene to keep boundaries clear" },
+    { "source": "Balance level of intervention", "target": "Play if needed" },
+    { "source": "Balance level of intervention", "target": "Never enforce personal idea or plan" }
   ]
 }
