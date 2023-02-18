@@ -2,12 +2,16 @@ import { Cross1Icon, MixerHorizontalIcon } from '@radix-ui/react-icons'
 import * as PopoverPrimitive from '@radix-ui/react-popover'
 import { clsx } from 'clsx'
 import Button from './button'
+import Checkbox from './checkbox'
 import Slider from './slider'
 
 interface PopoverProps {
   layers: [number]
   setLayers: (layers: [number]) => void
   maxDepth: number
+  allTags: string[]
+  selectedTags: string[]
+  updateTag: (tag: string, checked: boolean) => void
 }
 
 const Popover = (props: PopoverProps) => {
@@ -32,21 +36,30 @@ const Popover = (props: PopoverProps) => {
           <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100">Filters</h3>
 
           <form className="mt-4 space-y-2">
-            <fieldset key={`popover-items-layers`} className="flex align-middle ">
+            <fieldset key={`popover-items-layers`} className="flex flex-col align-middle space-y-2">
               <label
                 htmlFor={'layers'}
                 className="mr-4 shrink-0 grow text-xs font-medium text-gray-700 dark:text-gray-400"
               >
                 {'Levels'}
               </label>
-              <Slider
-                value={props.layers}
-                min={0}
-                max={props.maxDepth}
-                step={1}
-                onValueChange={props.setLayers}
-              />
+              <Slider value={props.layers} min={0} max={props.maxDepth} step={1} onValueChange={props.setLayers} />
+              <label
+                htmlFor={'tags'}
+                className="mr-4 shrink-0 grow text-xs font-medium text-gray-700 dark:text-gray-400"
+              >
+                {'Tags'}
+              </label>
             </fieldset>
+            {props.allTags.map((tag) => (
+              <fieldset key={`popover-items-checkbox`} className="flex align-middle ">
+                <Checkbox
+                  label={tag}
+                  checked={props.selectedTags.includes(tag)}
+                  onCheckedChange={(checked) => props.updateTag(tag, checked)}
+                />
+              </fieldset>
+            ))}
           </form>
 
           <PopoverPrimitive.Close

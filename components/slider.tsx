@@ -18,15 +18,15 @@ const Slider = (props: SliderProps) => {
       step={props.step}
       onValueChange={props.onValueChange}
       aria-label="value"
-      className="relative flex h-5 w-64 touch-none items-center"
+      className="relative flex h-5 touch-none items-center"
     >
       <SliderPrimitive.Track className="relative h-1 w-full grow rounded-full bg-white dark:bg-gray-800">
-        <SliderPrimitive.Range className="absolute h-full rounded-full bg-purple-600 dark:bg-white" />
+        <SliderPrimitive.Range className="absolute h-full rounded-full bg-orange-600 dark:bg-white" />
       </SliderPrimitive.Track>
       <SliderPrimitive.Thumb
         className={clsx(
-          'block h-5 w-5 rounded-full bg-purple-600 dark:bg-white',
-          'focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75'
+          'block h-5 w-5 rounded-full bg-orange-600 dark:bg-white',
+          'focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-75'
         )}
       />
     </SliderPrimitive.Root>

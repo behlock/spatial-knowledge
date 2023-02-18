@@ -28,6 +28,7 @@ const graphDepth = (node, links) => {
 const maxDepth = (graphData) =>
   graphData.nodes.map((node) => graphDepth(node, graphData.links)).reduce((a, b) => Math.max(a, b), -Infinity)
 
+// ANCESTORS
 const nodeAncestors = (node, links) => {
   const parents = links.filter((l) => l.target.id === node.id)
   if (parents.length === 0) {
@@ -45,18 +46,40 @@ const maxAncestors = (graphData) =>
     })
     .reduce((a, b) => Math.max(a, b), -Infinity)
 
+// TAGS
+const getTags = (graphData) => {
+  let tags = []
+  graphData.nodes.forEach((node) => {
+    if (node.tags) {
+      tags = tags.concat(node.tags)
+    }
+  })
+  return [...new Set(tags)]
+}
+
+const selectTag = (tag, selectedTags, setSelectedTags) => {
+  if (selectedTags.includes(tag)) {
+    setSelectedTags(selectedTags.filter((t) => t !== tag))
+  } else {
+    setSelectedTags([...selectedTags, tag])
+  }
+}
+
 //MAIN
 export const ForceGraph = ({ graphData }) => {
   // STATE
   const [extraRenderers, setExtraRenderers] = useState([])
+  const [layers, setLayers] = useState([4])
+  const [selectedTags, setSelectedTags] = useState(getTags(graphData))
+
+  // HOOKS
   useEffect(() => {
     setExtraRenderers([new CSS2DRenderer()])
   }, [])
 
-  const [layers, setLayers] = useState([4])
-
   // VISIBILITY
-  const isVisible = (node, links) => nodeAncestors(node, links).length <= layers[0]
+  const isVisible = (node, links) =>
+    nodeAncestors(node, links).length <= layers[0] && selectedTags.some((t) => node.tags.includes(t))
 
   const visibleNodes = (graphData) =>
     graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id)
@@ -72,7 +95,14 @@ export const ForceGraph = ({ graphData }) => {
   return (
     <>
       <div className={s.popover}>
-        <Popover layers={layers} setLayers={setLayers} maxDepth={4} />
+        <Popover
+          layers={layers}
+          setLayers={setLayers}
+          maxDepth={4}
+          allTags={getTags(graphData)}
+          selectedTags={selectedTags}
+          updateTag={(tag, _) => selectTag(tag, selectedTags, setSelectedTags)}
+        />
       </div>
       <ForceGraph3D
         // RENDERING
