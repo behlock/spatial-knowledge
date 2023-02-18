@@ -131,6 +131,7 @@ export const ForceGraph = ({ graphData }) => {
         nodeAutoColorBy={(node) => node.color}
         nodeThreeObjectExtend={true}
         nodeVisibility={(node) => visibleNodes(graphData).includes(node.id)}
+        nodeOpacity={1}
       />
     </>
   )
