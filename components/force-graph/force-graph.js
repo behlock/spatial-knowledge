@@ -124,7 +124,8 @@ export const ForceGraph = ({ graphData }) => {
             const nodeEl = document.createElement('div')
             nodeEl.textContent = node.id
             nodeEl.style.color = isTooLightYIQ(node.color) ? '#000' : '#fff'
-            nodeEl.style.fontSize = '0.5rem'
+            nodeEl.style.fontSize = '0.75rem'
+            nodeEl.style.opacity = '0.5'
             nodeEl.style.userSelect = 'none'
             nodeEl.style.textAlign = 'center'
             nodeEl.style.width = '100px'

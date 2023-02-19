@@ -19,7 +19,14 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     legacyBrowsers: false,
-    nextScriptWorkers: true,
+    swcPlugins: [
+      [
+        'next-superjson-plugin',
+        {
+          excluded: [],
+        },
+      ],
+    ],
   },
   compiler: {
     removeConsole: process.env.NODE_ENV !== 'development',

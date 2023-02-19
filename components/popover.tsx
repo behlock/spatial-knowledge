@@ -1,6 +1,7 @@
-import { Cross1Icon, MixerHorizontalIcon } from '@radix-ui/react-icons'
+import { Cross1Icon, GlobeIcon } from '@radix-ui/react-icons'
 import * as PopoverPrimitive from '@radix-ui/react-popover'
 import { clsx } from 'clsx'
+import { useState } from 'react'
 import Button from './button'
 import Checkbox from './checkbox'
 import Slider from './slider'
@@ -15,12 +16,20 @@ interface PopoverProps {
 }
 
 const Popover = (props: PopoverProps) => {
+  const [isPopoverOpen, setIsPopoverOpen] = useState(true)
+  const updatePopoverOpen = (checked: boolean) => {
+    setIsPopoverOpen(checked)
+  }
+
   return (
     <div className="relative inline-block text-left z-10">
-      <PopoverPrimitive.Root>
+      <PopoverPrimitive.Root open={isPopoverOpen} onOpenChange={updatePopoverOpen}>
         <PopoverPrimitive.Trigger asChild>
           <Button>
-            <MixerHorizontalIcon />
+            <div className="flex space-x-2 items-center">
+              <GlobeIcon style={{ marginBottom: '1.7px' }} />
+              <span>Explore Mind Map</span>
+            </div>
           </Button>
         </PopoverPrimitive.Trigger>
         <PopoverPrimitive.Content
@@ -29,7 +38,7 @@ const Popover = (props: PopoverProps) => {
           className={clsx(
             'radix-side-top:animate-slide-up radix-side-bottom:animate-slide-down',
             'z-50 w-48 rounded-lg p-4 shadow-md md:w-56',
-            'bg-white dark:bg-gray-800',
+            'bg-white dark:bg-gray-900',
             'z-10'
           )}
         >
@@ -53,7 +62,7 @@ const Popover = (props: PopoverProps) => {
               </label>
             </fieldset>
             {props.allTags.map((tag) => (
-              <fieldset key={`popover-items-checkbox`} className="flex align-middle ">
+              <fieldset key={`popover-items-checkbox-${tag}`} className="flex align-middle ">
                 <Checkbox
                   label={tag}
                   checked={props.selectedTags.includes(tag)}

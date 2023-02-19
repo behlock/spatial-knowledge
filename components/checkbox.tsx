@@ -11,14 +11,14 @@ interface CheckboxProps {
 
 const Checkbox = (props: CheckboxProps) => {
   return (
-    <form className="flex items-center">
+    <>
       <CheckboxPrimitive.Root
         id={`c-${props.label}`}
         checked={props.checked}
         onCheckedChange={props.onCheckedChange}
         className={clsx(
           'flex h-5 w-5 items-center justify-center rounded',
-          'radix-state-checked:bg-orange-600 radix-state-unchecked:bg-gray-100 dark:radix-state-unchecked:bg-gray-900',
+          'radix-state-checked:bg-orange-600 radix-state-unchecked:bg-gray-100 dark:radix-state-unchecked:bg-gray-800',
           'focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-75'
         )}
       >
@@ -33,7 +33,7 @@ const Checkbox = (props: CheckboxProps) => {
       >
         {props.label}
       </LabelPrimitive.Label>
-    </form>
+    </>
   )
 }
 

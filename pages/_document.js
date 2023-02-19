@@ -6,7 +6,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta charSet="UTF-8" />
-        <link href="/fonts/Inter-Thin.ttf" as="font" rel="preload prefetch" type="font/ttf" crossOrigin="anonymous" />
+        <link href="/fonts/Inter-Light.ttf" as="font" rel="preload prefetch" type="font/ttf" crossOrigin="anonymous" />
       </Head>
       <body>
         <Main />
