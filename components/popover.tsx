@@ -13,6 +13,7 @@ interface PopoverProps {
   allTags: string[]
   selectedTags: string[]
   updateTag: (tag: string, checked: boolean) => void
+  // resetFilters: () => void
 }
 
 const Popover = (props: PopoverProps) => {
@@ -41,11 +42,15 @@ const Popover = (props: PopoverProps) => {
             'bg-white dark:bg-gray-900',
             'z-10 ml-4'
           )}
+          onPointerDownOutside={(e) => e.preventDefault()}
         >
           <PopoverPrimitive.Arrow className="fill-current text-white dark:text-gray-800" />
           <h3 className="text-m font-medium text-gray-900 dark:text-gray-100">Exploration Parameters</h3>
 
-          <form className="mt-4 space-y-2">
+          <form className="mt-4 space-y-4">
+            {/* <fieldset key={`popover-items-reset-button`} className="flex align-middle ">
+              <Button onClick={props.resetFilters}>Reset</Button>
+            </fieldset> */}
             <fieldset key={`popover-items-layers`} className="flex flex-col align-middle space-y-2">
               <label
                 htmlFor={'layers'}

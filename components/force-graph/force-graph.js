@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { CSS2DObject, CSS2DRenderer } from 'three-stdlib'
 
 import { Popover } from 'components/popover'
@@ -70,18 +70,25 @@ export const ForceGraph = ({ graphData }) => {
   const [extraRenderers, setExtraRenderers] = useState([])
   const [layers, setLayers] = useState([7])
   const [selectedTags, setSelectedTags] = useState([])
+  const [prunedNodes, setPrunedNodes] = useState(graphData.nodes.map((node) => node.id))
 
   // HOOKS
   useEffect(() => {
     setExtraRenderers([new CSS2DRenderer()])
   }, [])
 
+  useEffect(() => {
+    setVisibleNodes(graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id))
+  }, [selectedTags, layers, prunedNodes])
+
   // VISIBILITY
   const isVisible = (node, links) =>
-    nodeAncestors(node, links).length <= layers[0] && selectedTags.every((t) => node.tags.includes(t))
-
-  const visibleNodes = (graphData) =>
+    nodeAncestors(node, links).length <= layers[0] &&
+    selectedTags.every((t) => node.tags.includes(t)) &&
+    prunedNodes.includes(node.id)
+  const [visibleNodes, setVisibleNodes] = useState(
     graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id)
+  )
 
   const isTooLightYIQ = (hexcolor) => {
     let r = parseInt(hexcolor.substr(0, 2), 16)
@@ -90,6 +97,46 @@ export const ForceGraph = ({ graphData }) => {
     let yiq = (r * 299 + g * 587 + b * 114) / 1000
     return yiq >= 128
   }
+
+  // CLICK
+  const rootId = 'In session'
+
+  const nodesById = useMemo(() => {
+    const nodesById = Object.fromEntries(graphData.nodes.map((node) => [node.id, node]))
+
+    // link parent/children
+    graphData.nodes.forEach((node) => {
+      node.collapsed = node.id !== rootId
+      node.childLinks = []
+    })
+    graphData.links.forEach((link) => nodesById[link.source].childLinks.push(link))
+
+    return nodesById
+  }, [graphData])
+
+  const getPrunedTree = useCallback(() => {
+    const newVisibleNodes = []
+    const visibleLinks = []
+    ;(function traverseTree(node = nodesById[rootId]) {
+      newVisibleNodes.push(node)
+      if (node.collapsed) return
+      visibleLinks.push(...node.childLinks)
+      node.childLinks
+        .map((link) => (typeof link.target === 'object' ? link.target : nodesById[link.target])) // get child node
+        .forEach(traverseTree)
+    })()
+
+    setPrunedNodes(newVisibleNodes.map((node) => node.id))
+
+    // return { nodes: visibleNodes, links: graphData.links }
+  }, [nodesById])
+
+  // const [prunedTree, setPrunedTree] = useState(getPrunedTree())
+
+  const handleNodeClick = useCallback((node) => {
+    node.collapsed = !node.collapsed // toggle collapse state
+    getPrunedTree()
+  }, [])
 
   return (
     <>
@@ -101,6 +148,11 @@ export const ForceGraph = ({ graphData }) => {
         allTags={getTags(graphData)}
         selectedTags={selectedTags}
         updateTag={(tag, _) => selectTag(tag, selectedTags, setSelectedTags)}
+        // resetFilters={() => {
+        //   setSelectedTags([])
+        //   setLayers([7])
+        //   setVisibleNodes(graphData.nodes.map((node) => node.id))
+        // }}
       />
       <div className="mx-20">
         <ForceGraph3D
@@ -134,9 +186,11 @@ export const ForceGraph = ({ graphData }) => {
           }}
           nodeThreeObjectExtend={true}
           nodeAutoColorBy={(node) => node.color}
-          nodeVisibility={(node) => visibleNodes(graphData).includes(node.id)}
+          nodeVisibility={(node) => visibleNodes.includes(node.id)}
           nodeOpacity={1}
           nodeResolution={32}
+          // ACTIONS
+          onNodeClick={handleNodeClick}
           // onNodeClick={(node) => {
           //   // Aim at node from outside it
           //   const distance = 40
