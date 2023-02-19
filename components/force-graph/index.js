@@ -69,7 +69,7 @@ const selectTag = (tag, selectedTags, setSelectedTags) => {
 export const ForceGraph = ({ graphData }) => {
   // STATE
   const [extraRenderers, setExtraRenderers] = useState([])
-  const [layers, setLayers] = useState([4])
+  const [layers, setLayers] = useState([7])
   const [selectedTags, setSelectedTags] = useState([])
 
   // HOOKS
@@ -99,7 +99,7 @@ export const ForceGraph = ({ graphData }) => {
           layers={layers}
           setLayers={setLayers}
           // TODO
-          maxDepth={4}
+          maxDepth={7}
           allTags={getTags(graphData)}
           selectedTags={selectedTags}
           updateTag={(tag, _) => selectTag(tag, selectedTags, setSelectedTags)}
