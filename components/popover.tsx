@@ -22,7 +22,7 @@ const Popover = (props: PopoverProps) => {
   }
 
   return (
-    <div className="relative inline-block text-left z-10">
+    <div className="relative inline-block text-left z-10 ">
       <PopoverPrimitive.Root open={isPopoverOpen} onOpenChange={updatePopoverOpen}>
         <PopoverPrimitive.Trigger asChild>
           <Button>
@@ -37,28 +37,28 @@ const Popover = (props: PopoverProps) => {
           sideOffset={4}
           className={clsx(
             'radix-side-top:animate-slide-up radix-side-bottom:animate-slide-down',
-            'z-50 w-48 rounded-lg p-4 shadow-md md:w-56',
+            'z-50 w-64 rounded-lg p-4 shadow-md md:w-96',
             'bg-white dark:bg-gray-900',
-            'z-10'
+            'z-10 ml-4'
           )}
         >
           <PopoverPrimitive.Arrow className="fill-current text-white dark:text-gray-800" />
-          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100">Filters</h3>
+          <h3 className="text-m font-medium text-gray-900 dark:text-gray-100">Exploration Parameters</h3>
 
           <form className="mt-4 space-y-2">
             <fieldset key={`popover-items-layers`} className="flex flex-col align-middle space-y-2">
               <label
                 htmlFor={'layers'}
-                className="mr-4 shrink-0 grow text-xs font-medium text-gray-700 dark:text-gray-400"
+                className="mr-4 shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400"
               >
-                {'Levels'}
+                {'How much complexity to you want to see?'}
               </label>
               <Slider value={props.layers} min={0} max={props.maxDepth} step={1} onValueChange={props.setLayers} />
               <label
                 htmlFor={'tags'}
-                className="mr-4 shrink-0 grow text-xs font-medium text-gray-700 dark:text-gray-400"
+                className="mr-4 shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400"
               >
-                {'Tags'}
+                {'Which themes are you interested in?'}
               </label>
             </fieldset>
             {props.allTags.map((tag) => (
