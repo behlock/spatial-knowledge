@@ -16,7 +16,7 @@ interface PopoverProps {
 
 const Popover = (props: PopoverProps) => {
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative inline-block text-left z-10">
       <PopoverPrimitive.Root>
         <PopoverPrimitive.Trigger asChild>
           <Button>
@@ -29,7 +29,8 @@ const Popover = (props: PopoverProps) => {
           className={clsx(
             'radix-side-top:animate-slide-up radix-side-bottom:animate-slide-down',
             'z-50 w-48 rounded-lg p-4 shadow-md md:w-56',
-            'bg-white dark:bg-gray-800'
+            'bg-white dark:bg-gray-800',
+            'z-10'
           )}
         >
           <PopoverPrimitive.Arrow className="fill-current text-white dark:text-gray-800" />
