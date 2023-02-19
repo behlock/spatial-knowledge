@@ -1,18 +1,45 @@
 {
   "nodes": [
     {
-      "id": "In session",
+      "id": "Phase",
       "tags": [
-        "In session",
+        "During session",
         "Street intervention",
         "Materials",
         "Transformation",
+        "Individuality",
         "Social psychology",
         "Collective work",
         "Reflection and learning",
         "Setup",
         "Warm-up",
-        "Creative act",
+        "Creative process",
+        "Rules",
+        "Chaos",
+        "Benefits",
+        "Time",
+        "Systems thinking",
+        "Facilitation",
+        "Game"
+      ],
+      "color": "#ff0000",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "During session",
+      "tags": [
+        "During session",
+        "Street intervention",
+        "Materials",
+        "Transformation",
+        "Individuality",
+        "Social psychology",
+        "Collective work",
+        "Reflection and learning",
+        "Setup",
+        "Warm-up",
+        "Creative process",
         "Rules",
         "Chaos",
         "Benefits",
@@ -28,18 +55,22 @@
     {
       "id": "During street intervention",
       "tags": [
-        "In session",
+        "During session",
         "Materials",
+        "Rules",
+        "Game",
+        "Individuality",
         "Street intervention",
         "Setup",
         "Transformation",
-        "Creative act",
+        "Creative process",
         "Benefits",
         "Chaos",
         "Time",
         "Systems thinking",
         "Facilitation",
-        "Game"
+        "Game",
+        "Social psychology"
       ],
       "color": "#b69b37",
       "portalTo": "",
@@ -47,168 +78,251 @@
     },
     {
       "id": "Work on setup",
-      "tags": ["In session", "Street intervention", "Setup"],
+      "tags": ["During session", "Street intervention", "Setup", "Game"],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Make intervention area obvious",
-      "tags": ["In session", "Materials", "Street intervention", "Setup"],
+      "tags": ["During session", "Materials", "Street intervention", "Setup"],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Position adequately on sidewalk",
-      "tags": ["In session", "Street intervention", "Setup"],
+      "tags": ["During session", "Street intervention", "Setup"],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Layout of support and tools",
-      "tags": ["In session", "Materials", "Street intervention", "Setup"],
+      "tags": ["During session", "Materials", "Game", "Street intervention", "Setup"],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Adapt to specificities of location",
-      "tags": ["In session", "Street intervention", "Setup"],
-      "color": "#b69b37",
-      "portalTo": "",
-      "isVideo": false
-    },
-    {
-      "id": "Communication needs",
-      "tags": ["In session", "Street intervention", "Facilitation"],
+      "tags": ["During session", "Street intervention", "Setup"],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Communicate prompt to passersby",
-      "tags": ["In session", "Street intervention", "Facilitation", "Game"],
+      "tags": [
+        "During session",
+        "Rules",
+        "Street intervention",
+        "Facilitation",
+        "Game",
+        "Individuality",
+        "Creative process"
+      ],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Connect with nearby shop keepers",
-      "tags": ["In session", "Street intervention"],
+      "tags": ["During session", "Street intervention"],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
-      "id": "Assume social role",
-      "tags": ["In session", "Street intervention", "Transformation", "Facilitation"],
+      "id": "Cultivate open mindset",
+      "tags": [
+        "During session",
+        "Street intervention",
+        "Individuality",
+        "Transformation",
+        "Benefits",
+        "Facilitation",
+        "Social psychology",
+        "Chaos"
+      ],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
-      "id": "Find adequate formulation",
-      "tags": ["In session", "Street intervention", "Facilitation", "Game"],
+      "id": "Find adequate formulation to open possibilities of interpretation",
+      "tags": ["During session", "Rules", "Game", "Street intervention", "Creative process", "Facilitation", "Game"],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
-      "id": "Adapt to passerby",
-      "tags": ["In session", "Street intervention", "Facilitation"],
+      "id": "Adapt approach to passerby",
+      "tags": ["During session", "Street intervention", "Rules", "Game", "Facilitation", "Individuality"],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Explain purpose/meaning",
-      "tags": ["In session", "Street intervention", "Facilitation", "Game"],
+      "tags": ["During session", "Street intervention", "Facilitation", "Game", "Rules", "Creative process"],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
-      "id": "Open space for diversity",
-      "tags": ["In session", "Street intervention", "Benefits"],
+      "id": "By keeping space open for diversity",
+      "tags": [
+        "During session",
+        "Street intervention",
+        "Facilitation",
+        "Benefits",
+        "Individuality",
+        "Social psychology"
+      ],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
-      "id": "Embrace meaning participants give to this encounter",
-      "tags": ["In session", "Street intervention", "Transformation", "Benefits"],
+      "id": "By embracing meanings participants give to this encounter",
+      "tags": [
+        "During session",
+        "Street intervention",
+        "Transformation",
+        "Benefits",
+        "Chaos",
+        "Facilitation",
+        "Individuality",
+        "Social psychology"
+      ],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
-      "id": "Open for helping hands",
-      "tags": ["In session", "Street intervention", "Benefits"],
+      "id": "Welcome helping hands",
+      "tags": [
+        "During session",
+        "Street intervention",
+        "Benefits",
+        "Facilitation",
+        "Individuality",
+        "Collective work",
+        "Social psychology"
+      ],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
-      "id": "Open for conversations",
-      "tags": ["In session", "Street intervention", "Benefits"],
+      "id": "Be open for conversation",
+      "tags": ["During session", "Street intervention", "Benefits", "Social psychology", "Facilitation"],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
-      "id": "Creatively",
-      "tags": ["In session", "Street intervention", "Creative act", "Chaos", "Systems thinking", "Collective work"],
+      "id": "Tending the creative process",
+      "tags": [
+        "During session",
+        "Rules",
+        "Game",
+        "Creative process",
+        "Chaos",
+        "Systems thinking",
+        "Collective work",
+        "Facilitation",
+        "Time"
+      ],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Be attentive to phases of evolution of the piece",
-      "tags": ["In session", "Collective work", "Street intervention", "Creative act", "Time", "Systems thinking"],
+      "tags": [
+        "During session",
+        "Collective work",
+        "Street intervention",
+        "Creative process",
+        "Time",
+        "Systems thinking",
+        "Game"
+      ],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Take part of the action",
-      "tags": ["In session", "Street intervention", "Creative act"],
+      "tags": ["During session", "Street intervention", "Creative process", "Game", "Collective work", "Rules"],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Help piece come together",
-      "tags": ["In session", "Street intervention", "Collective work", "Creative act", "Chaos"],
+      "tags": [
+        "During session",
+        "Street intervention",
+        "Collective work",
+        "Creative process",
+        "Chaos",
+        "Game",
+        "Rules"
+      ],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Balance quality of personal actions with passersby's",
-      "tags": ["In session", "Collective work", "Street intervention", "Creative act", "Chaos", "Systems thinking"],
+      "tags": [
+        "During session",
+        "Collective work",
+        "Street intervention",
+        "Creative process",
+        "Chaos",
+        "Systems thinking"
+      ],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Take note of synchronicities",
-      "tags": ["In session", "Street intervention", "Creative act", "Chaos", "Time", "Systems thinking"],
+      "tags": ["During session", "Street intervention", "Creative process", "Chaos", "Time", "Systems thinking"],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Actions which put work out of balance",
-      "tags": ["In session", "Collective work", "Chaos", "Street intervention", "Creative act", "Time"],
+      "tags": [
+        "Systems thinking",
+        "During session",
+        "Collective work",
+        "Chaos",
+        "Street intervention",
+        "Creative process",
+        "Time"
+      ],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Actions which bring it together",
-      "tags": ["In session", "Collective work", "Chaos", "Street intervention", "Creative act", "Time"],
+      "tags": [
+        "Systems thinking",
+        "During session",
+        "Collective work",
+        "Chaos",
+        "Street intervention",
+        "Creative process",
+        "Time"
+      ],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
@@ -216,11 +330,12 @@
     {
       "id": "Actions which transmit to others'",
       "tags": [
-        "In session",
+        "Systems thinking",
+        "During session",
         "Collective work",
         "Chaos",
         "Street intervention",
-        "Creative act",
+        "Creative process",
         "Time",
         "Systems thinking"
       ],
@@ -231,10 +346,11 @@
     {
       "id": "Moments which mark a transformation",
       "tags": [
-        "In session",
+        "Systems thinking",
+        "During session",
         "Street intervention",
         "Collective work",
-        "Creative act",
+        "Creative process",
         "Chaos",
         "Time",
         "Systems thinking"
@@ -246,9 +362,9 @@
     {
       "id": "Listen to changes in passersby's remarks",
       "tags": [
-        "In session",
+        "During session",
         "Street intervention",
-        "Creative act",
+        "Creative process",
         "Systems thinking",
         "Time",
         "Chaos",
@@ -259,8 +375,8 @@
       "isVideo": false
     },
     {
-      "id": "Adjust prompt in relation to evolution",
-      "tags": ["In session", "Street intervention", "Creative act", "Chaos", "Time"],
+      "id": "Adjust the prompt to the phase of evolution of the piece",
+      "tags": ["During session", "Street intervention", "Creative process", "Chaos", "Time", "Game", "Rules"],
       "color": "#b69b37",
       "portalTo": "",
       "isVideo": false
@@ -268,7 +384,7 @@
     {
       "id": "During workshops with groups",
       "tags": [
-        "In session",
+        "During session",
         "Materials",
         "Workshops",
         "Social psychology",
@@ -282,7 +398,7 @@
         "Reflection and learning",
         "Rules",
         "Chaos",
-        "Creative act",
+        "Creative process",
         "Setup"
       ],
       "color": "#ff0000",
@@ -291,21 +407,38 @@
     },
     {
       "id": "Set the ground",
-      "tags": ["In session", "Workshops", "Program", "Facilitation"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Take care of logistics",
-      "tags": ["In session", "Workshops", "Program", "Setup", "Reflection and learning"],
+      "tags": ["During session", "Workshops", "Program", "Setup", "Reflection and learning"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Communicate game boundaries",
-      "tags": ["In session", "Workshops", "Program", "Setup", "Social psychology", "Systems thinking", "Rules", "Game"],
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Creative process",
+        "Materials",
+        "Setup",
+        "Social psychology",
+        "Systems thinking",
+        "Rules",
+        "Game",
+        "Collective work",
+        "Chaos",
+        "Time",
+        "Individuality",
+        "Facilitation",
+        "Reflection and learning"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
@@ -313,13 +446,13 @@
     {
       "id": "Guide warm-up",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
         "Program",
         "Warm-up",
         "Game",
         "Facilitation",
-        "Creative act",
+        "Creative process",
         "Collective work",
         "Individuality",
         "Materials",
@@ -334,13 +467,18 @@
     {
       "id": "Cultivate facilitator mindset",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
+        "Rules",
+        "Reflection and learning",
         "Program",
+        "Collective work",
         "Facilitation",
+        "Rules",
+        "Social psychology",
         "time",
         "Chaos",
-        "Creative act",
+        "Creative process",
         "Systems thinking",
         "Game"
       ],
@@ -351,13 +489,13 @@
     {
       "id": "Playful",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
         "Program",
         "Facilitation",
         "time",
         "Chaos",
-        "Creative act",
+        "Creative process",
         "Systems thinking",
         "Game"
       ],
@@ -366,16 +504,16 @@
       "isVideo": false
     },
     {
-      "id": "Facilitate session",
+      "id": "In facilitating the session",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
         "Program",
         "Facilitation",
         "Time",
         "Reflection and learning",
         "Chaos",
-        "Creative act",
+        "Creative process",
         "Systems thinking",
         "Game",
         "Collective work",
@@ -388,36 +526,36 @@
     },
     {
       "id": "Facilitate reflection",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Reflection and learning"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Reflection and learning"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Welcome them while waiting for others",
-      "tags": ["In session", "Workshops", "Program", "Facilitation"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Explain purpose of session",
-      "tags": ["In session", "Workshops", "Program", "Facilitation"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Ask questions related to past session",
-      "tags": ["In session", "Workshops", "Program", "Facilitation"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
-      "id": "Agree on ethics and habits of session",
+      "id": "Commonly agree on ethics and habits",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
         "Program",
         "Facilitation",
@@ -426,7 +564,7 @@
         "Collective work",
         "Rules",
         "Game",
-        "Creative act"
+        "Creative process"
       ],
       "color": "#10646f",
       "portalTo": "",
@@ -435,13 +573,13 @@
     {
       "id": "Guide session flow",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
         "Program",
         "Facilitation",
         "Time",
         "Chaos",
-        "Creative act",
+        "Creative process",
         "Collective work",
         "Game"
       ],
@@ -452,14 +590,14 @@
     {
       "id": "Hold the space",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
         "Program",
         "Facilitation",
         "Collective work",
         "Time",
         "Social psychology",
-        "Creative act",
+        "Creative process",
         "Chaos",
         "Reflection and learning",
         "Game"
@@ -470,7 +608,7 @@
     },
     {
       "id": "Speak from the heart",
-      "tags": ["In session", "Workshops", "Program", "Facilitation"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
@@ -478,11 +616,11 @@
     {
       "id": "See session as evolutionary creative process",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
         "Program",
         "Facilitation",
-        "Creative act",
+        "Creative process",
         "Chaos",
         "Time",
         "Systems thinking"
@@ -493,41 +631,50 @@
     },
     {
       "id": "Presence",
-      "tags": ["In session", "Workshops", "Program", "Facilitation"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Experimentalist: what if we tried?..",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Systems thinking", "Creative act", "Game"],
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Facilitation",
+        "Systems thinking",
+        "Creative process",
+        "Game"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Embrace uncertainty",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Chaos", "Game", "Creative act"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Chaos", "Game", "Creative process"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "All things throughout all sessions, are linked as a system",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Systems thinking", "Time"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Systems thinking", "Time"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
-      "id": "Balance level of intervention",
+      "id": "Balance your level of intervention",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
+        "Social psychology",
         "Program",
         "Facilitation",
         "Reflection and learning",
-        "Creative act",
+        "Creative process",
         "Collective work",
         "Chaos",
         "Rules",
@@ -541,14 +688,14 @@
     {
       "id": "Prepare pre-requisite for the game",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
         "Program",
         "Warm-up",
         "Facilitation",
         "Game",
         "Individuality",
-        "Creative act",
+        "Creative process",
         "Chaos",
         "Materials",
         "Collective work",
@@ -561,63 +708,89 @@
     },
     {
       "id": "Mindset",
-      "tags": ["In session", "Workshops", "Program", "Warm-up", "Facilitation"],
+      "tags": ["During session", "Workshops", "Program", "Warm-up", "Facilitation"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Physical",
-      "tags": ["In session", "Workshops", "Program", "Warm-up", "Facilitation"],
+      "tags": ["During session", "Workshops", "Program", "Warm-up", "Facilitation"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Show example (if needed)",
-      "tags": ["In session", "Workshops", "Program", "Warm-up", "Facilitation", "Game"],
+      "tags": ["During session", "Workshops", "Program", "Warm-up", "Facilitation", "Game"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
-      "id": "Secure Game area",
-      "tags": ["In session", "Workshops", "Program", "Setup"],
+      "id": "Essentials of the game area",
+      "tags": ["During session", "Workshops", "Program", "Setup"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
-      "id": "Hire assistant to film session",
-      "tags": ["In session", "Workshops", "Program", "setup", "Reflection and learning"],
+      "id": "Get session filmed for future reflection",
+      "tags": ["During session", "Workshops", "Program", "setup", "Reflection and learning"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Various small tasks",
-      "tags": ["In session", "Workshops", "Program", "Setup"],
+      "tags": ["During session", "Workshops", "Program", "Setup"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Prepare music playlist",
-      "tags": ["In session", "Workshops", "Program", "Setup"],
+      "tags": ["During session", "Workshops", "Program", "Setup"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Game description",
-      "tags": ["In session", "Workshops", "Program", "Game", "Systems thinking", "Collective work"],
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Systems thinking",
+        "Collective work",
+        "Chaos",
+        "Rules",
+        "Collective work",
+        "Social psychology",
+        "Individuality",
+        "Materials",
+        "Reflection and learning"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
-      "id": "Game play",
-      "tags": ["In session", "Workshops", "Program", "Game", "Rules", "Systems thinking", "Collective work"],
+      "id": "Gameplay",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Collective work",
+        "Creative process",
+        "Chaos",
+        "Social psychology",
+        "Individuality"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
@@ -625,7 +798,7 @@
     {
       "id": "Environment/Setup",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
         "Program",
         "Game",
@@ -640,126 +813,222 @@
     },
     {
       "id": "Open dialogues to reach meaningful insights",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Reflection and learning", "Learning"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Reflection and learning", "Learning"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Look at and analyse result",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Reflection and learning", "Learning"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Reflection and learning", "Learning"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Provide platform for their notes",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Reflection and learning", "Learning"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Reflection and learning", "Learning"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Give perspective to experience from place of learning",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Reflection and learning", "Learning"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Reflection and learning", "Learning"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Extract seed of ideas for next session",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Reflection and learning", "Learning"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Reflection and learning", "Learning"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Self-identification",
-      "tags": ["In session", "Workshops", "Program", "Game"],
+      "tags": ["During session", "Workshops", "Program", "Game"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Type of game",
-      "tags": ["In session", "Workshops", "Program", "Game", "Systems thinking"],
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Social psychology"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Theme",
-      "tags": ["In session", "Workshops", "Program", "Game", "Social psychology"],
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Social psychology",
+        "Materials",
+        "Chaos",
+        "Rules",
+        "Individuality",
+        "Collective work",
+        "Reflection and learning",
+        "Facilitation"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Game language",
-      "tags": ["In session", "Workshops", "Program", "Game"],
+      "tags": [
+        "During session",
+        "Materials",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Creative process",
+        "Systems thinking",
+        "Chaos",
+        "Collective work",
+        "Social psychology"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "How is it played?",
-      "tags": ["In session", "Workshops", "Program", "Game", "Rules"],
+      "tags": ["During session", "Workshops", "Program", "Game", "Rules", "Collective work", "Creative process"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Rules",
-      "tags": ["In session", "Workshops", "Program", "Game", "Rules", "Systems thinking"],
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Chaos",
+        "Social psychology",
+        "Individuality"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
-      "id": "Actions",
-      "tags": ["In session", "Workshops", "Program", "Game", "Rules", "Systems thinking"],
+      "id": "Quality of the actions",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Chaos"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Goal",
-      "tags": ["In session", "Workshops", "Program", "Game", "Rules", "Systems thinking"],
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Chaos"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Time signature",
-      "tags": ["In session", "Workshops", "Program", "Game", "Time", "Systems thinking"],
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Time",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Chaos"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Materials",
-      "tags": ["In session", "Workshops", "Program", "Game", "Materials"],
+      "tags": ["During session", "Workshops", "Program", "Game", "Materials"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Game setting",
-      "tags": ["In session", "Workshops", "Program", "Game", "Setup", "Systems thinking", "Materials"],
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Setup",
+        "Systems thinking",
+        "Materials",
+        "Creative process",
+        "Collective work",
+        "Rules"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
-      "id": "Who designed the game?",
-      "tags": ["In session", "Workshops", "Program", "Game", "Facilitation", "Systems thinking", "Rules"],
+      "id": "Who's responsible for the game design?",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Creative process",
+        "Program",
+        "Game",
+        "Facilitation",
+        "Systems thinking",
+        "Rules"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Facilitator",
-      "tags": ["In session", "Workshops", "Program", "Game", "Facilitation", "Rules", "Systems thinking"],
+      "tags": ["During session", "Workshops", "Program", "Game", "Facilitation", "Rules", "Systems thinking"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
@@ -767,13 +1036,13 @@
     {
       "id": "Participants during session",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
         "Program",
         "Game",
         "Systems thinking",
         "Facilitation",
-        "Creative act",
+        "Creative process",
         "Rules"
       ],
       "color": "#10646f",
@@ -783,13 +1052,13 @@
     {
       "id": "Adjust plan according to emerging situation",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
         "Program",
         "Facilitation",
         "Time",
         "Chaos",
-        "Creative act",
+        "Creative process",
         "Collective work"
       ],
       "color": "#10646f",
@@ -798,21 +1067,21 @@
     },
     {
       "id": "Alternate exercises, games and reflections",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Time", "Collective work", "Game"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Time", "Collective work", "Game"],
       "color": "#10646f",
       "portalTo": "Short mini-games",
       "isVideo": false
     },
     {
-      "id": "Adequate actions/materials to phases of session",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Time", "Creative act", "Collective work"],
+      "id": "Allocate actions/materials to phases of session",
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Time", "Creative process", "Collective work"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Time different phases of reflection/action",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Time", "Creative act"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Time", "Creative process"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
@@ -820,14 +1089,14 @@
     {
       "id": "Keep momentum of session",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
         "Program",
         "Facilitation",
         "Time",
         "Chaos",
         "Collective work",
-        "Creative act"
+        "Creative process"
       ],
       "color": "#10646f",
       "portalTo": "",
@@ -835,7 +1104,7 @@
     },
     {
       "id": "Major importance of reflection",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Reflection and learning"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Reflection and learning"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
@@ -843,13 +1112,13 @@
     {
       "id": "Looking at and listening to each other",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
         "Program",
         "Facilitation",
         "Collective work",
         "Chaos",
-        "Creative act",
+        "Creative process",
         "Reflection and learning"
       ],
       "color": "#10646f",
@@ -857,36 +1126,52 @@
       "isVideo": false
     },
     {
-      "id": "Add don't cancel",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Collective work", "Creative act", "Rules"],
+      "id": "Add on, dont cancel other players' actions",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Facilitation",
+        "Collective work",
+        "Creative process",
+        "Rules"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "There are appropriate times for propositions and others for action",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "time", "Collective work"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "time", "Collective work"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Keep chaos constructive",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Collective work", "Chaos", "Creative act"],
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Facilitation",
+        "Collective work",
+        "Chaos",
+        "Creative process"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Facilitate dialogue",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Collective work", "Reflection and learning"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Collective work", "Reflection and learning"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Human connection",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Collective work", "Social psychology"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Collective work", "Social psychology"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
@@ -894,11 +1179,11 @@
     {
       "id": "Stay attuned to creative process",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
         "Program",
         "Facilitation",
-        "Creative act",
+        "Creative process",
         "Collective work",
         "Game",
         "Time",
@@ -911,13 +1196,14 @@
     {
       "id": "Give space for their initiatives",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
         "Program",
+        "Social psychology",
         "Facilitation",
         "Chaos",
         "Collective work",
-        "Creative act",
+        "Creative process",
         "Time",
         "Reflection and learning"
       ],
@@ -927,14 +1213,14 @@
     },
     {
       "id": "Intervene to keep boundaries clear",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Game", "Rules"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Game", "Rules"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Play if needed",
-      "tags": ["In session", "Workshops", "Program", "Facilitation", "Creative act", "Game", "Collective work"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Creative process", "Game", "Collective work"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
@@ -942,7 +1228,7 @@
     {
       "id": "Never enforce personal idea or plan",
       "tags": [
-        "In session",
+        "During session",
         "Workshops",
         "Program",
         "Facilitation",
@@ -955,22 +1241,711 @@
       "isVideo": false
     },
     {
-      "id": "Prepare participants to use tools and materials",
-      "tags": ["In session", "Workshops", "Program", "Warm-up", "Materials", "Creative act", "Reflection and learning"],
+      "id": "Use of tools and materials",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Warm-up",
+        "Materials",
+        "Creative process",
+        "Reflection and learning"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Behavior/Approach",
-      "tags": ["In session", "Workshops", "Program", "Warm-up", "Creative act", "Chaos", "Social psychology"],
+      "tags": ["During session", "Workshops", "Program", "Warm-up", "Creative process", "Chaos", "Social psychology"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
     },
     {
       "id": "Individual creation",
-      "tags": ["In session", "Workshops", "Program", "Warm-up", "Creative act", "Individuality"],
+      "tags": ["During session", "Workshops", "Program", "Warm-up", "Creative process", "Individuality"],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Location",
+      "tags": ["During session", "Workshops", "Program", "Setup"],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Familiarity",
+      "tags": ["During session", "Workshops", "Program", "Setup"],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Laying out material",
+      "tags": ["During session", "Workshops", "Program", "Setup"],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Who's reponsible for setting up the game space?",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Setup",
+        "Systems thinking",
+        "Materials",
+        "Creative process"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "What's the physical stance of the players?",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Setup",
+        "Systems thinking",
+        "Materials",
+        "Creative process",
+        "Rules"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "What's the scale?",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Setup",
+        "Systems thinking",
+        "Materials",
+        "Rules",
+        "Creative process"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "How's the layout?",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Setup",
+        "Systems thinking",
+        "Materials",
+        "Creative process"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Open game",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Social psychology"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Closed game",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Social psychology"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Combination",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Social psychology"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "What mood are we targeting?",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Social psychology"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Using chance?",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Collective work",
+        "Creative process",
+        "Chaos"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Individually",
+      "tags": ["During session", "Workshops", "Program", "Game", "Rules", "Collective work", "Creative process"],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Collectively",
+      "tags": ["During session", "Workshops", "Program", "Game", "Rules", "Collective work", "Creative process"],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "In teams",
+      "tags": ["During session", "Workshops", "Program", "Game", "Rules", "Collective work", "Creative process"],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Creates equal ground",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Collective work",
+        "Creative process",
+        "Chaos"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Creates a link with deep outlooks on life",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Collective work",
+        "Creative process",
+        "Chaos"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Creates a space of uncertainty",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Collective work",
+        "Creative process",
+        "Chaos"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Relieves people from need of control",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Collective work",
+        "Creative process",
+        "Chaos"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Two-Dimensional",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Creative process",
+        "Systems thinking",
+        "Chaos",
+        "Collective work",
+        "Social psychology",
+        "Materials"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Three-Dimensional",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Creative process",
+        "Systems thinking",
+        "Chaos",
+        "Collective work",
+        "Social psychology",
+        "Materials"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Physical behavior",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Creative process",
+        "Systems thinking",
+        "Chaos",
+        "Collective work",
+        "Social psychology",
+        "Materials"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Combination of languages",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Creative process",
+        "Systems thinking",
+        "Chaos",
+        "Collective work",
+        "Social psychology",
+        "Materials"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Get inspired from",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Social psychology",
+        "Materials",
+        "Chaos",
+        "Rules",
+        "Individuality",
+        "Collective work",
+        "Reflection and learning",
+        "Facilitation"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Make the goal of the game more relatable to the players",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Social psychology",
+        "Materials",
+        "Chaos",
+        "Rules",
+        "Individuality",
+        "Collective work",
+        "Reflection and learning",
+        "Facilitation"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Needs be simplified to it simplest parts",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Social psychology",
+        "Materials",
+        "Chaos",
+        "Rules",
+        "Individuality",
+        "Collective work",
+        "Reflection and learning",
+        "Facilitation"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "How developed are they?",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Collective work",
+        "Creative process",
+        "Chaos",
+        "Social psychology",
+        "Individuality"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Fixed rules",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Collective work",
+        "Creative process",
+        "Chaos",
+        "Social psychology",
+        "Individuality"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Variable rules",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Collective work",
+        "Creative process",
+        "Chaos",
+        "Social psychology",
+        "Individuality"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Formulate and reiterate the challenge",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Collective work",
+        "Creative process",
+        "Chaos",
+        "Social psychology",
+        "Individuality"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Set the tension which stir the emotions",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Collective work",
+        "Creative process",
+        "Chaos",
+        "Social psychology",
+        "Individuality"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Blend their actions",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Collective work",
+        "Creative process",
+        "Chaos",
+        "Social psychology",
+        "Individuality"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Limit the actions possible",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Collective work",
+        "Creative process",
+        "Chaos",
+        "Social psychology",
+        "Individuality"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Set what type of verbal communication is allowed",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Collective work",
+        "Creative process",
+        "Chaos",
+        "Social psychology",
+        "Individuality"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Create more then one movement",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Chaos"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Come from  personal place",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Chaos"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Give creative outlet for their impulses",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Chaos"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Allow their impulses to blend",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Chaos"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Simple",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Chaos"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Can incrementally evolve and reach complexity",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Chaos"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Activate mutual response",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Chaos"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Create space of possibility",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Rules",
+        "Systems thinking",
+        "Creative process",
+        "Collective work",
+        "Chaos"
+      ],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
@@ -978,28 +1953,35 @@
   ],
 
   "links": [
-    { "source": "In session", "target": "During street intervention" },
-    { "source": "In session", "target": "During workshops with groups" },
+    { "source": "Phase", "target": "During session" },
+    { "source": "During session", "target": "During street intervention" },
+    { "source": "During session", "target": "During workshops with groups" },
     { "source": "During street intervention", "target": "Work on setup" },
     { "source": "Work on setup", "target": "Make intervention area obvious" },
     { "source": "Work on setup", "target": "Position adequately on sidewalk" },
     { "source": "Work on setup", "target": "Adapt to specificities of location" },
     { "source": "Work on setup", "target": "Layout of support and tools" },
-    { "source": "Communication needs", "target": "Communicate prompt to passersby" },
-    { "source": "Communication needs", "target": "Connect with nearby shop keepers" },
-    { "source": "During street intervention", "target": "Assume social role" },
-    { "source": "Communicate prompt to passersby", "target": "Find adequate formulation" },
-    { "source": "Communicate prompt to passersby", "target": "Adapt to passerby" },
+    { "source": "During street intervention", "target": "Cultivate open mindset" },
+    {
+      "source": "Communicate prompt to passersby",
+      "target": "Find adequate formulation to open possibilities of interpretation"
+    },
+    { "source": "Communicate prompt to passersby", "target": "Adapt approach to passerby" },
     { "source": "Communicate prompt to passersby", "target": "Explain purpose/meaning" },
-    { "source": "Assume social role", "target": "Open space for diversity" },
-    { "source": "Assume social role", "target": "Embrace meaning participants give to this encounter" },
-    { "source": "Assume social role", "target": "Open for helping hands" },
-    { "source": "Assume social role", "target": "Open for conversations" },
-    { "source": "During street intervention", "target": "Creatively" },
-    { "source": "During street intervention", "target": "Communication needs" },
-    { "source": "Creatively", "target": "Be attentive to phases of evolution of the piece" },
-    { "source": "Creatively", "target": "Take part of the action" },
-    { "source": "Creatively", "target": "Adjust prompt in relation to evolution" },
+    {
+      "source": "Communicate prompt to passersby",
+      "target": "Adjust the prompt to the phase of evolution of the piece"
+    },
+    { "source": "Cultivate open mindset", "target": "By keeping space open for diversity" },
+    { "source": "Cultivate open mindset", "target": "By embracing meanings participants give to this encounter" },
+    { "source": "Cultivate open mindset", "target": "Welcome helping hands" },
+    { "source": "Cultivate open mindset", "target": "Be open for conversation" },
+    { "source": "Cultivate open mindset", "target": "Connect with nearby shop keepers" },
+    { "source": "During street intervention", "target": "Tending the creative process" },
+    { "source": "During street intervention", "target": "Communicate prompt to passersby" },
+    { "source": "Tending the creative process", "target": "Be attentive to phases of evolution of the piece" },
+    { "source": "Tending the creative process", "target": "Take part of the action" },
+    { "source": "Tending the creative process", "target": "Adjust the prompt to the phase of evolution of the piece" },
     { "source": "Take part of the action", "target": "Help piece come together" },
     { "source": "Take part of the action", "target": "Balance quality of personal actions with passersby's" },
     { "source": "Be attentive to phases of evolution of the piece", "target": "Take note of synchronicities" },
@@ -1016,16 +1998,16 @@
     { "source": "During workshops with groups", "target": "Communicate game boundaries" },
     { "source": "During workshops with groups", "target": "Guide warm-up" },
     { "source": "During workshops with groups", "target": "Cultivate facilitator mindset" },
-    { "source": "During workshops with groups", "target": "Facilitate session" },
+    { "source": "During workshops with groups", "target": "In facilitating the session" },
     { "source": "During workshops with groups", "target": "Facilitate reflection" },
     { "source": "Set the ground", "target": "Welcome them while waiting for others" },
     { "source": "Set the ground", "target": "Explain purpose of session" },
     { "source": "Set the ground", "target": "Ask questions related to past session" },
-    { "source": "Facilitate session", "target": "Agree on ethics and habits of session" },
-    { "source": "Facilitate session", "target": "Guide session flow" },
-    { "source": "Facilitate session", "target": "Hold the space" },
-    { "source": "Facilitate session", "target": "Speak from the heart" },
-    { "source": "Facilitate session", "target": "Cultivate facilitator mindset" },
+    { "source": "In facilitating the session", "target": "Commonly agree on ethics and habits" },
+    { "source": "In facilitating the session", "target": "Guide session flow" },
+    { "source": "In facilitating the session", "target": "Hold the space" },
+    { "source": "In facilitating the session", "target": "Speak from the heart" },
+    { "source": "In facilitating the session", "target": "Cultivate facilitator mindset" },
     { "source": "Cultivate facilitator mindset", "target": "See session as evolutionary creative process" },
     { "source": "Cultivate facilitator mindset", "target": "Presence" },
     { "source": "Cultivate facilitator mindset", "target": "Experimentalist: what if we tried?.." },
@@ -1034,14 +2016,14 @@
       "source": "Cultivate facilitator mindset",
       "target": "All things throughout all sessions, are linked as a system"
     },
-    { "source": "Cultivate facilitator mindset", "target": "Balance level of intervention" },
+    { "source": "Cultivate facilitator mindset", "target": "Balance your level of intervention" },
     { "source": "Cultivate facilitator mindset", "target": "Playful" },
     { "source": "Guide warm-up", "target": "Prepare pre-requisite for the game" },
     { "source": "Guide warm-up", "target": "Mindset" },
     { "source": "Guide warm-up", "target": "Physical" },
     { "source": "Guide warm-up", "target": "Show example (if needed)" },
-    { "source": "Take care of logistics", "target": "Secure Game area" },
-    { "source": "Take care of logistics", "target": "Hire assistant to film session" },
+    { "source": "Take care of logistics", "target": "Essentials of the game area" },
+    { "source": "Take care of logistics", "target": "Get session filmed for future reflection" },
     { "source": "Take care of logistics", "target": "Various small tasks" },
     { "source": "Take care of logistics", "target": "Prepare music playlist" },
     { "source": "Facilitate reflection", "target": "Open dialogues to reach meaningful insights" },
@@ -1050,44 +2032,87 @@
     { "source": "Facilitate reflection", "target": "Give perspective to experience from place of learning" },
     { "source": "Facilitate reflection", "target": "Extract seed of ideas for next session" },
     { "source": "Communicate game boundaries", "target": "Game description" },
-    { "source": "Communicate game boundaries", "target": "Game play" },
+    { "source": "Communicate game boundaries", "target": "Gameplay" },
     { "source": "Communicate game boundaries", "target": "Environment/Setup" },
-    { "source": "Communicate game boundaries", "target": "Who designed the game?" },
+    { "source": "Communicate game boundaries", "target": "Who's responsible for the game design?" },
     { "source": "Game description", "target": "Self-identification" },
     { "source": "Game description", "target": "Type of game" },
     { "source": "Game description", "target": "Theme" },
     { "source": "Game description", "target": "Game language" },
-    { "source": "Game play", "target": "How is it played?" },
-    { "source": "Game play", "target": "Rules" },
-    { "source": "Game play", "target": "Actions" },
-    { "source": "Game play", "target": "Goal" },
-    { "source": "Game play", "target": "Time signature" },
+    { "source": "Gameplay", "target": "How is it played?" },
+    { "source": "Gameplay", "target": "Rules" },
+    { "source": "Gameplay", "target": "Quality of the actions" },
+    { "source": "Gameplay", "target": "Goal" },
+    { "source": "Gameplay", "target": "Time signature" },
     { "source": "Environment/Setup", "target": "Materials" },
     { "source": "Environment/Setup", "target": "Game setting" },
-    { "source": "Who designed the game?", "target": "Facilitator" },
-    { "source": "Who designed the game?", "target": "Participants during session" },
+    { "source": "Who's responsible for the game design?", "target": "Facilitator" },
+    { "source": "Who's responsible for the game design?", "target": "Participants during session" },
     { "source": "Guide session flow", "target": "Adjust plan according to emerging situation" },
     { "source": "Guide session flow", "target": "Alternate exercises, games and reflections" },
-    { "source": "Guide session flow", "target": "Adequate actions/materials to phases of session" },
+    { "source": "Guide session flow", "target": "Allocate actions/materials to phases of session" },
     { "source": "Guide session flow", "target": "Time different phases of reflection/action" },
     { "source": "Guide session flow", "target": "Keep momentum of session" },
-    { "source": "Agree on ethics and habits of session", "target": "Major importance of reflection" },
-    { "source": "Agree on ethics and habits of session", "target": "Looking at and listening to each other" },
-    { "source": "Agree on ethics and habits of session", "target": "Add don't cancel" },
+    { "source": "Commonly agree on ethics and habits", "target": "Major importance of reflection" },
+    { "source": "Commonly agree on ethics and habits", "target": "Looking at and listening to each other" },
+    { "source": "Commonly agree on ethics and habits", "target": "Add on, dont cancel other players' actions" },
     {
-      "source": "Agree on ethics and habits of session",
+      "source": "Commonly agree on ethics and habits",
       "target": "There are appropriate times for propositions and others for action"
     },
-    { "source": "Agree on ethics and habits of session", "target": "Keep chaos constructive" },
+    { "source": "Commonly agree on ethics and habits", "target": "Keep chaos constructive" },
     { "source": "Hold the space", "target": "Facilitate dialogue" },
     { "source": "Hold the space", "target": "Human connection" },
     { "source": "Hold the space", "target": "Stay attuned to creative process" },
-    { "source": "Balance level of intervention", "target": "Give space for their initiatives" },
-    { "source": "Balance level of intervention", "target": "Intervene to keep boundaries clear" },
-    { "source": "Balance level of intervention", "target": "Play if needed" },
-    { "source": "Balance level of intervention", "target": "Never enforce personal idea or plan" },
-    { "source": "Prepare pre-requisite for the game", "target": "Prepare participants to use tools and materials" },
+    { "source": "Balance your level of intervention", "target": "Give space for their initiatives" },
+    { "source": "Balance your level of intervention", "target": "Intervene to keep boundaries clear" },
+    { "source": "Balance your level of intervention", "target": "Play if needed" },
+    { "source": "Balance your level of intervention", "target": "Never enforce personal idea or plan" },
+    { "source": "Prepare pre-requisite for the game", "target": "Use of tools and materials" },
     { "source": "Prepare pre-requisite for the game", "target": "Behavior/Approach" },
-    { "source": "Prepare pre-requisite for the game", "target": "Individual creation" }
+    { "source": "Prepare pre-requisite for the game", "target": "Individual creation" },
+    { "source": "Mindset", "target": "Behavior/Approach" },
+    { "source": "Essentials of the game area", "target": "Location" },
+    { "source": "Essentials of the game area", "target": "Familiarity" },
+    { "source": "Essentials of the game area", "target": "Laying out material" },
+    { "source": "Game setting", "target": "Who's reponsible for setting up the game space?" },
+    { "source": "Game setting", "target": "What's the physical stance of the players?" },
+    { "source": "Game setting", "target": "What's the scale?" },
+    { "source": "Game setting", "target": "How's the layout?" },
+    { "source": "Type of game", "target": "Open game" },
+    { "source": "Type of game", "target": "Closed game" },
+    { "source": "Type of game", "target": "Combination" },
+    { "source": "Type of game", "target": "What mood are we targeting?" },
+    { "source": "How is it played?", "target": "Individually" },
+    { "source": "How is it played?", "target": "Collectively" },
+    { "source": "How is it played?", "target": "In teams" },
+    { "source": "Using chance?", "target": "Creates equal ground" },
+    { "source": "Using chance?", "target": "Creates a link with deep outlooks on life" },
+    { "source": "Using chance?", "target": "Creates a space of uncertainty" },
+    { "source": "Using chance?", "target": "Relieves people from need of control" },
+    { "source": "Game language", "target": "Two-Dimensional" },
+    { "source": "Game language", "target": "Three-Dimensional" },
+    { "source": "Game language", "target": "Physical behavior" },
+    { "source": "Game language", "target": "Combination of languages" },
+    { "source": "Theme", "target": "Get inspired from" },
+    { "source": "Theme", "target": "Make the goal of the game more relatable to the players" },
+    { "source": "Theme", "target": "Needs be simplified to it simplest parts" },
+    { "source": "Rules", "target": "Using chance?" },
+    { "source": "Rules", "target": "How developed are they?" },
+    { "source": "Rules", "target": "Fixed rules" },
+    { "source": "Rules", "target": "Variable rules" },
+    { "source": "Rules", "target": "Formulate and reiterate the challenge" },
+    { "source": "Rules", "target": "Limit the actions possible" },
+    { "source": "Rules", "target": "Set what type of verbal communication is allowed" },
+    { "source": "Rules", "target": "Blend their actions" },
+    { "source": "Quality of the actions", "target": "Create more then one movement" },
+    { "source": "Quality of the actions", "target": "Come from  personal place" },
+    { "source": "Quality of the actions", "target": "Give creative outlet for their impulses" },
+    { "source": "Quality of the actions", "target": "Allow their impulses to blend" },
+    { "source": "Quality of the actions", "target": "Simple" },
+    { "source": "Quality of the actions", "target": "Can incrementally evolve and reach complexity" },
+    { "source": "Quality of the actions", "target": "Activate mutual response" },
+    { "source": "Quality of the actions", "target": "Create space of possibility" },
+    { "source": "Quality of the actions", "target": "Activate mutual response" }
   ]
 }

@@ -99,7 +99,7 @@ export const ForceGraph = ({ graphData }) => {
   }
 
   // CLICK
-  const rootId = 'In session'
+  const rootId = graphData.nodes[0].id
 
   const nodesById = useMemo(() => {
     const nodesById = Object.fromEntries(graphData.nodes.map((node) => [node.id, node]))
