@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { CSS2DObject, CSS2DRenderer } from 'three-stdlib'
+import SpriteText from 'three-spritetext'
+import { CSS2DRenderer } from 'three-stdlib'
 
 import { Popover } from 'components/popover'
 
@@ -172,21 +173,16 @@ export const ForceGraph = ({ graphData }) => {
         }}
         nodeLabel={() => ''}
         nodeThreeObject={(node) => {
-          const nodeEl = document.createElement('div')
-          nodeEl.textContent = node.id
-          nodeEl.style.color = isTooLightYIQ(node.color) ? '#000' : '#fff'
-          nodeEl.style.fontSize = '0.75rem'
-          nodeEl.style.opacity = '0.5'
-          nodeEl.style.userSelect = 'none'
-          nodeEl.style.textAlign = 'center'
-          nodeEl.style.width = '100px'
-          // nodeEl.className = s.nodeLabel
-          return new CSS2DObject(nodeEl)
+          const sprite = new SpriteText(node.id)
+          sprite.textHeight = 6
+          sprite.color = isTooLightYIQ(node.color) ? '#000' : 'rgba(255, 255, 255, 0.9)'
+          sprite.fontSize = 25
+          return sprite
         }}
         nodeThreeObjectExtend={true}
         nodeAutoColorBy={(node) => node.color}
         nodeVisibility={(node) => visibleNodes.includes(node.id)}
-        nodeOpacity={1}
+        nodeOpacity={0.3}
         nodeResolution={32}
         // ACTIONS
         // onNodeClick={handleNodeClick}
