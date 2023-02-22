@@ -21,7 +21,7 @@
 
 html {
   font-family: 'Inter', sans-serif;
-  background-color: var(--theme-primary);
+  background-color: black;
   color: var(--theme-secondary);
   scrollbar-width: thin;
   overflow: hidden;
@@ -33,6 +33,7 @@ html {
 
 html,
 body {
+  background-color: black;
   overscroll-behavior: none;
 }
 

@@ -10,9 +10,9 @@ export default function Home() {
   const { data, error } = useSWR('/api/staticdata', fetcher)
 
   //Handle the error state
-  if (error) return <div>Failed to load</div>
+  if (error) return <div className="flex items-center justify-center">Failed to load</div>
   //Handle the loading state
-  if (!data) return <div>Loading...</div>
+  if (!data) return <div className="flex items-center justify-center">Loading...</div>
 
   return (
     <Layout>

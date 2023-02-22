@@ -4,7 +4,6 @@ import SpriteText from 'three-spritetext'
 import { CSS2DRenderer } from 'three-stdlib'
 
 import { Popover } from 'components/popover'
-import AlertDialog from 'components/alert-dialog'
 
 const ForceGraph3D = dynamic(() => import('react-force-graph-3d'), {
   ssr: false,
@@ -186,7 +185,7 @@ export const ForceGraph = ({ graphData }) => {
         nodeOpacity={0.3}
         nodeResolution={32}
         // ACTIONS
-        onNodeClick={handleNodeClick}
+        // onNodeClick={handleNodeClick}
         // onNodeClick={(node) => {
         //   // Aim at node from outside it
         //   const distance = 40
