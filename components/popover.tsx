@@ -17,7 +17,7 @@ interface PopoverProps {
 }
 
 const Popover = (props: PopoverProps) => {
-  const [isPopoverOpen, setIsPopoverOpen] = useState(true)
+  const [isPopoverOpen, setIsPopoverOpen] = useState(false)
   const updatePopoverOpen = (checked: boolean) => {
     setIsPopoverOpen(checked)
   }

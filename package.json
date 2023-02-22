@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@babel/core": ">=7.0.0 <8.0.0",
+    "@headlessui/react": "^1.7.11",
     "@next/env": "*",
     "@radix-ui/colors": "^0.1.8",
+    "@radix-ui/react-alert-dialog": "^1.0.2",
     "@radix-ui/react-checkbox": "^1.0.1",
     "@radix-ui/react-icons": "^1.1.1",
     "@radix-ui/react-label": "^2.0.0",

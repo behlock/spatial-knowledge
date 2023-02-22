@@ -4,6 +4,7 @@ import SpriteText from 'three-spritetext'
 import { CSS2DRenderer } from 'three-stdlib'
 
 import { Popover } from 'components/popover'
+import AlertDialog from 'components/alert-dialog'
 
 const ForceGraph3D = dynamic(() => import('react-force-graph-3d'), {
   ssr: false,
