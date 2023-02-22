@@ -56,7 +56,7 @@ const AlertDialog = (props: AlertDialogProps) => {
                 <p>
                   Collective Creation Games was born out of a desire to create a space for people to come together and
                   create something new. We believe that the best games are the ones that are created through
-                  playfulness, experimentation, and collaboration.{' '}
+                  playfulness, experimentation, and collaboration.
                 </p>
 
                 <p>
