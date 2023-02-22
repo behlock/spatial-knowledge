@@ -189,7 +189,7 @@ export const ForceGraph = ({ graphData }) => {
         nodeOpacity={1}
         nodeResolution={32}
         // ACTIONS
-        onNodeClick={handleNodeClick}
+        // onNodeClick={handleNodeClick}
         // onNodeClick={(node) => {
         //   // Aim at node from outside it
         //   const distance = 40
