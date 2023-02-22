@@ -68,7 +68,7 @@ const selectTag = (tag, selectedTags, setSelectedTags) => {
 export const ForceGraph = ({ graphData }) => {
   // STATE
   const [extraRenderers, setExtraRenderers] = useState([])
-  const [layers, setLayers] = useState([8])
+  const [layers, setLayers] = useState([10])
   const [selectedTags, setSelectedTags] = useState([])
   const [prunedNodes, setPrunedNodes] = useState(graphData.nodes.map((node) => node.id))
 
@@ -144,7 +144,7 @@ export const ForceGraph = ({ graphData }) => {
         layers={layers}
         setLayers={setLayers}
         // TODO
-        maxDepth={8}
+        maxDepth={10}
         allTags={getTags(graphData)}
         selectedTags={selectedTags}
         updateTag={(tag, _) => selectTag(tag, selectedTags, setSelectedTags)}
