@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import SpriteText from 'three-spritetext'
 import { CSS2DRenderer } from 'three-stdlib'
 
@@ -71,73 +71,35 @@ export const ForceGraph = ({ graphData }) => {
   const [extraRenderers, setExtraRenderers] = useState([])
   const [layers, setLayers] = useState([13])
   const [selectedTags, setSelectedTags] = useState([])
-  const [prunedNodes, setPrunedNodes] = useState(graphData.nodes.map((node) => node.id))
 
   // HOOKS
   useEffect(() => {
     setExtraRenderers([new CSS2DRenderer()])
   }, [])
 
-  useEffect(() => {
-    setVisibleNodes(graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id))
-  }, [selectedTags, layers, prunedNodes])
-
   // VISIBILITY
   const isVisible = (node, links) =>
-    nodeAncestors(node, links).length <= layers[0] &&
-    selectedTags.every((t) => node.tags.includes(t)) &&
-    prunedNodes.includes(node.id)
+    nodeAncestors(node, links).length <= layers[0] && selectedTags.every((t) => node.tags.includes(t))
+
   const [visibleNodes, setVisibleNodes] = useState(
     graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id)
   )
 
-  const isTooLightYIQ = (hexcolor) => {
-    let r = parseInt(hexcolor.substr(0, 2), 16)
-    let g = parseInt(hexcolor.substr(2, 2), 16)
-    let b = parseInt(hexcolor.substr(4, 2), 16)
-    let yiq = (r * 299 + g * 587 + b * 114) / 1000
-    return yiq >= 128
-  }
+  useEffect(() => {
+    setVisibleNodes(graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id))
+  }, [selectedTags, layers])
 
+  const [dimmedNodes, setDimmedNodes] = useState([])
   // CLICK
-  const rootId = graphData.nodes[0].id
-
-  const nodesById = useMemo(() => {
-    const nodesById = Object.fromEntries(graphData.nodes.map((node) => [node.id, node]))
-
-    // link parent/children
-    graphData.nodes.forEach((node) => {
-      node.collapsed = node.id !== rootId
-      node.childLinks = []
+  const handleNodeClick = (node) => {
+    getNodeChildrenIds(node, graphData.links).forEach((id) => {
+      setDimmedNodes(
+        graphData.nodes
+          .map((n) => n.id)
+          .filter((id) => !getNodeChildrenIds(node, graphData.links).includes(id) && id !== node.id)
+      )
     })
-    graphData.links.forEach((link) => nodesById[link.source].childLinks.push(link))
-
-    return nodesById
-  }, [graphData])
-
-  const getPrunedTree = useCallback(() => {
-    const newVisibleNodes = []
-    const visibleLinks = []
-    ;(function traverseTree(node = nodesById[rootId]) {
-      newVisibleNodes.push(node)
-      if (node.collapsed) return
-      visibleLinks.push(...node.childLinks)
-      node.childLinks
-        .map((link) => (typeof link.target === 'object' ? link.target : nodesById[link.target])) // get child node
-        .forEach(traverseTree)
-    })()
-
-    setPrunedNodes(newVisibleNodes.map((node) => node.id))
-
-    // return { nodes: visibleNodes, links: graphData.links }
-  }, [nodesById])
-
-  // const [prunedTree, setPrunedTree] = useState(getPrunedTree())
-
-  const handleNodeClick = useCallback((node) => {
-    node.collapsed = !node.collapsed // toggle collapse state
-    getPrunedTree()
-  }, [])
+  }
 
   return (
     <>
@@ -175,7 +137,7 @@ export const ForceGraph = ({ graphData }) => {
         nodeThreeObject={(node) => {
           const sprite = new SpriteText(node.id)
           sprite.textHeight = 6
-          sprite.color = isTooLightYIQ(node.color) ? '#000' : 'rgba(255, 255, 255, 0.9)'
+          sprite.color = dimmedNodes.includes(node.id) ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.9)'
           sprite.fontSize = 25
           return sprite
         }}
@@ -185,23 +147,7 @@ export const ForceGraph = ({ graphData }) => {
         nodeOpacity={0.3}
         nodeResolution={32}
         // ACTIONS
-        // onNodeClick={handleNodeClick}
-        // onNodeClick={(node) => {
-        //   // Aim at node from outside it
-        //   const distance = 40
-        //   const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z)
-
-        //   const newPos =
-        //     node.x || node.y || node.z
-        //       ? { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio }
-        //       : { x: 0, y: 0, z: distance } // special case if node is in (0,0,0)
-
-        //   this.cameraPosition(
-        //     newPos, // new position
-        //     node, // lookAt ({ x, y, z })
-        //     3000 // ms transition duration
-        //   )
-        // }}
+        onNodeClick={handleNodeClick}
       />
     </>
   )
