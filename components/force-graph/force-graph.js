@@ -71,6 +71,7 @@ export const ForceGraph = ({ graphData }) => {
   const [extraRenderers, setExtraRenderers] = useState([])
   const [layers, setLayers] = useState([13])
   const [selectedTags, setSelectedTags] = useState([])
+  const [isVideo, setIsVideo] = useState(false)
 
   // HOOKS
   useEffect(() => {
@@ -79,7 +80,9 @@ export const ForceGraph = ({ graphData }) => {
 
   // VISIBILITY
   const isVisible = (node, links) =>
-    nodeAncestors(node, links).length <= layers[0] && selectedTags.every((t) => node.tags.includes(t))
+    nodeAncestors(node, links).length <= layers[0] &&
+    selectedTags.every((t) => node.tags.includes(t)) &&
+    node.isVideo === isVideo
 
   const [visibleNodes, setVisibleNodes] = useState(
     graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id)
@@ -89,16 +92,21 @@ export const ForceGraph = ({ graphData }) => {
     setVisibleNodes(graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id))
   }, [selectedTags, layers])
 
-  const [dimmedNodes, setDimmedNodes] = useState([])
   // CLICK
+  const [dimmedNodes, setDimmedNodes] = useState([])
   const handleNodeClick = (node) => {
-    getNodeChildrenIds(node, graphData.links).forEach((id) => {
-      setDimmedNodes(
-        graphData.nodes
-          .map((n) => n.id)
-          .filter((id) => !getNodeChildrenIds(node, graphData.links).includes(id) && id !== node.id)
-      )
-    })
+    console.log(dimmedNodes)
+    if ((dimmedNodes.length == 0) || dimmedNodes.includes(node.id)) {
+      getNodeChildrenIds(node, graphData.links).forEach((id) => {
+        setDimmedNodes(
+          graphData.nodes
+            .map((n) => n.id)
+            .filter((id) => !getNodeChildrenIds(node, graphData.links).includes(id) && id !== node.id)
+        )
+      })
+    } else {
+      setDimmedNodes([])
+    }
   }
 
   return (
