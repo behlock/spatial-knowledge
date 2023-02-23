@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react'
 import SpriteText from 'three-spritetext'
 import { CSS2DRenderer } from 'three-stdlib'
 
-import { Popover } from 'components/popover'
+import Select from 'components/select'
+import Slider from 'components/slider'
 
 const ForceGraph3D = dynamic(() => import('react-force-graph-3d'), {
   ssr: false,
@@ -52,6 +53,7 @@ const getTags = (graphData) => {
       tags = tags.concat(node.tags)
     }
   })
+  tags.sort()
   return [...new Set(tags)]
 }
 
@@ -67,7 +69,7 @@ const selectTag = (tag, selectedTags, setSelectedTags) => {
 export const ForceGraph = ({ graphData }) => {
   // STATE
   const [extraRenderers, setExtraRenderers] = useState([])
-  const [layers, setLayers] = useState([maxAncestors(graphData)])
+  const [layers, setLayers] = useState([20])
   const [selectedTags, setSelectedTags] = useState([])
   const [isVideo, setIsVideo] = useState(false)
 
@@ -94,12 +96,12 @@ export const ForceGraph = ({ graphData }) => {
   const [dimmedNodes, setDimmedNodes] = useState([])
   const handleNodeClick = (node) => {
     if (dimmedNodes.length == 0 || dimmedNodes.includes(node.id)) {
-      getNodeChildrenIds(node, graphData.links).forEach((id) => {
-        setDimmedNodes(
-          graphData.nodes
-            .map((n) => n.id)
-            .filter((id) => !getNodeChildrenIds(node, graphData.links).includes(id) && id !== node.id)
-        )
+      let childrenIds = getNodeChildrenIds(node, graphData.links)
+      if (childrenIds.length == 0) {
+        childrenIds = [node.id]
+      }
+      childrenIds.forEach((id) => {
+        setDimmedNodes(graphData.nodes.map((n) => n.id).filter((id) => !childrenIds.includes(id) && id !== node.id))
       })
     } else {
       setDimmedNodes([])
@@ -108,52 +110,84 @@ export const ForceGraph = ({ graphData }) => {
 
   return (
     <>
-      <Popover
+      {/* <Popover
         layers={layers}
         setLayers={setLayers}
-        // TODO
-        maxDepth={maxAncestors(graphData)}
+        maxDepth={20}
         allTags={getTags(graphData)}
         selectedTags={selectedTags}
         updateTag={(tag, _) => selectTag(tag, selectedTags, setSelectedTags)}
+        isVideo={isVideo}
+        setIsVideo={setIsVideo}
         // resetFilters={() => {
         //   setSelectedTags([])
         //   setLayers([7])
         //   setVisibleNodes(graphData.nodes.map((node) => node.id))
         // }}
-      />
-      <ForceGraph3D
-        // RENDERING
-        extraRenderers={extraRenderers}
-        // DATA
-        graphData={graphData}
-        nodeId="id"
-        linkSource="source"
-        linkTarget="target"
-        // CONTAINER
-        backgroundColor="black"
-        showNavInfo={false}
-        // NODES
-        nodeRelSize={10}
-        nodeVal={(node) => {
-          node.group
-        }}
-        nodeLabel={() => ''}
-        nodeThreeObject={(node) => {
-          const sprite = new SpriteText(node.id)
-          sprite.textHeight = 6
-          sprite.color = dimmedNodes.includes(node.id) ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.9)'
-          sprite.fontSize = 25
-          return sprite
-        }}
-        nodeThreeObjectExtend={true}
-        nodeAutoColorBy={(node) => node.color}
-        nodeVisibility={(node) => visibleNodes.includes(node.id)}
-        nodeOpacity={0.5}
-        nodeResolution={32}
-        // ACTIONS
-        onNodeClick={handleNodeClick}
-      />
+      /> */}
+
+      <form className="flex flex-col relative h-full max-w-sm mt-4 space-y-4 z-20">
+        <fieldset key={`popover-items-layers`} className="flex flex-col align-middle space-y-2">
+          <label htmlFor={'layers'} className="mr-4 shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400">
+            {'How much complexity to you want to see?'}
+          </label>
+          <Slider value={layers} min={0} max={20} step={1} onValueChange={setLayers} />
+        </fieldset>
+        <fieldset key={`popover-items-select`} className="flex flex-col h-full align-middle space-y-2">
+          <label htmlFor={'tags'} className="mr-4 shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400">
+            {'Which themes are you interested in?'}
+          </label>
+          <Select
+            options={getTags(graphData)}
+            selectedTags={selectedTags}
+            onValueChange={(tag) => selectTag(tag, selectedTags, setSelectedTags)}
+          />
+        </fieldset>
+
+        {/* {props.allTags.map((tag) => (
+              <fieldset key={`popover-items-checkbox-${tag}`} className="flex align-middle ">
+                <Checkbox
+                  label={tag}
+                  checked={props.selectedTags.includes(tag)}
+                  onCheckedChange={(checked) => props.updateTag(tag, checked)}
+                />
+              </fieldset>
+            ))} */}
+      </form>
+      <div className="flex flex-col h-full align-middle fixed w-full left-0 top-0 z-10">
+        <ForceGraph3D
+          // RENDERING
+          extraRenderers={extraRenderers}
+          // DATA
+          graphData={graphData}
+          nodeId="id"
+          linkSource="source"
+          linkTarget="target"
+          // CONTAINER
+          backgroundColor="black"
+          showNavInfo={false}
+          // NODES
+          nodeRelSize={10}
+          nodeVal={(node) => {
+            node.group
+          }}
+          nodeLabel={() => ''}
+          nodeThreeObject={(node) => {
+            const sprite = new SpriteText(node.id)
+            sprite.textHeight = 6
+            sprite.color = dimmedNodes.includes(node.id) ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.9)'
+            sprite.fontSize = 25
+            return sprite
+          }}
+          nodeThreeObjectExtend={true}
+          nodeAutoColorBy={(node) => node.color}
+          nodeVisibility={(node) => visibleNodes.includes(node.id)}
+          nodeOpacity={0.5}
+          nodeResolution={32}
+          // ACTIONS
+          onNodeClick={handleNodeClick}
+        />
+      </div>
     </>
   )
 }

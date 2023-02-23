@@ -24,10 +24,7 @@ const Slider = (props: SliderProps) => {
         <SliderPrimitive.Range className="absolute h-full rounded-full bg-orange-600 dark:bg-white" />
       </SliderPrimitive.Track>
       <SliderPrimitive.Thumb
-        className={clsx(
-          'block h-5 w-5 rounded-full bg-orange-600 dark:bg-white',
-          'focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-75'
-        )}
+        className={clsx('block h-5 w-5 rounded-full bg-orange-600 dark:bg-white', 'focus:outline-none')}
       />
     </SliderPrimitive.Root>
   )

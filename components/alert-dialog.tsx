@@ -14,7 +14,6 @@ const AlertDialog = (props: AlertDialogProps) => {
   return (
     <AlertDialogPrimitive.Root open={isOpen} onOpenChange={setIsOpen}>
       <AlertDialogPrimitive.Trigger asChild>
-        {/* <Button>Click</Button> */}
         <InfoCircledIcon className="cursor-pointer" />
       </AlertDialogPrimitive.Trigger>
       <AlertDialogPrimitive.Portal forceMount>
@@ -45,14 +44,14 @@ const AlertDialog = (props: AlertDialogProps) => {
                 'fixed z-50',
                 'w-[95vw] max-w-md rounded-lg p-4 md:w-full',
                 'top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]',
-                'bg-white dark:bg-gray-900',
-                'focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-75'
+                'bg-white',
+                'focus:outline-none'
               )}
             >
-              <AlertDialogPrimitive.Title className="text-m font-medium text-gray-900 dark:text-gray-100">
+              <AlertDialogPrimitive.Title className="text-m font-medium text-gray-900">
                 What is Collective Creation Games?
               </AlertDialogPrimitive.Title>
-              <AlertDialogPrimitive.Description className="mt-2 text-sm font-normal text-gray-700 dark:text-gray-400 whitespace-pre-wrap space-y-4">
+              <AlertDialogPrimitive.Description className="mt-2 text-sm font-normal text-gray-700 whitespace-pre-wrap space-y-4">
                 <p>
                   Collective Creation Games was born out of a desire to create a space for people to come together and
                   create something new. We believe that the best games are the ones that are created through
@@ -67,8 +66,7 @@ const AlertDialog = (props: AlertDialogProps) => {
 
                 <p>
                   The three dimensional "Mind Map" can be navigated by scrolling and panning around. Clicking on a node
-                  will collapse or expand the node and its children. The exploration parameters can be adjusted by
-                  clicking on the "Explore Mind Map" button in the top left corner.
+                  will collapse or expand the node and its children. The exploration parameters can also be adjusted.
                 </p>
 
                 <p>We hope you enjoy our games, and we hope you'll join us in creating something new.</p>
@@ -77,9 +75,9 @@ const AlertDialog = (props: AlertDialogProps) => {
                 <AlertDialogPrimitive.Action
                   className={clsx(
                     'inline-flex select-none justify-center rounded-md px-4 py-2 text-sm font-medium',
-                    'bg-orange-600 text-white hover:bg-orange-700 dark:bg-orange-700 dark:text-gray-100 dark:hover:bg-orange-600',
+                    'bg-gray-600 text-white',
                     'border border-transparent',
-                    'focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-75'
+                    'focus:outline-none'
                   )}
                 >
                   Start Exploring

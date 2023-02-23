@@ -3,9 +3,8 @@ import * as PopoverPrimitive from '@radix-ui/react-popover'
 import { clsx } from 'clsx'
 import { useState } from 'react'
 import Button from './button'
-import Checkbox from './checkbox'
+import Select from './select'
 import Slider from './slider'
-
 interface PopoverProps {
   layers: [number]
   setLayers: (layers: [number]) => void
@@ -13,6 +12,8 @@ interface PopoverProps {
   allTags: string[]
   selectedTags: string[]
   updateTag: (tag: string, checked: boolean) => void
+  isVideo: boolean
+  setIsVideo: (isVideo: boolean) => void
   // resetFilters: () => void
 }
 
@@ -66,7 +67,11 @@ const Popover = (props: PopoverProps) => {
                 {'Which themes are you interested in?'}
               </label>
             </fieldset>
-            {props.allTags.map((tag) => (
+            <fieldset key={`popover-items-select`} className="flex flex-col align-middle space-y-2">
+              <Select options={props.allTags} />
+            </fieldset>
+
+            {/* {props.allTags.map((tag) => (
               <fieldset key={`popover-items-checkbox-${tag}`} className="flex align-middle ">
                 <Checkbox
                   label={tag}
@@ -74,7 +79,7 @@ const Popover = (props: PopoverProps) => {
                   onCheckedChange={(checked) => props.updateTag(tag, checked)}
                 />
               </fieldset>
-            ))}
+            ))} */}
           </form>
 
           <PopoverPrimitive.Close
