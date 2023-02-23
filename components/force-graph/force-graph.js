@@ -94,6 +94,7 @@ export const ForceGraph = ({ graphData }) => {
 
   // CLICK
   const [dimmedNodes, setDimmedNodes] = useState([])
+  const [unDimmedNodes, setUnDimmedNodes] = useState([])
   const [clickedNodes, setClickedNodes] = useState([])
   const handleNodeClick = (node) => {
     let childrenIds = getNodeChildrenIds(node, graphData.links)
@@ -104,10 +105,12 @@ export const ForceGraph = ({ graphData }) => {
       }
       childrenIds.forEach((id) => {
         setDimmedNodes(graphData.nodes.map((n) => n.id).filter((id) => !childrenIds.includes(id) && id !== node.id))
+        setUnDimmedNodes(childrenIds + [node.id] + unDimmedNodes)
       })
     } else {
       setDimmedNodes([])
       setClickedNodes([])
+      setUnDimmedNodes([])
     }
     setClickedNodes([node.id])
   }
@@ -179,7 +182,7 @@ export const ForceGraph = ({ graphData }) => {
           nodeThreeObject={(node) => {
             const sprite = new SpriteText(node.id)
             sprite.textHeight = 6
-            sprite.color = dimmedNodes.includes(node.id) ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.9)'
+            sprite.color = dimmedNodes.includes(node.id) & !unDimmedNodes.includes(node.id) ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.9)'
             sprite.fontSize = 25
             return sprite
           }}
