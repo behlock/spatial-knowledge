@@ -69,7 +69,7 @@ const selectTag = (tag, selectedTags, setSelectedTags) => {
 export const ForceGraph = ({ graphData }) => {
   // STATE
   const [extraRenderers, setExtraRenderers] = useState([])
-  const [layers, setLayers] = useState([13])
+  const [layers, setLayers] = useState([14])
   const [selectedTags, setSelectedTags] = useState([])
   const [isVideo, setIsVideo] = useState(false)
 
@@ -115,7 +115,7 @@ export const ForceGraph = ({ graphData }) => {
         layers={layers}
         setLayers={setLayers}
         // TODO
-        maxDepth={13}
+        maxDepth={14}
         allTags={getTags(graphData)}
         selectedTags={selectedTags}
         updateTag={(tag, _) => selectTag(tag, selectedTags, setSelectedTags)}
@@ -152,7 +152,7 @@ export const ForceGraph = ({ graphData }) => {
         nodeThreeObjectExtend={true}
         nodeAutoColorBy={(node) => node.color}
         nodeVisibility={(node) => visibleNodes.includes(node.id)}
-        nodeOpacity={0.3}
+        nodeOpacity={0.5}
         nodeResolution={32}
         // ACTIONS
         onNodeClick={handleNodeClick}
