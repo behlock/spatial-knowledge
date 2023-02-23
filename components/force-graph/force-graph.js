@@ -94,25 +94,48 @@ export const ForceGraph = ({ graphData }) => {
 
   // CLICK
   const [dimmedNodes, setDimmedNodes] = useState([])
-  const [unDimmedNodes, setUnDimmedNodes] = useState([])
   const [clickedNodes, setClickedNodes] = useState([])
+
+  const resetGraphVisiblity = () => {
+    setDimmedNodes([])
+    setClickedNodes([])
+  }
+
+  const dimNodeAndChildren = (node, links) => {
+    let childrenIds = getNodeChildrenIds(node, links)
+    setDimmedNodes(dimmedNodes.concat(graphData.nodes.map((n) => n.id).filter((id) => childrenIds.includes(id))))
+    setClickedNodes(clickedNodes.filter((id) => !childrenIds.includes(id) && id !== node.id))
+  }
+
+  const undimNodeAndChildren = (node, links) => {
+    let childrenIds = getNodeChildrenIds(node, links)
+    setDimmedNodes(dimmedNodes.filter((id) => !childrenIds.includes(id) && id !== node.id))
+    setClickedNodes(clickedNodes.concat(node.id))
+  }
+
   const handleNodeClick = (node) => {
     let childrenIds = getNodeChildrenIds(node, graphData.links)
 
-    if (dimmedNodes.length == 0 || !clickedNodes.includes(node.id)) {
-      if (childrenIds.length == 0) {
-        childrenIds = [node.id]
-      }
-      childrenIds.forEach((id) => {
-        setDimmedNodes(graphData.nodes.map((n) => n.id).filter((id) => !childrenIds.includes(id) && id !== node.id))
-        setUnDimmedNodes(childrenIds + [node.id] + unDimmedNodes)
-      })
-    } else {
-      setDimmedNodes([])
-      setClickedNodes([])
-      setUnDimmedNodes([])
+    // First clicked node is clicked again
+    if (node.id == clickedNodes[0]) {
+      resetGraphVisiblity()
     }
-    setClickedNodes([node.id])
+
+    // No dimmed nodes yet
+    else if (dimmedNodes.length == 0) {
+      setDimmedNodes(graphData.nodes.map((n) => n.id).filter((id) => !childrenIds.includes(id) && id !== node.id))
+      setClickedNodes(clickedNodes.concat(node.id))
+    }
+
+    // Click on any other node
+    else if (!clickedNodes.includes(node.id)) {
+      undimNodeAndChildren(node, graphData.links)
+    }
+
+    // Collapse node
+    else {
+      dimNodeAndChildren(node, graphData.links)
+    }
   }
 
   return (
@@ -133,7 +156,7 @@ export const ForceGraph = ({ graphData }) => {
         // }}
       /> */}
 
-      <form className="flex flex-col relative h-full max-w-sm mt-4 space-y-4 z-20">
+      <form className="flex flex-col relative h-full max-w-xs mt-4 space-y-4 z-20">
         <fieldset key={`popover-items-layers`} className="flex flex-col align-middle space-y-2">
           <label htmlFor={'layers'} className="mr-4 shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400">
             {'How much complexity to you want to see?'}
@@ -182,7 +205,7 @@ export const ForceGraph = ({ graphData }) => {
           nodeThreeObject={(node) => {
             const sprite = new SpriteText(node.id)
             sprite.textHeight = 6
-            sprite.color = dimmedNodes.includes(node.id) & !unDimmedNodes.includes(node.id) ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.9)'
+            sprite.color = dimmedNodes.includes(node.id) ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.9)'
             sprite.fontSize = 25
             return sprite
           }}
