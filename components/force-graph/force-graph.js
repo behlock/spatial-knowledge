@@ -38,13 +38,11 @@ const nodeAncestors = (node, links) => {
   return parents.map((p) => p.source).concat(parents.flatMap((p) => nodeAncestors(p.source, links)))
 }
 
-const maxAncestors = (graphData) =>
-  graphData.nodes
-    .map((node) => {
-      let ancestors = nodeAncestors(node, graphData.links)
-      return ancestors.length + 1
-    })
-    .reduce((a, b) => Math.max(a, b), -Infinity)
+Array.prototype.max = function () {
+  return Math.max.apply(null, this)
+}
+
+const maxAncestors = (graphData) => graphData.nodes.map((node) => nodeAncestors(node, graphData.links).length + 1).max()
 
 // TAGS
 const getTags = (graphData) => {
@@ -69,7 +67,7 @@ const selectTag = (tag, selectedTags, setSelectedTags) => {
 export const ForceGraph = ({ graphData }) => {
   // STATE
   const [extraRenderers, setExtraRenderers] = useState([])
-  const [layers, setLayers] = useState([14])
+  const [layers, setLayers] = useState([maxAncestors(graphData)])
   const [selectedTags, setSelectedTags] = useState([])
   const [isVideo, setIsVideo] = useState(false)
 
@@ -95,8 +93,7 @@ export const ForceGraph = ({ graphData }) => {
   // CLICK
   const [dimmedNodes, setDimmedNodes] = useState([])
   const handleNodeClick = (node) => {
-    console.log(dimmedNodes)
-    if ((dimmedNodes.length == 0) || dimmedNodes.includes(node.id)) {
+    if (dimmedNodes.length == 0 || dimmedNodes.includes(node.id)) {
       getNodeChildrenIds(node, graphData.links).forEach((id) => {
         setDimmedNodes(
           graphData.nodes
@@ -115,7 +112,7 @@ export const ForceGraph = ({ graphData }) => {
         layers={layers}
         setLayers={setLayers}
         // TODO
-        maxDepth={14}
+        maxDepth={maxAncestors(graphData)}
         allTags={getTags(graphData)}
         selectedTags={selectedTags}
         updateTag={(tag, _) => selectTag(tag, selectedTags, setSelectedTags)}
