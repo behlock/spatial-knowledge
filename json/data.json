@@ -903,13 +903,6 @@
       "isVideo": false
     },
     {
-      "id": "Extract seed of ideas for next session",
-      "tags": ["During session", "Workshops", "Program", "Facilitation", "Reflection and learning", "Learning"],
-      "color": "#10646f",
-      "portalTo": "",
-      "isVideo": false
-    },
-    {
       "id": "Self-identification",
       "tags": ["During session", "Workshops", "Program", "Game"],
       "color": "#10646f",
@@ -1095,7 +1088,10 @@
         "Game",
         "Facilitation",
         "Systems thinking",
-        "Rules"
+        "Rules",
+        "Collective work",
+        "Time",
+        "Reflection and learning"
       ],
       "color": "#10646f",
       "portalTo": "",
@@ -1118,7 +1114,9 @@
         "Systems thinking",
         "Facilitation",
         "Creative process",
-        "Rules"
+        "Rules",
+        "Collective work",
+        "Reflection and learning"
       ],
       "color": "#10646f",
       "portalTo": "",
@@ -1834,7 +1832,7 @@
       "isVideo": false
     },
     {
-      "id": "Set the tension which stir the emotions",
+      "id": "Create a positive tension which stirs the emotions",
       "tags": [
         "During session",
         "Workshops",
@@ -2131,7 +2129,7 @@
       "isVideo": false
     },
     {
-      "id": "Added to fixed rules makes up the logic of the game",
+      "id": "Essential part of the logic of the game",
       "tags": [
         "During session",
         "Workshops",
@@ -2585,7 +2583,7 @@
       "isVideo": false
     },
     {
-      "id": "Playful",
+      "id": "Playfulness",
       "tags": [
         "During session",
         "Workshops",
@@ -3001,6 +2999,340 @@
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
+    },
+    {
+      "id": "Connect the experience to the principles of the method",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Facilitation",
+        "Reflection and learning",
+        "Learning",
+        "Chaos",
+        "Collective work",
+        "Game",
+        "Rules",
+        "Individuality",
+        "Warm-up",
+        "Materials",
+        "Social psychology",
+        "Creative process"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Extract seeds of ideas for next session",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Facilitation",
+        "Reflection and learning",
+        "Learning",
+        "Chaos",
+        "Collective work",
+        "Game",
+        "Rules",
+        "Individuality",
+        "Warm-up",
+        "Materials",
+        "Social psychology",
+        "Creative process"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "From their requests",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Facilitation",
+        "Reflection and learning",
+        "Learning",
+        "Chaos",
+        "Collective work",
+        "Game",
+        "Rules",
+        "Individuality",
+        "Warm-up",
+        "Materials",
+        "Social psychology",
+        "Creative process"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "From small details during discussions",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Facilitation",
+        "Reflection and learning",
+        "Learning",
+        "Chaos",
+        "Collective work",
+        "Game",
+        "Rules",
+        "Individuality",
+        "Warm-up",
+        "Materials",
+        "Social psychology",
+        "Creative process"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "From synthesis of reflection",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Facilitation",
+        "Reflection and learning",
+        "Learning",
+        "Chaos",
+        "Collective work",
+        "Game",
+        "Rules",
+        "Individuality",
+        "Warm-up",
+        "Materials",
+        "Social psychology",
+        "Creative process"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Proposes a game developed pre-session",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Creative process",
+        "Program",
+        "Game",
+        "Facilitation",
+        "Systems thinking",
+        "Rules",
+        "Collective work",
+        "Time",
+        "Reflection and learning"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Players experience and reflect on the game",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Creative process",
+        "Program",
+        "Game",
+        "Facilitation",
+        "Systems thinking",
+        "Rules",
+        "Collective work",
+        "Time",
+        "Reflection and learning"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Time is given for players to propose variable rules",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Creative process",
+        "Program",
+        "Game",
+        "Facilitation",
+        "Systems thinking",
+        "Rules",
+        "Collective work",
+        "Time",
+        "Reflection and learning"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Players get organized into teams",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Systems thinking",
+        "Facilitation",
+        "Creative process",
+        "Rules",
+        "Collective work",
+        "Reflection and learning"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Players take initiative and control",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Systems thinking",
+        "Facilitation",
+        "Creative process",
+        "Rules",
+        "Collective work",
+        "Reflection and learning"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Needs verbal communication for collective decision making",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Systems thinking",
+        "Facilitation",
+        "Creative process",
+        "Rules",
+        "Collective work",
+        "Reflection and learning"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Players decide the boundaries",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Systems thinking",
+        "Facilitation",
+        "Creative process",
+        "Rules",
+        "Collective work",
+        "Reflection and learning"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Participants engage in a system design process",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Systems thinking",
+        "Facilitation",
+        "Creative process",
+        "Rules",
+        "Collective work",
+        "Reflection and learning"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Creating the game is the creative process",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Systems thinking",
+        "Facilitation",
+        "Creative process",
+        "Rules",
+        "Collective work",
+        "Reflection and learning"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Facilitation required",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Systems thinking",
+        "Facilitation",
+        "Creative process",
+        "Rules",
+        "Collective work",
+        "Reflection and learning"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Participants during session",
+      "tags": [
+        "During session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Systems thinking",
+        "Facilitation",
+        "Creative process",
+        "Rules",
+        "Collective work",
+        "Reflection and learning"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
+    },
+    {
+      "id": "Pre-session planning",
+      "tags": [
+        "Pre-session",
+        "Workshops",
+        "Program",
+        "Game",
+        "Systems thinking",
+        "Facilitation",
+        "Creative process",
+        "Rules",
+        "Collective work",
+        "Reflection and learning"
+      ],
+      "color": "#10646f",
+      "portalTo": "",
+      "isVideo": false
     }
   ],
 
@@ -3082,7 +3414,7 @@
     { "source": "Facilitate reflection", "target": "Look at and analyse result" },
     { "source": "Facilitate reflection", "target": "Provide platform for their notes" },
     { "source": "Facilitate reflection", "target": "Give perspective to experience from place of learning" },
-    { "source": "Facilitate reflection", "target": "Extract seed of ideas for next session" },
+    { "source": "Facilitate reflection", "target": "Extract seeds of ideas for next session" },
     { "source": "Communicate game boundaries", "target": "Game description" },
     { "source": "Communicate game boundaries", "target": "Gameplay" },
     { "source": "Communicate game boundaries", "target": "Environment/Setup" },
@@ -3095,6 +3427,7 @@
     { "source": "Gameplay", "target": "Rules" },
     { "source": "Gameplay", "target": "Quality of the actions" },
     { "source": "Gameplay", "target": "Time signature" },
+    { "source": "Gameplay", "target": "What's the goal?" },
     { "source": "Environment/Setup", "target": "Materials" },
     { "source": "Environment/Setup", "target": "Game setting" },
     { "source": "Who's responsible for the game design?", "target": "Facilitator" },
@@ -3103,6 +3436,7 @@
     { "source": "Guide session flow", "target": "Alternate exercises, games and reflections" },
     { "source": "Guide session flow", "target": "Allocate actions/materials to phases of session" },
     { "source": "Guide session flow", "target": "Give adequate time to phases of reflection/action" },
+    { "source": "Guide session flow", "target": "Duration and division of time" },
     { "source": "Guide session flow", "target": "Keep momentum of session" },
     { "source": "Commonly agree on ethics and habits", "target": "Major importance of reflection" },
     { "source": "Commonly agree on ethics and habits", "target": "Looking at and listening to each other" },
@@ -3156,6 +3490,7 @@
     { "source": "Rules", "target": "Limit the actions possible" },
     { "source": "Rules", "target": "Set what type of verbal communication is allowed" },
     { "source": "Rules", "target": "Blend their actions" },
+    { "source": "Rules", "target": "Create a positive tension which stirs the emotions" },
     { "source": "Quality of the actions", "target": "Create more then one movement" },
     { "source": "Quality of the actions", "target": "Come from  personal place" },
     { "source": "Quality of the actions", "target": "Give creative outlet for their impulses" },
@@ -3179,9 +3514,9 @@
     { "source": "What's the goal?", "target": "It's a direction not an end" },
     { "source": "What's the goal?", "target": "Keeps the game going" },
     { "source": "What's the goal?", "target": "Theme" },
+    { "source": "What's the goal?", "target": "Essential part of the logic of the game" },
     { "source": "Time signature", "target": "Duration and division of time" },
     { "source": "Time signature", "target": "Timing / Phasing of players' actions" },
-    { "source": "Duration and division of time", "target": "Guide session flow" },
     { "source": "Adjust plan according to emerging situation", "target": "From the game" },
     { "source": "Adjust plan according to emerging situation", "target": "From the group dynamics" },
     { "source": "Facilitate dialogue", "target": "Linking observations and actions to theories" },
@@ -3189,6 +3524,7 @@
     { "source": "Facilitate dialogue", "target": "To agree on collective decisions" },
     { "source": "Facilitate dialogue", "target": "Opening a safe space for their exchanges" },
     { "source": "Facilitate dialogue", "target": "Finding different ways of getting ideas understood" },
+    { "source": "Facilitate dialogue", "target": "To analyze and deal with issues" },
     { "source": "Facilitate dialogue", "target": "All propositions have the same weight" },
     { "source": "For human connection", "target": "Anxieties are dealt with understanding" },
     { "source": "For human connection", "target": "Participant's perception of their capacities are respected" },
@@ -3200,7 +3536,7 @@
     { "source": "Mindset", "target": "Collective flow" },
     { "source": "Mindset", "target": "Individual attunement" },
     { "source": "Mindset", "target": "Willful" },
-    { "source": "Mindset", "target": "Playful" },
+    { "source": "Mindset", "target": "Playfulness" },
     { "source": "Mindset", "target": "Disconnect from the outside world" },
     { "source": "Mindset", "target": "Enter the theme, world of the game" },
     { "source": "Mindset", "target": "Gather energy" },
@@ -3222,8 +3558,26 @@
       "target": "About special situations which happened during the game"
     },
     { "source": "Open dialogues to reach meaningful insights", "target": "About collective work" },
+    {
+      "source": "Open dialogues to reach meaningful insights",
+      "target": "Connect the experience to the principles of the method"
+    },
     { "source": "About individual experiences", "target": "Their preferences" },
     { "source": "About individual experiences", "target": "Changes which happened in their perception" },
-    { "source": "About collective work", "target": "Role of the individual in the collective" }
+    { "source": "About collective work", "target": "Role of the individual in the collective" },
+    { "source": "Extract seeds of ideas for next session", "target": "From their requests" },
+    { "source": "Extract seeds of ideas for next session", "target": "From small details during discussions" },
+    { "source": "Extract seeds of ideas for next session", "target": "From synthesis of reflection" },
+    { "source": "Facilitator", "target": "Proposes a game developed pre-session" },
+    { "source": "Proposes a game developed pre-session", "target": "Pre-session planning" },
+    { "source": "Facilitator", "target": "Players experience and reflect on the game" },
+    { "source": "Facilitator", "target": "Time is given for players to propose variable rules" },
+    { "source": "Participants during session", "target": "Players get organized into teams" },
+    { "source": "Participants during session", "target": "Players take initiative and control" },
+    { "source": "Participants during session", "target": "Needs verbal communication for collective decision making" },
+    { "source": "Participants during session", "target": "Players decide the boundaries" },
+    { "source": "Participants during session", "target": "Participants engage in a system design process" },
+    { "source": "Participants during session", "target": "Creating the game is the creative process" },
+    { "source": "Participants during session", "target": "Facilitation required" }
   ]
 }
