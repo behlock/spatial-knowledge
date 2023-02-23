@@ -94,9 +94,11 @@ export const ForceGraph = ({ graphData }) => {
 
   // CLICK
   const [dimmedNodes, setDimmedNodes] = useState([])
+  const [clickedNodes, setClickedNodes] = useState([])
   const handleNodeClick = (node) => {
-    if (dimmedNodes.length == 0 || dimmedNodes.includes(node.id)) {
-      let childrenIds = getNodeChildrenIds(node, graphData.links)
+    let childrenIds = getNodeChildrenIds(node, graphData.links)
+
+    if (dimmedNodes.length == 0 || !clickedNodes.includes(node.id)) {
       if (childrenIds.length == 0) {
         childrenIds = [node.id]
       }
@@ -105,7 +107,9 @@ export const ForceGraph = ({ graphData }) => {
       })
     } else {
       setDimmedNodes([])
+      setClickedNodes([])
     }
+    setClickedNodes([node.id])
   }
 
   return (
