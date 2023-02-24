@@ -69,7 +69,7 @@ const selectTag = (tag, selectedTags, setSelectedTags) => {
 export const ForceGraph = ({ graphData }) => {
   // STATE
   const [extraRenderers, setExtraRenderers] = useState([])
-  const [layers, setLayers] = useState([20])
+  const [layers, setLayers] = useState([22])
   const [selectedTags, setSelectedTags] = useState([])
   const [isVideo, setIsVideo] = useState(false)
 
@@ -161,7 +161,7 @@ export const ForceGraph = ({ graphData }) => {
           <label htmlFor={'layers'} className="mr-4 shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400">
             {'How much complexity to you want to see?'}
           </label>
-          <Slider value={layers} min={0} max={20} step={1} onValueChange={setLayers} />
+          <Slider value={layers} min={0} max={22} step={1} onValueChange={setLayers} />
         </fieldset>
         <fieldset key={`popover-items-select`} className="flex flex-col h-full align-middle space-y-2">
           <label htmlFor={'tags'} className="mr-4 shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400">
