@@ -83,9 +83,7 @@ export const ForceGraph = ({ graphData }) => {
 
   // VISIBILITY
   const isVisible = (node, links) =>
-    nodeAncestors(node, links).length <= layers[0] &&
-    selectedTags.every((t) => node.tags.includes(t)) &&
-    node.isVideo === isVideo
+    nodeAncestors(node, links).length <= layers[0] && selectedTags.every((t) => node.tags.includes(t))
 
   const [visibleNodes, setVisibleNodes] = useState(
     graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id)
@@ -93,7 +91,13 @@ export const ForceGraph = ({ graphData }) => {
 
   useEffect(() => {
     setVisibleNodes(graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id))
-  }, [selectedTags, layers, isVideo])
+  }, [selectedTags, layers])
+
+  useEffect(() => {
+    if (isVideo) {
+      setVisibleNodes(graphData.nodes.filter((node) => node.isVideo).map((node) => node.id))
+    }
+  }, [isVideo])
 
   // CLICK
   const [dimmedNodes, setDimmedNodes] = useState([])
@@ -200,7 +204,8 @@ export const ForceGraph = ({ graphData }) => {
           }}
           nodeLabel={() => ''}
           nodeThreeObject={(node) => {
-            const sprite = new SpriteText(node.id)
+            const label = node.isVideo ? "Video" : node.id
+            const sprite = new SpriteText(label)
             sprite.textHeight = 6
             sprite.color = dimmedNodes.includes(node.id) ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.9)'
             sprite.color = node.isVideo ? 'blue' : sprite.color
