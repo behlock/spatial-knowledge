@@ -42,13 +42,14 @@ const AlertDialog = (props: AlertDialogProps) => {
               forceMount
               className={clsx(
                 'fixed z-50',
-                'w-[95vw] max-w-md rounded-lg p-4 md:w-full',
+                'w-[95vw] max-w-xl rounded-lg p-14 md:w-full',
                 'top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]',
                 'bg-white',
-                'focus:outline-none'
+                'focus:outline-none', 
+                'flex flex-col space-y-4'
               )}
             >
-              <AlertDialogPrimitive.Title className="text-m font-medium text-gray-900">
+              <AlertDialogPrimitive.Title className="text-lg font-bold text-gray-900">
                 What is Collective Creation Games?
               </AlertDialogPrimitive.Title>
               <AlertDialogPrimitive.Description className="mt-2 text-sm font-normal text-gray-700 whitespace-pre-wrap space-y-4">
