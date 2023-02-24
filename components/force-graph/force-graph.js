@@ -148,7 +148,7 @@ export const ForceGraph = ({ graphData }) => {
     <>
       <Button onClick={() => setIsParametersPanelOpen(!isParametersPanelOpen)}>
         <div className="flex flex-row items-center">
-          <span className="mr-2">Adjust parameters</span>
+          <span className="mr-2 w-xs">Parameters</span>
           {isParametersPanelOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
         </div>
       </Button>
@@ -165,13 +165,13 @@ export const ForceGraph = ({ graphData }) => {
               htmlFor={'layers'}
               className="mr-4 shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400"
             >
-              {'How much complexity to you want to see?'}
+              {'Depth'}
             </label>
             <Slider value={layers} min={0} max={22} step={1} onValueChange={setLayers} />
           </fieldset>
           <fieldset key={`popover-items-select`} className="flex flex-col h-full align-middle space-y-2">
             <label htmlFor={'tags'} className="mr-4 shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400">
-              {'Which themes are you interested in?'}
+              {'Themes'}
             </label>
             <Select
               options={getTags(graphData)}
