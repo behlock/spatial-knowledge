@@ -95,7 +95,13 @@ export const ForceGraph = ({ graphData }) => {
 
   useEffect(() => {
     if (isVideo) {
-      setVisibleNodes(graphData.nodes.filter((node) => node.isVideo).map((node) => node.id))
+      setVisibleNodes(
+        graphData.nodes
+          .filter((node) => node.isVideo || nodeAncestors(node, graphData.links).some((n) => n.isVideo))
+          .map((node) => node.id)
+      )
+    } else {
+      setVisibleNodes(graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id))
     }
   }, [isVideo])
 
@@ -207,8 +213,7 @@ export const ForceGraph = ({ graphData }) => {
             const label = node.isVideo ? "Video" : node.id
             const sprite = new SpriteText(label)
             sprite.textHeight = 6
-            sprite.color = dimmedNodes.includes(node.id) ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.9)'
-            sprite.color = node.isVideo ? 'blue' : sprite.color
+            sprite.color = dimmedNodes.includes(node.id) ? 'rgba(255, 255, 255, 0)' : 'rgba(255, 255, 255, 0.9)'
             sprite.fontSize = 25
             return sprite
           }}
@@ -219,6 +224,8 @@ export const ForceGraph = ({ graphData }) => {
           nodeResolution={32}
           // ACTIONS
           onNodeClick={handleNodeClick}
+          // LINKS
+          linkWidth={1.5}
         />
       </div>
     </>

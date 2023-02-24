@@ -477,7 +477,7 @@
         "Facilitation",
         "Rules",
         "Social psychology",
-        "time",
+        "Time",
         "Chaos",
         "Creative process",
         "Systems thinking",
@@ -494,7 +494,7 @@
         "Workshops",
         "Program",
         "Facilitation",
-        "time",
+        "Time",
         "Chaos",
         "Creative process",
         "Systems thinking",
@@ -540,7 +540,7 @@
         "Creative process",
         "Collective work",
         "Social psychology",
-        "chaos",
+        "Chaos",
         "Time",
         "Warm-up"
       ],
@@ -750,7 +750,7 @@
         "Warm-up",
         "Facilitation",
         "Creative process",
-        "chaos",
+        "Chaos",
         "Game"
       ],
       "color": "#10646f",
@@ -773,7 +773,7 @@
     },
     {
       "id": "Get session filmed for future reflection",
-      "tags": ["During session", "Workshops", "Program", "setup", "Reflection and learning"],
+      "tags": ["During session", "Workshops", "Program", "Setup", "Reflection and learning"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
@@ -882,7 +882,7 @@
         "Learning",
         "Creative process",
         "Rules",
-        "chaos",
+        "Chaos",
         "Collective work"
       ],
       "color": "#10646f",
@@ -1217,7 +1217,7 @@
     },
     {
       "id": "There are appropriate times for propositions and others for action",
-      "tags": ["During session", "Workshops", "Program", "Facilitation", "time", "Collective work"],
+      "tags": ["During session", "Workshops", "Program", "Facilitation", "Time", "Collective work"],
       "color": "#10646f",
       "portalTo": "",
       "isVideo": false
@@ -2809,7 +2809,7 @@
         "Learning",
         "Creative process",
         "Rules",
-        "chaos",
+        "Chaos",
         "Collective work"
       ],
       "color": "#10646f",
@@ -2827,7 +2827,7 @@
         "Learning",
         "Creative process",
         "Rules",
-        "chaos",
+        "Chaos",
         "Collective work"
       ],
       "color": "#10646f",
@@ -2845,7 +2845,7 @@
         "Learning",
         "Creative process",
         "Rules",
-        "chaos",
+        "Chaos",
         "Collective work"
       ],
       "color": "#10646f",
@@ -2863,7 +2863,7 @@
         "Learning",
         "Creative process",
         "Rules",
-        "chaos",
+        "Chaos",
         "Collective work"
       ],
       "color": "#10646f",
@@ -2881,7 +2881,7 @@
         "Learning",
         "Creative process",
         "Rules",
-        "chaos",
+        "Chaos",
         "Collective work"
       ],
       "color": "#10646f",
@@ -3783,7 +3783,7 @@
         "Social psychology",
         "Individuality"
       ],
-      "color": "#10646f",
+      "color": "purple",
       "portalTo": "",
       "isVideo": true
     }
