@@ -7,7 +7,7 @@ import { CSS2DRenderer } from 'three-stdlib'
 import Button from 'components/button'
 import Select from 'components/select'
 import Slider from 'components/slider'
-
+import Switch from 'components/switch'
 const ForceGraph3D = dynamic(() => import('react-force-graph-3d'), {
   ssr: false,
 })
@@ -93,7 +93,7 @@ export const ForceGraph = ({ graphData }) => {
 
   useEffect(() => {
     setVisibleNodes(graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id))
-  }, [selectedTags, layers])
+  }, [selectedTags, layers, isVideo])
 
   // CLICK
   const [dimmedNodes, setDimmedNodes] = useState([])
@@ -143,29 +143,20 @@ export const ForceGraph = ({ graphData }) => {
 
   return (
     <>
-      {/* <Popover
-        layers={layers}
-        setLayers={setLayers}
-        maxDepth={20}
-        allTags={getTags(graphData)}
-        selectedTags={selectedTags}
-        updateTag={(tag, _) => selectTag(tag, selectedTags, setSelectedTags)}
-        isVideo={isVideo}
-        setIsVideo={setIsVideo}
-        // resetFilters={() => {
-        //   setSelectedTags([])
-        //   setLayers([7])
-        //   setVisibleNodes(graphData.nodes.map((node) => node.id))
-        // }}
-      /> */}
       <Button onClick={() => setIsParametersPanelOpen(!isParametersPanelOpen)}>
         <div className="flex flex-row items-center">
           <span className="mr-2">Adjust parameters</span>
-          {  isParametersPanelOpen ? <ChevronUpIcon /> : <ChevronDownIcon /> }
+          {isParametersPanelOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
         </div>
       </Button>
       {isParametersPanelOpen && (
         <form className="flex flex-col relative h-full max-w-xs mt-4 space-y-4 z-20">
+          <fieldset key={`popover-items-isVideo`} className="flex space-x-2 justify-center align-middle">
+            <Switch checked={isVideo} onChange={setIsVideo} />
+            <label htmlFor={'isVideo'} className="shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400">
+              {'Videos'}
+            </label>
+          </fieldset>
           <fieldset key={`popover-items-layers`} className="flex flex-col align-middle space-y-2">
             <label
               htmlFor={'layers'}
