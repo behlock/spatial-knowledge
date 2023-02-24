@@ -17,8 +17,8 @@ export const Header = () => {
   })
 
   return (
-    <header className='z-20'>
-      <div className="font-extrabold text-3xl  mb-2 flex flex-row space-x-1 z-50">
+    <header className="z-20">
+      <div className="font-extrabold text-3xl mb-2 mr-8 flex flex-row flex-wrap space-x-2 z-20">
         <Link href="/">
           <h3>Collective Creation Games</h3>
         </Link>

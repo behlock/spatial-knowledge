@@ -151,13 +151,13 @@ export const ForceGraph = ({ graphData }) => {
   return (
     <>
       <Button onClick={() => setIsParametersPanelOpen(!isParametersPanelOpen)}>
-        <div className="flex flex-row items-center">
+        <div className="flex flex-row flex-wrap items-center">
           <span className="mr-2 w-xs">Parameters</span>
           {isParametersPanelOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
         </div>
       </Button>
       {isParametersPanelOpen && (
-        <form className="flex flex-col relative h-full max-w-xs mt-4 space-y-4 z-20">
+        <form className="flex flex-col relative h-full max-w-xs mt-4 mr-8 space-y-4 z-20">
           <fieldset key={`popover-items-isVideo`} className="flex space-x-2 justify-center align-middle">
             <Switch checked={isVideo} onChange={setIsVideo} />
             <label htmlFor={'isVideo'} className="shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400">
