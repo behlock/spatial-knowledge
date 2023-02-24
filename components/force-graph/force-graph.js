@@ -117,7 +117,9 @@ export const ForceGraph = ({ graphData }) => {
   }
 
   const handleNodeClick = (node) => {
-    let childrenIds = getNodeChildrenIds(node, graphData.links)
+    if (node.isVideo) {
+      window && window.open(node.id, '_blank')
+    }
 
     // First clicked node is clicked again
     if (node.id == clickedNodes[0]) {
@@ -126,6 +128,7 @@ export const ForceGraph = ({ graphData }) => {
 
     // No dimmed nodes yet
     else if (dimmedNodes.length == 0) {
+      let childrenIds = getNodeChildrenIds(node, graphData.links)
       setDimmedNodes(graphData.nodes.map((n) => n.id).filter((id) => !childrenIds.includes(id) && id !== node.id))
       setClickedNodes(clickedNodes.concat(node.id))
     }
@@ -200,6 +203,7 @@ export const ForceGraph = ({ graphData }) => {
             const sprite = new SpriteText(node.id)
             sprite.textHeight = 6
             sprite.color = dimmedNodes.includes(node.id) ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.9)'
+            sprite.color = node.isVideo ? 'blue' : sprite.color
             sprite.fontSize = 25
             return sprite
           }}
