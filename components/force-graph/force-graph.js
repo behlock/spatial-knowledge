@@ -1,8 +1,10 @@
+import { ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons'
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 import SpriteText from 'three-spritetext'
 import { CSS2DRenderer } from 'three-stdlib'
 
+import Button from 'components/button'
 import Select from 'components/select'
 import Slider from 'components/slider'
 
@@ -72,6 +74,7 @@ export const ForceGraph = ({ graphData }) => {
   const [layers, setLayers] = useState([22])
   const [selectedTags, setSelectedTags] = useState([])
   const [isVideo, setIsVideo] = useState(false)
+  const [isParametersPanelOpen, setIsParametersPanelOpen] = useState(false)
 
   // HOOKS
   useEffect(() => {
@@ -155,35 +158,35 @@ export const ForceGraph = ({ graphData }) => {
         //   setVisibleNodes(graphData.nodes.map((node) => node.id))
         // }}
       /> */}
-
-      <form className="flex flex-col relative h-full max-w-xs mt-4 space-y-4 z-20">
-        <fieldset key={`popover-items-layers`} className="flex flex-col align-middle space-y-2">
-          <label htmlFor={'layers'} className="mr-4 shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400">
-            {'How much complexity to you want to see?'}
-          </label>
-          <Slider value={layers} min={0} max={22} step={1} onValueChange={setLayers} />
-        </fieldset>
-        <fieldset key={`popover-items-select`} className="flex flex-col h-full align-middle space-y-2">
-          <label htmlFor={'tags'} className="mr-4 shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400">
-            {'Which themes are you interested in?'}
-          </label>
-          <Select
-            options={getTags(graphData)}
-            selectedTags={selectedTags}
-            onValueChange={(tag) => selectTag(tag, selectedTags, setSelectedTags)}
-          />
-        </fieldset>
-
-        {/* {props.allTags.map((tag) => (
-              <fieldset key={`popover-items-checkbox-${tag}`} className="flex align-middle ">
-                <Checkbox
-                  label={tag}
-                  checked={props.selectedTags.includes(tag)}
-                  onCheckedChange={(checked) => props.updateTag(tag, checked)}
-                />
-              </fieldset>
-            ))} */}
-      </form>
+      <Button onClick={() => setIsParametersPanelOpen(!isParametersPanelOpen)}>
+        <div className="flex flex-row items-center">
+          <span className="mr-2">Adjust parameters</span>
+          {  isParametersPanelOpen ? <ChevronUpIcon /> : <ChevronDownIcon /> }
+        </div>
+      </Button>
+      {isParametersPanelOpen && (
+        <form className="flex flex-col relative h-full max-w-xs mt-4 space-y-4 z-20">
+          <fieldset key={`popover-items-layers`} className="flex flex-col align-middle space-y-2">
+            <label
+              htmlFor={'layers'}
+              className="mr-4 shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400"
+            >
+              {'How much complexity to you want to see?'}
+            </label>
+            <Slider value={layers} min={0} max={22} step={1} onValueChange={setLayers} />
+          </fieldset>
+          <fieldset key={`popover-items-select`} className="flex flex-col h-full align-middle space-y-2">
+            <label htmlFor={'tags'} className="mr-4 shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400">
+              {'Which themes are you interested in?'}
+            </label>
+            <Select
+              options={getTags(graphData)}
+              selectedTags={selectedTags}
+              onValueChange={(tag) => selectTag(tag, selectedTags, setSelectedTags)}
+            />
+          </fieldset>
+        </form>
+      )}
       <div className="flex flex-col h-full align-middle fixed w-full left-0 top-0 z-10">
         <ForceGraph3D
           // RENDERING

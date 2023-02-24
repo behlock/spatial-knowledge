@@ -24,7 +24,7 @@ const Select = (props: SelectProps) => {
         <SelectPrimitive.ScrollUpButton className="flex items-center justify-center text-gray-700 ">
           <ChevronUpIcon />
         </SelectPrimitive.ScrollUpButton>
-        <SelectPrimitive.Viewport className="bg-white p-2 rounded-lg shadow-lg">
+        <SelectPrimitive.Viewport className="bg-white my-10 px-14 py-6 rounded-lg shadow-lg">
           <SelectPrimitive.Group>
             {props.options.map((f, i) => (
               <SelectPrimitive.Item
