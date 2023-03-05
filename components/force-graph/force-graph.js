@@ -210,7 +210,7 @@ export const ForceGraph = ({ graphData }) => {
           }}
           nodeLabel={() => ''}
           nodeThreeObject={(node) => {
-            const label = node.isVideo ? "Video" : node.id
+            const label = node.isVideo ? 'Video' : node.id
             const sprite = new SpriteText(label)
             sprite.textHeight = 6
             sprite.color = dimmedNodes.includes(node.id) ? 'rgba(255, 255, 255, 0)' : 'rgba(255, 255, 255, 0.9)'
