@@ -7,8 +7,8 @@
   },
   "files.associations": {
     "*.js": "javascriptreact",
-    "*.tsx": "javascriptreact",
-    "*.scss": "postcss"
+    "*.tsx": "typescriptreact",
+    "*.scss": "postcss",
   },
   "prettier.enable": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode"

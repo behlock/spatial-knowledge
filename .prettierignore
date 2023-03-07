@@ -5,4 +5,4 @@ node_modules
 .github/**
 .vercel/**
 .husky/**
-pnpm-lock.yaml
+package-lock.json
