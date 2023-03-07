@@ -8,9 +8,12 @@ import Button from '@/components/button'
 import Select from '@/components/select'
 import Slider from '@/components/slider'
 import Switch from '@/components/switch'
+
 const ForceGraph3D = dynamic(() => import('react-force-graph-3d'), {
   ssr: false,
 })
+
+const MAX_DEPTH = 30
 
 // CHILDREN
 const getNodeChildren = (node, links) =>
@@ -71,16 +74,25 @@ const selectTag = (tag, selectedTags, setSelectedTags) => {
 export const ForceGraph = ({ englishData, arabicData }) => {
   // STATE
   const [extraRenderers, setExtraRenderers] = useState([])
-  const [layers, setLayers] = useState([22])
+  const [layers, setLayers] = useState([MAX_DEPTH])
   const [selectedTags, setSelectedTags] = useState([])
   const [isVideo, setIsVideo] = useState(false)
   const [isParametersPanelOpen, setIsParametersPanelOpen] = useState(false)
   const [isTagsPanelOpen, setIsTagsPanelOpen] = useState(false)
   const [forceClose, setForceClose] = useState(false)
+  const [dimmedNodes, setDimmedNodes] = useState([])
+  const [clickedNodes, setClickedNodes] = useState([])
+  const [intermediaryNodeColor, setIntermediaryNodeColor] = useState(undefined)
 
   const [language, setLanguage] = useState('english')
-
   const graphData = language === 'english' ? englishData : arabicData
+
+  const resetFilters = () => {
+    setLayers([MAX_DEPTH])
+    setSelectedTags([])
+    setIsVideo(false)
+    resetGraphVisiblity()
+  }
 
   // HOOKS
   useEffect(() => {
@@ -119,10 +131,6 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   }, [forceClose])
 
   // CLICK
-  const [dimmedNodes, setDimmedNodes] = useState([])
-  const [clickedNodes, setClickedNodes] = useState([])
-  const [intermediaryNodeColor, setIntermediaryNodeColor] = useState(undefined)
-
   useEffect(() => {
     if (clickedNodes.length == 1) {
       let nodeId = clickedNodes[0]
@@ -204,7 +212,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
             >
               {'Depth'}
             </label>
-            <Slider value={layers} min={0} max={22} step={1} onValueChange={setLayers} />
+            <Slider value={layers} min={0} max={MAX_DEPTH} step={1} onValueChange={setLayers} />
           </fieldset>
           <fieldset key={`popover-items-select`} className="flex h-full flex-col space-y-2 align-middle">
             <label htmlFor={'tags'} className="text-s mr-4 shrink-0 grow font-medium text-gray-700 dark:text-gray-400">
@@ -219,6 +227,9 @@ export const ForceGraph = ({ englishData, arabicData }) => {
               forceClose={forceClose}
               closeSelect={() => setForceClose(true)}
             />
+          </fieldset>
+          <fieldset key={`popover-items-reset`}>
+            <Button onClick={resetFilters}>Reset</Button>
           </fieldset>
         </form>
       )}
