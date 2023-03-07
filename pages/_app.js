@@ -1,12 +1,22 @@
+import Script from 'next/script'
 import { CookiesProvider } from 'react-cookie'
 
 import 'styles/global.scss'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <CookiesProvider>
-      <Component {...pageProps} />
-    </CookiesProvider>
+    <>
+      <Script
+        src="https://stats-peach-alpha.vercel.app/api/stats.js"
+        onLoad={() => {
+          // @ts-ignore
+          collect('page_view')
+        }}
+      />
+      <CookiesProvider>
+        <Component {...pageProps} />
+      </CookiesProvider>
+    </>
   )
 }
 
