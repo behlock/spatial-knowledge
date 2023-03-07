@@ -121,6 +121,20 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   // CLICK
   const [dimmedNodes, setDimmedNodes] = useState([])
   const [clickedNodes, setClickedNodes] = useState([])
+  const [intermediaryNodeColor, setIntermediaryNodeColor] = useState(undefined)
+
+  useEffect(() => {
+    if (clickedNodes.length == 1) {
+      let nodeId = clickedNodes[0]
+      let node = graphData.nodes.find((n) => n.id === nodeId)
+      setIntermediaryNodeColor(node.color)
+      node.color = 'pink'
+    } else if (clickedNodes.length == 0 && intermediaryNodeColor) {
+      let node = graphData.nodes.find((n) => n.color === 'pink')
+      node.color = intermediaryNodeColor
+      setIntermediaryNodeColor(undefined)
+    }
+  }, [clickedNodes])
 
   const resetGraphVisiblity = () => {
     setDimmedNodes([])
