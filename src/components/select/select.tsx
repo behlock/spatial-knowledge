@@ -7,11 +7,20 @@ type SelectProps = {
   options: string[]
   selectedTags: string[]
   onValueChange: (value: string) => void
+  open: boolean
+  onOpenChange: (open: boolean) => void
+  forceClose: boolean
+  closeSelect: () => void
 }
 
 const Select = (props: SelectProps) => {
   return (
-    <SelectPrimitive.Root value={""} onValueChange={props.onValueChange}>
+    <SelectPrimitive.Root
+      value={''}
+      onValueChange={props.onValueChange}
+      open={props.forceClose ? false : props.open}
+      onOpenChange={(_) => props.onOpenChange(props.forceClose ? false : true)}
+    >
       <SelectPrimitive.Trigger asChild aria-label="Food">
         <Button>
           {props.selectedTags.join(' — ')}
@@ -20,11 +29,14 @@ const Select = (props: SelectProps) => {
           </SelectPrimitive.Icon>
         </Button>
       </SelectPrimitive.Trigger>
-      <SelectPrimitive.Content>
+      <SelectPrimitive.Content
+        onPointerDownOutside={(_) => props.closeSelect()}
+        onEscapeKeyDown={(_) => props.closeSelect()}
+      >
         <SelectPrimitive.ScrollUpButton className="flex items-center justify-center text-gray-700 ">
           <ChevronUpIcon />
         </SelectPrimitive.ScrollUpButton>
-        <SelectPrimitive.Viewport className="bg-white my-10 px-14 py-6 rounded-lg shadow-lg">
+        <SelectPrimitive.Viewport className="my-10 rounded-lg bg-white px-14 py-6 shadow-lg">
           <SelectPrimitive.Group>
             {props.options.map((f, i) => (
               <SelectPrimitive.Item
@@ -32,9 +44,9 @@ const Select = (props: SelectProps) => {
                 key={`${f}-${i}`}
                 value={f}
                 className={clsx(
-                  'relative flex items-center px-8 py-2 rounded-md text-sm text-gray-700  font-medium focus:bg-gray-100 ',
+                  'relative flex items-center rounded-md px-8 py-2 text-sm font-medium  text-gray-700 focus:bg-gray-100 ',
                   'radix-disabled:opacity-50',
-                  'focus:outline-none select-none'
+                  'select-none focus:outline-none'
                 )}
               >
                 <SelectPrimitive.ItemText>{f}</SelectPrimitive.ItemText>

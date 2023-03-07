@@ -75,6 +75,8 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   const [selectedTags, setSelectedTags] = useState([])
   const [isVideo, setIsVideo] = useState(false)
   const [isParametersPanelOpen, setIsParametersPanelOpen] = useState(false)
+  const [isTagsPanelOpen, setIsTagsPanelOpen] = useState(false)
+  const [forceClose, setForceClose] = useState(false)
 
   const [language, setLanguage] = useState('english')
 
@@ -108,6 +110,13 @@ export const ForceGraph = ({ englishData, arabicData }) => {
       setVisibleNodes(graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id))
     }
   }, [isVideo])
+
+  useEffect(() => {
+    if (forceClose) {
+      setIsTagsPanelOpen(false)
+      setForceClose(false)
+    }
+  }, [forceClose])
 
   // CLICK
   const [dimmedNodes, setDimmedNodes] = useState([])
@@ -162,40 +171,44 @@ export const ForceGraph = ({ englishData, arabicData }) => {
     <>
       <Button onClick={() => setIsParametersPanelOpen(!isParametersPanelOpen)}>
         <div className="flex flex-row flex-wrap items-center">
-          <span className="mr-2 w-xs">Parameters</span>
+          <span className="w-xs mr-2">Parameters</span>
           {isParametersPanelOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
         </div>
       </Button>
       {isParametersPanelOpen && (
-        <form className="flex flex-col relative h-full max-w-xs mt-4 mr-8 space-y-4 z-20">
-          <fieldset key={`popover-items-isVideo`} className="flex space-x-2 justify-center align-middle">
+        <form className="relative z-20 mt-4 mr-8 flex h-full max-w-xs flex-col space-y-4">
+          <fieldset key={`popover-items-isVideo`} className="flex justify-center space-x-2 align-middle">
             <Switch checked={isVideo} onChange={setIsVideo} />
-            <label htmlFor={'isVideo'} className="shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400">
+            <label htmlFor={'isVideo'} className="text-s shrink-0 grow font-medium text-gray-700 dark:text-gray-400">
               {'Videos'}
             </label>
           </fieldset>
-          <fieldset key={`popover-items-layers`} className="flex flex-col align-middle space-y-2">
+          <fieldset key={`popover-items-layers`} className="flex flex-col space-y-2 align-middle">
             <label
               htmlFor={'layers'}
-              className="mr-4 shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400"
+              className="text-s mr-4 shrink-0 grow font-medium text-gray-700 dark:text-gray-400"
             >
               {'Depth'}
             </label>
             <Slider value={layers} min={0} max={22} step={1} onValueChange={setLayers} />
           </fieldset>
-          <fieldset key={`popover-items-select`} className="flex flex-col h-full align-middle space-y-2">
-            <label htmlFor={'tags'} className="mr-4 shrink-0 grow text-s font-medium text-gray-700 dark:text-gray-400">
+          <fieldset key={`popover-items-select`} className="flex h-full flex-col space-y-2 align-middle">
+            <label htmlFor={'tags'} className="text-s mr-4 shrink-0 grow font-medium text-gray-700 dark:text-gray-400">
               {'Themes'}
             </label>
             <Select
               options={getTags(graphData)}
               selectedTags={selectedTags}
               onValueChange={(tag) => selectTag(tag, selectedTags, setSelectedTags)}
+              open={isTagsPanelOpen}
+              onOpenChange={setIsTagsPanelOpen}
+              forceClose={forceClose}
+              closeSelect={() => setForceClose(true)}
             />
           </fieldset>
         </form>
       )}
-      <div className="flex flex-col h-full align-middle fixed w-full left-0 top-0 z-10">
+      <div className="fixed left-0 top-0 z-10 flex h-full w-full flex-col align-middle">
         <ForceGraph3D
           // RENDERING
           extraRenderers={extraRenderers}
