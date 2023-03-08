@@ -13,7 +13,7 @@ const ForceGraph3D = dynamic(() => import('react-force-graph-3d'), {
   ssr: false,
 })
 
-const MAX_DEPTH = 30
+const MAX_DEPTH = 35
 
 // CHILDREN
 const getNodeChildren = (node, links) =>
