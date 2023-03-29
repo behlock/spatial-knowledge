@@ -151,13 +151,15 @@ export const ForceGraph = ({ englishData, arabicData }) => {
 
   const dimNodeAndChildren = (node, links) => {
     let childrenIds = getNodeChildrenIds(node, links)
-    setDimmedNodes(dimmedNodes.concat(graphData.nodes.map((n) => n.id).filter((id) => childrenIds.includes(id))))
-    setClickedNodes(clickedNodes.filter((id) => !childrenIds.includes(id) && id !== node.id))
+    let childrenIdsWithNodeId = childrenIds.concat(node.id)
+    setDimmedNodes(dimmedNodes.concat(graphData.nodes.map((n) => n.id).filter((id) => childrenIdsWithNodeId.includes(id))))
+    setClickedNodes(clickedNodes.filter((id) => !childrenIdsWithNodeId.includes(id) && id !== node.id))
   }
-
+  
   const undimNodeAndChildren = (node, links) => {
     let childrenIds = getNodeChildrenIds(node, links)
-    setDimmedNodes(dimmedNodes.filter((id) => !childrenIds.includes(id) && id !== node.id))
+    let childrenIdsWithNodeId = childrenIds.concat(node.id)
+    setDimmedNodes(dimmedNodes.filter((id) => !childrenIdsWithNodeId.includes(id) && id !== node.id))
     setClickedNodes(clickedNodes.concat(node.id))
   }
 
