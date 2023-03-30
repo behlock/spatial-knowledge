@@ -109,7 +109,7 @@
                 "Street intervention",
                 "Facilitation, reflection and learning",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#e5eb00",
             "portalTo": "",
@@ -172,7 +172,7 @@
                 "Street intervention",
                 "Facilitation, reflection and learning",
                 "Game design and systems thinking",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#e5eb00",
             "portalTo": "",
@@ -270,7 +270,7 @@
                 "The creative process, materials, chaos and time",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#e5eb00",
             "portalTo": "",
@@ -285,7 +285,7 @@
                 "The creative process, materials, chaos and time",
                 "The creative process, materials, chaos and time",
                 "Game design and systems thinking",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#e5eb00",
             "portalTo": "",
@@ -393,7 +393,7 @@
                 "Street intervention",
                 "The creative process, materials, chaos and time",
                 "Game design and systems thinking",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#e5eb00",
             "portalTo": "",
@@ -586,7 +586,7 @@
                 "Facilitation, reflection and learning",
                 "Collectivity, individuality and social psychology",
                 "Game design and systems thinking",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -683,7 +683,7 @@
                 "Program",
                 "Facilitation, reflection and learning",
                 "Game design and systems thinking",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -973,7 +973,7 @@
                 "Game design and systems thinking",
                 "Facilitation, reflection and learning",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -1251,7 +1251,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -1288,21 +1288,6 @@
             "videoUrl": ""
         },
         {
-            "id": "Cheating",
-            "tags": [
-                "Facilitation, reflection and learning",
-                "During session",
-                "Workshops",
-                "Program",
-                "Game design and systems thinking",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology"
-            ],
-            "color": "#fcb13b",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
             "id": "Playing with and \n testing boundaries",
             "tags": [
                 "Facilitation, reflection and learning",
@@ -1318,52 +1303,7 @@
             "videoUrl": ""
         },
         {
-            "id": "Reveals areas where rules \n can be added",
-            "tags": [
-                "Facilitation, reflection and learning",
-                "During session",
-                "Workshops",
-                "Program",
-                "Game design and systems thinking",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology"
-            ],
-            "color": "#fcb13b",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
-            "id": "Is a very playful act",
-            "tags": [
-                "Facilitation, reflection and learning",
-                "During session",
-                "Workshops",
-                "Program",
-                "Game design and systems thinking",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology"
-            ],
-            "color": "#fcb13b",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
             "id": "Paradoxically needs limits",
-            "tags": [
-                "Facilitation, reflection and learning",
-                "During session",
-                "Workshops",
-                "Program",
-                "Game design and systems thinking",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology"
-            ],
-            "color": "#fcb13b",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
-            "id": "Cannot challenge logic \n of the game",
             "tags": [
                 "Facilitation, reflection and learning",
                 "During session",
@@ -2228,7 +2168,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -2358,7 +2298,7 @@
                 "Workshops",
                 "Program",
                 "Facilitation, reflection and learning",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -2372,7 +2312,7 @@
                 "Program",
                 "Facilitation, reflection and learning",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -2399,7 +2339,7 @@
                 "Facilitation, reflection and learning",
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -2427,7 +2367,7 @@
                 "Program",
                 "Facilitation, reflection and learning",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -2454,7 +2394,7 @@
                 "Program",
                 "Facilitation, reflection and learning",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -2497,7 +2437,7 @@
                 "Workshops",
                 "Program",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -2738,7 +2678,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "The creative process, materials, chaos and time",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -2752,7 +2692,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "The creative process, materials, chaos and time",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -2765,7 +2705,7 @@
                 "Workshops",
                 "Program",
                 "The creative process, materials, chaos and time",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -2778,7 +2718,7 @@
                 "Workshops",
                 "Program",
                 "The creative process, materials, chaos and time",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -2791,7 +2731,7 @@
                 "Workshops",
                 "Program",
                 "The creative process, materials, chaos and time",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3182,7 +3122,7 @@
                 "Workshops",
                 "Program",
                 "Game design and systems thinking",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3195,7 +3135,7 @@
                 "Workshops",
                 "Program",
                 "Game design and systems thinking",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3208,7 +3148,7 @@
                 "Workshops",
                 "Program",
                 "Game design and systems thinking",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3502,7 +3442,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3516,7 +3456,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3826,7 +3766,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3840,7 +3780,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3854,7 +3794,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3868,7 +3808,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3882,7 +3822,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3896,7 +3836,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3910,7 +3850,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3924,7 +3864,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3938,7 +3878,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3952,7 +3892,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3966,7 +3906,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3980,7 +3920,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -3994,7 +3934,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4008,7 +3948,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4022,7 +3962,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4036,7 +3976,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4050,7 +3990,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4064,7 +4004,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4078,7 +4018,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4092,7 +4032,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4106,7 +4046,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4120,7 +4060,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4134,7 +4074,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4148,7 +4088,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4162,7 +4102,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4176,7 +4116,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4190,7 +4130,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4204,7 +4144,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4218,7 +4158,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4232,7 +4172,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4246,7 +4186,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4260,7 +4200,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4274,7 +4214,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4288,7 +4228,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4302,7 +4242,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4316,7 +4256,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4330,7 +4270,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4344,7 +4284,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4358,7 +4298,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4372,7 +4312,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4386,7 +4326,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4401,7 +4341,7 @@
                 "Game design and systems thinking",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4415,7 +4355,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4429,7 +4369,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4443,7 +4383,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4457,7 +4397,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4471,7 +4411,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4485,7 +4425,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4499,7 +4439,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4513,7 +4453,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4527,7 +4467,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -4541,7 +4481,7 @@
                 "Program",
                 "Game design and systems thinking",
                 "Collectivity, individuality and social psychology",
-                 "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6379,7 +6319,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6398,7 +6338,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6417,7 +6357,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6436,7 +6376,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6455,7 +6395,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6474,7 +6414,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6493,7 +6433,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6512,7 +6452,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6531,7 +6471,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6550,7 +6490,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6569,7 +6509,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6588,7 +6528,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6607,7 +6547,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6626,7 +6566,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6645,7 +6585,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6664,7 +6604,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6683,7 +6623,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6702,7 +6642,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6721,7 +6661,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6740,7 +6680,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6759,7 +6699,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6778,7 +6718,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6797,7 +6737,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6816,7 +6756,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6835,7 +6775,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6854,7 +6794,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6873,7 +6813,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6892,7 +6832,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6911,7 +6851,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6930,7 +6870,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6949,7 +6889,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6968,7 +6908,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -6987,7 +6927,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7006,7 +6946,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7025,7 +6965,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7044,7 +6984,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7063,7 +7003,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7082,7 +7022,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7101,7 +7041,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7120,7 +7060,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7139,7 +7079,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7158,7 +7098,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Facilitation, reflection and learning",
-                 "Game design and systems thinking"
+                "Game design and systems thinking"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7322,7 +7262,7 @@
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7338,7 +7278,7 @@
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7354,7 +7294,7 @@
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7370,7 +7310,7 @@
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7386,7 +7326,7 @@
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7814,7 +7754,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7834,7 +7774,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7857,7 +7797,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7880,7 +7820,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7903,7 +7843,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7922,7 +7862,7 @@
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7945,7 +7885,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7968,7 +7908,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -7991,7 +7931,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -8014,7 +7954,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -8037,7 +7977,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -8057,7 +7997,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -8077,7 +8017,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -8097,7 +8037,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -8117,7 +8057,7 @@
                 "Collectivity, individuality and social psychology",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -8139,7 +8079,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -8162,7 +8102,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -8185,7 +8125,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9362,7 +9302,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9385,7 +9325,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9408,7 +9348,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9427,7 +9367,7 @@
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9446,7 +9386,7 @@
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9465,7 +9405,7 @@
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9580,7 +9520,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9600,7 +9540,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9620,7 +9560,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9640,7 +9580,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9663,7 +9603,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9686,7 +9626,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9708,7 +9648,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9730,7 +9670,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9753,7 +9693,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9775,7 +9715,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9797,7 +9737,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9819,7 +9759,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9841,7 +9781,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9864,7 +9804,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9886,7 +9826,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9908,7 +9848,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9930,7 +9870,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9952,7 +9892,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9974,7 +9914,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -9996,7 +9936,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -10018,7 +9958,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -10040,7 +9980,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -10062,7 +10002,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -10084,7 +10024,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -10106,7 +10046,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -10129,7 +10069,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -10152,7 +10092,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -10175,7 +10115,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -10197,7 +10137,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -10219,7 +10159,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -10241,7 +10181,7 @@
                 "Facilitation, reflection and learning",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
-               "The creative process, materials, chaos and time"
+                "The creative process, materials, chaos and time"
             ],
             "color": "#fcb13b",
             "portalTo": "",
@@ -10839,7 +10779,7 @@
             "videoUrl": ""
         },
         {
-            "id": "Seeds from in-session reflection",
+            "id": "Look at seeds from in-session reflection",
             "tags": [
                 "Post-session",
                 "Workshops",
@@ -10864,7 +10804,7 @@
             "videoUrl": ""
         },
         {
-            "id": "Seeds from post-session reflection",
+            "id": "Look at seeds from post-session reflection",
             "tags": [
                 "Post-session",
                 "Workshops",
@@ -13904,7 +13844,7 @@
             "videoUrl": ""
         },
         {
-            "id": "Collectively",
+            "id": "At a collective level",
             "tags": [
                 "Post-session",
                 "Workshops",
@@ -16406,13 +16346,7 @@
                 "Post-session",
                 "Collectivity, individuality and social psychology",
                 "Street intervention",
-                "The creative process, materials, chaos and time",
                 "Concepts, insights, feedback and benefits",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning",
-                "Game design and systems thinking",
-                "Collectivity, individuality and social psychology",
                 "Collectivity, individuality and social psychology"
             ],
             "color": "#6a329f",
@@ -16574,12 +16508,12 @@
                 "Concepts, insights, feedback and benefits",
                 "Game design and systems thinking"
             ],
-            "color": "#1014ff",
+            "color": "#cc0000",
             "portalTo": "",
             "videoUrl": ""
         },
         {
-            "id": "Framework",
+            "id": "Main field of interest",
             "tags": [
                 "How can we work together?",
                 "Pre-session",
@@ -16726,7 +16660,7 @@
             "videoUrl": ""
         },
         {
-            "id": "In-depth inquiry to understand \n partner's needs",
+            "id": "Do an in-depth inquiry to understand \n partner's needs",
             "tags": [
                 "How can we work together?",
                 "Pre-session",
@@ -16747,7 +16681,7 @@
             "videoUrl": ""
         },
         {
-            "id": "Characteristics of the project",
+            "id": "Look to understand all \n characteristics of the project",
             "tags": [
                 "How can we work together?",
                 "Pre-session",
@@ -17188,7 +17122,7 @@
             "videoUrl": ""
         },
         {
-            "id": "Facilitation, reflection and learning",
+            "id": "Facilitating event, workshop \n or program",
             "tags": [
                 "How can we work together?",
                 "Pre-session",
@@ -17968,7 +17902,7 @@
             "videoUrl": ""
         },
         {
-            "id": "Upcoming session is part \n of a sequence of sessions",
+            "id": "Upcoming session is part \n of a sequence of workshops \n or program",
             "tags": [
                 "Pre-session",
                 "Workshops",
@@ -18976,30 +18910,6 @@
             "videoUrl": ""
         },
         {
-            "id": "Try something different \n explore in breadth",
-            "tags": [
-                "Pre-session",
-                "Workshops",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "The creative process, materials, chaos and time",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning"
-            ],
-            "color": "#52dafa",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
             "id": "What are participants being most \n responsive to?",
             "tags": [
                 "Pre-session",
@@ -19480,30 +19390,6 @@
             "videoUrl": ""
         },
         {
-            "id": "What is the importance of aesthetics here?",
-            "tags": [
-                "Pre-session",
-                "Workshops",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "The creative process, materials, chaos and time",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning"
-            ],
-            "color": "#52dafa",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
             "id": "Keep exploring in the same direction \n go in-depth",
             "tags": [
                 "Pre-session",
@@ -19715,7 +19601,7 @@
                 "Game design and systems thinking",
                 "Facilitation, reflection and learning"
             ],
-            "color": "#52dafa",
+            "color": "#cc0000",
             "portalTo": "",
             "videoUrl": ""
         },
@@ -19985,30 +19871,6 @@
         },
         {
             "id": "New environments",
-            "tags": [
-                "Pre-session",
-                "Workshops",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "The creative process, materials, chaos and time",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning"
-            ],
-            "color": "#52dafa",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
-            "id": "New streets and roads",
             "tags": [
                 "Pre-session",
                 "Workshops",
@@ -21208,7 +21070,7 @@
             "videoUrl": ""
         },
         {
-            "id": "Momets where momentum could \n be lost",
+            "id": "Moments where momentum could \n be lost",
             "tags": [
                 "Pre-session",
                 "Workshops",
@@ -21518,7 +21380,7 @@
                 "Game design and systems thinking",
                 "Facilitation, reflection and learning"
             ],
-            "color": "#f55a68",
+            "color": "#CC0000",
             "portalTo": "",
             "videoUrl": ""
         },
@@ -21664,33 +21526,6 @@
                 "Pre-session",
                 "During session",
                 "Post-session",
-                "Workshops",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "The creative process, materials, chaos and time",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning"
-            ],
-            "color": "#f55a68",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
-            "id": "A graphic element being reproduced \n exploring its world while interacting with \n others",
-            "tags": [
-                "Concepts, insights, feedback and benefits",
-                "Pre-session",
-                "Post-session",
-                "During session",
                 "Workshops",
                 "The creative process, materials, chaos and time",
                 "Collectivity, individuality and social psychology",
@@ -22036,33 +21871,6 @@
             "videoUrl": ""
         },
         {
-            "id": "Creating games out of real life \n challenges",
-            "tags": [
-                "Concepts, insights, feedback and benefits",
-                "Pre-session",
-                "Post-session",
-                "During session",
-                "Workshops",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "The creative process, materials, chaos and time",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning"
-            ],
-            "color": "#f55a68",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
             "id": "The game starts with the setup",
             "tags": [
                 "Concepts, insights, feedback and benefits",
@@ -22144,7 +21952,7 @@
             "videoUrl": ""
         },
         {
-            "id": "Is the individual forcing themself \n on the group or is the group \n repressing them?",
+            "id": "Are the individuals forcing themselves \n on the group or is the group \n repressing them?",
             "tags": [
                 "Concepts, insights, feedback and benefits",
                 "Pre-session",
@@ -22333,7 +22141,34 @@
             "videoUrl": ""
         },
         {
-            "id": "Insights",
+            "id": "Insights from reflections \n and videos",
+            "tags": [
+                "Concepts, insights, feedback and benefits",
+                "Pre-session",
+                "Post-session",
+                "During session",
+                "Workshops",
+                "The creative process, materials, chaos and time",
+                "Collectivity, individuality and social psychology",
+                "Collectivity, individuality and social psychology",
+                "Collectivity, individuality and social psychology",
+                "Game design and systems thinking",
+                "Facilitation, reflection and learning",
+                "The creative process, materials, chaos and time",
+                "Game design and systems thinking",
+                "The creative process, materials, chaos and time",
+                "The creative process, materials, chaos and time",
+                "Game design and systems thinking",
+                "Facilitation, reflection and learning",
+                "Game design and systems thinking",
+                "Facilitation, reflection and learning"
+            ],
+            "color": "#cc0000",
+            "portalTo": "",
+            "videoUrl": ""
+        },
+        {
+            "id": "Insights from reflection",
             "tags": [
                 "Concepts, insights, feedback and benefits",
                 "Pre-session",
@@ -22468,7 +22303,7 @@
             "videoUrl": ""
         },
         {
-            "id": "If the intention's to build, patterns \n emerge from chaos on \n small sequences",
+            "id": "If the intention's to build, patterns \n emerge from chaos in \n small sequences",
             "tags": [
                 "Concepts, insights, feedback and benefits",
                 "Pre-session",
@@ -22873,173 +22708,112 @@
             "videoUrl": ""
         },
         {
-          "id": "Cheating",
-          "tags": [
-              "Facilitation, reflection and learning",
-              "During session",
-              "Workshops",
-              "Program",
-              "Game design and systems thinking",
-              "Game design and systems thinking",
-              "Game design and systems thinking",
-              "The creative process, materials, chaos and time",
-              "Collectivity, individuality and social psychology",
-              "The creative process, materials, chaos and time",
-              "Collectivity, individuality and social psychology",
-              "Collectivity, individuality and social psychology"
-          ],
-          "color": "#fcb13b",
-          "portalTo": "",
-          "videoUrl": ""
-      },
-      {
-          "id": "Playing with boundaries",
-          "tags": [
-              "Facilitation, reflection and learning",
-              "During session",
-              "Workshops",
-              "Program",
-              "Game design and systems thinking",
-              "Game design and systems thinking",
-              "Game design and systems thinking",
-              "The creative process, materials, chaos and time",
-              "Collectivity, individuality and social psychology",
-              "The creative process, materials, chaos and time",
-              "Collectivity, individuality and social psychology",
-              "Collectivity, individuality and social psychology"
-          ],
-          "color": "#fcb13b",
-          "portalTo": "",
-          "videoUrl": ""
-      },
-      {
-          "id": "Testing game boundaries",
-          "tags": [
-              "Facilitation, reflection and learning",
-              "During session",
-              "Workshops",
-              "Program",
-              "Game design and systems thinking",
-              "Game design and systems thinking",
-              "Game design and systems thinking",
-              "The creative process, materials, chaos and time",
-              "Collectivity, individuality and social psychology",
-              "The creative process, materials, chaos and time",
-              "Collectivity, individuality and social psychology",
-              "Collectivity, individuality and social psychology"
-          ],
-          "color": "#fcb13b",
-          "portalTo": "",
-          "videoUrl": ""
-      },
-      {
-          "id": "Reveals areas where rules \n can be added",
-          "tags": [
-              "Facilitation, reflection and learning",
-              "During session",
-              "Workshops",
-              "Program",
-              "Game design and systems thinking",
-              "Game design and systems thinking",
-              "Game design and systems thinking",
-              "The creative process, materials, chaos and time",
-              "Collectivity, individuality and social psychology",
-              "The creative process, materials, chaos and time",
-              "Collectivity, individuality and social psychology",
-              "Collectivity, individuality and social psychology"
-          ],
-          "color": "#fcb13b",
-          "portalTo": "",
-          "videoUrl": ""
-      },
-      {
-          "id": "Is a very playful act",
-          "tags": [
-              "Facilitation, reflection and learning",
-              "During session",
-              "Workshops",
-              "Program",
-              "Game design and systems thinking",
-              "Game design and systems thinking",
-              "Game design and systems thinking",
-              "The creative process, materials, chaos and time",
-              "Collectivity, individuality and social psychology",
-              "The creative process, materials, chaos and time",
-              "Collectivity, individuality and social psychology",
-              "Collectivity, individuality and social psychology"
-          ],
-          "color": "#fcb13b",
-          "portalTo": "",
-          "videoUrl": ""
-      },
-      {
-          "id": "Paradoxically needs limits",
-          "tags": [
-              "Facilitation, reflection and learning",
-              "During session",
-              "Workshops",
-              "Program",
-              "Game design and systems thinking",
-              "Game design and systems thinking",
-              "Game design and systems thinking",
-              "The creative process, materials, chaos and time",
-              "Collectivity, individuality and social psychology",
-              "The creative process, materials, chaos and time",
-              "Collectivity, individuality and social psychology",
-              "Collectivity, individuality and social psychology"
-          ],
-          "color": "#fcb13b",
-          "portalTo": "",
-          "videoUrl": ""
-      },
-      {
-          "id": "Cannot challenge logic \n of the game",
-          "tags": [
-              "Facilitation, reflection and learning",
-              "During session",
-              "Workshops",
-              "Program",
-              "Game design and systems thinking",
-              "Game design and systems thinking",
-              "Game design and systems thinking",
-              "The creative process, materials, chaos and time",
-              "Collectivity, individuality and social psychology",
-              "The creative process, materials, chaos and time",
-              "Collectivity, individuality and social psychology",
-              "Collectivity, individuality and social psychology"
-          ],
-          "color": "#fcb13b",
-          "portalTo": "",
-          "videoUrl": ""
-      },
-      {
-          "id": "Game design and systems thinking",
-          "tags": [],
-          "color": "#fcb13b",
-          "portalTo": "",
-          "videoUrl": ""
-      },
-      {
-          "id": "The creative process, materials, chaos and time",
-          "tags": [],
-          "color": "#fcb13b",
-          "portalTo": "",
-          "videoUrl": ""
-      },
-      {
-          "id": "Design the gameplay",
-          "tags": [],
-          "color": "#fcb13b",
-          "portalTo": "",
-          "videoUrl": ""
-      },
-      {
-          "id": "Concepts and insights we played with",
-          "tags": [],
-          "color": "#fcb13b",
-          "portalTo": "",
-          "videoUrl": ""
-      }
+            "id": "Cheating",
+            "tags": [
+                "Facilitation, reflection and learning",
+                "During session",
+                "Workshops",
+                "Program",
+                "Game design and systems thinking",
+                "Game design and systems thinking",
+                "Game design and systems thinking",
+                "The creative process, materials, chaos and time",
+                "Collectivity, individuality and social psychology",
+                "The creative process, materials, chaos and time",
+                "Collectivity, individuality and social psychology",
+                "Collectivity, individuality and social psychology"
+            ],
+            "color": "#fcb13b",
+            "portalTo": "",
+            "videoUrl": ""
+        },
+        {
+            "id": "Playing with boundaries",
+            "tags": [
+                "Facilitation, reflection and learning",
+                "During session",
+                "Workshops",
+                "Program",
+                "Game design and systems thinking",
+                "Game design and systems thinking",
+                "Game design and systems thinking",
+                "The creative process, materials, chaos and time",
+                "Collectivity, individuality and social psychology",
+                "The creative process, materials, chaos and time",
+                "Collectivity, individuality and social psychology",
+                "Collectivity, individuality and social psychology"
+            ],
+            "color": "#fcb13b",
+            "portalTo": "",
+            "videoUrl": ""
+        },
+        {
+            "id": "Reveals areas where rules \n can be added",
+            "tags": [
+                "Facilitation, reflection and learning",
+                "During session",
+                "Workshops",
+                "Program",
+                "Game design and systems thinking",
+                "Game design and systems thinking",
+                "Game design and systems thinking",
+                "The creative process, materials, chaos and time",
+                "Collectivity, individuality and social psychology",
+                "The creative process, materials, chaos and time",
+                "Collectivity, individuality and social psychology",
+                "Collectivity, individuality and social psychology"
+            ],
+            "color": "#fcb13b",
+            "portalTo": "",
+            "videoUrl": ""
+        },
+        {
+            "id": "Is a very playful act",
+            "tags": [
+                "Facilitation, reflection and learning",
+                "During session",
+                "Workshops",
+                "Program",
+                "Game design and systems thinking",
+                "Game design and systems thinking",
+                "Game design and systems thinking",
+                "The creative process, materials, chaos and time",
+                "Collectivity, individuality and social psychology",
+                "The creative process, materials, chaos and time",
+                "Collectivity, individuality and social psychology",
+                "Collectivity, individuality and social psychology"
+            ],
+            "color": "#fcb13b",
+            "portalTo": "",
+            "videoUrl": ""
+        },
+        {
+            "id": "Cannot challenge logic \n of the game",
+            "tags": [
+                "Facilitation, reflection and learning",
+                "During session",
+                "Workshops",
+                "Program",
+                "Game design and systems thinking",
+                "Game design and systems thinking",
+                "Game design and systems thinking",
+                "The creative process, materials, chaos and time",
+                "Collectivity, individuality and social psychology",
+                "The creative process, materials, chaos and time",
+                "Collectivity, individuality and social psychology",
+                "Collectivity, individuality and social psychology"
+            ],
+            "color": "#fcb13b",
+            "portalTo": "",
+            "videoUrl": ""
+        },
+        {
+            "id": "Design the gameplay",
+            "tags": [],
+            "color": "#fcb13b",
+            "portalTo": "",
+            "videoUrl": ""
+        }
     ],
     "links": [
         {
@@ -23420,7 +23194,7 @@
         },
         {
             "source": "Gameplay",
-            "target":  "Game design and systems thinking"
+            "target": "Rules of the game"
         },
         {
             "source": "Gameplay",
@@ -23436,7 +23210,7 @@
         },
         {
             "source": "Environment/Setup",
-            "target":  "The creative process, materials, chaos and time"
+            "target": "Materials used"
         },
         {
             "source": "Environment/Setup",
@@ -24170,7 +23944,6 @@
             "source": "Paradoxically needs limits",
             "target": "Cannot challenge logic \n of the game"
         },
-
         {
             "source": "Rigid/tight",
             "target": "Who decided them?"
@@ -24824,10 +24597,6 @@
             "target": "An entry into different \n types of crafts"
         },
         {
-            "source": "Allocate actions/materials \n to phases of session",
-            "target":  "The creative process, materials, chaos and time"
-        },
-        {
             "source": "What's the goal?",
             "target": "Unpredictable"
         },
@@ -25304,16 +25073,8 @@
             "target": "Had we gathered the \n collective energy?"
         },
         {
-            "source": "About warm-up",
-            "target": "Guide warm-up"
-        },
-        {
             "source": "About the boundaries \n of the experience",
             "target": "As as general outline"
-        },
-        {
-            "source": "About the boundaries \n of the experience",
-            "target": "Communicate game boundaries"
         },
         {
             "source": "As as general outline",
@@ -25354,10 +25115,6 @@
         {
             "source": "About rules",
             "target": "Did they build up momentum?"
-        },
-        {
-            "source": "About rules",
-            "target":  "Game design and systems thinking"
         },
         {
             "source": "About the boundaries \n of the experience",
@@ -25409,7 +25166,7 @@
         },
         {
             "source": "How did participants relate \n to the material?",
-            "target":  "The creative process, materials, chaos and time"
+            "target": "Materials used"
         },
         {
             "source": "About the boundaries \n of the experience",
@@ -25840,8 +25597,12 @@
             "target": "Seeds from post-session reflection"
         },
         {
+            "source": "Seeds from post-session reflection",
+            "target": "Look at seeds from post-session reflection"
+        },
+        {
             "source": "Synthesize",
-            "target": "Insights"
+            "target": "Insights from reflection"
         },
         {
             "source": "Seeds from in-session reflection",
@@ -26509,7 +26270,7 @@
         },
         {
             "source": "Aspects we're actively exercising",
-            "target": "Collectively"
+            "target": "At a collective level"
         },
         {
             "source": "Aspects we're actively exercising",
@@ -26560,23 +26321,23 @@
             "target": "'All week I wait for our session', Jana"
         },
         {
-            "source": "Collectively",
+            "source": "At a collective level",
             "target": "Cooperation"
         },
         {
-            "source": "Collectively",
+            "source": "At a collective level",
             "target": "Bonds and trust"
         },
         {
-            "source": "Collectively",
+            "source": "At a collective level",
             "target": "Exchange of ideas and skills"
         },
         {
-            "source": "Collectively",
+            "source": "At a collective level",
             "target": "Critical reflection"
         },
         {
-            "source": "Collectively",
+            "source": "At a collective level",
             "target": "Recognition of diversity of \n perceptions"
         },
         {
@@ -26977,7 +26738,7 @@
         },
         {
             "source": "Pre-session planning",
-            "target": "Upcoming session is part \n of a sequence of sessions"
+            "target": "Upcoming session is part \n of a sequence of workshops \n or program"
         },
         {
             "source": "Pre-session planning",
@@ -26993,10 +26754,10 @@
         },
         {
             "source": "Session is asked for by \n a client/partner/collaborator",
-            "target": "Framework"
+            "target": "Main field of interest"
         },
         {
-            "source": "Framework",
+            "source": "Main field of interest",
             "target": "Educational/learning"
         },
         {
@@ -27004,7 +26765,7 @@
             "target": "Institutions aiming for a deep learning \n experience with a target group"
         },
         {
-            "source": "Framework",
+            "source": "Main field of interest",
             "target": "Social engagement"
         },
         {
@@ -27012,7 +26773,7 @@
             "target": "Institutions aiming for social development \n psychosocial support with communities"
         },
         {
-            "source": "Framework",
+            "source": "Main field of interest",
             "target": "Organizational"
         },
         {
@@ -27021,15 +26782,19 @@
         },
         {
             "source": "Session is asked for by \n a client/partner/collaborator",
-            "target": "In-depth inquiry to understand \n partner's needs"
+            "target": "Do an in-depth inquiry to understand \n partner's needs"
         },
         {
             "source": "Session is asked for by \n a client/partner/collaborator",
-            "target": "Characteristics of the project"
+            "target": "Look to understand all \n characteristics of the project"
         },
         {
-            "source": "Characteristics of the project",
+            "source": "Look to understand all \n characteristics of the project",
             "target": "Project description"
+        },
+        {
+            "source": "Look to understand all \n characteristics of the project",
+            "target": "Project boundaries"
         },
         {
             "source": "Project description",
@@ -27072,7 +26837,7 @@
             "target": "We're sourcing materials"
         },
         {
-            "source": "Characteristics of the project",
+            "source": "Look to understand all \n characteristics of the project",
             "target": "History"
         },
         {
@@ -27109,7 +26874,7 @@
         },
         {
             "source": "Service sought for",
-            "target": "Facilitation, reflection and learning"
+            "target": "Facilitating event, workshop \n or program"
         },
         {
             "source": "Service sought for",
@@ -27196,10 +26961,6 @@
             "target": "What material are we using?"
         },
         {
-            "source": "What material are we using?",
-            "target":  "The creative process, materials, chaos and time"
-        },
-        {
             "source": "Planning a street intervention",
             "target": "What's the game like?"
         },
@@ -27256,7 +27017,7 @@
             "target": "The actions propose choices \n but no interpretation"
         },
         {
-            "source": "Upcoming session is part \n of a sequence of sessions",
+            "source": "Upcoming session is part \n of a sequence of workshops \n or program",
             "target": "Program flow and strategy"
         },
         {
@@ -27372,7 +27133,7 @@
             "target": "Players propose and play \n facilitator helps"
         },
         {
-            "source": "Upcoming session is part \n of a sequence of sessions",
+            "source": "Upcoming session is part \n of a sequence of workshops \n or program",
             "target": "Look at synthesis from previous session"
         },
         {
@@ -27381,11 +27142,11 @@
         },
         {
             "source": "Look at synthesis from previous session",
-            "target": "Seeds from post-session reflection"
+            "target": "Look at seeds from post-session reflection"
         },
         {
             "source": "Look at synthesis from previous session",
-            "target": "Seeds from in-session reflection"
+            "target": "Look at seeds from in-session reflection"
         },
         {
             "source": "Look at synthesis from previous session",
@@ -27404,15 +27165,15 @@
             "target": "To build up on where we left off"
         },
         {
-            "source": "Seeds from post-session reflection",
+            "source": "Look at seeds from post-session reflection",
             "target": "What conclusive insights have \n we reached through editing the video?"
         },
         {
-            "source": "Seeds from post-session reflection",
+            "source": "Look at seeds from post-session reflection",
             "target": "Dynamics which can be translated \n into game elements"
         },
         {
-            "source": "Seeds from post-session reflection",
+            "source": "Look at seeds from post-session reflection",
             "target": "In relation to game performance"
         },
         {
@@ -27464,7 +27225,7 @@
             "target": "Do we have a space where all \n feel they can participate?"
         },
         {
-            "source": "Seeds from in-session reflection",
+            "source": "Look at seeds from in-session reflection",
             "target": "What resonates most from their \n feedback?"
         },
         {
@@ -27476,7 +27237,7 @@
             "target": "Should it be challenged?"
         },
         {
-            "source": "Seeds from in-session reflection",
+            "source": "Look at seeds from in-session reflection",
             "target": "How can their requests be used?"
         },
         {
@@ -27517,7 +27278,7 @@
         },
         {
             "source": "What are participants being most \n responsive to?",
-            "target": "Try something different \n explore in breadth"
+            "target": "Try something different to broaden \n their experience"
         },
         {
             "source": "Do we implement them as is \n and help with the physical \n adaptation?",
@@ -27536,11 +27297,11 @@
             "target": "Have ideas in mind to propose \n if needed"
         },
         {
-            "source": "Upcoming session is part \n of a sequence of sessions",
+            "source": "Upcoming session is part \n of a sequence of workshops \n or program",
             "target": "Actively wander, be receptive"
         },
         {
-            "source": "Upcoming session is part \n of a sequence of sessions",
+            "source": "Upcoming session is part \n of a sequence of workshops \n or program",
             "target": "Plan the session"
         },
         {
@@ -27741,10 +27502,6 @@
         },
         {
             "source": "Formulate the rules",
-            "target":  "Game design and systems thinking"
-        },
-        {
-            "source": "Formulate the rules",
             "target": "Give a structure to the actions"
         },
         {
@@ -27820,12 +27577,16 @@
             "target": "What still remains unclear?"
         },
         {
+            "source": "Get familiar with the \n boundaries proposed",
+            "target": "Expected flow and momentum"
+        },
+        {
             "source": "What still remains unclear?",
             "target": "Weaknesses in the proposition"
         },
         {
             "source": "What still remains unclear?",
-            "target": "Momets where momentum could \n be lost"
+            "target": "Moments where momentum could \n be lost"
         },
         {
             "source": "Get familiar with the \n boundaries proposed",
@@ -27850,10 +27611,6 @@
         {
             "source": "Tangible inspirations",
             "target": "The materials at hand"
-        },
-        {
-            "source": "The materials at hand",
-            "target":  "The creative process, materials, chaos and time"
         },
         {
             "source": "Tangible inspirations",
@@ -27901,15 +27658,19 @@
         },
         {
             "source": "Intangible inspirations",
-            "target": "Concepts and insights we played with"
+            "target": "Concepts we played with"
         },
         {
-            "source": "Concepts and insights we played with",
+            "source": "Concepts we played with",
             "target": "With obvious physical \n aspects to them"
         },
         {
             "source": "With obvious physical \n aspects to them",
             "target": "First grouping OP"
+        },
+        {
+            "source": "With obvious physical \n aspects to them",
+            "target": "Second grouping OP"
         },
         {
             "source": "First grouping OP",
@@ -27948,7 +27709,7 @@
             "target": "Intervening on/modifying  known games"
         },
         {
-            "source": "Concepts and insights we played with",
+            "source": "Concepts we played with",
             "target": "With wide interpretations \n for physical application"
         },
         {
@@ -27976,6 +27737,10 @@
             "target": "Reappropriation of a source of tension \n to facilitate exploration"
         },
         {
+            "source": "First grouping WI",
+            "target": "Are the individuals forcing themselves \n on the group or is the group \n repressing them?"
+        },
+        {
             "source": "With wide interpretations \n for physical application",
             "target": "Second grouping WI"
         },
@@ -27997,10 +27762,10 @@
         },
         {
             "source": "What conclusive insights have \n we reached through editing the video?",
-            "target": "Insights"
+            "target": "Insights from reflections \n and videos"
         },
         {
-            "source": "Insights",
+            "source": "Insights from reflections \n and videos",
             "target": "First grouping insights"
         },
         {
@@ -28009,10 +27774,10 @@
         },
         {
             "source": "First grouping insights",
-            "target": "If the intention's to build, patterns \n emerge from chaos on \n small sequences"
+            "target": "If the intention's to build, patterns \n emerge from chaos in \n small sequences"
         },
         {
-            "source": "If the intention's to build, patterns \n emerge from chaos on \n small sequences",
+            "source": "If the intention's to build, patterns \n emerge from chaos in \n small sequences",
             "target": "If we stop listening to each other \n the patterns get lost in \n destructive chaos"
         },
         {
@@ -28032,7 +27797,7 @@
             "target": "Self-knowledge is the first bridge \n towards others"
         },
         {
-            "source": "Insights",
+            "source": "Insights from reflections \n and videos",
             "target": "Second grouping insights"
         },
         {
@@ -28056,7 +27821,7 @@
             "target": "Cheating is play, up until \n cheating ruins the game"
         },
         {
-            "source": "Insights",
+            "source": "Insights from reflections \n and videos",
             "target": "Third grouping insights"
         },
         {
@@ -28078,6 +27843,11 @@
         {
             "source": "Third grouping insights",
             "target": "Bonds are built during the \n action of the game"
-        }
+        },
+        { "source": "Consequences of our presence \n on the street", "target":  "Quotes which resonate from their feedback"},
+        { "source": "Quotes which resonate from their feedback", "target":  "I wish there was something like that \n happening in every corner"},
+        { "source": "Quotes which resonate from their feedback", "target":  "I was walking feeling I need something \n not knowing what it was...\n Then I saw you and I knew \n that was it"},
+        { "source": "Quotes which resonate from their feedback", "target":  "I was so much in need of talking \n to a stranger"}
+       
     ]
 }
