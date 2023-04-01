@@ -269,7 +269,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
           // ACTIONS
           onNodeClick={handleNodeClick}
           // LINKS
-          linkWidth={1.5}
+          linkWidth={1}
         />
       </div>
     </>
