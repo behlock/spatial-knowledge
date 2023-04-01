@@ -6,129 +6,163 @@ import { CSS2DRenderer } from 'three-stdlib'
 
 import Button from '@/components/button'
 import Select from '@/components/select'
-import Slider from '@/components/slider'
 import Switch from '@/components/switch'
 
 const ForceGraph3D = dynamic(() => import('react-force-graph-3d'), {
   ssr: false,
 })
 
-const MAX_DEPTH = 35
-
-// CHILDREN
-const getNodeChildren = (node, links) =>
-  links.filter((l) => {
-    return l.source.id === node.id
-  })
-
-const getNodeChildrenIds = (node, links) => getNodeChildren(node, links).map((l) => l.target.id)
-
-// DEPTH
-const graphDepth = (node, links) => {
-  const children = getNodeChildren(node, links)
-  if (children.length === 0) {
-    return 1
-  }
-  return 1 + Math.max(...children.map((c) => graphDepth(c.target, links)))
-}
-const maxDepth = (graphData) =>
-  graphData.nodes.map((node) => graphDepth(node, graphData.links)).reduce((a, b) => Math.max(a, b), -Infinity)
-
-// ANCESTORS
-const nodeAncestors = (node, links) => {
-  const parents = links.filter((l) => l.target.id === node.id)
-  if (parents.length === 0) {
-    return []
-  }
-
-  return parents.map((p) => p.source).concat(parents.flatMap((p) => nodeAncestors(p.source, links)))
-}
-
-Array.prototype.max = function () {
-  return Math.max.apply(null, this)
-}
-
-const maxAncestors = (graphData) => graphData.nodes.map((node) => nodeAncestors(node, graphData.links).length + 1).max()
-
-// TAGS
-const getTags = (graphData) => {
-  let tags = []
-  graphData.nodes.forEach((node) => {
-    if (node.tags) {
-      tags = tags.concat(node.tags)
-    }
-  })
-  tags.sort()
-  return [...new Set(tags)]
-}
-
-const selectTag = (tag, selectedTags, setSelectedTags) => {
-  if (selectedTags.includes(tag)) {
-    setSelectedTags(selectedTags.filter((t) => t !== tag))
-  } else {
-    setSelectedTags([...selectedTags, tag])
-  }
-}
-
 //MAIN
 export const ForceGraph = ({ englishData, arabicData }) => {
-  // STATE
-  const [extraRenderers, setExtraRenderers] = useState([])
-  const [layers, setLayers] = useState([MAX_DEPTH])
-  const [selectedTags, setSelectedTags] = useState([])
-  const [isVideo, setIsVideo] = useState(false)
-  const [isParametersPanelOpen, setIsParametersPanelOpen] = useState(false)
-  const [isTagsPanelOpen, setIsTagsPanelOpen] = useState(false)
-  const [forceClose, setForceClose] = useState(false)
-  const [dimmedNodes, setDimmedNodes] = useState([])
+  // LANGUAGE
+  // const [language, setLanguage] = useState('english')
+  // const graphData = language === 'english' ? englishData : arabicData
+
+  // const [graphData, setGraphData] = useState(englishData)
+
+  const graphData = englishData
+
+  // CHILDREN
+  const getNodeChildren = (nodeId) =>
+    graphData.links.filter((l) => {
+      return l.source.id === nodeId
+    })
+
+  const getNodeChildrenIds = (nodeId) => {
+    let children = getNodeChildren(nodeId)
+    return children.map((l) => l.target.id)
+  }
+
+  // NODES
+  // Set initially shown nodes
+  const hardcodedDefaultVisibleNodesIds = [
+    'Look back at course of \n the session',
+    'Who designed the game?',
+    'Self-reflection on \n facilitator role',
+    'Resort to external perspective',
+    'How did the game \n boundaries perform?',
+    'How was the group dynamic?',
+    'Concepts we played with',
+    'With obvious physical \n aspects to them',
+    'With wide interpretations \n for physical application',
+    'First grouping OP',
+    'Second grouping OP',
+    'First grouping WI',
+    'Second grouping WI',
+    'Insight from reflections \n and videos',
+    'Phase',
+    'During session',
+    'During street intervention',
+    'During workshops with groups',
+    'Post-session reflection',
+    'Reflecting on workshop',
+    'Reflection on street intervention',
+    'Pre-session planning',
+    'Session is asked for by \n a client/partner/collaborator',
+    'Planning a street intervention',
+    'Upcoming session is part \n of a sequence of workshops \n or program',
+    'Plan the session',
+    'Insights from reflections \n and videos',
+    'During session',
+    'Pre-session planning',
+    'Post-session reflection',
+    'During street intervention',
+    'During workshops with groups',
+    'Work on setup',
+    'Cultivate open mindset',
+    'Tending the creative process',
+    'Communicate prompt to passersby',
+    'Set the ground',
+    'Take care of logistics',
+    'Communicate game boundaries',
+    'Guide warm-up',
+    'Cultivate facilitator mindset',
+    'In facilitating the session',
+    'Facilitate reflection',
+    'Reflection on street intervention',
+    'Reflecting on workshop',
+    'Look back at course of \n the session',
+    'Synthesize',
+    'Take note of all mini-games \n ideas which emerge from \n this process',
+    'Look at piece with a distance \n from its creation process',
+    'Was setup intuitive and attractive?',
+    'About the facilitation',
+    'Evolution of experience',
+    'Consequences of our presence \n on the street',
+    'Upcoming session is part \n of a sequence of workshops \n or program',
+    'Upcoming session is \n a one time event',
+    'Session is self-initiated',
+    'Session is asked for by \n a client/partner/collaborator',
+    'Main field of interest',
+    "Do an in-depth inquiry to understand \n partner's needs",
+    'Look to understand all \n characteristics of the project',
+    'Service sought for',
+    'Determine context of intervention',
+    'Interventions in public space \n using simple prompts to \n allow passersby to indirectly \n create together',
+    'Plan the setup',
+    'What material are we using?',
+    "What's the game like?",
+    'Program flow and strategy',
+    'Look at synthesis from previous session',
+    'Actively wander, be receptive',
+    'Plan the session',
+    'Decide on introductory \n questions and explanations',
+    'Organize flow of the session',
+    'Define the game boundaries',
+    'Choose material',
+    'Plan warm-up adequate \n for the game',
+    'First grouping insights',
+    'Second grouping insights',
+    'Third grouping insights',
+  ]
+
+  const [visibleNodesIds, setVisibleNodesIds] = useState(hardcodedDefaultVisibleNodesIds)
   const [clickedNodes, setClickedNodes] = useState([])
   const [intermediaryNodeColor, setIntermediaryNodeColor] = useState(undefined)
 
-  const [language, setLanguage] = useState('english')
-  const graphData = language === 'english' ? englishData : arabicData
+  useEffect(() => {
+    setVisibleNodesIds(hardcodedDefaultVisibleNodesIds)
+  }, [])
 
-  const resetFilters = () => {
-    setLayers([MAX_DEPTH])
-    setSelectedTags([])
-    setIsVideo(false)
-    resetGraphVisiblity()
-  }
-
-  // HOOKS
+  // RENDERING
+  const [extraRenderers, setExtraRenderers] = useState([])
   useEffect(() => {
     setExtraRenderers([new CSS2DRenderer()])
   }, [])
 
-  // VISIBILITY
-  const isVisible = (node, links) =>
-    nodeAncestors(node, links).length <= layers[0] && selectedTags.every((t) => node.tags.includes(t))
+  // ANCESTORS
+  const nodeAncestors = (node) => {
+    const parents = graphData.links.filter((l) => l.target.id === node.id)
+    if (parents.length === 0) {
+      return []
+    }
 
-  const [visibleNodes, setVisibleNodes] = useState(
-    graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id)
-  )
+    return parents.map((p) => p.source).concat(parents.flatMap((p) => nodeAncestors(p.source, graphData.links)))
+  }
 
-  useEffect(() => {
-    setVisibleNodes(graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id))
-  }, [selectedTags, layers])
+  Array.prototype.max = function () {
+    return Math.max.apply(null, this)
+  }
 
-  useEffect(() => {
-    if (isVideo) {
-      setVisibleNodes(
-        graphData.nodes
-          .filter((node) => node.isVideo || nodeAncestors(node, graphData.links).some((n) => n.isVideo))
-          .map((node) => node.id)
-      )
+  // TAGS
+  const getTags = (graphData) => {
+    let tags = []
+    graphData.nodes.forEach((node) => {
+      if (node.tags) {
+        tags = tags.concat(node.tags)
+      }
+    })
+    tags.sort()
+    return [...new Set(tags)]
+  }
+
+  const selectTag = (tag, selectedTags, setSelectedTags) => {
+    if (selectedTags.includes(tag)) {
+      setSelectedTags(selectedTags.filter((t) => t !== tag))
     } else {
-      setVisibleNodes(graphData.nodes.filter((node) => isVisible(node, graphData.links)).map((node) => node.id))
+      setSelectedTags([...selectedTags, tag])
     }
-  }, [isVideo])
-
-  useEffect(() => {
-    if (forceClose) {
-      setIsTagsPanelOpen(false)
-      setForceClose(false)
-    }
-  }, [forceClose])
+  }
 
   // CLICK
   useEffect(() => {
@@ -144,22 +178,23 @@ export const ForceGraph = ({ englishData, arabicData }) => {
     }
   }, [clickedNodes])
 
-  const resetGraphVisiblity = () => {
-    setDimmedNodes([])
-    setClickedNodes([])
+  const dimNodeAndChildren = (node, links) => {
+    let childrenIds = getNodeChildren(node.id, links)
+    if (childrenIds.length == 0) {
+      childrenIds = [node.id]
+    }
+
+    setVisibleNodesIds(visibleNodesIds.filter((id) => !childrenIds.includes(id) && id !== node.id))
+    setClickedNodes(clickedNodes.filter((id) => !childrenIds.includes(id) && id !== node.id))
   }
 
-  const dimNodeAndChildren = (node, links) => {
-    let childrenIds = getNodeChildrenIds(node, links)
-    let childrenIdsWithNodeId = childrenIds.concat(node.id)
-    setDimmedNodes(dimmedNodes.concat(graphData.nodes.map((n) => n.id).filter((id) => childrenIdsWithNodeId.includes(id))))
-    setClickedNodes(clickedNodes.filter((id) => !childrenIdsWithNodeId.includes(id) && id !== node.id))
-  }
-  
   const undimNodeAndChildren = (node, links) => {
-    let childrenIds = getNodeChildrenIds(node, links)
-    let childrenIdsWithNodeId = childrenIds.concat(node.id)
-    setDimmedNodes(dimmedNodes.filter((id) => !childrenIdsWithNodeId.includes(id) && id !== node.id))
+    let childrenIds = getNodeChildrenIds(node.id, links)
+    if (childrenIds.length == 0) {
+      childrenIds = [node.id]
+    }
+
+    setVisibleNodesIds(visibleNodesIds.concat(childrenIds))
     setClickedNodes(clickedNodes.concat(node.id))
   }
 
@@ -170,14 +205,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
 
     // First clicked node is clicked again
     if (node.id == clickedNodes[0]) {
-      resetGraphVisiblity()
-    }
-
-    // No dimmed nodes yet
-    else if (dimmedNodes.length == 0) {
-      let childrenIds = getNodeChildrenIds(node, graphData.links)
-      setDimmedNodes(graphData.nodes.map((n) => n.id).filter((id) => !childrenIds.includes(id) && id !== node.id))
-      setClickedNodes(clickedNodes.concat(node.id))
+      resetGraphVisibility()
     }
 
     // Click on any other node
@@ -191,6 +219,56 @@ export const ForceGraph = ({ englishData, arabicData }) => {
     }
   }
 
+  // PANEL
+  const [isParametersPanelOpen, setIsParametersPanelOpen] = useState(false)
+  const [isTagsPanelOpen, setIsTagsPanelOpen] = useState(false)
+  const [forceClose, setForceClose] = useState(false)
+  const [selectedTags, setSelectedTags] = useState([])
+  const [isVideo, setIsVideo] = useState(false)
+  const [isRevealed, setIsRevealed] = useState(false)
+
+  const resetGraphVisibility = () => {
+    setVisibleNodesIds(graphData.nodes.map((n) => n.id))
+    setSelectedTags([])
+    setIsVideo(false)
+    setClickedNodes([])
+  }
+
+  const resetFilters = () => {
+    setVisibleNodesIds(hardcodedDefaultVisibleNodesIds)
+    setSelectedTags([])
+    setIsVideo(false)
+    setClickedNodes([])
+  }
+
+  const isVisible = (node) => selectedTags.every((t) => node.tags.includes(t)) && (!isVideo || node.isVideo)
+
+  useEffect(() => {
+    let visibleNodes = graphData.nodes.filter((node) => visibleNodesIds.includes(node.id) && isVisible(node))
+    setVisibleNodesIds(visibleNodes.map((node) => node.id))
+  }, [selectedTags])
+
+  useEffect(() => {
+    if (isVideo) {
+      let visibleNodes = graphData.nodes.filter(
+        (node) =>
+          (visibleNodesIds.includes(node.id) && node.isVideo) ||
+          nodeAncestors(node, graphData.links).some((n) => n.isVideo)
+      )
+      setVisibleNodesIds(visibleNodes.map((node) => node.id))
+    } else {
+      setVisibleNodesIds(hardcodedDefaultVisibleNodesIds)
+    }
+  }, [isVideo])
+
+  useEffect(() => {
+    if (forceClose) {
+      setIsTagsPanelOpen(false)
+      setForceClose(false)
+    }
+  }, [forceClose])
+
+  // VIEW
   return (
     <>
       <Button onClick={() => setIsParametersPanelOpen(!isParametersPanelOpen)}>
@@ -201,13 +279,28 @@ export const ForceGraph = ({ englishData, arabicData }) => {
       </Button>
       {isParametersPanelOpen && (
         <form className="relative z-20 mt-4 mr-8 flex h-full max-w-xs flex-col space-y-4">
+          <fieldset key={`popover-items-reset`}>
+            <Button
+              onClick={(e) => {
+                e.preventDefault()
+                setIsRevealed(!isRevealed)
+                if (isRevealed) {
+                  resetFilters()
+                } else {
+                  resetGraphVisibility()
+                }
+              }}
+            >
+              {isRevealed ? 'Reset' : 'Reveal'}
+            </Button>
+          </fieldset>
           <fieldset key={`popover-items-isVideo`} className="flex justify-center space-x-2 align-middle">
             <Switch checked={isVideo} onChange={setIsVideo} />
             <label htmlFor={'isVideo'} className="text-s shrink-0 grow font-medium text-gray-700 dark:text-gray-400">
               {'Videos'}
             </label>
           </fieldset>
-          <fieldset key={`popover-items-layers`} className="flex flex-col space-y-2 align-middle">
+          {/* <fieldset key={`popover-items-layers`} className="flex flex-col space-y-2 align-middle">
             <label
               htmlFor={'layers'}
               className="text-s mr-4 shrink-0 grow font-medium text-gray-700 dark:text-gray-400"
@@ -215,7 +308,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
               {'Depth'}
             </label>
             <Slider value={layers} min={0} max={MAX_DEPTH} step={1} onValueChange={setLayers} />
-          </fieldset>
+          </fieldset> */}
           <fieldset key={`popover-items-select`} className="flex h-full flex-col space-y-2 align-middle">
             <label htmlFor={'tags'} className="text-s mr-4 shrink-0 grow font-medium text-gray-700 dark:text-gray-400">
               {'Themes'}
@@ -229,9 +322,6 @@ export const ForceGraph = ({ englishData, arabicData }) => {
               forceClose={forceClose}
               closeSelect={() => setForceClose(true)}
             />
-          </fieldset>
-          <fieldset key={`popover-items-reset`}>
-            <Button onClick={resetFilters}>Reset</Button>
           </fieldset>
         </form>
       )}
@@ -257,13 +347,14 @@ export const ForceGraph = ({ englishData, arabicData }) => {
             const label = node.isVideo ? 'Video' : node.id
             const sprite = new SpriteText(label)
             sprite.textHeight = 6
-            sprite.color = dimmedNodes.includes(node.id) ? 'rgba(255, 255, 255, 0)' : 'rgba(255, 255, 255, 0.9)'
+            sprite.color = visibleNodesIds.includes(node.id) ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)'
+
             sprite.fontSize = 25
             return sprite
           }}
           nodeThreeObjectExtend={true}
           nodeAutoColorBy={(node) => node.color}
-          nodeVisibility={(node) => visibleNodes.includes(node.id)}
+          // nodeVisibility={(node) => visibleNodesIds.includes(node.id)}
           nodeOpacity={0.5}
           nodeResolution={32}
           // ACTIONS
