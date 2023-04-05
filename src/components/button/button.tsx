@@ -16,8 +16,8 @@ const Button = React.forwardRef<HTMLButtonElement, Props>(({ children, ...props 
       'group',
       'radix-state-open:bg-gray-50',
       'radix-state-on:bg-gray-50',
-      'radix-state-instant-open:bg-gray-50 radix-state-delayed-open:bg-gray-50',
-      'max-w-fit mt-4 space-y-4 z-50'
+      'radix-state-delayed-open:bg-gray-50 radix-state-instant-open:bg-gray-50',
+      'z-50 mt-4 max-w-fit space-y-4'
     )}
   >
     {children}

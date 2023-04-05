@@ -6,6 +6,8 @@ import { Fragment, useState } from 'react'
 
 interface AlertDialogProps {
   isOpen?: boolean
+  content: any
+  button: any
 }
 
 const AlertDialog = (props: AlertDialogProps) => {
@@ -45,45 +47,19 @@ const AlertDialog = (props: AlertDialogProps) => {
                 'w-[95vw] max-w-xl rounded-lg p-14 md:w-full',
                 'top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]',
                 'bg-white',
-                'focus:outline-none', 
+                'focus:outline-none',
                 'flex flex-col space-y-4'
               )}
             >
               <AlertDialogPrimitive.Title className="text-lg font-bold text-gray-900">
                 What is Collective Creation Games?
               </AlertDialogPrimitive.Title>
-              <AlertDialogPrimitive.Description className="mt-2 text-sm font-normal text-gray-700 whitespace-pre-wrap space-y-4">
-                <p>
-                  Collective Creation Games was born out of a desire to create a space for people to come together and
-                  create something new. We believe that the best games are the ones that are created through
-                  playfulness, experimentation, and collaboration.
-                </p>
-
-                <p>
-                  This exploratory space explains the processes we used to create the games and most importantly the
-                  principles we used to guide our work. This is a work in progress, and we hope to continue to add to it
-                  as we learn more about the vast world of game design.
-                </p>
-
-                <p>
-                  The three dimensional "Mind Map" can be navigated by scrolling and panning around. Clicking on a node
-                  will collapse or expand the node and its children. The exploration parameters can also be adjusted.
-                </p>
-
-                <p>We hope you enjoy our games, and we hope you'll join us in creating something new.</p>
+              <AlertDialogPrimitive.Description className="mt-2 space-y-4 whitespace-pre-wrap text-sm font-normal text-gray-700">
+                {props.content}
               </AlertDialogPrimitive.Description>
-              <div className="mt-4 flex justify-end space-x-2">
-                <AlertDialogPrimitive.Action
-                  className={clsx(
-                    'inline-flex select-none justify-center rounded-md px-4 py-2 text-sm font-medium',
-                    'bg-gray-600 text-white',
-                    'border border-transparent',
-                    'focus:outline-none'
-                  )}
-                >
-                  Start Exploring
-                </AlertDialogPrimitive.Action>
-              </div>
+              {props.button}
+
+
             </AlertDialogPrimitive.Content>
           </Transition.Child>
         </Transition.Root>
