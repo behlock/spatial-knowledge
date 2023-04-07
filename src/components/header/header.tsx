@@ -25,9 +25,9 @@ const Header = () => {
             </p>
             <p>
               By <b>critically engaging</b> as groups, in the design and trial of such an <b>art of games</b>, using
-              <b>mainly found materials and the surrounding environment</b>, we fulfill a place where we can explore the
-              subtle dynamics at play between <b>the individual and the collective</b>, where we can develop our
-              <b>collective imagination</b>, our <b>capacities to co-create</b>, transform materials and spaces and our{' '}
+              <b> mainly found materials and the surrounding environment</b>, we fulfill a place where we can explore
+              the subtle dynamics at play between <b>the individual and the collective</b>, where we can develop our
+              <b> collective imagination</b>, our <b>capacities to co-create</b>, transform materials and spaces and our{' '}
               <b>disposition to rethink and try out our systems of cooperation</b>.
             </p>
           </>
@@ -38,16 +38,21 @@ const Header = () => {
           <>
             <p>
               Both these claims have been put into the test during street interventions, festivals, workshop sessions
-              with groups, collectives, alternative education endeavors, and grassroots organizations. A methodological
-              framework has been developed in praxis with 3 groups of youth between 2021 and 2022 in a rich laboratory
-              program combining creative process and critical pedagogy. It has brought to light the main faculties which
-              engage our attention at different phases of the process, mainly designing the game boundaries,
-              understanding/embracing the role of the facilitator and the importance of the critical reflection,
-              observing the individual/group dynamics and tending the creative process.
+              with groups, collectives, alternative education endeavors, and grassroots organizations.
+            </p>
+            <p>
+              A methodological framework has been developed in praxis with 3 groups of youth between 2021 and 2022 in a
+              rich laboratory program combining creative process and critical pedagogy. It has brought to light the main
+              faculties which engage our attention at different phases of the process, mainly designing the game
+              boundaries, understanding/embracing the role of the facilitator and the importance of the critical
+              reflection, observing the individual/group dynamics and tending the creative process.
             </p>
             <p>
               This page is a visual mind map depicting relationships between all the processes and faculties at play at
-              the different stages of planning, facilitating, and reflecting on the sessions. With the support of:
+              the different stages of planning, facilitating, and reflecting on the sessions.
+            </p>
+            <p>
+              With the support of:
               <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
             </p>
           </>
@@ -65,17 +70,20 @@ const Header = () => {
               them.
             </p>
             <Image src="/assets/node click expand traced.png" alt="click" width={70} height={40} className="mx-auto " />
-            <p>You can rotate around the map.</p>
+            <p>You can rotate around the map</p>
             <Image src="/assets/figure rotate traced.png" alt="click" width={70} height={40} className="mx-auto " />
-            <p>You can zoom in/out.</p>
+            <p>You can zoom in/out</p>
             <Image src="/assets/zoom out traced.png" alt="rotate" width={70} height={40} className="mx-auto " />
             <p>
-              Depending on your interest you can choose one of the topics from the <b>Themes</b>dropdown menu.
+              Depending on your interest you can choose one of the topics from the <b>Themes</b> dropdown menu
             </p>
             <Image src="/assets/choosing topics traced.png" alt="topics" width={70} height={40} className="mx-auto " />
             <p>
               You can isolate the nodes which will link you to the videos. And you can also visit our Youtube channel
-              <b>Collective creation games</b>.
+              <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875">
+                Collective Creation Games
+              </a>
+              .
             </p>
             <Image src="/assets/video toggle traced.png" alt="video" width={70} height={40} className="mx-auto " />
           </>
@@ -85,13 +93,13 @@ const Header = () => {
         return (
           <>
             <p>
-              Our method has many applications which might benefit you and your organization. If its related to
-              individuals and collectives, learning, thinking, designing, trying, creating then we can probably work
+              Our method has many applications which might benefit you and your organization. If it's related to
+              individuals and collectives, learning, thinking, designing, trying and creating then we can probably work
               together.
             </p>
             <p>
-              Have a look at the Topic "How can we work together?" or even better, contact us so that we can better
-              understand how we can help you achieve what you need.
+              Have a look at the topic <b>"How can we work together?"</b> or even better, contact us so that we can
+              better understand how we can help you achieve what you need.
             </p>
             <p>
               Phone:
