@@ -4,7 +4,8 @@ import { clsx } from 'clsx'
 import Button from '../button/button'
 
 type SelectProps = {
-  options: string[]
+  phases: string[]
+  topics: string[]
   selectedTags: string[]
   onValueChange: (value: string) => void
   open: boolean
@@ -38,9 +39,29 @@ const Select = (props: SelectProps) => {
         </SelectPrimitive.ScrollUpButton>
         <SelectPrimitive.Viewport className="my-10 rounded-lg bg-white px-14 py-6 shadow-lg">
           <SelectPrimitive.Group>
-            {props.options.map((f, i) => (
+            <SelectPrimitive.Label>Phases</SelectPrimitive.Label>
+            {props.phases.map((f, i) => (
               <SelectPrimitive.Item
-                disabled={f === 'Grapes'}
+                key={`${f}-${i}`}
+                value={f}
+                className={clsx(
+                  'relative flex items-center rounded-md px-8 py-2 text-sm font-medium  text-gray-700 focus:bg-gray-100 ',
+                  'radix-disabled:opacity-50',
+                  'select-none focus:outline-none'
+                )}
+              >
+                <SelectPrimitive.ItemText>{f}</SelectPrimitive.ItemText>
+                <div className="absolute left-2 inline-flex items-center">
+                  {props.selectedTags.includes(f) ? <CheckIcon /> : null}
+                </div>
+              </SelectPrimitive.Item>
+            ))}
+          </SelectPrimitive.Group>
+          {/* <SelectPrimitive.Separator /> */}
+          <SelectPrimitive.Group>
+            <SelectPrimitive.Label>Topics</SelectPrimitive.Label>
+            {props.topics.map((f, i) => (
+              <SelectPrimitive.Item
                 key={`${f}-${i}`}
                 value={f}
                 className={clsx(

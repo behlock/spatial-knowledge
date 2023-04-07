@@ -145,6 +145,8 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   }
 
   // TAGS
+  const phases = ["Pre-session", "During session", "Post-session"]
+
   const getTags = (graphData) => {
     let tags = []
     graphData.nodes.forEach((node) => {
@@ -316,7 +318,8 @@ export const ForceGraph = ({ englishData, arabicData }) => {
               {'Themes'}
             </label>
             <Select
-              options={getTags(graphData)}
+              phases={phases}
+              topics={getTags(graphData).filter((t) => !phases.includes(t))}
               selectedTags={selectedTags}
               onValueChange={(tag) => selectTag(tag, selectedTags, setSelectedTags)}
               open={isTagsPanelOpen}
