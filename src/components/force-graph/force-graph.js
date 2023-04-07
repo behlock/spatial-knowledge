@@ -359,7 +359,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
           }}
           nodeThreeObjectExtend={true}
           nodeAutoColorBy={(node) => node.color}
-          // nodeVisibility={(node) => visibleNodesIds.includes(node.id)}
+          nodeVisibility={(node) => visibleNodesIds.includes(node.id)}
           nodeOpacity={0.5}
           nodeResolution={32}
           // ACTIONS
