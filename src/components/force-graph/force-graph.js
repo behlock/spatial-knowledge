@@ -203,7 +203,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   }
 
   const handleNodeClick = (node) => {
-    if (node.isVideo) {
+    if (node.videoUrl) {
       window && window.open(node.id, '_blank')
     }
 
@@ -245,7 +245,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
     setClickedNodes([])
   }
 
-  const isVisible = (node) => selectedTags.every((t) => node.tags.includes(t)) && (!isVideo || node.isVideo)
+  const isVisible = (node) => selectedTags.every((t) => node.tags.includes(t)) && (!isVideo || node.videoUrl)
 
   useEffect(() => {
     let visibleNodes = graphData.nodes.filter((node) => visibleNodesIds.includes(node.id) && isVisible(node))
@@ -256,8 +256,8 @@ export const ForceGraph = ({ englishData, arabicData }) => {
     if (isVideo) {
       let visibleNodes = graphData.nodes.filter(
         (node) =>
-          (visibleNodesIds.includes(node.id) && node.isVideo) ||
-          nodeAncestors(node, graphData.links).some((n) => n.isVideo)
+          (visibleNodesIds.includes(node.id) && node.videoUrl) ||
+          nodeAncestors(node, graphData.links).some((n) => n.videoUrl)
       )
       setVisibleNodesIds(visibleNodes.map((node) => node.id))
     } else {
@@ -349,7 +349,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
           }}
           nodeLabel={() => ''}
           nodeThreeObject={(node) => {
-            const label = node.isVideo ? 'Video' : node.id
+            const label = node.videoUrl ? 'Video' : node.id
             const sprite = new SpriteText(label)
             sprite.textHeight = 6
             sprite.color = visibleNodesIds.includes(node.id) ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)'
