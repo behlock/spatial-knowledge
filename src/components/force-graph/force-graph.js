@@ -234,7 +234,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
       <div className="z-50 mt-4 mb-4 mr-4 flex h-full w-full flex-row">
         {phases.map((phase) => {
           return (
-            <div className="mr-4 flex flex-row">
+            <div className="mr-4 flex flex-row" key={phase}>
               <Checkbox
                 label={phase}
                 checked={selectedTags.includes(phase)}
