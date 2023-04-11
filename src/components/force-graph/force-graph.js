@@ -193,11 +193,6 @@ export const ForceGraph = ({ englishData, arabicData }) => {
       window && window.open(node.videoUrl, '_blank')
     }
 
-    // First clicked node is clicked again
-    if (node.id == clickedNodes[0]) {
-      resetGraphVisibility()
-    }
-
     // Click on any other node
     else if (!clickedNodes.includes(node.id)) {
       undimNodeAndChildren(node, graphData.links)
