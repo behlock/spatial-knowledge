@@ -80,7 +80,7 @@ const Header = () => {
             <Image src="/assets/choosing topics traced.png" alt="topics" width={70} height={40} className="mx-auto " />
             <p>
               You can isolate the nodes which will link you to the videos. And you can also visit our Youtube channel
-              <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875">
+              <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">
                 Collective Creation Games
               </a>
               .
