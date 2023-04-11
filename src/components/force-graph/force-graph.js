@@ -256,8 +256,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
     if (isVideo) {
       let visibleNodes = graphData.nodes.filter(
         (node) =>
-          (visibleNodesIds.includes(node.id) && node.videoUrl) ||
-          nodeAncestors(node, graphData.links).some((n) => n.videoUrl)
+          (visibleNodesIds.includes(node.id) && node.videoUrl)
       )
       setVisibleNodesIds(visibleNodes.map((node) => node.id))
     } else {
