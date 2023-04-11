@@ -122,51 +122,37 @@ const Header = () => {
     switch (page) {
       case 1:
         return (
-          <>
-            <div className="mt-4 flex justify-end space-x-2">
-              <Button onClick={() => setPage(page + 1)}>
-                <ArrowRightIcon className="h-5 w-5" />
-              </Button>
-            </div>
-          </>
+          <Button onClick={() => setPage(page + 1)}>
+            <ArrowRightIcon className="h-5 w-5" />
+          </Button>
         )
 
       case 2:
         return (
-          <>
-            <div className="mt-4 flex justify-end space-x-2">
-              <Button onClick={() => setPage(page + 1)}>
-                <ArrowRightIcon className="h-5 w-5" />
-              </Button>
-            </div>
-          </>
+          <Button onClick={() => setPage(page + 1)}>
+            <ArrowRightIcon className="h-5 w-5" />
+          </Button>
         )
 
       case 3:
         return (
-          <>
-            <div className="mt-4 flex justify-end space-x-2">
-              <Button onClick={() => setPage(page + 1)}>
-                <ArrowRightIcon className="h-5 w-5" />
-              </Button>
-            </div>
-          </>
+          <Button onClick={() => setPage(page + 1)}>
+            <ArrowRightIcon className="h-5 w-5" />
+          </Button>
         )
 
       case 4:
         return (
-          <div className="mt-4 flex justify-end space-x-2">
-            <AlertDialogPrimitive.Action
-              className={clsx(
-                'inline-flex select-none justify-center rounded-md px-4 py-2 text-sm font-medium',
-                'bg-gray-600 text-white',
-                'border border-transparent',
-                'focus:outline-none'
-              )}
-            >
-              Start Exploring
-            </AlertDialogPrimitive.Action>
-          </div>
+          <AlertDialogPrimitive.Action
+            className={clsx(
+              'inline-flex select-none justify-center rounded-md px-4 py-2 text-sm font-medium',
+              'bg-gray-600 text-white',
+              'border border-transparent',
+              'focus:outline-none'
+            )}
+          >
+            Start Exploring
+          </AlertDialogPrimitive.Action>
         )
     }
   }
@@ -186,7 +172,12 @@ const Header = () => {
           <h3>Collective Creation Games</h3>
         </Link>
         {cookies.showDialog && (
-          <AlertDialog isOpen={cookies.showDialog === 'true'} content={pageContent()} button={pageButton()} />
+          <AlertDialog
+            isOpen={cookies.showDialog === 'true'}
+            content={pageContent()}
+            pageNumber={page}
+            button={pageButton()}
+          />
         )}
       </div>
     </header>

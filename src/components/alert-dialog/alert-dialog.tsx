@@ -6,6 +6,7 @@ import { Fragment, useState } from 'react'
 
 interface AlertDialogProps {
   isOpen?: boolean
+  pageNumber?: number
   content: any
   button: any
 }
@@ -57,9 +58,17 @@ const AlertDialog = (props: AlertDialogProps) => {
               <AlertDialogPrimitive.Description className="mt-2 space-y-4 whitespace-pre-wrap text-sm font-normal text-gray-700">
                 {props.content}
               </AlertDialogPrimitive.Description>
-              {props.button}
 
-
+              <div className="mt-4 flex flex-row align-middle">
+                <div className="flex flex-grow flex-row justify-start">
+                  <div className="mt-5 flex flex-row items-center">
+                    <p className="text-sm font-normal text-gray-500">{`Page ${props.pageNumber} of 4`}</p>
+                  </div>
+                </div>
+                <div className="flex flex-grow flex-row justify-end">
+                  <div className="flex flex-row items-center">{props.button}</div>
+                </div>
+              </div>
             </AlertDialogPrimitive.Content>
           </Transition.Child>
         </Transition.Root>
