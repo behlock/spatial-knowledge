@@ -5,7 +5,7 @@ import Button from '../button/button'
 
 type SelectProps = {
   phases: string[]
-  topics: string[]
+  // topics: string[]
   selectedTags: string[]
   onValueChange: (value: string) => void
   open: boolean
@@ -37,7 +37,7 @@ const Select = (props: SelectProps) => {
         <SelectPrimitive.ScrollUpButton className="flex items-center justify-center text-gray-700 ">
           <ChevronUpIcon />
         </SelectPrimitive.ScrollUpButton>
-        <SelectPrimitive.Viewport className="my-10 rounded-lg bg-white px-14 py-6 shadow-lg">
+        <SelectPrimitive.Viewport className="my-12 rounded-lg bg-white px-5 shadow-lg">
           <SelectPrimitive.Group>
             <SelectPrimitive.Label>Phases</SelectPrimitive.Label>
             {props.phases.map((f, i) => (
@@ -58,7 +58,7 @@ const Select = (props: SelectProps) => {
             ))}
           </SelectPrimitive.Group>
           {/* <SelectPrimitive.Separator /> */}
-          <SelectPrimitive.Group>
+          {/* <SelectPrimitive.Group>
             <SelectPrimitive.Label>Topics</SelectPrimitive.Label>
             {props.topics.map((f, i) => (
               <SelectPrimitive.Item
@@ -76,7 +76,7 @@ const Select = (props: SelectProps) => {
                 </div>
               </SelectPrimitive.Item>
             ))}
-          </SelectPrimitive.Group>
+          </SelectPrimitive.Group> */}
         </SelectPrimitive.Viewport>
         <SelectPrimitive.ScrollDownButton className="flex items-center justify-center text-gray-700 ">
           <ChevronDownIcon />

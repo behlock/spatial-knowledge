@@ -1,4 +1,3 @@
-import { ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons'
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 import SpriteText from 'three-spritetext'
@@ -6,7 +5,6 @@ import { CSS2DRenderer } from 'three-stdlib'
 
 import Button from '@/components/button'
 import Select from '@/components/select'
-import Switch from '@/components/switch'
 
 const ForceGraph3D = dynamic(() => import('react-force-graph-3d'), {
   ssr: false,
@@ -205,7 +203,6 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   }
 
   // PANEL
-  const [isParametersPanelOpen, setIsParametersPanelOpen] = useState(false)
   const [isTagsPanelOpen, setIsTagsPanelOpen] = useState(false)
   const [forceClose, setForceClose] = useState(false)
   const [selectedTags, setSelectedTags] = useState([])
@@ -252,13 +249,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   // VIEW
   return (
     <>
-      <Button onClick={() => setIsParametersPanelOpen(!isParametersPanelOpen)}>
-        <div className="flex flex-row flex-wrap items-center">
-          <span className="w-xs mr-2">Parameters</span>
-          {isParametersPanelOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
-        </div>
-      </Button>
-      {isParametersPanelOpen && (
+      {
         <form className="relative z-20 mt-4 mr-8 flex h-full max-w-xs flex-col space-y-4">
           <fieldset key={`popover-items-reset`}>
             <Button
@@ -275,12 +266,12 @@ export const ForceGraph = ({ englishData, arabicData }) => {
               {isRevealed ? 'Reset' : 'Reveal'}
             </Button>
           </fieldset>
-          <fieldset key={`popover-items-isVideo`} className="flex justify-center space-x-2 align-middle">
+          {/* <fieldset key={`popover-items-isVideo`} className="flex justify-center space-x-2 align-middle">
             <Switch checked={isVideo} onChange={setIsVideo} />
             <label htmlFor={'isVideo'} className="text-s shrink-0 grow font-medium text-gray-700 dark:text-gray-400">
               {'Videos'}
             </label>
-          </fieldset>
+          </fieldset> */}
           {/* <fieldset key={`popover-items-layers`} className="flex flex-col space-y-2 align-middle">
             <label
               htmlFor={'layers'}
@@ -292,11 +283,11 @@ export const ForceGraph = ({ englishData, arabicData }) => {
           </fieldset> */}
           <fieldset key={`popover-items-select`} className="flex h-full flex-col space-y-2 align-middle">
             <label htmlFor={'tags'} className="text-s mr-4 shrink-0 grow font-medium text-gray-700 dark:text-gray-400">
-              {'Themes'}
+              {'Phases'}
             </label>
             <Select
               phases={phases}
-              topics={getTags(graphData).filter((t) => !phases.includes(t))}
+              // topics={getTags(graphData).filter((t) => !phases.includes(t))}
               selectedTags={selectedTags}
               onValueChange={(tag) => selectTag(tag, selectedTags, setSelectedTags)}
               open={isTagsPanelOpen}
@@ -306,7 +297,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
             />
           </fieldset>
         </form>
-      )}
+      }
       <div className="fixed left-0 top-0 z-10 flex h-full w-full flex-col align-middle">
         <ForceGraph3D
           // RENDERING
