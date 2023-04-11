@@ -144,7 +144,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   }
 
   // TAGS
-  const phases = ["Pre-session", "During session", "Post-session"]
+  const phases = ['Pre-session', 'During session', 'Post-session']
 
   const getTags = (graphData) => {
     let tags = []
@@ -240,10 +240,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
 
   useEffect(() => {
     if (isVideo) {
-      let visibleNodes = graphData.nodes.filter(
-        (node) =>
-          (visibleNodesIds.includes(node.id) && node.videoUrl)
-      )
+      let visibleNodes = graphData.nodes.filter((node) => visibleNodesIds.includes(node.id) && node.videoUrl)
       setVisibleNodesIds(visibleNodes.map((node) => node.id))
     } else {
       setVisibleNodesIds(hardcodedDefaultVisibleNodesIds)
@@ -350,6 +347,13 @@ export const ForceGraph = ({ englishData, arabicData }) => {
           onNodeClick={handleNodeClick}
           // LINKS
           linkWidth={1}
+          linkColor={(link) => {
+            if (clickedNodes.includes(link.source.id)) {
+              return 'yellow'
+            } else {
+              return 'white'
+            }
+          }}
         />
       </div>
     </>
