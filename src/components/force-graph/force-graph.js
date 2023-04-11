@@ -118,7 +118,6 @@ export const ForceGraph = ({ englishData, arabicData }) => {
 
   const [visibleNodesIds, setVisibleNodesIds] = useState(hardcodedDefaultVisibleNodesIds)
   const [clickedNodes, setClickedNodes] = useState([])
-  const [intermediaryNodeColor, setIntermediaryNodeColor] = useState(undefined)
 
   useEffect(() => {
     setVisibleNodesIds(hardcodedDefaultVisibleNodesIds)
@@ -167,19 +166,6 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   }
 
   // CLICK
-  useEffect(() => {
-    if (clickedNodes.length == 1) {
-      let nodeId = clickedNodes[0]
-      let node = graphData.nodes.find((n) => n.id === nodeId)
-      setIntermediaryNodeColor(node.color)
-      node.color = 'pink'
-    } else if (clickedNodes.length == 0 && intermediaryNodeColor) {
-      let node = graphData.nodes.find((n) => n.color === 'pink')
-      node.color = intermediaryNodeColor
-      setIntermediaryNodeColor(undefined)
-    }
-  }, [clickedNodes])
-
   const dimNodeAndChildren = (node, links) => {
     let childrenIds = getNodeChildrenIds(node.id, links)
     if (childrenIds.length == 0) {
@@ -352,7 +338,6 @@ export const ForceGraph = ({ englishData, arabicData }) => {
             const sprite = new SpriteText(label)
             sprite.textHeight = 6
             sprite.color = visibleNodesIds.includes(node.id) ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)'
-
             sprite.fontSize = 25
             return sprite
           }}
