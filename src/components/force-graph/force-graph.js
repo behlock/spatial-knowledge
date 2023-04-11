@@ -3,8 +3,7 @@ import { useEffect, useState } from 'react'
 import SpriteText from 'three-spritetext'
 import { CSS2DRenderer } from 'three-stdlib'
 
-import Button from '@/components/button'
-import Select from '@/components/select'
+import Checkbox from '@/components/checkbox'
 
 const ForceGraph3D = dynamic(() => import('react-force-graph-3d'), {
   ssr: false,
@@ -156,6 +155,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   }
 
   const selectTag = (tag, selectedTags, setSelectedTags) => {
+    setIsRevealed(false)
     if (selectedTags.includes(tag)) {
       setSelectedTags(selectedTags.filter((t) => t !== tag))
     } else {
@@ -203,101 +203,83 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   }
 
   // PANEL
-  const [isTagsPanelOpen, setIsTagsPanelOpen] = useState(false)
-  const [forceClose, setForceClose] = useState(false)
   const [selectedTags, setSelectedTags] = useState([])
-  const [isVideo, setIsVideo] = useState(false)
   const [isRevealed, setIsRevealed] = useState(false)
 
-  const resetGraphVisibility = () => {
+  const expandAll = () => {
     setVisibleNodesIds(graphData.nodes.map((n) => n.id))
     setSelectedTags([])
-    setIsVideo(false)
-    setClickedNodes([])
   }
 
   const resetFilters = () => {
     setVisibleNodesIds(hardcodedDefaultVisibleNodesIds)
-    setSelectedTags([])
-    setIsVideo(false)
-    setClickedNodes([])
   }
 
-  const isVisible = (node) => selectedTags.every((t) => node.tags.includes(t)) && (!isVideo || node.videoUrl)
+  const isVisible = (node) => selectedTags.every((t) => node.tags.includes(t))
 
   useEffect(() => {
-    let visibleNodes = graphData.nodes.filter((node) => visibleNodesIds.includes(node.id) && isVisible(node))
-    setVisibleNodesIds(visibleNodes.map((node) => node.id))
-  }, [selectedTags])
-
-  useEffect(() => {
-    if (isVideo) {
-      let visibleNodes = graphData.nodes.filter((node) => visibleNodesIds.includes(node.id) && node.videoUrl)
+    if (isRevealed) {
+      setVisibleNodesIds(graphData.nodes.map((n) => n.id))
+    } else if (selectedTags.length !== 0) {
+      let visibleNodes = graphData.nodes.filter((node) => isVisible(node))
       setVisibleNodesIds(visibleNodes.map((node) => node.id))
     } else {
       setVisibleNodesIds(hardcodedDefaultVisibleNodesIds)
     }
-  }, [isVideo])
-
-  useEffect(() => {
-    if (forceClose) {
-      setIsTagsPanelOpen(false)
-      setForceClose(false)
-    }
-  }, [forceClose])
+  }, [selectedTags])
 
   // VIEW
   return (
     <>
-      {
-        <form className="relative z-20 mr-8 flex h-full max-w-xs flex-col space-y-4">
-          <fieldset key={`popover-items-reset`}>
-            <Button
-              onClick={(e) => {
-                e.preventDefault()
-                setIsRevealed(!isRevealed)
-                if (isRevealed) {
-                  resetFilters()
-                } else {
-                  resetGraphVisibility()
-                }
-              }}
-            >
-              {isRevealed ? 'Reset' : 'Reveal'}
-            </Button>
-          </fieldset>
-          {/* <fieldset key={`popover-items-isVideo`} className="flex justify-center space-x-2 align-middle">
-            <Switch checked={isVideo} onChange={setIsVideo} />
-            <label htmlFor={'isVideo'} className="text-s shrink-0 grow font-medium text-gray-700 dark:text-gray-400">
-              {'Videos'}
-            </label>
-          </fieldset> */}
-          {/* <fieldset key={`popover-items-layers`} className="flex flex-col space-y-2 align-middle">
-            <label
-              htmlFor={'layers'}
-              className="text-s mr-4 shrink-0 grow font-medium text-gray-700 dark:text-gray-400"
-            >
-              {'Depth'}
-            </label>
-            <Slider value={layers} min={0} max={MAX_DEPTH} step={1} onValueChange={setLayers} />
-          </fieldset> */}
-          <fieldset key={`popover-items-select`} className="flex h-full flex-col space-y-2 align-middle">
-            <label htmlFor={'tags'} className="text-s mr-4 shrink-0 grow font-medium text-gray-700 dark:text-gray-400">
-              {'Phases'}
-            </label>
-            <Select
-              phases={phases}
-              // topics={getTags(graphData).filter((t) => !phases.includes(t))}
-              selectedTags={selectedTags}
-              onValueChange={(tag) => selectTag(tag, selectedTags, setSelectedTags)}
-              open={isTagsPanelOpen}
-              onOpenChange={setIsTagsPanelOpen}
-              forceClose={forceClose}
-              closeSelect={() => setForceClose(true)}
-            />
-          </fieldset>
-        </form>
-      }
+      <div className="z-50 mt-4 mb-4 mr-4 flex h-full w-full flex-row">
+        {phases.map((phase) => {
+          return (
+            <div className="mr-4 flex flex-row">
+              <Checkbox
+                label={phase}
+                checked={selectedTags.includes(phase)}
+                onCheckedChange={() => selectTag(phase, selectedTags, setSelectedTags)}
+              />
+            </div>
+          )
+        })}
+        <Checkbox
+          label={'Everything'}
+          checked={isRevealed}
+          onCheckedChange={() => {
+            setIsRevealed(!isRevealed)
+            if (isRevealed) {
+              resetFilters()
+            } else {
+              expandAll()
+            }
+          }}
+        />
+      </div>
+      {/* <Button
+        onClick={(e) => {
+          e.preventDefault()
+          setIsRevealed(!isRevealed)
+          if (isRevealed) {
+            resetFilters()
+          } else {
+            expandAll()
+          }
+        }}
+      >
+        {isRevealed ? 'Reset' : 'Reveal'}
+      </Button> */}
+
+      {/* <Select
+        phases={phases}
+        // topics={getTags(graphData).filter((t) => !phases.includes(t))}
+        selectedTags={selectedTags}
+        onValueChange={(tag) => selectTag(tag, selectedTags, setSelectedTags)}
+        open={isTagsPanelOpen}
+        onOpenChange={setIsTagsPanelOpen}
+        forceClose={forceClose}
+        closeSelect={() => setForceClose(true)}
+      /> */}
       <div className="fixed left-0 top-0 z-10 flex h-full w-full flex-col align-middle">
         <ForceGraph3D
           // RENDERING

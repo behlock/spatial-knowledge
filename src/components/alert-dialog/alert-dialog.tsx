@@ -1,6 +1,6 @@
 import { Transition } from '@headlessui/react'
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog'
-import { InfoCircledIcon } from '@radix-ui/react-icons'
+import { Cross1Icon, InfoCircledIcon } from '@radix-ui/react-icons'
 import { clsx } from 'clsx'
 import { Fragment, useState } from 'react'
 
@@ -52,6 +52,11 @@ const AlertDialog = (props: AlertDialogProps) => {
                 'flex flex-col space-y-4'
               )}
             >
+              <AlertDialogPrimitive.Cancel asChild>
+                <button className="absolute top-0 right-0 p-8">
+                  <Cross1Icon />
+                </button>
+              </AlertDialogPrimitive.Cancel>
               <AlertDialogPrimitive.Title className="text-lg font-bold text-gray-900">
                 What is Collective Creation Games?
               </AlertDialogPrimitive.Title>

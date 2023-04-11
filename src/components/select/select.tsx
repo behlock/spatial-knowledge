@@ -37,7 +37,7 @@ const Select = (props: SelectProps) => {
         <SelectPrimitive.ScrollUpButton className="flex items-center justify-center text-gray-700 ">
           <ChevronUpIcon />
         </SelectPrimitive.ScrollUpButton>
-        <SelectPrimitive.Viewport className="my-12 rounded-lg bg-white px-5 shadow-lg">
+        <SelectPrimitive.Viewport className="rounded-lg bg-white px-5 shadow-lg">
           <SelectPrimitive.Group>
             <SelectPrimitive.Label>Phases</SelectPrimitive.Label>
             {props.phases.map((f, i) => (

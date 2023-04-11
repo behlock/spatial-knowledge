@@ -171,8 +171,8 @@ const Header = () => {
 
   return (
     <header className="z-20">
-      <div className="z-20 mb-2 mr-8 flex flex-row flex-wrap space-x-2 text-3xl font-extrabold">
-        <Link href="/">{isMobile ? <h3>Collective Creation Games</h3> : <h5>Collective Creation Games</h5>}</Link>
+      <div className="z-20 mb-2 mr-8 flex flex-row flex-wrap space-x-2 font-extrabold">
+        <Link href="/">{isMobile ? <h3>Collective Creation Games</h3> : <h3>Collective Creation Games</h3>}</Link>
         {cookies.showDialog && (
           <AlertDialog
             isOpen={cookies.showDialog === 'true'}
