@@ -346,7 +346,13 @@ export const ForceGraph = ({ englishData, arabicData }) => {
           // ACTIONS
           onNodeClick={handleNodeClick}
           // LINKS
-          linkWidth={1}
+          linkWidth={(link) => {
+            if (clickedNodes.includes(link.source.id)) {
+              return 3
+            } else {
+              return 1
+            }
+          }}
           linkColor={(link) => {
             if (clickedNodes.includes(link.source.id)) {
               return 'yellow'
