@@ -190,7 +190,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
 
   const handleNodeClick = (node) => {
     if (node.videoUrl) {
-      window && window.open(node.id, '_blank')
+      window && window.open(node.videoUrl, '_blank')
     }
 
     // First clicked node is clicked again
