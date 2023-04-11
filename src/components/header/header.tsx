@@ -10,20 +10,13 @@ import Button from '@/components/button'
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
 
+import useDeviceDetect from '@/hooks/useDeviceDetect'
+
 const Header = () => {
   const [cookies, setCookie] = useCookies(['showDialog'])
-
-  const [isTouchDevice, setIsTouchDevice] = useState(false)
-
-  useEffect(() => {
-    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-      setIsTouchDevice(true)
-    } else {
-      setIsTouchDevice(false)
-    }
-  }, [])
-
   let [page, setPage] = useState(1)
+
+  const { isMobile } = useDeviceDetect()
 
   const pageContent = () => {
     switch (page) {
@@ -179,7 +172,7 @@ const Header = () => {
   return (
     <header className="z-20">
       <div className="z-20 mb-2 mr-8 flex flex-row flex-wrap space-x-2 text-3xl font-extrabold">
-        <Link href="/">{isTouchDevice ? <h3>Collective Creation Games</h3> : <h5>Collective Creation Games</h5>}</Link>
+        <Link href="/">{isMobile ? <h3>Collective Creation Games</h3> : <h5>Collective Creation Games</h5>}</Link>
         {cookies.showDialog && (
           <AlertDialog
             isOpen={cookies.showDialog === 'true'}
