@@ -250,7 +250,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   return (
     <>
       {
-        <form className="relative z-20 mt-4 mr-8 flex h-full max-w-xs flex-col space-y-4">
+        <form className="relative z-20 mr-8 flex h-full max-w-xs flex-col space-y-4">
           <fieldset key={`popover-items-reset`}>
             <Button
               onClick={(e) => {
