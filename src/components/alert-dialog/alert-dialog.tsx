@@ -17,7 +17,7 @@ const AlertDialog = (props: AlertDialogProps) => {
   return (
     <AlertDialogPrimitive.Root open={isOpen} onOpenChange={setIsOpen}>
       <AlertDialogPrimitive.Trigger asChild>
-        <InfoCircledIcon className="cursor-pointer" />
+        <InfoCircledIcon className="cursor-pointer w-2 h-2" />
       </AlertDialogPrimitive.Trigger>
       <AlertDialogPrimitive.Portal forceMount>
         <Transition.Root show={isOpen}>

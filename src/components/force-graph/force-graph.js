@@ -172,7 +172,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
       setClickedNodes(clickedNodes.filter((id) => id !== node.id))
     } else {
       setVisibleNodesIds(visibleNodesIds.filter((id) => !childrenIds.includes(id)))
-      setClickedNodes(clickedNodes.filter((id) => !childrenIds.includes(id)))
+      setClickedNodes(clickedNodes.filter((id) => !childrenIds.includes(id) && id !== node.id))
     }
   }
 
