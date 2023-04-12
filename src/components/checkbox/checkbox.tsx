@@ -17,7 +17,7 @@ const Checkbox = (props: CheckboxProps) => {
         checked={props.checked}
         onCheckedChange={props.onCheckedChange}
         className={clsx(
-          'flex h-5 w-5 items-center justify-center rounded',
+          'flex h-3 w-3 items-center justify-center rounded',
           'radix-state-checked:bg-orange-600 radix-state-unchecked:bg-gray-100 dark:radix-state-unchecked:bg-gray-800',
           'focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-75'
         )}
@@ -29,7 +29,7 @@ const Checkbox = (props: CheckboxProps) => {
 
       <LabelPrimitive.Label
         htmlFor="c1"
-        className="ml-3 select-none text-sm font-medium text-gray-300"
+        className="ml-1 select-none text-xs font-small text-gray-300"
         onClick={() => props.onCheckedChange(!props.checked)}
       >
         {props.label}
