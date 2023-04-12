@@ -29,7 +29,7 @@ const Checkbox = (props: CheckboxProps) => {
 
       <LabelPrimitive.Label
         htmlFor="c1"
-        className="ml-3 select-none text-sm font-medium text-gray-900 dark:text-gray-100"
+        className="ml-3 select-none text-sm font-medium text-gray-300"
         onClick={() => props.onCheckedChange(!props.checked)}
       >
         {props.label}

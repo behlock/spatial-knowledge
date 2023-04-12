@@ -323,9 +323,9 @@ export const ForceGraph = ({ englishData, arabicData }) => {
           }}
           linkColor={(link) => {
             if (clickedNodes.includes(link.source.id)) {
-              return 'yellow'
+              return '#ffff00'
             } else {
-              return 'white'
+              return '#ffffff'
             }
           }}
         />
