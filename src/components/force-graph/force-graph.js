@@ -114,6 +114,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   ]
 
   const [visibleNodesIds, setVisibleNodesIds] = useState(hardcodedDefaultVisibleNodesIds)
+  const [completeSetOfNodesIds, setCompleteSetOfNodesIds] = useState(hardcodedDefaultVisibleNodesIds)
   const [clickedNodes, setClickedNodes] = useState([])
 
   useEffect(() => {
@@ -155,7 +156,6 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   }
 
   const selectTag = (tag, selectedTags, setSelectedTags) => {
-    setIsRevealed(false)
     if (selectedTags.includes(tag)) {
       setSelectedTags(selectedTags.filter((t) => t !== tag))
     } else {
@@ -206,28 +206,30 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   const [selectedTags, setSelectedTags] = useState([])
   const [isRevealed, setIsRevealed] = useState(false)
 
-  const expandAll = () => {
-    setVisibleNodesIds(graphData.nodes.map((n) => n.id))
-    setSelectedTags([])
+  const isVisible = (node) => {
+    if (node.tags) {
+      return node.tags.some((tag) => selectedTags.includes(tag))
+    }
+    return false
   }
-
-  const resetFilters = () => {
-    setVisibleNodesIds(hardcodedDefaultVisibleNodesIds)
-  }
-
-  const isVisible = (node) => selectedTags.every((t) => node.tags.includes(t))
 
   useEffect(() => {
     if (isRevealed) {
-      setVisibleNodesIds(graphData.nodes.map((n) => n.id))
-    } else if (selectedTags.length !== 0) {
-      let nodesFromVisibileNodesIds = graphData.nodes.filter((node) => visibleNodesIds.includes(node.id))
-      let visibleNodes = nodesFromVisibileNodesIds.filter((node) => isVisible(node))
+      setCompleteSetOfNodesIds(graphData.nodes.map((n) => n.id))
+    } else {
+      setCompleteSetOfNodesIds(hardcodedDefaultVisibleNodesIds)
+    }
+  }, [isRevealed])
+
+  useEffect(() => {
+    if (selectedTags.length !== 0) {
+      let completeSetOfNodes = graphData.nodes.filter((node) => completeSetOfNodesIds.includes(node.id))
+      let visibleNodes = completeSetOfNodes.filter((node) => isVisible(node))
       setVisibleNodesIds(visibleNodes.map((node) => node.id))
     } else {
-      setVisibleNodesIds(hardcodedDefaultVisibleNodesIds)
+      setVisibleNodesIds(completeSetOfNodesIds)
     }
-  }, [selectedTags])
+  }, [selectedTags, completeSetOfNodesIds])
 
   // VIEW
   return (
@@ -245,15 +247,10 @@ export const ForceGraph = ({ englishData, arabicData }) => {
           )
         })}
         <Checkbox
-          label={'Everything'}
+          label={'Reveal'}
           checked={isRevealed}
           onCheckedChange={() => {
             setIsRevealed(!isRevealed)
-            if (isRevealed) {
-              resetFilters()
-            } else {
-              expandAll()
-            }
           }}
         />
       </div>
