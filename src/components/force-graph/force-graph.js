@@ -317,18 +317,19 @@ export const ForceGraph = ({ englishData, arabicData }) => {
           // LINKS
           linkWidth={(link) => {
             if (clickedNodes.includes(link.source.id)) {
-              return 3
+              return 2
             } else {
               return 1
             }
           }}
           linkColor={(link) => {
             if (clickedNodes.includes(link.source.id)) {
-              return '#ffff00'
+              return 'rgba(228, 255, 0, 1)'
             } else {
-              return '#ffffff'
+              return 'rgba(255, 255, 255, 0.3)'
             }
           }}
+          linkOpacity={0.5}
         />
       </div>
     </>
