@@ -221,7 +221,8 @@ export const ForceGraph = ({ englishData, arabicData }) => {
     if (isRevealed) {
       setVisibleNodesIds(graphData.nodes.map((n) => n.id))
     } else if (selectedTags.length !== 0) {
-      let visibleNodes = graphData.nodes.filter((node) => isVisible(node))
+      let nodesFromVisibileNodesIds = graphData.nodes.filter((node) => visibleNodesIds.includes(node.id))
+      let visibleNodes = nodesFromVisibileNodesIds.filter((node) => isVisible(node))
       setVisibleNodesIds(visibleNodes.map((node) => node.id))
     } else {
       setVisibleNodesIds(hardcodedDefaultVisibleNodesIds)
