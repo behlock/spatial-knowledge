@@ -113,8 +113,10 @@ export const ForceGraph = ({ englishData, arabicData }) => {
     'Third grouping insights',
   ]
 
+  const hardcodedDefaultVisibleNodes = graphData.nodes.filter((n) => hardcodedDefaultVisibleNodesIds.includes(n.id))
+
   const [visibleNodesIds, setVisibleNodesIds] = useState(hardcodedDefaultVisibleNodesIds)
-  const [completeSetOfNodesIds, setCompleteSetOfNodesIds] = useState(hardcodedDefaultVisibleNodesIds)
+  const [completeSetOfNodes, setCompleteSetOfNodes] = useState(hardcodedDefaultVisibleNodes)
   const [clickedNodes, setClickedNodes] = useState([])
 
   useEffect(() => {
@@ -215,21 +217,20 @@ export const ForceGraph = ({ englishData, arabicData }) => {
 
   useEffect(() => {
     if (isRevealed) {
-      setCompleteSetOfNodesIds(graphData.nodes.map((n) => n.id))
+      setCompleteSetOfNodes(graphData.nodes)
     } else {
-      setCompleteSetOfNodesIds(hardcodedDefaultVisibleNodesIds)
+      setCompleteSetOfNodes(hardcodedDefaultVisibleNodes)
     }
   }, [isRevealed])
 
   useEffect(() => {
     if (selectedTags.length !== 0) {
-      let completeSetOfNodes = graphData.nodes.filter((node) => completeSetOfNodesIds.includes(node.id))
       let visibleNodes = completeSetOfNodes.filter((node) => isVisible(node))
       setVisibleNodesIds(visibleNodes.map((node) => node.id))
     } else {
-      setVisibleNodesIds(completeSetOfNodesIds)
+      setVisibleNodesIds(completeSetOfNodes.map((node) => node.id))
     }
-  }, [selectedTags, completeSetOfNodesIds])
+  }, [selectedTags, completeSetOfNodes])
 
   // VIEW
   return (
