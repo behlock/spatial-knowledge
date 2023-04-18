@@ -146,17 +146,6 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   // TAGS
   const phases = ['Pre-session', 'During session', 'Post-session']
 
-  const getTags = (graphData) => {
-    let tags = []
-    graphData.nodes.forEach((node) => {
-      if (node.tags) {
-        tags = tags.concat(node.tags)
-      }
-    })
-    tags.sort()
-    return [...new Set(tags)]
-  }
-
   const selectTag = (tag, selectedTags, setSelectedTags) => {
     if (selectedTags.includes(tag)) {
       setSelectedTags(selectedTags.filter((t) => t !== tag))
@@ -166,6 +155,14 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   }
 
   // CLICK
+  useEffect(() => {
+    if (clickedNodes.length > 0) {
+      let firstClickedNodeId = clickedNodes[0]
+      let firstClickedNode = graphData.nodes.find((n) => n.id === firstClickedNodeId)
+      firstClickedNode.color = 'rgba(228, 255, 0, 1)'
+    }
+  }, [clickedNodes])
+
   const dimNodeAndChildren = (node, links) => {
     let childrenIds = getNodeChildrenIds(node.id, links)
     if (childrenIds.length == 0) {

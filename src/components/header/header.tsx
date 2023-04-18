@@ -210,7 +210,7 @@ const Header = () => {
             forwardButton={forwardPageButton()}
           />
         )}
-        <a href="https://www.youtube.com/@ramichahine8875/videos" target="_blank">
+        <a href="https://www.youtube.com/@ramichahine8875/videos" target="_blank" rel="noreferrer">
           <svg
             fill="#FFFFFF"
             width="15px"
