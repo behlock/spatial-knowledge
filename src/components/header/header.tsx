@@ -8,7 +8,7 @@ import { useCookies } from 'react-cookie'
 import AlertDialog from '@/components/alert-dialog'
 import Button from '@/components/button'
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog'
-import { ArrowRightIcon } from '@radix-ui/react-icons'
+import { ArrowRightIcon, ArrowLeftIcon } from '@radix-ui/react-icons'
 
 import useDeviceDetect from '@/hooks/useDeviceDetect'
 
@@ -122,7 +122,35 @@ const Header = () => {
     }
   }
 
-  const pageButton = () => {
+  const previousPageButton = () => {
+    switch (page) {
+      case 1:
+        return <></>
+
+      case 2:
+        return (
+          <Button onClick={() => setPage(page - 1)}>
+            <ArrowLeftIcon className="h-5 w-5" />
+          </Button>
+        )
+
+      case 3:
+        return (
+          <Button onClick={() => setPage(page - 1)}>
+            <ArrowLeftIcon className="h-5 w-5" />
+          </Button>
+        )
+
+      case 4:
+        return (
+          <Button onClick={() => setPage(page - 1)}>
+            <ArrowLeftIcon className="h-5 w-5" />
+          </Button>
+        )
+    }
+  }
+
+  const forwardPageButton = () => {
     switch (page) {
       case 1:
         return (
@@ -178,7 +206,8 @@ const Header = () => {
             isOpen={cookies.showDialog === 'true'}
             content={pageContent()}
             pageNumber={page}
-            button={pageButton()}
+            previousButton={previousPageButton()}
+            forwardButton={forwardPageButton()}
           />
         )}
       </div>

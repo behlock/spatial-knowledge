@@ -8,7 +8,8 @@ interface AlertDialogProps {
   isOpen?: boolean
   pageNumber?: number
   content: any
-  button: any
+  previousButton: any
+  forwardButton: any
 }
 
 const AlertDialog = (props: AlertDialogProps) => {
@@ -17,7 +18,7 @@ const AlertDialog = (props: AlertDialogProps) => {
   return (
     <AlertDialogPrimitive.Root open={isOpen} onOpenChange={setIsOpen}>
       <AlertDialogPrimitive.Trigger asChild>
-        <InfoCircledIcon className="cursor-pointer w-2 h-2" />
+        <InfoCircledIcon className="h-4 w-4 cursor-pointer" />
       </AlertDialogPrimitive.Trigger>
       <AlertDialogPrimitive.Portal forceMount>
         <Transition.Root show={isOpen}>
@@ -66,12 +67,13 @@ const AlertDialog = (props: AlertDialogProps) => {
 
               <div className="mt-4 flex flex-row align-middle">
                 <div className="flex flex-grow flex-row justify-start">
-                  <div className="mt-5 flex flex-row items-center">
+                  <div className="flex flex-row items-center mr-3">{props.previousButton}</div>
+                  <div className="mt-3 flex flex-row items-center">
                     <p className="text-sm font-normal text-gray-500">{`Page ${props.pageNumber} of 4`}</p>
                   </div>
                 </div>
-                <div className="flex flex-grow flex-row justify-end">
-                  <div className="flex flex-row items-center">{props.button}</div>
+                <div className="flex flex-row justify-end">
+                  <div className="flex flex-row items-center">{props.forwardButton}</div>
                 </div>
               </div>
             </AlertDialogPrimitive.Content>
