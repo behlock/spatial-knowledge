@@ -8,7 +8,7 @@ interface AlertDialogProps {
   isOpen?: boolean
   pageNumber?: number
   content: any
-  previousButton: any
+  previousButton?: any
   forwardButton: any
 }
 
@@ -67,7 +67,11 @@ const AlertDialog = (props: AlertDialogProps) => {
 
               <div className="mt-4 flex flex-row align-middle">
                 <div className="flex flex-grow flex-row justify-start">
-                  <div className="mr-3 flex flex-row items-center">{props.previousButton}</div>
+                  {props.previousButton ? (
+                    <div className="mr-3 flex flex-row items-center">{props.previousButton}</div>
+                  ) : (
+                    <></>
+                  )}
                   <div className="mt-3 flex flex-row items-center">
                     <p className="text-sm font-normal text-gray-500">{`Page ${props.pageNumber} of 4`}</p>
                   </div>

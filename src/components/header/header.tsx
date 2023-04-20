@@ -24,15 +24,13 @@ const Header = () => {
         return (
           <>
             <p>
-              <b>Collective Creation Games (CCG)</b> creates spaces of possibility, where groups of people come together
-              in shaping extraordinary creative visual experiences.
+              <b>Collective Creation Games (CCG)</b> create situations of possibility for groups of people to
+              collaborate in giving shape to their collective imagination.
             </p>
             <p>
-              By <b>critically engaging</b> as groups, in the design and trial of such an <b>art of games</b>, using
-              <b> mainly found materials and the surrounding environment</b>, we fulfill a place where we can explore
-              the subtle dynamics at play between <b>the individual and the collective</b>, where we can develop our
-              <b> collective imagination</b>, our <b>capacities to co-create</b>, transform materials and spaces and our{' '}
-              <b>disposition to rethink and try out our systems of cooperation</b>.
+              Combining arts research and critical pedagogy, CCG's are context specific lab sessions for groups to
+              engage in creative processes, where they experiment and design the games and systems of interaction and
+              critically reflect on the individual and group dynamics emerging from these experiences.
             </p>
           </>
         )
@@ -41,19 +39,31 @@ const Header = () => {
         return (
           <>
             <p>
-              Both these claims have been put into the test during street interventions, festivals, workshop sessions
-              with groups, collectives, alternative education endeavors, and grassroots organizations.
+              These experiences have taken the form of interventions, installations, workshops and programs and have
+              engaged individuals and collectives in the streets, in retreats, in formal and informal gatherings; in
+              carnivalesque, social, educational or organizational contexts.
             </p>
             <p>
-              A methodological framework has been developed in praxis with 3 groups of youth between 2021 and 2022 in a
-              rich laboratory program combining creative process and critical pedagogy. It has brought to light the main
-              faculties which engage our attention at different phases of the process, mainly designing the game
-              boundaries, understanding/embracing the role of the facilitator and the importance of the critical
-              reflection, observing the individual/group dynamics and tending the creative process.
+              Between 2021 and 2022 the “Pedagogy of games” program was co-developed with 3 groups of youth, drawing a
+              methodological framework for this practice, and exploring deeper layers of learning emerging from such a
+              shared engagement.
             </p>
             <p>
-              This page is a visual mind map depicting relationships between all the processes and faculties at play at
-              the different stages of planning, facilitating, and reflecting on the sessions.
+              This page invites you to explore that framework and discover all the operations building up the play
+              between the facilitator, the group and the system at different stages of the process:
+              <b>the pre-session planning, the in-session facilitation and the post-session reflection.</b>
+            </p>
+            <p>
+              It is complemented by videos of the practice accessible on our
+              <a
+                className="ml-1 text-blue-600"
+                href="https://www.youtube.com/@ramichahine8875/videos"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Youtube Channel
+              </a>
+              .
             </p>
             <p>
               With the support of:
@@ -66,30 +76,30 @@ const Header = () => {
         return (
           <>
             <p>
-              The <b>3D mindmap</b> is an invitation to explore, to build relationships and approach things from
-              different perspectives.
+              <b>How to navigate it:</b>
             </p>
             <p>
-              By clicking on a central <b>node</b>, you reveal its <b>leaves</b>. By clicking on it again you collapse
-              them.
+              The map is partially visible when you first open the page. <b>Your exploration</b> will reveal the rest.
+              The <text className="text-red-500">red nodes</text> are our main reference points.
             </p>
-            <Image src="/assets/node click expand traced.png" alt="click" width={70} height={40} className="mx-auto " />
-            <p>You can rotate around the map</p>
-            <Image src="/assets/figure rotate traced.png" alt="click" width={70} height={40} className="mx-auto " />
-            <p>You can zoom in/out</p>
+            <p>
+              <b>Click</b> on a central "node", to reveal or collapse its leaves.
+            </p>
+            <Image
+              src="/assets/node click expand traced.png"
+              alt="click"
+              width={100}
+              height={60}
+              className="mx-auto "
+            />
+            <p>
+              <b>Rotate</b>around the map to move in space.
+            </p>
+            <Image src="/assets/figure rotate traced.png" alt="click" width={100} height={60} className="mx-auto " />
+            <p>
+              <b>Zoom</b>in for reading, <b>zoom out</b> to allow easier movement in space.
+            </p>
             <Image src="/assets/zoom out traced.png" alt="rotate" width={70} height={40} className="mx-auto " />
-            <p>
-              Depending on your interest you can choose one of the topics from the <b>Themes</b> dropdown menu
-            </p>
-            <Image src="/assets/choosing topics traced.png" alt="topics" width={70} height={40} className="mx-auto " />
-            <p>
-              You can isolate the nodes which will link you to the videos. And you can also visit our Youtube channel
-              <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">
-                Collective Creation Games
-              </a>
-              .
-            </p>
-            <Image src="/assets/video toggle traced.png" alt="video" width={70} height={40} className="mx-auto " />
           </>
         )
 
@@ -97,13 +107,29 @@ const Header = () => {
         return (
           <>
             <p>
-              Our method has many applications which might benefit you and your organization. If it's related to
-              individuals and collectives, learning, thinking, designing, trying and creating then we can probably work
-              together.
+              <b>Useful commands around the main title</b>
+            </p>
+            <p>The □ Checkboxes allow you to choose the stage of the process to explore.</p>
+            <p>Click on ⓘ to re-open this dialog box.</p>
+            <p>
+              Click on ⏵ to open our
+              <a
+                className="ml-1 text-blue-600"
+                href="https://www.youtube.com/@ramichahine8875/videos"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Youtube Channel
+              </a>
+              .
             </p>
             <p>
-              Have a look at the topic <b>"How can we work together?"</b> or even better, contact us so that we can
-              better understand how we can help you achieve what you need.
+              <b>Contact us</b>
+            </p>
+            <p>
+              If your endeavor is related to <b>individuals learning, thinking, designing, trying, creating together</b>{' '}
+              and you are curious to explore unusual ways to do so, then we can surely collaborate. Get in touch, let's
+              have a chat and develop the appropriate Collective creation game for the situation.
             </p>
             <p>
               Phone:
@@ -125,7 +151,7 @@ const Header = () => {
   const previousPageButton = () => {
     switch (page) {
       case 1:
-        return <></>
+        return null
 
       case 2:
         return (
