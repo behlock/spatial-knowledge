@@ -318,7 +318,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
             }
           }}
           linkColor={(link) => {
-            if (clickedNodes.includes(link.source.id)) {
+            if (clickedNodes.includes(link.source.id) && visibleNodesIds.includes(link.target.id)) {
               return 'rgba(228, 255, 0, 1)'
             } else {
               return 'rgba(255, 255, 255, 0.3)'
