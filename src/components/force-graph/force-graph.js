@@ -212,7 +212,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   }
 
   // PANEL
-  const [selectedTags, setSelectedTags] = useState([])
+  const [selectedTags, setSelectedTags] = useState(phases)
   const [isRevealed, setIsRevealed] = useState(false)
 
   const isVisible = (node) => {
