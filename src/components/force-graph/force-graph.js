@@ -201,12 +201,8 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   }
 
   const handleNodeClick = (node) => {
-    if (node.videoUrl) {
-      window && window.open(node.videoUrl, '_blank')
-    }
-
     // Click on any other node
-    else if (!clickedNodes.includes(node.id)) {
+    if (!clickedNodes.includes(node.id)) {
       undimNodeAndChildren(node, graphData.links)
     }
 
