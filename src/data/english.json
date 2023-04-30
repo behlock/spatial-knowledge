@@ -453,18 +453,6 @@
             "videoUrl": ""
         },
         {
-            "id": "Can put tools at their \n disposal",
-            "tags": [
-                "During session",
-                "Workshops",
-                "Program",
-                "Facilitation, reflection and learning"
-            ],
-            "color": "#fcb13b",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
             "id": "Explain purpose of session",
             "tags": [
                 "During session",
@@ -2053,20 +2041,6 @@
             "videoUrl": ""
         },
         {
-            "id": "There are appropriate times for \n propositions and others for action",
-            "tags": [
-                "During session",
-                "Workshops",
-                "Program",
-                "Facilitation, reflection and learning",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology"
-            ],
-            "color": "#fcb13b",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
             "id": "Keep chaos constructive",
             "tags": [
                 "During session",
@@ -2619,20 +2593,6 @@
         },
         {
             "id": "Proactive participants might \n take all",
-            "tags": [
-                "During session",
-                "Workshops",
-                "Program",
-                "Game design and systems thinking",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology"
-            ],
-            "color": "#fcb13b",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
-            "id": "Attention can drift off topic",
             "tags": [
                 "During session",
                 "Workshops",
@@ -3805,35 +3765,7 @@
             "videoUrl": ""
         },
         {
-            "id": "Visual result",
-            "tags": [
-                "During session",
-                "Workshops",
-                "Program",
-                "Game design and systems thinking",
-                "Collectivity, individuality and social psychology",
-                "The creative process, materials, chaos and time"
-            ],
-            "color": "#fcb13b",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
             "id": "Choreographic visual result",
-            "tags": [
-                "During session",
-                "Workshops",
-                "Program",
-                "Game design and systems thinking",
-                "Collectivity, individuality and social psychology",
-                "The creative process, materials, chaos and time"
-            ],
-            "color": "#fcb13b",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
-            "id": "Extraordinary collective \n behavior",
             "tags": [
                 "During session",
                 "Workshops",
@@ -4769,41 +4701,7 @@
             "videoUrl": ""
         },
         {
-            "id": "Opportunity to change \n preconceived ideas",
-            "tags": [
-                "During session",
-                "Workshops",
-                "Program",
-                "Game design and systems thinking",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology",
-                "Facilitation, reflection and learning"
-            ],
-            "color": "#fcb13b",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
-            "id": "Opportunity to learn in \n open environment",
-            "tags": [
-                "During session",
-                "Workshops",
-                "Program",
-                "Game design and systems thinking",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology",
-                "Facilitation, reflection and learning"
-            ],
-            "color": "#fcb13b",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
-            "id": "Opportunity to try",
+            "id": "Opportunity to learn \n in an experimental environment",
             "tags": [
                 "During session",
                 "Workshops",
@@ -7958,29 +7856,6 @@
             "videoUrl": ""
         },
         {
-            "id": "Positives and negatives",
-            "tags": [
-                "During session",
-                "Workshops",
-                "Program",
-                "Facilitation, reflection and learning",
-                "Facilitation, reflection and learning",
-                "Facilitation, reflection and learning",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology",
-                "Game design and systems thinking",
-                "Game design and systems thinking",
-                "Collectivity, individuality and social psychology",
-                "Facilitation, reflection and learning",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology",
-                "The creative process, materials, chaos and time"
-            ],
-            "color": "#fcb13b",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
             "id": "How did they work together \n through their challenges?",
             "tags": [
                 "During session",
@@ -10698,63 +10573,6 @@
         },
         {
             "id": "Activate the drive \n for actions to happen",
-            "tags": [
-                "Post-session",
-                "Workshops",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Facilitation, reflection and learning",
-                "Facilitation, reflection and learning",
-                "The creative process, materials, chaos and time",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "Game design and systems thinking"
-            ],
-            "color": "#c90076",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
-            "id": "Give drive to the action \n of the group",
-            "tags": [
-                "Post-session",
-                "Workshops",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Facilitation, reflection and learning",
-                "Facilitation, reflection and learning",
-                "The creative process, materials, chaos and time",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "Game design and systems thinking"
-            ],
-            "color": "#c90076",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
-            "id": "Can be full of propositions",
-            "tags": [
-                "Post-session",
-                "Workshops",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Facilitation, reflection and learning",
-                "Facilitation, reflection and learning",
-                "The creative process, materials, chaos and time",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "Game design and systems thinking"
-            ],
-            "color": "#c90076",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
-            "id": "Risk having a hard time \n completing one idea",
             "tags": [
                 "Post-session",
                 "Workshops",
@@ -17898,33 +17716,6 @@
             "videoUrl": ""
         },
         {
-            "id": "'House' with Zayraqoun'",
-            "tags": [
-                "Concepts, insights, feedback and benefits",
-                "Pre-session",
-                "Post-session",
-                "During session",
-                "Workshops",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "The creative process, materials, chaos and time",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning"
-            ],
-            "color": "#f55a68",
-            "portalTo": "",
-            "videoUrl": "https://youtu.be/mxSuFPKv5Kk "
-        },
-        {
             "id": "Building our own musical instruments",
             "tags": [
                 "Concepts, insights, feedback and benefits",
@@ -18272,33 +18063,6 @@
                 "Facilitation, reflection and learning"
             ],
             "color": "#f55a68",
-            "portalTo": "",
-            "videoUrl": ""
-        },
-        {
-            "id": "Insights from reflections \n and videos",
-            "tags": [
-                "Concepts, insights, feedback and benefits",
-                "Pre-session",
-                "Post-session",
-                "During session",
-                "Workshops",
-                "The creative process, materials, chaos and time",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Collectivity, individuality and social psychology",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "The creative process, materials, chaos and time",
-                "The creative process, materials, chaos and time",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning",
-                "Game design and systems thinking",
-                "Facilitation, reflection and learning"
-            ],
-            "color": "#cc0000",
             "portalTo": "",
             "videoUrl": ""
         },
@@ -20397,7 +20161,7 @@
         },
         {
             "source": "Stationary",
-            "target": "Opportunity to learn in \n open environment"
+            "target": "Opportunity to learn \n in an experimental environment"
         },
         {
             "source": "Store bought",
