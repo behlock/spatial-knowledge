@@ -185,7 +185,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
     if (grandchildrenIds.length == 0) {
       grandchildrenIds = [node.id]
     }
-    setVisibleNodesIds(visibleNodesIds.filter((id) => !grandchildrenIds.includes(id)))
+    setVisibleNodesIds(visibleNodesIds.filter((id) => !grandchildrenIds.includes(id) ))
     setClickedNodes(clickedNodes.filter((id) => !grandchildrenIds.includes(id) && id !== node.id))
   }
 
@@ -216,9 +216,6 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   const [isRevealed, setIsRevealed] = useState(false)
 
   const isVisible = (node) => {
-    if (hardcodedDefaultVisibleNodesIds.includes(node.id)) {
-      return true
-    }
     if (node.tags) {
       return node.tags.some((tag) => selectedTags.includes(tag))
     }
