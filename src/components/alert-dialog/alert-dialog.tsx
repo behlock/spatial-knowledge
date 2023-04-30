@@ -73,7 +73,7 @@ const AlertDialog = (props: AlertDialogProps) => {
                     <></>
                   )}
                   <div className="mt-3 flex flex-row items-center">
-                    <p className="text-sm font-normal text-gray-500">{`Page ${props.pageNumber} of 4`}</p>
+                    <p className="text-sm font-normal text-gray-500">{`Page ${props.pageNumber} of 6`}</p>
                   </div>
                 </div>
                 <div className="flex flex-row justify-end">

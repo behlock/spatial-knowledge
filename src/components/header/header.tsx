@@ -28,37 +28,37 @@ const Header = ({ english, setEnglish }) => {
         return (
           <>
             <p>
-              <b>Collective Creation Games (CCG)</b> create situations of possibility for groups of people to
-              collaborate in giving shape to their collective imagination.
+              <b>Collective Creation Games (CCG)</b> create situations of emancipation where groups of people
+              collaborate in giving shape to their collective imagination, motion and inspiration.
             </p>
             <p>
-              Combining arts research and critical pedagogy, CCG's are context specific lab sessions for groups to
-              engage in creative processes, where they experiment and design the games and systems of interaction and
-              critically reflect on the individual and group dynamics emerging from these experiences.
+              These experiences take the form of interventions, installations, workshops or programs. They engage our
+              spontaneity, intuition, and will to explore in order to draw us into a state of creative flow.
             </p>
           </>
         )
 
       case 2:
         return (
+          <p>
+            Between 2021 and 2022 the <b>Pedagogy of games</b> program was co-developed with 3 groups of youth. Combining
+            arts research and critical pedagogy, all sessions were context specific, inclusive, creative processes,
+            where we played, designed the games and systems of interaction, and critically reflected on the individual
+            and group dynamics emerging from these experiences.
+          </p>
+        )
+
+      case 3:
+        return (
           <>
             <p>
-              These experiences have taken the form of interventions, installations, workshops and programs and have
-              engaged individuals and collectives in the streets, in retreats, in formal and informal gatherings; in
-              carnivalesque, social, educational or organizational contexts.
-            </p>
-            <p>
-              Between 2021 and 2022 the “Pedagogy of games” program was co-developed with 3 groups of youth, drawing a
-              methodological framework for this practice, and exploring deeper layers of learning emerging from such a
-              shared engagement.
-            </p>
-            <p>
-              This page invites you to explore that framework and discover all the operations building up the play
-              between the facilitator, the group and the system at different stages of the process:
+              This page is a visual attempt to communicate the quirkiness of such a creative process. It invites you to
+              explore the methodological framework we developed for this practice and discover all the operations
+              building up the play between the facilitator, the group and the system at different stages of the process:{' '}
               <b>the pre-session planning, the in-session facilitation and the post-session reflection.</b>
             </p>
             <p>
-              It is complemented by videos of the practice accessible on our
+              It is complemented by videos of all experience on our
               <a
                 className="ml-1 text-blue-600"
                 href="https://www.youtube.com/@ramichahine8875/videos"
@@ -76,7 +76,7 @@ const Header = ({ english, setEnglish }) => {
           </>
         )
 
-      case 3:
+      case 4:
         return (
           <>
             <p>
@@ -84,36 +84,34 @@ const Header = ({ english, setEnglish }) => {
             </p>
             <p>
               The map is partially visible when you first open the page. <b>Your exploration</b> will reveal the rest.
-              The <text className="text-red-500">red nodes</text> are our main reference points.
+              The <text className="text-red-500">Red Balls</text> are our starting points.
             </p>
             <p>
-              <b>Click</b> on a central "node", to reveal or collapse its leaves.
+              <b>Click</b> on a ball, to reveal or collapse its leaves.
             </p>
             <Image
               src="/assets/node click expand traced.png"
               alt="click"
-              width={100}
-              height={60}
+              width={200}
+              height={100}
               className="mx-auto "
             />
             <p>
               <b>Rotate</b> around the map to move in space.
             </p>
-            <Image src="/assets/figure rotate traced.png" alt="click" width={100} height={60} className="mx-auto " />
-            <p>
-              <b>Zoom</b> in for reading, <b>zoom out</b> to allow easier movement in space.
-            </p>
-            <Image src="/assets/zoom out traced.png" alt="rotate" width={70} height={40} className="mx-auto " />
+            <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
+
           </>
         )
 
-      case 4:
+      case 5:
         return (
           <>
             <p>
-              <b>Useful commands around the main title</b>
+              <b>Zoom</b> in for reading, <b>zoom out</b> to allow easier movement in space.
             </p>
-            <p>The □ Checkboxes allow you to choose the stage of the process to explore.</p>
+            <Image src="/assets/zoom out traced.png" alt="rotate" width={200} height={100} className="mx-auto " />
+            <p>Check boxes □ to choose the stage of the process to explore.</p>
             <p>Click on ⓘ to re-open this dialog box.</p>
             <p>
               Click on ⏵ to open our
@@ -127,6 +125,12 @@ const Header = ({ english, setEnglish }) => {
               </a>
               .
             </p>
+          </>
+        )
+
+      case 6:
+        return (
+          <>
             <p>
               <b>Contact us</b>
             </p>
@@ -177,6 +181,18 @@ const Header = ({ english, setEnglish }) => {
             <ArrowLeftIcon className="h-5 w-5" />
           </Button>
         )
+      case 5:
+        return (
+          <Button onClick={() => setPage(page - 1)}>
+            <ArrowLeftIcon className="h-5 w-5" />
+          </Button>
+        )
+      case 6:
+        return (
+          <Button onClick={() => setPage(page - 1)}>
+            <ArrowLeftIcon className="h-5 w-5" />
+          </Button>
+        )
     }
   }
 
@@ -202,8 +218,20 @@ const Header = ({ english, setEnglish }) => {
             <ArrowRightIcon className="h-5 w-5" />
           </Button>
         )
-
       case 4:
+        return (
+          <Button onClick={() => setPage(page + 1)}>
+            <ArrowRightIcon className="h-5 w-5" />
+          </Button>
+        )
+      case 5:
+        return (
+          <Button onClick={() => setPage(page + 1)}>
+            <ArrowRightIcon className="h-5 w-5" />
+          </Button>
+        )
+
+      case 6:
         return (
           <AlertDialogPrimitive.Action
             className={clsx(
