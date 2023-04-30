@@ -8,15 +8,19 @@ import { useCookies } from 'react-cookie'
 import AlertDialog from '@/components/alert-dialog'
 import Button from '@/components/button'
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog'
-import { ArrowLeftIcon, ArrowRightIcon } from '@radix-ui/react-icons'
+import { ArrowLeftIcon, ArrowRightIcon, GlobeIcon } from '@radix-ui/react-icons'
 
 import useDeviceDetect from '@/hooks/useDeviceDetect'
 
-const Header = () => {
+const Header = ({ english, setEnglish }) => {
   const [cookies, setCookie] = useCookies(['showDialog'])
   let [page, setPage] = useState(1)
 
   const { isMobile } = useDeviceDetect()
+
+  const setOpEnglish = () => {
+    setEnglish(!english)
+  }
 
   const pageContent = () => {
     switch (page) {
@@ -236,6 +240,9 @@ const Header = () => {
             forwardButton={forwardPageButton()}
           />
         )}
+        <button onClick={() => setOpEnglish()}>
+          <GlobeIcon className="mb-2 h-4 w-4" />
+        </button>
         <a href="https://www.youtube.com/@ramichahine8875/videos" target="_blank" rel="noreferrer">
           <svg
             fill="#FFFFFF"
