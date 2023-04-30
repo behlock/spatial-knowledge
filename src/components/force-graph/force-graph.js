@@ -49,7 +49,6 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   // NODES
   // Set initially shown nodes
   const hardcodedDefaultVisibleNodesIds = 
-    isMobile ? duringSessionNodesIds :
     [
     'Look back at course of \n the session',
     'Who designed the game?',
@@ -213,7 +212,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   }
 
   // PANEL
-  const [selectedTags, setSelectedTags] = useState([])
+  const [selectedTags, setSelectedTags] = useState(isMobile ? ["During session"] : [])
   const [isRevealed, setIsRevealed] = useState(false)
 
   const isVisible = (node) => {
