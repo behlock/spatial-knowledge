@@ -132,12 +132,12 @@ export const ForceGraph = ({ englishData, arabicData }) => {
 
   const hardcodedDefaultVisibleNodes = graphData.nodes.filter((n) => hardcodedDefaultVisibleNodesIds.includes(n.id))
 
-  const [visibleNodesIds, setVisibleNodesIds] = useState(hardcodedDefaultVisibleNodesIds)
+  const [visibleNodesIds, setVisibleNodesIds] = useState(isMobile ? duringSessionNodesIds : hardcodedDefaultVisibleNodesIds)
   const [completeSetOfNodes, setCompleteSetOfNodes] = useState(hardcodedDefaultVisibleNodes)
   const [clickedNodes, setClickedNodes] = useState([])
 
   useEffect(() => {
-    setVisibleNodesIds(hardcodedDefaultVisibleNodesIds)
+    setVisibleNodesIds(isMobile ? duringSessionNodesIds :hardcodedDefaultVisibleNodesIds)
   }, [])
 
   // RENDERING
@@ -212,7 +212,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   }
 
   // PANEL
-  const [selectedTags, setSelectedTags] = useState(isMobile ? ["During session"] : [])
+  const [selectedTags, setSelectedTags] = useState([])
   const [isRevealed, setIsRevealed] = useState(false)
 
   const isVisible = (node) => {
