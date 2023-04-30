@@ -30,6 +30,19 @@ export const ForceGraph = ({ englishData, arabicData }) => {
     return children.map((l) => l.target.id)
   }
 
+  const getAllDescendantIds = (nodeId) => {
+    const childrenIds = getNodeChildrenIds(nodeId);
+    let descendants = [];
+  
+    childrenIds.forEach((childId) => {
+      descendants.push(childId);
+      const childDescendants = getAllDescendantIds(childId);
+      descendants = descendants.concat(childDescendants);
+    });
+  
+    return descendants;
+  };
+
   // NODES
   // Set initially shown nodes
   const hardcodedDefaultVisibleNodesIds = [
@@ -164,15 +177,12 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   }, [clickedNodes])
 
   const dimNodeAndChildren = (node, links) => {
-    let childrenIds = getNodeChildrenIds(node.id, links)
-    if (childrenIds.length == 0) {
-      childrenIds = [node.id]
-      setVisibleNodesIds(visibleNodesIds.filter((id) => id !== node.id))
-      setClickedNodes(clickedNodes.filter((id) => id !== node.id))
-    } else {
-      setVisibleNodesIds(visibleNodesIds.filter((id) => !childrenIds.includes(id)))
-      setClickedNodes(clickedNodes.filter((id) => !childrenIds.includes(id) && id !== node.id))
+    let grandchildrenIds = getAllDescendantIds(node.id)
+    if (grandchildrenIds.length == 0) {
+      grandchildrenIds = [node.id]
     }
+    setVisibleNodesIds(visibleNodesIds.filter((id) => !grandchildrenIds.includes(id)))
+    setClickedNodes(clickedNodes.filter((id) => !grandchildrenIds.includes(id) && id !== node.id))
   }
 
   const undimNodeAndChildren = (node, links) => {
@@ -206,6 +216,9 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   const [isRevealed, setIsRevealed] = useState(false)
 
   const isVisible = (node) => {
+    if (hardcodedDefaultVisibleNodesIds.includes(node.id)) {
+      return true
+    }
     if (node.tags) {
       return node.tags.some((tag) => selectedTags.includes(tag))
     }

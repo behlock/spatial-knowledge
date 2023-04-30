@@ -93,11 +93,11 @@ const Header = () => {
               className="mx-auto "
             />
             <p>
-              <b>Rotate</b>around the map to move in space.
+              <b>Rotate</b> around the map to move in space.
             </p>
             <Image src="/assets/figure rotate traced.png" alt="click" width={100} height={60} className="mx-auto " />
             <p>
-              <b>Zoom</b>in for reading, <b>zoom out</b> to allow easier movement in space.
+              <b>Zoom</b> in for reading, <b>zoom out</b> to allow easier movement in space.
             </p>
             <Image src="/assets/zoom out traced.png" alt="rotate" width={70} height={40} className="mx-auto " />
           </>
