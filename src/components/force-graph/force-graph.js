@@ -131,9 +131,10 @@ export const ForceGraph = ({ englishData, arabicData }) => {
   ]
 
   const hardcodedDefaultVisibleNodes = graphData.nodes.filter((n) => hardcodedDefaultVisibleNodesIds.includes(n.id))
+  const duringSessionNodes = graphData.nodes.filter((n) => duringSessionNodesIds.includes(n.id))
 
   const [visibleNodesIds, setVisibleNodesIds] = useState(isMobile ? duringSessionNodesIds : hardcodedDefaultVisibleNodesIds)
-  const [completeSetOfNodes, setCompleteSetOfNodes] = useState(hardcodedDefaultVisibleNodes)
+  const [completeSetOfNodes, setCompleteSetOfNodes] = useState(isMobile ? duringSessionNodes  : hardcodedDefaultVisibleNodes)
   const [clickedNodes, setClickedNodes] = useState([])
 
   useEffect(() => {
@@ -226,7 +227,7 @@ export const ForceGraph = ({ englishData, arabicData }) => {
     if (isRevealed) {
       setCompleteSetOfNodes(graphData.nodes)
     } else {
-      setCompleteSetOfNodes(hardcodedDefaultVisibleNodes)
+      setCompleteSetOfNodes(isMobile ? duringSessionNodes : hardcodedDefaultVisibleNodes)
     }
   }, [isRevealed])
 
