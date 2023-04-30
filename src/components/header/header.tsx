@@ -12,6 +12,7 @@ import { ArrowLeftIcon, ArrowRightIcon, GlobeIcon } from '@radix-ui/react-icons'
 
 import useDeviceDetect from '@/hooks/useDeviceDetect'
 
+// @ts-ignore
 const Header = ({ english, setEnglish }) => {
   const [cookies, setCookie] = useCookies(['showDialog'])
   let [page, setPage] = useState(1)
