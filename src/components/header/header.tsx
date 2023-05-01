@@ -23,7 +23,7 @@ const Header = ({ english, setEnglish }) => {
     setEnglish(!english)
   }
 
-  const pageContent = () => {
+  const desktopPageContent = () => {
     switch (page) {
       case 1:
         return (
@@ -42,10 +42,10 @@ const Header = ({ english, setEnglish }) => {
       case 2:
         return (
           <p>
-            Between 2021 and 2022 the <b>Pedagogy of games</b> program was co-developed with 3 groups of youth. Combining
-            arts research and critical pedagogy, all sessions were context specific, inclusive, creative processes,
-            where we played, designed the games and systems of interaction, and critically reflected on the individual
-            and group dynamics emerging from these experiences.
+            Between 2021 and 2022 the <b>Pedagogy of games</b> program was co-developed with 3 groups of youth.
+            Combining arts research and critical pedagogy, all sessions were context specific, inclusive, creative
+            processes, where we played, designed the games and systems of interaction, and critically reflected on the
+            individual and group dynamics emerging from these experiences.
           </p>
         )
 
@@ -101,7 +101,6 @@ const Header = ({ english, setEnglish }) => {
               <b>Rotate</b> around the map to move in space.
             </p>
             <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
-
           </>
         )
 
@@ -113,6 +112,129 @@ const Header = ({ english, setEnglish }) => {
             </p>
             <Image src="/assets/zoom out traced.png" alt="rotate" width={200} height={100} className="mx-auto " />
             <p>Check boxes □ to choose the stage of the process to explore.</p>
+            <p>Click on ⓘ to re-open this dialog box.</p>
+            <p>
+              Click on ⏵ to open our
+              <a
+                className="ml-1 text-blue-600"
+                href="https://www.youtube.com/@ramichahine8875/videos"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Youtube Channel
+              </a>
+              .
+            </p>
+          </>
+        )
+
+      case 6:
+        return (
+          <>
+            <p>
+              <b>Contact us</b>
+            </p>
+            <p>
+              If your endeavor is related to <b>individuals learning, thinking, designing, trying, creating together</b>{' '}
+              and you are curious to explore unusual ways to do so, then we can surely collaborate. Get in touch, let's
+              have a chat and develop the appropriate Collective creation game for the situation.
+            </p>
+            <p>
+              Phone:
+              <a className="ml-1 text-blue-600" href="tel:+961 3 593660">
+                +961 3 593660
+              </a>
+            </p>
+            <p>
+              Email:
+              <a className="ml-1 text-blue-600" href="mailto:rami.o.chahine@gmail.com">
+                rami.o.chahine@gmail.com
+              </a>
+            </p>
+          </>
+        )
+    }
+  }
+
+  const mobilePageContent = () => {
+    switch (page) {
+      case 1:
+        return (
+          <>
+            <p>
+              <b>Collective Creation Games (CCG)</b> create situations of emancipation where groups of people
+              collaborate in giving shape to their collective imagination, motion and inspiration.
+            </p>
+            <p>
+              These experiences take the form of interventions, installations, workshops or programs. They engage our
+              spontaneity, intuition, and will to explore in order to draw us into a state of creative flow.
+            </p>
+          </>
+        )
+
+      case 2:
+        return (
+          <p>
+            Between 2021 and 2022 the <b>Pedagogy of games</b> program was co-developed with 3 groups of youth.
+            Combining arts research and critical pedagogy, all sessions were context specific, inclusive, creative
+            processes, where we played, designed the games and systems of interaction, and critically reflected on the
+            individual and group dynamics emerging from these experiences.
+          </p>
+        )
+
+      case 3:
+        return (
+          <>
+            <p>
+              This page is a visual attempt to communicate the quirkiness of such a creative process. It invites you to
+              explore the methodological framework we developed for this practice and discover all the operations
+              building up the play between the facilitator, the group and the system at different stages of the process:{' '}
+              <b>the pre-session planning, the in-session facilitation and the post-session reflection.</b>
+            </p>
+            <p>
+              It is complemented by videos of all experience on our
+              <a
+                className="ml-1 text-blue-600"
+                href="https://www.youtube.com/@ramichahine8875/videos"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Youtube Channel
+              </a>
+              .
+            </p>
+            <p>
+              With the support of:
+              <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
+            </p>
+          </>
+        )
+
+      case 4:
+        return (
+          <>
+            <p>
+              For compatibility and ease of navigation purposes, only part of the functionalities are enabled on your
+              phone. Only the operations required <b>"during the session"</b> are visible. For a complete experience of
+              exploration, please access the page on a desktop.
+            </p>
+            <p>
+              <b>How to navigate it:</b>
+            </p>
+            <p>
+              <b>Rotate</b> around the map to move in space.
+            </p>
+            <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
+          </>
+        )
+
+      case 5:
+        return (
+          <>
+            <p>
+              <b>Zoom</b> in for reading, <b>zoom out</b> to allow easier movement in space.
+            </p>
+            <Image src="/assets/zoom out traced.png" alt="rotate" width={200} height={100} className="mx-auto " />
             <p>Click on ⓘ to re-open this dialog box.</p>
             <p>
               Click on ⏵ to open our
@@ -263,7 +385,7 @@ const Header = ({ english, setEnglish }) => {
         {cookies.showDialog && (
           <AlertDialog
             isOpen={cookies.showDialog === 'true'}
-            content={pageContent()}
+            content={isMobile ? mobilePageContent() : desktopPageContent()}
             pageNumber={page}
             previousButton={previousPageButton()}
             forwardButton={forwardPageButton()}
