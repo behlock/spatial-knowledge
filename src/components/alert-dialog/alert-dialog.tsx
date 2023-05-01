@@ -1,12 +1,13 @@
 import { Transition } from '@headlessui/react'
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog'
-import { Cross1Icon, InfoCircledIcon } from '@radix-ui/react-icons'
+import { Cross1Icon, GlobeIcon, InfoCircledIcon } from '@radix-ui/react-icons'
 import { clsx } from 'clsx'
 import { Fragment, useState } from 'react'
 
 interface AlertDialogProps {
   isOpen?: boolean
   pageNumber?: number
+  changeLanguage?: any
   content: any
   previousButton?: any
   forwardButton: any
@@ -53,6 +54,14 @@ const AlertDialog = (props: AlertDialogProps) => {
                 'flex flex-col space-y-4'
               )}
             >
+              <button
+                className="absolute top-4 right-0 px-20 py-8"
+                onClick={() => {
+                  props.changeLanguage()
+                }}
+              >
+                <GlobeIcon className="mb-2 h-4 w-4" />
+              </button>
               <AlertDialogPrimitive.Cancel asChild>
                 <button className="absolute top-0 right-0 p-8">
                   <Cross1Icon />
