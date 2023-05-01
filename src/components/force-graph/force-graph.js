@@ -5,7 +5,6 @@ import { CSS2DRenderer } from 'three-stdlib'
 
 import Checkbox from '@/components/checkbox'
 import useDeviceDetect from '@/hooks/useDeviceDetect'
-import Button from '../button/button'
 
 const ForceGraph3D = dynamic(() => import('react-force-graph-3d'), {
   ssr: false,
@@ -14,6 +13,11 @@ const ForceGraph3D = dynamic(() => import('react-force-graph-3d'), {
 //MAIN
 export const ForceGraph = ({ graphData }) => {
   const { isMobile } = useDeviceDetect()
+
+  useEffect(() => {
+    setVisibleNodesIds(isMobile ? duringSessionNodesIds : hardcodedDefaultVisibleNodesIds)
+    setCompleteSetOfNodes(isMobile ? duringSessionNodes : hardcodedDefaultVisibleNodes)
+  }, [isMobile])
 
   // CHILDREN
   const getNodeChildren = (nodeId) =>
@@ -125,17 +129,9 @@ export const ForceGraph = ({ graphData }) => {
   const hardcodedDefaultVisibleNodes = graphData.nodes.filter((n) => hardcodedDefaultVisibleNodesIds.includes(n.id))
   const duringSessionNodes = graphData.nodes.filter((n) => duringSessionNodesIds.includes(n.id))
 
-  const [visibleNodesIds, setVisibleNodesIds] = useState(
-    isMobile ? duringSessionNodesIds : hardcodedDefaultVisibleNodesIds
-  )
-  const [completeSetOfNodes, setCompleteSetOfNodes] = useState(
-    isMobile ? duringSessionNodes : hardcodedDefaultVisibleNodes
-  )
+  const [visibleNodesIds, setVisibleNodesIds] = useState(hardcodedDefaultVisibleNodesIds)
+  const [completeSetOfNodes, setCompleteSetOfNodes] = useState(hardcodedDefaultVisibleNodes)
   const [clickedNodes, setClickedNodes] = useState([])
-
-  useEffect(() => {
-    setVisibleNodesIds(isMobile ? duringSessionNodesIds : hardcodedDefaultVisibleNodesIds)
-  }, [])
 
   // RENDERING
   const [extraRenderers, setExtraRenderers] = useState([])
