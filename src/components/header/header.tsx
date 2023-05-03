@@ -385,6 +385,7 @@ const Header = ({ english, setEnglish }) => {
         {cookies.showDialog && (
           <AlertDialog
             isOpen={cookies.showDialog === 'true'}
+            language={english ? "عربي" : 'English'}
             changeLanguage={setOpEnglish}
             content={isMobile ? mobilePageContent() : desktopPageContent()}
             pageNumber={page}

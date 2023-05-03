@@ -7,6 +7,7 @@ import { Fragment, useState } from 'react'
 interface AlertDialogProps {
   isOpen?: boolean
   pageNumber?: number
+  language?: string
   changeLanguage?: any
   content: any
   previousButton?: any
@@ -55,15 +56,16 @@ const AlertDialog = (props: AlertDialogProps) => {
               )}
             >
               <button
-                className="absolute top-4 right-0 px-20 py-8"
+                className="absolute flex space-x-2 align-middle items-center mb-4 top-3.5 right-0 px-20 py-8"
                 onClick={() => {
                   props.changeLanguage()
                 }}
               >
-                <GlobeIcon className="mb-2 h-4 w-4" />
+                <GlobeIcon className="h-4 w-4" />
+                <text className='text-sm'>{props.language}</text>
               </button>
               <AlertDialogPrimitive.Cancel asChild>
-                <button className="absolute top-0 right-0 p-8">
+                <button className="absolute top-0 right-0 p-8 focus:outline-none">
                   <Cross1Icon />
                 </button>
               </AlertDialogPrimitive.Cancel>
