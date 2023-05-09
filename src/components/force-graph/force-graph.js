@@ -11,7 +11,7 @@ const ForceGraph3D = dynamic(() => import('react-force-graph-3d'), {
 })
 
 //MAIN
-export const ForceGraph = ({ graphData }) => {
+export const ForceGraph = ({ graphData, isEnglish }) => {
   const { isMobile } = useDeviceDetect()
 
   useEffect(() => {
@@ -45,86 +45,104 @@ export const ForceGraph = ({ graphData }) => {
 
   // NODES
   // Set initially shown nodes
-  const hardcodedDefaultVisibleNodesIds = [
-    'Look back at course of \n the session',
-    'Who designed the game?',
-    'Self-reflection on \n facilitator role',
-    'Resort to external perspective',
-    'How did the game \n boundaries perform?',
-    'How was the group dynamic?',
-    'Concepts we played with',
-    'With obvious physical \n aspects to them',
-    'With wide interpretations \n for physical application',
-    'First grouping OP',
-    'Second grouping OP',
-    'First grouping WI',
-    'Second grouping WI',
-    'Insight from reflections \n and videos',
-    'Phase',
-    'During session',
-    'During street intervention',
-    'During workshops with groups',
-    'Post-session reflection',
-    'Reflecting on workshop',
-    'Reflection on street intervention',
-    'Pre-session planning',
-    'Session is asked for by \n a client/partner/collaborator',
-    'Planning a street intervention',
-    'Upcoming session is part \n of a sequence of workshops \n or program',
-    'Plan the session',
-    'Insights from reflections \n and videos',
-    'During session',
-    'Pre-session planning',
-    'Post-session reflection',
-    'During street intervention',
-    'During workshops with groups',
-    'Work on setup',
-    'Cultivate open mindset',
-    'Tending the creative process',
-    'Communicate prompt to passersby',
-    'Set the ground',
-    'Take care of logistics',
-    'Communicate game boundaries',
-    'Guide warm-up',
-    'Cultivate facilitator mindset',
-    'In facilitating the session',
-    'Facilitate reflection',
-    'Reflection on street intervention',
-    'Reflecting on workshop',
-    'Look back at course of \n the session',
-    'Synthesize',
-    'Take note of all mini-games \n ideas which emerge from \n this process',
-    'Look at piece with a distance \n from its creation process',
-    'Was setup intuitive and attractive?',
-    'About the facilitation',
-    'Evolution of experience',
-    'Consequences of our presence \n on the street',
-    'Upcoming session is part \n of a sequence of workshops \n or program',
-    'Upcoming session is \n a one time event',
-    'Session is self-initiated',
-    'Session is asked for by \n a client/partner/collaborator',
-    'Main field of interest',
-    "Do an in-depth inquiry to understand \n partner's needs",
-    'Look to understand all \n characteristics of the project',
-    'Service sought for',
-    'Determine context of intervention',
-    'Interventions in public space \n using simple prompts to \n allow passersby to indirectly \n create together',
-    'Plan the setup',
-    'What material are we using?',
-    "What's the game like?",
-    'Program flow and strategy',
-    'Look at synthesis from previous session',
-    'Actively wander, be receptive',
-    'Plan the session',
-    'Decide on introductory \n questions and explanations',
-    'Organize flow of the session',
-    'Define the game boundaries',
-    'Choose material',
-    'Plan warm-up adequate \n for the game',
-    'First grouping insights',
-    'Second grouping insights',
-    'Third grouping insights',
-  ]
+  const hardcodedDefaultVisibleNodesIds = isEnglish
+    ? [
+        'Trace back  course of \n the session',
+        'Who designed the game?',
+        'Self-reflection on \n facilitator role',
+        'Resort to external perspective',
+        'How did the game \n boundaries perform?',
+        'How was the group dynamic?',
+        'Concepts we played with',
+        'With obvious physical \n aspects to them',
+        'With wide interpretations \n for physical application',
+        'First grouping OP',
+        'Second grouping OP',
+        'First grouping WI',
+        'Second grouping WI',
+        'Insight from reflections \n and videos',
+        'Phase',
+        'During session',
+        'During street intervention',
+        'During workshops with groups',
+        'Post-session reflection',
+        'Reflecting on workshop',
+        'Reflection on street intervention',
+        'Pre-session planning',
+        'Session is asked for by \n a client/partner/collaborator',
+        'Planning a street intervention',
+        'Upcoming session is part \n of a sequence of workshops \n or program',
+        'Plan the session',
+        'Insights from reflections \n and videos',
+        'During session',
+        'Pre-session planning',
+        'Post-session reflection',
+        'During street intervention',
+        'During workshops with groups',
+        'Work on setup',
+        'Cultivate open mindset',
+        'Tending the creative process',
+        'Communicate prompt to passersby',
+        'Set the ground',
+        'Take care of logistics',
+        'Communicate game boundaries',
+        'Guide warm-up',
+        'Cultivate facilitator mindset',
+        'In facilitating the session',
+        'Facilitate reflection',
+        'Reflection on street intervention',
+        'Reflecting on workshop',
+        'Trace back  course of \n the session',
+        'Synthesize',
+        'Take note of all mini-games \n ideas which emerge from \n this process',
+        'Look at piece with a distance \n from its creation process',
+        'Was setup intuitive and attractive?',
+        'About the facilitation',
+        'Evolution of experience',
+        'Consequences of our presence \n on the street',
+        'Upcoming session is part \n of a sequence of workshops \n or program',
+        'Upcoming session is \n a one time event',
+        'Session is self-initiated',
+        'Session is asked for by \n a client/partner/collaborator',
+        'Main field of interest',
+        "Do an in-depth inquiry to understand \n partner's needs",
+        'Look to understand all \n characteristics of the project',
+        'Service sought for',
+        'Determine context of intervention',
+        'Interventions in public space \n using simple prompts to \n allow passersby to indirectly \n create together',
+        'Plan the setup',
+        'What material are we using?',
+        "What's the game like?",
+        'Program flow and strategy',
+        'Look at synthesis from previous session',
+        'Actively wander, be receptive',
+        'Plan the session',
+        'Decide on introductory \n questions and explanations',
+        'Organize flow of the session',
+        'Define the game boundaries',
+        'Choose material',
+        'Plan warm-up adequate \n for the game',
+        'First grouping insights',
+        'Second grouping insights',
+        'Third grouping insights',
+      ]
+    : [
+        'المرحلة',
+        'خلال الجلسة',
+        'خلال تدخل الشارع',
+        'خلال ورش العمل مع المجموعات',
+        'إنعكاس ما بعد الجلسة',
+        'التفكير في الورشة',
+        'إنعكاس عن التدخل في الشارع',
+        'تخطيط ما قبل الجلسة',
+        'التخطيط للتدخل في الشارع',
+        'التخطيط للجلسة',
+        'تم طلب الجلسة من قبل \n زبون / شريك / متعاون',
+        'المفاهيم التي لعبنا بها',
+        'مفاهيم استنتجت من الانعكاسات \n ومقاطع الفيديو',
+        'الجلسة القادمة جزء \n من سلسلة ورش عمل أو برنامج',
+        'راجع مسار الجلسة',
+      ]
 
   const hardcodedDefaultVisibleNodes = graphData.nodes.filter((n) => hardcodedDefaultVisibleNodesIds.includes(n.id))
   const duringSessionNodes = graphData.nodes.filter((n) => duringSessionNodesIds.includes(n.id))
@@ -154,7 +172,9 @@ export const ForceGraph = ({ graphData }) => {
   }
 
   // TAGS
-  const phases = ['Pre-session', 'During session', 'Post-session']
+  const phases = isEnglish
+    ? ['Pre-session', 'During session', 'Post-session']
+    : ['ما قبل الجلسة', 'خلال الجلسة', 'ما بعد الجلسة']
 
   const selectTag = (tag, selectedTags, setSelectedTags) => {
     if (selectedTags.includes(tag)) {
@@ -249,7 +269,7 @@ export const ForceGraph = ({ graphData }) => {
             )
           })}
           <Checkbox
-            label={'Reveal'}
+            label={isEnglish ? 'Reveal' : 'كشف'}
             checked={isRevealed}
             onCheckedChange={() => {
               setIsRevealed(!isRevealed)
