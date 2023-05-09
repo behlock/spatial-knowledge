@@ -26,36 +26,53 @@ const Header = ({ english, setEnglish }) => {
   const desktopPageContent = () => {
     switch (page) {
       case 1:
-        return (
+        return english ? (
           <>
             <p>
               <b>Collective Creation Games (CCG)</b> create situations of emancipation where groups of people
               collaborate in giving shape to their collective imagination, motion and inspiration.
             </p>
             <p>
-              These experiences take the form of interventions, installations, workshops or programs. They engage our
+              These experiences take the form of interventions, installations and workshops. They engage our
               spontaneity, intuition, and will to explore in order to draw us into a state of creative flow.
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              تخلق ألعاب الإبداع الجماعي (CCG) مواقف من التحرر حيث تتعاون مجموعات من الناس في تشكيل خيالهم الجماعي،
+              حركتهم وإلهامهم.
+            </p>
+            <p>
+              تأخذ هذه التجارب شكل مداخلات وتركيبات وورش عمل. تفعّل من عبرها عفويّتنا وحدسنا وإرادتنا في الاستكشاف، من
+              أجل جذبنا إلى حالة من التدفق والإنسجام الإبداعي.
             </p>
           </>
         )
 
       case 2:
-        return (
+        return english ? (
           <p>
-            Between 2021 and 2022 the <b>Pedagogy of games</b> program was co-developed with 3 groups of youth.
-            Combining arts research and critical pedagogy, all sessions were context specific, inclusive, creative
-            processes, where we played, designed the games and systems of interaction, and critically reflected on the
-            individual and group dynamics emerging from these experiences.
+            Between 2021 and 2022 the <b>Pedagogy of games</b> program was co-developed with 3 groups of youth.Combining
+            arts research and critical pedagogy, all sessions were context specific, inclusive, creative processes,
+            where we played, designed the systems of interaction, and critically reflected on the dynamics emerging from
+            these experiences.
           </p>
+        ) : (
+          <>
+            بين عامي 2021 و 2022 تم تطوير برنامج "بيداغوجيا اللعب" بالتعاون مع ثلاث مجموعات شبابيّة. عبر دمج طرق البحث
+            الفنّي والتعلّم النقدي ، كانت الجلسات عبارة عن عمليات إبداعية، متكيّفة بالموقف وشاملة لقدرات الجميع. حيث
+            لعبنا، صممنا أنظمة تفاعلاتنا، وفكّرنا نقديّاً بالديناميكيات الناشئة عن هذه التجارب.
+          </>
         )
 
       case 3:
-        return (
+        return english ? (
           <>
             <p>
-              This page is a visual attempt to communicate the quirkiness of such a creative process. It invites you to
-              explore the methodological framework we developed for this practice and discover all the operations
-              building up the play between the facilitator, the group and the system at different stages of the process:{' '}
+              This page is a visual means to communicate the quirkiness of this practice. It invites you to explore the
+              methodological framework we developed for it and discover all the operations building up the play between
+              the facilitator, the group and the system at different stages of the process:
               <b>the pre-session planning, the in-session facilitation and the post-session reflection.</b>
             </p>
             <p>
@@ -75,10 +92,34 @@ const Header = ({ english, setEnglish }) => {
               <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
             </p>
           </>
+        ) : (
+          <>
+            <p>
+              هذه الصفحة هي وسيلة مرئية للتعبير عن غرابة هذه الممارسة. تدعوك لاستكشاف الإطار المنهجي الذي قمنا بتطويره،
+              واكتشاف جميع العمليات التي تبني اللعب بين الميسر والمجموعة والنظام في مراحل مختلفة من العملية: التخطيط ما
+              قبل الجلسة، التيسير أثناء الجلسة و انعكاس ما بعد الجلسة.
+            </p>
+            <p>
+              يتم استكمالها بمقاطع فيديو لجميع التجارب على قناة{' '}
+              <a
+                className="ml-1 text-blue-600"
+                href="https://www.youtube.com/@ramichahine8875/videos"
+                target="_blank"
+                rel="noreferrer"
+              >
+                YouTube
+              </a>
+              الخاصة بنا. إضغط هنا:
+            </p>
+            <p>
+              بدعم من :
+              <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
+            </p>
+          </>
         )
 
       case 4:
-        return (
+        return english ? (
           <>
             <p>
               <b>How to navigate it:</b>
@@ -102,10 +143,29 @@ const Header = ({ english, setEnglish }) => {
             </p>
             <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
           </>
+        ) : (
+          <>
+            <p>
+              <b>كيفية الإستكشاف:</b>
+            </p>
+            <p>
+              تظهر الخريطة الذهنية جزئيًا عند فتح الصفحة، استكشافكم سوف يظهر الباقي. "الكرات" الحمراء هي نقاط انطلاقنا.
+            </p>
+            <p>غطوا على كرة لفتح أو تسكير أطفالها.</p>
+            <Image
+              src="/assets/node click expand traced.png"
+              alt="click"
+              width={200}
+              height={100}
+              className="mx-auto "
+            />
+            <p>دوروا حول الخريطة للتحرك في الفضاء.</p>
+            <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
+          </>
         )
 
       case 5:
-        return (
+        return english ? (
           <>
             <p>
               <b>Zoom</b> in for reading, <b>zoom out</b> to allow easier movement in space.
@@ -126,18 +186,59 @@ const Header = ({ english, setEnglish }) => {
               .
             </p>
           </>
+        ) : (
+          <>
+            <p>كبّرواالنص للقراءة ، و صغّروا لتسهيل الحركة بالفضاء.</p>
+            <Image src="/assets/zoom out traced.png" alt="rotate" width={200} height={100} className="mx-auto " />
+            <p>ضعوا علامة في المربعات □ لاختيار مرحلة العملية المراد استكشافها.</p>
+            <p>إضغط فوق ⓘ لإعادة فتح مربع الحوار هذا.</p>
+            <p>
+              إضغط ⏵ لفتح قناة ال
+              <a
+                className="ml-1 text-blue-600"
+                href="https://www.youtube.com/@ramichahine8875/videos"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Youtube Channel
+              </a>
+              .
+            </p>
+          </>
         )
 
       case 6:
-        return (
+        return english ? (
           <>
             <p>
               <b>Contact us</b>
             </p>
             <p>
-              If your endeavor is related to <b>individuals learning, thinking, designing, trying, creating together</b>{' '}
-              and you are curious to explore unusual ways to do so, then we can surely collaborate. Get in touch, let's
-              have a chat and develop the appropriate Collective creation game for the situation.
+              If your endeavor is related to <b>individuals creating, experimenting, designing and learning together</b>{' '}
+              then we can surely collaborate. Get in touch, let's have a chat and develop the appropriate Collective
+              creation game for the situation.
+            </p>
+            <p>
+              Phone:
+              <a className="ml-1 text-blue-600" href="tel:+961 3 593660">
+                +961 3 593660
+              </a>
+            </p>
+            <p>
+              Email:
+              <a className="ml-1 text-blue-600" href="mailto:rami.o.chahine@gmail.com">
+                rami.o.chahine@gmail.com
+              </a>
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              <b>اتصلوا بنا</b>
+            </p>
+            <p>
+              إذا كان سعيكم مرتبطًا بأفراد تخلق ،تجرّب ،تصمّم وتطوّر فهمها سويّةً ، فيمكننا بالتأكيد التعاون. تواصلوا
+              معنا ، فالنتحدث ونطور لعبة إبداع جماعي تناسب ألموقف
             </p>
             <p>
               Phone:
@@ -159,36 +260,53 @@ const Header = ({ english, setEnglish }) => {
   const mobilePageContent = () => {
     switch (page) {
       case 1:
-        return (
+        return english ? (
           <>
             <p>
               <b>Collective Creation Games (CCG)</b> create situations of emancipation where groups of people
               collaborate in giving shape to their collective imagination, motion and inspiration.
             </p>
             <p>
-              These experiences take the form of interventions, installations, workshops or programs. They engage our
-              spontaneity, intuition, and will to explore in order to draw us into a state of creative flow.
+              These experiences take the form of interventions, installations or workshops. They engage our spontaneity,
+              intuition, and will to explore in order to draw us into a state of creative flow.
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              تخلق ألعاب الإبداع الجماعي (CCG) مواقف من التحرر حيث تتعاون مجموعات من الناس في تشكيل خيالهم الجماعي،
+              حركتهم وإلهامهم.
+            </p>
+            <p>
+              تأخذ هذه التجارب شكل مداخلات وتركيبات وورش عمل. تفعّل من عبرها عفويّتنا وحدسنا وإرادتنا في الاستكشاف، من
+              أجل جذبنا إلى حالة من التدفق والإنسجام الإبداعي.
             </p>
           </>
         )
 
       case 2:
-        return (
+        return english ? (
           <p>
-            Between 2021 and 2022 the <b>Pedagogy of games</b> program was co-developed with 3 groups of youth.
-            Combining arts research and critical pedagogy, all sessions were context specific, inclusive, creative
-            processes, where we played, designed the games and systems of interaction, and critically reflected on the
-            individual and group dynamics emerging from these experiences.
+            Between 2021 and 2022 the <b>Pedagogy of games</b> program was co-developed with 3 groups of youth.Combining
+            arts research and critical pedagogy, all sessions were context specific, inclusive, creative processes,
+            where we played, designed the systems of interaction, and critically reflected on the dynamics emerging from
+            these experiences.
           </p>
+        ) : (
+          <>
+            بين عامي 2021 و 2022 تم تطوير برنامج "بيداغوجيا اللعب" بالتعاون مع ثلاث مجموعات شبابيّة. عبر دمج طرق البحث
+            الفنّي والتعلّم النقدي ، كانت الجلسات عبارة عن عمليات إبداعية، متكيّفة بالموقف وشاملة لقدرات الجميع. حيث
+            لعبنا، صممنا أنظمة تفاعلاتنا، وفكّرنا نقديّاً بالديناميكيات الناشئة عن هذه التجارب.
+          </>
         )
 
       case 3:
-        return (
+        return english ? (
           <>
             <p>
-              This page is a visual attempt to communicate the quirkiness of such a creative process. It invites you to
-              explore the methodological framework we developed for this practice and discover all the operations
-              building up the play between the facilitator, the group and the system at different stages of the process:{' '}
+              This page is a visual attempt to communicate the quirkiness of such a practice. It invites you to explore
+              the methodological framework we developed for it and discover all the operations building up the play
+              between the facilitator, the group and the system at different stages of the process:
               <b>the pre-session planning, the in-session facilitation and the post-session reflection.</b>
             </p>
             <p>
@@ -208,10 +326,34 @@ const Header = ({ english, setEnglish }) => {
               <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
             </p>
           </>
+        ) : (
+          <>
+            <p>
+              هذه الصفحة هي وسيلة مرئية للتعبير عن غرابة هذه الممارسة. تدعوك لاستكشاف الإطار المنهجي الذي قمنا بتطويره،
+              واكتشاف جميع العمليات التي تبني اللعب بين الميسر والمجموعة والنظام في مراحل مختلفة من العملية: التخطيط ما
+              قبل الجلسة، التيسير أثناء الجلسة و انعكاس ما بعد الجلسة.
+            </p>
+            <p>
+              يتم استكمالها بمقاطع فيديو لجميع التجارب على قناة YouTube الخاصة بنا. إضغط هنا:
+              <a
+                className="ml-1 text-blue-600"
+                href="https://www.youtube.com/@ramichahine8875/videos"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Youtube Channel
+              </a>
+              .
+            </p>
+            <p>
+              بدعم من :
+              <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
+            </p>
+          </>
         )
 
       case 4:
-        return (
+        return english ? (
           <>
             <p>
               For compatibility and ease of navigation purposes, only part of the functionalities are enabled on your
@@ -226,10 +368,22 @@ const Header = ({ english, setEnglish }) => {
             </p>
             <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
           </>
+        ) : (
+          <>
+            <p>
+              من أجل تسهيل التنقل ، إضطرّينا إلى تمكين فقط جزء من الوظائف على هاتفك. تظهر فقط العمليات في "أثناء
+              الجلسة". للحصول على تجربة استكشاف كاملة، يرجى الوصول صفحتنا على جهاز كمبيوتر.
+            </p>
+            <p>
+              <b>كيفية الإستكشاف:</b>
+            </p>
+            <p>دوروا حول الخريطة للتحرك في الفضاء.</p>
+            <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
+          </>
         )
 
       case 5:
-        return (
+        return english ? (
           <>
             <p>
               <b>Zoom</b> in for reading, <b>zoom out</b> to allow easier movement in space.
@@ -249,18 +403,58 @@ const Header = ({ english, setEnglish }) => {
               .
             </p>
           </>
+        ) : (
+          <>
+            <p>كبّرواالنص للقراءة ، و صغّروا لتسهيل الحركة بالفضاء.</p>
+            <Image src="/assets/zoom out traced.png" alt="rotate" width={200} height={100} className="mx-auto " />
+            <p>إضغط فوق ⓘ لإعادة فتح مربع الحوار هذا.</p>
+            <p>
+              إضغط ⏵ لفتح قناة ال
+              <a
+                className="ml-1 text-blue-600"
+                href="https://www.youtube.com/@ramichahine8875/videos"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Youtube Channel
+              </a>
+              .
+            </p>
+          </>
         )
 
       case 6:
-        return (
+        return english ? (
           <>
             <p>
               <b>Contact us</b>
             </p>
             <p>
-              If your endeavor is related to <b>individuals learning, thinking, designing, trying, creating together</b>{' '}
-              and you are curious to explore unusual ways to do so, then we can surely collaborate. Get in touch, let's
-              have a chat and develop the appropriate Collective creation game for the situation.
+              If your endeavor is related to <b>individuals creating, designing, experimenting and learning together</b>{' '}
+              then we can surely collaborate. Get in touch, let's have a chat and develop the appropriate Collective
+              creation game for the situation.
+            </p>
+            <p>
+              Phone:
+              <a className="ml-1 text-blue-600" href="tel:+961 3 593660">
+                +961 3 593660
+              </a>
+            </p>
+            <p>
+              Email:
+              <a className="ml-1 text-blue-600" href="mailto:rami.o.chahine@gmail.com">
+                rami.o.chahine@gmail.com
+              </a>
+            </p>
+          </>
+        ) : (
+          <>
+            <p>
+              <b>اتصلوا بنا:</b>
+            </p>
+            <p>
+              إذا كان سعيكم مرتبطًا بأفراد تخلق ،تجرّب ،تصمّم وتطوّر فهمها سويّةً ، فيمكننا بالتأكيد التعاون. تواصلوا
+              معنا ، فالنتحدث ونطور لعبة إبداع جماعي تناسب ألموقف.
             </p>
             <p>
               Phone:
@@ -385,7 +579,7 @@ const Header = ({ english, setEnglish }) => {
         {cookies.showDialog && (
           <AlertDialog
             isOpen={cookies.showDialog === 'true'}
-            language={english ? "عربي" : 'English'}
+            language={english ? 'العربية' : 'English'}
             changeLanguage={setOpEnglish}
             content={isMobile ? mobilePageContent() : desktopPageContent()}
             pageNumber={page}
