@@ -38,16 +38,16 @@ const Header = ({ english, setEnglish }) => {
             </p>
           </>
         ) : (
-          <>
+          <div className='text-right space-y-2'>
             <p>
               تخلق ألعاب الإبداع الجماعي مواقف من التحرر حيث تتعاون مجموعات من الناس في تشكيل خيالهم الجماعي، حركتهم
-              وإلهامهم.
+              وإلهامهم
             </p>
             <p>
               تأخذ هذه التجارب شكل مداخلات وتركيبات وورش عمل. تفعّل من عبرها عفويّتنا وحدسنا وإرادتنا في الاستكشاف، من
-              أجل جذبنا إلى حالة من التدفق والإنسجام الإبداعي.
+              أجل جذبنا إلى حالة من التدفق والإنسجام الإبداعي
             </p>
-          </>
+          </div>
         )
 
       case 2:
@@ -59,11 +59,11 @@ const Header = ({ english, setEnglish }) => {
             these experiences.
           </p>
         ) : (
-          <>
+          <div className='text-right space-y-2'>
             بين عامي 2021 و 2022 تم تطوير برنامج "بيداغوجيا اللعب" بالتعاون مع ثلاث مجموعات شبابيّة. عبر دمج طرق البحث
             الفنّي والتعلّم النقدي ، كانت الجلسات عبارة عن عمليات إبداعية، متكيّفة بالموقف وشاملة لقدرات الجميع. حيث
             لعبنا، صممنا أنظمة تفاعلاتنا، وفكّرنا نقديّاً بالديناميكيات الناشئة عن هذه التجارب.
-          </>
+          </div>
         )
 
       case 3:
@@ -93,7 +93,7 @@ const Header = ({ english, setEnglish }) => {
             </p>
           </>
         ) : (
-          <>
+          <div className='text-right space-y-2'>
             <p>
               هذه الصفحة هي وسيلة مرئية للتعبير عن غرابة هذه الممارسة. تدعوك لاستكشاف الإطار المنهجي الذي قمنا بتطويره،
               واكتشاف جميع العمليات التي تبني اللعب بين الميسر والمجموعة والنظام في مراحل مختلفة من العملية: التخطيط ما
@@ -115,7 +115,7 @@ const Header = ({ english, setEnglish }) => {
               بدعم من :
               <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
             </p>
-          </>
+          </div>
         )
 
       case 4:
@@ -144,7 +144,7 @@ const Header = ({ english, setEnglish }) => {
             <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
           </>
         ) : (
-          <>
+          <div className='text-right space-y-2'>
             <p>
               <b>كيفية الإستكشاف:</b>
             </p>
@@ -161,7 +161,7 @@ const Header = ({ english, setEnglish }) => {
             />
             <p>دوروا حول الخريطة للتحرك في الفضاء.</p>
             <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
-          </>
+          </div>
         )
 
       case 5:
@@ -187,7 +187,7 @@ const Header = ({ english, setEnglish }) => {
             </p>
           </>
         ) : (
-          <>
+          <div className='text-right space-y-2'>
             <p>كبّرواالنص للقراءة ، و صغّروا لتسهيل الحركة بالفضاء.</p>
             <Image src="/assets/zoom out traced.png" alt="rotate" width={200} height={100} className="mx-auto " />
             <p>ضعوا علامة في المربعات □ لاختيار مرحلة العملية المراد استكشافها.</p>
@@ -204,7 +204,7 @@ const Header = ({ english, setEnglish }) => {
               </a>
               .
             </p>
-          </>
+          </div>
         )
 
       case 6:
@@ -232,7 +232,7 @@ const Header = ({ english, setEnglish }) => {
             </p>
           </>
         ) : (
-          <>
+          <div className='text-right space-y-2'>
             <p>
               <b>اتصلوا بنا</b>
             </p>
@@ -252,7 +252,7 @@ const Header = ({ english, setEnglish }) => {
                 rami.o.chahine@gmail.com
               </a>
             </p>
-          </>
+          </div>
         )
     }
   }
@@ -276,8 +276,8 @@ const Header = ({ english, setEnglish }) => {
             </p>
           </>
         ) : (
-          <>
-            <p>أجل تسهيل التنقل ، إضطرّينا إلى تمكين فقط جزء من الوظائف على هاتفكم</p>
+          <div className='text-right space-y-2'>
+            <p className='text-red-800'>أجل تسهيل التنقل ، إضطرّينا إلى تمكين فقط جزء من الوظائف على هاتفكم</p>
             <p>
               تخلق ألعاب الإبداع الجماعي مواقف من التحرر حيث تتعاون مجموعات من الناس في تشكيل خيالهم الجماعي، حركتهم
               وإلهامهم.
@@ -286,7 +286,7 @@ const Header = ({ english, setEnglish }) => {
               تأخذ هذه التجارب شكل مداخلات وتركيبات وورش عمل. تفعّل من عبرها عفويّتنا وحدسنا وإرادتنا في الاستكشاف، من
               أجل جذبنا إلى حالة من التدفق والإنسجام الإبداعي.
             </p>
-          </>
+          </div>
         )
 
       case 2:
@@ -298,11 +298,11 @@ const Header = ({ english, setEnglish }) => {
             these experiences.
           </p>
         ) : (
-          <>
+          <div className='text-right space-y-2'>
             بين عامي 2021 و 2022 تم تطوير برنامج "بيداغوجيا اللعب" بالتعاون مع ثلاث مجموعات شبابيّة. عبر دمج طرق البحث
             الفنّي والتعلّم النقدي ، كانت الجلسات عبارة عن عمليات إبداعية، متكيّفة بالموقف وشاملة لقدرات الجميع. حيث
             لعبنا، صممنا أنظمة تفاعلاتنا، وفكّرنا نقديّاً بالديناميكيات الناشئة عن هذه التجارب.
-          </>
+            </div>
         )
 
       case 3:
@@ -332,7 +332,7 @@ const Header = ({ english, setEnglish }) => {
             </p>
           </>
         ) : (
-          <>
+          <div className='text-right space-y-2'>
             <p>
               هذه الصفحة هي وسيلة مرئية للتعبير عن غرابة هذه الممارسة. تدعوك لاستكشاف الإطار المنهجي الذي قمنا بتطويره،
               واكتشاف جميع العمليات التي تبني اللعب بين الميسر والمجموعة والنظام في مراحل مختلفة من العملية: التخطيط ما
@@ -354,7 +354,7 @@ const Header = ({ english, setEnglish }) => {
               بدعم من :
               <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
             </p>
-          </>
+          </div>
         )
 
       case 4:
@@ -374,7 +374,7 @@ const Header = ({ english, setEnglish }) => {
             <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
           </>
         ) : (
-          <>
+          <div className='text-right space-y-2'>
             <p>
               من أجل تسهيل التنقل ، إضطرّينا إلى تمكين فقط جزء من الوظائف على هاتفك. تظهر فقط العمليات في "أثناء
               الجلسة". للحصول على تجربة استكشاف كاملة، يرجى الوصول صفحتنا على جهاز كمبيوتر.
@@ -384,7 +384,7 @@ const Header = ({ english, setEnglish }) => {
             </p>
             <p>دوروا حول الخريطة للتحرك في الفضاء.</p>
             <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
-          </>
+          </div>
         )
 
       case 5:
@@ -409,7 +409,7 @@ const Header = ({ english, setEnglish }) => {
             </p>
           </>
         ) : (
-          <>
+          <div className='text-right space-y-2'>
             <p>كبّرواالنص للقراءة ، و صغّروا لتسهيل الحركة بالفضاء.</p>
             <Image src="/assets/zoom out traced.png" alt="rotate" width={200} height={100} className="mx-auto " />
             <p>إضغط فوق ⓘ لإعادة فتح مربع الحوار هذا.</p>
@@ -425,7 +425,7 @@ const Header = ({ english, setEnglish }) => {
               </a>
               .
             </p>
-          </>
+          </div>
         )
 
       case 6:
@@ -453,7 +453,7 @@ const Header = ({ english, setEnglish }) => {
             </p>
           </>
         ) : (
-          <>
+          <div className='text-right space-y-2'>
             <p>
               <b>اتصلوا بنا:</b>
             </p>
@@ -473,7 +473,7 @@ const Header = ({ english, setEnglish }) => {
                 rami.o.chahine@gmail.com
               </a>
             </p>
-          </>
+          </div>
         )
     }
   }
