@@ -29,8 +29,8 @@ const Header = ({ english, setEnglish }) => {
         return english ? (
           <>
             <p>
-              <b>Collective Creation Games (CCG)</b> create situations of emancipation where groups of people
-              collaborate in giving shape to their collective imagination, motion and inspiration.
+              <b>Collective Creation Games </b> create situations of emancipation where groups of people collaborate in
+              giving shape to their collective imagination, motion and inspiration.
             </p>
             <p>
               These experiences take the form of interventions, installations and workshops. They engage our
@@ -40,8 +40,8 @@ const Header = ({ english, setEnglish }) => {
         ) : (
           <>
             <p>
-              تخلق ألعاب الإبداع الجماعي (CCG) مواقف من التحرر حيث تتعاون مجموعات من الناس في تشكيل خيالهم الجماعي،
-              حركتهم وإلهامهم.
+              تخلق ألعاب الإبداع الجماعي مواقف من التحرر حيث تتعاون مجموعات من الناس في تشكيل خيالهم الجماعي، حركتهم
+              وإلهامهم.
             </p>
             <p>
               تأخذ هذه التجارب شكل مداخلات وتركيبات وورش عمل. تفعّل من عبرها عفويّتنا وحدسنا وإرادتنا في الاستكشاف، من
@@ -263,6 +263,10 @@ const Header = ({ english, setEnglish }) => {
         return english ? (
           <>
             <p>
+              Disclaimer: For compatibility and ease of navigation purposes on mobile, only parts of the functionalities
+              are enabled.
+            </p>
+            <p>
               <b>Collective Creation Games (CCG)</b> create situations of emancipation where groups of people
               collaborate in giving shape to their collective imagination, motion and inspiration.
             </p>
@@ -273,9 +277,10 @@ const Header = ({ english, setEnglish }) => {
           </>
         ) : (
           <>
+            <p>أجل تسهيل التنقل ، إضطرّينا إلى تمكين فقط جزء من الوظائف على هاتفكم</p>
             <p>
-              تخلق ألعاب الإبداع الجماعي (CCG) مواقف من التحرر حيث تتعاون مجموعات من الناس في تشكيل خيالهم الجماعي،
-              حركتهم وإلهامهم.
+              تخلق ألعاب الإبداع الجماعي مواقف من التحرر حيث تتعاون مجموعات من الناس في تشكيل خيالهم الجماعي، حركتهم
+              وإلهامهم.
             </p>
             <p>
               تأخذ هذه التجارب شكل مداخلات وتركيبات وورش عمل. تفعّل من عبرها عفويّتنا وحدسنا وإرادتنا في الاستكشاف، من

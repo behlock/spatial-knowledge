@@ -28,7 +28,7 @@ export default function Home() {
       {/* @ts-ignore */}
       <>
         <Header english={english} setEnglish={setEnglish} />
-        <ForceGraph graphData={english ? englishData : arabicData} isEnglish={english}/>
+        <ForceGraph englishData={englishData} arabicData={arabicData} isEnglish={english}/>
       </>
     </Layout>
   )
