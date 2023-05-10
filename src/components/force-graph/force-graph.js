@@ -48,7 +48,12 @@ export const ForceGraph = ({ englishData, arabicData, isEnglish }) => {
 
   useEffect(() => {
     setDuringSessionNodes(graphData.nodes.filter((n) => duringSessionNodesIds.includes(n.id)))
+    setVisibleNodesIds(isMobile ? duringSessionNodesIds : hardcodedDefaultVisibleNodesIds)
   }, [duringSessionNodesIds])
+
+  useEffect(() => {
+    setCompleteSetOfNodes(isMobile ? duringSessionNodes : hardcodedDefaultVisibleNodes)
+  }, [duringSessionNodes])
 
   useEffect(() => {
     setVisibleNodesIds(isMobile ? duringSessionNodesIds : hardcodedDefaultVisibleNodesIds)
@@ -208,8 +213,6 @@ export const ForceGraph = ({ englishData, arabicData, isEnglish }) => {
   Array.prototype.max = function () {
     return Math.max.apply(null, this)
   }
-
-
 
   // TAGS
   const englishPhases = ['Pre-session', 'During session', 'Post-session']
