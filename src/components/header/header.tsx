@@ -263,7 +263,7 @@ const Header = ({ english, setEnglish }) => {
         return english ? (
           <>
             <p>
-              Disclaimer: For compatibility and ease of navigation purposes on mobile, only parts of the functionalities
+              Disclaimer: For compatibility and ease of navigation on mobile, only parts of the functionalities
               are enabled.
             </p>
             <p>
