@@ -340,6 +340,7 @@ const Header = ({ english, setEnglish }) => {
             </p>
             <p>
               يتم استكمالها بمقاطع فيديو لجميع التجارب على قناة{' '}
+              الخاصة بنا. إضغط هنا: .
               <a
                 className="ml-1 text-blue-600"
                 href="https://www.youtube.com/@ramichahine8875/videos"
@@ -348,7 +349,6 @@ const Header = ({ english, setEnglish }) => {
               >
                 Youtube
               </a>{' '}
-              الخاصة بنا. إضغط هنا: .
             </p>
             <p>
               بدعم من :
