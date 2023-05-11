@@ -29,7 +29,7 @@ const Header = ({ english, setEnglish }) => {
         return english ? (
           <>
             <p>
-              <b>Collective Creation Games </b> create situations of emancipation where groups of people collaborate in
+              <b>Collective Creation Games</b> create situations of emancipation where groups of people collaborate in
               giving shape to their collective imagination, motion and inspiration.
             </p>
             <p>
@@ -41,11 +41,11 @@ const Header = ({ english, setEnglish }) => {
           <div className="space-y-2 text-right">
             <p>
               تخلق ألعاب الإبداع الجماعي مواقف من التحرر حيث تتعاون مجموعات من الناس في تشكيل خيالهم الجماعي، حركتهم
-              وإلهامهم
+             .وإلهامهم
             </p>
             <p>
               تأخذ هذه التجارب شكل مداخلات وتركيبات وورش عمل. تفعّل من عبرها عفويّتنا وحدسنا وإرادتنا في الاستكشاف، من
-              أجل جذبنا إلى حالة من التدفق والإنسجام الإبداعي
+              .أجل جذبنا إلى حالة من التدفق والإنسجام الإبداعي
             </p>
           </div>
         )
@@ -62,7 +62,7 @@ const Header = ({ english, setEnglish }) => {
           <div className="space-y-2 text-right">
             بين عامي 2021 و 2022 تم تطوير برنامج "بيداغوجيا اللعب" بالتعاون مع ثلاث مجموعات شبابيّة. عبر دمج طرق البحث
             الفنّي والتعلّم النقدي ، كانت الجلسات عبارة عن عمليات إبداعية، متكيّفة بالموقف وشاملة لقدرات الجميع. حيث
-            لعبنا، صممنا أنظمة تفاعلاتنا، وفكّرنا نقديّاً بالديناميكيات الناشئة عن هذه التجارب
+            .لعبنا، صممنا أنظمة تفاعلاتنا، وفكّرنا نقديّاً بالديناميكيات الناشئة عن هذه التجارب
           </div>
         )
 
@@ -97,10 +97,11 @@ const Header = ({ english, setEnglish }) => {
             <p>
               هذه الصفحة هي وسيلة مرئية للتعبير عن خصوصيّة هذه الممارسة. تدعوك لاستكشاف الإطار المنهجي الذي قمنا
               بتطويره، واكتشاف جميع العمليات التي تبني اللعب بين الميسر والمجموعة والنظام في مراحل مختلفة من العملية:
-              التخطيط ما قبل الجلسة، التيسير أثناء الجلسة و انعكاس ما بعد الجلسة
+              .التخطيط ما قبل الجلسة، التيسير أثناء الجلسة و انعكاس ما بعد الجلسة
             </p>
             <p>
-              يتم استكمالها بمقاطع فيديو لجميع التجارب على قناة{' '}
+              يتم استكمالها بمقاطع فيديو لجميع التجارب على قناة
+              :الخاصة بنا. إضغط هنا
               <a
                 className="ml-1 text-blue-600"
                 href="https://www.youtube.com/@ramichahine8875/videos"
@@ -109,10 +110,9 @@ const Header = ({ english, setEnglish }) => {
               >
                 YouTube
               </a>
-              الخاصة بنا. إضغط هنا:
             </p>
             <p>
-              بدعم من :
+              :بدعم من
               <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
             </p>
           </div>
@@ -146,12 +146,12 @@ const Header = ({ english, setEnglish }) => {
         ) : (
           <div className="space-y-2 text-right">
             <p>
-              <b>كيفية الإستكشاف:</b>
+              <b>كيفية الإستكشاف</b>
             </p>
             <p>
-              تظهر الخريطة الذهنية جزئيًا عند فتح الصفحة، استكشافكم سوف يظهر الباقي. "الكرات" الحمراء هي نقاط انطلاقنا.
+              .تظهر الخريطة الذهنية جزئيًا عند فتح الصفحة، استكشافكم سوف يظهر الباقي. "الكرات" الحمراء هي نقاط انطلاقنا
             </p>
-            <p>غطوا على كرة لفتح أو تسكير أطفالها.</p>
+            <p>غطوا على كرة لفتح أو تسكير أطفالها</p>
             <Image
               src="/assets/node click expand traced.png"
               alt="click"
@@ -159,7 +159,7 @@ const Header = ({ english, setEnglish }) => {
               height={100}
               className="mx-auto "
             />
-            <p>دوروا حول الخريطة للتحرك في الفضاء.</p>
+            <p>دوروا حول الخريطة للتحرك في الفضاء</p>
             <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
           </div>
         )
@@ -188,10 +188,10 @@ const Header = ({ english, setEnglish }) => {
           </>
         ) : (
           <div className="space-y-2 text-right">
-            <p>كبّرواالنص للقراءة ، و صغّروا لتسهيل الحركة بالفضاء.</p>
+            <p>كبّرواالنص للقراءة ، و صغّروا لتسهيل الحركة بالفضاء</p>
             <Image src="/assets/zoom out traced.png" alt="rotate" width={200} height={100} className="mx-auto " />
             <p>ضعوا علامة في المربعات □ لاختيار مرحلة العملية المراد استكشافها.</p>
-            <p>إضغط فوق ⓘ لإعادة فتح مربع الحوار هذا.</p>
+            <p>إضغط فوق ⓘ لإعادة فتح مربع الحوار هذا</p>
             <p>
               إضغط ⏵ لفتح قناة ال
               <a
@@ -379,9 +379,9 @@ const Header = ({ english, setEnglish }) => {
               الجلسة". للحصول على تجربة استكشاف كاملة، يرجى الوصول صفحتنا على جهاز كمبيوتر
             </p>
             <p>
-              <b>كيفية الإستكشاف:</b>
+              <b>كيفية الإستكشاف</b>
             </p>
-            <p>دوروا حول الخريطة للتحرك في الفضاء.</p>
+            <p>دوروا حول الخريطة للتحرك في الفضاء</p>
             <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
           </div>
         )
@@ -409,9 +409,9 @@ const Header = ({ english, setEnglish }) => {
           </>
         ) : (
           <div className="space-y-2 text-right">
-            <p>كبّرواالنص للقراءة ، و صغّروا لتسهيل الحركة بالفضاء.</p>
+            <p>كبّرواالنص للقراءة ، و صغّروا لتسهيل الحركة بالفضاء</p>
             <Image src="/assets/zoom out traced.png" alt="rotate" width={200} height={100} className="mx-auto " />
-            <p>إضغط فوق ⓘ لإعادة فتح مربع الحوار هذا.</p>
+            <p>إضغط فوق ⓘ لإعادة فتح مربع الحوار هذا</p>
             <p>
               إضغط ⏵ لفتح قناة ال
               <a
@@ -454,7 +454,7 @@ const Header = ({ english, setEnglish }) => {
         ) : (
           <div className="space-y-2 text-right">
             <p>
-              <b>اتصلوا بنا:</b>
+              <b>اتصلوا بنا</b>
             </p>
             <p>
               إذا كان سعيكم مرتبطًا بأفراد تخلق ،تجرّب ،تصمّم وتطوّر فهمها سويّةً ، فيمكننا بالتأكيد التعاون. تواصلوا
