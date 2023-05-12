@@ -41,11 +41,11 @@ const Header = ({ english, setEnglish }) => {
           <div className="space-y-2 text-right">
             <p>
               تخلق ألعاب الإبداع الجماعي مواقف من التحرر حيث تتعاون مجموعات من الناس في تشكيل خيالهم الجماعي، حركتهم
-             .وإلهامهم
+              وإلهامهم
             </p>
             <p>
               تأخذ هذه التجارب شكل مداخلات وتركيبات وورش عمل. تفعّل من عبرها عفويّتنا وحدسنا وإرادتنا في الاستكشاف، من
-              .أجل جذبنا إلى حالة من التدفق والإنسجام الإبداعي
+              أجل جذبنا إلى حالة من التدفق والإنسجام الإبداعي
             </p>
           </div>
         )
@@ -100,16 +100,16 @@ const Header = ({ english, setEnglish }) => {
               .التخطيط ما قبل الجلسة، التيسير أثناء الجلسة و انعكاس ما بعد الجلسة
             </p>
             <p>
-              يتم استكمالها بمقاطع فيديو لجميع التجارب على قناة
-              :الخاصة بنا. إضغط هنا
               <a
-                className="ml-1 text-blue-600"
+                className="ml-1 text-blue-600 mr-1"
                 href="https://www.youtube.com/@ramichahine8875/videos"
                 target="_blank"
                 rel="noreferrer"
               >
                 YouTube
               </a>
+              يتم استكمالها بمقاطع فيديو لجميع التجارب على قناة
+              الخاصة بنا. إضغط هنا
             </p>
             <p>
               :بدعم من
@@ -134,8 +134,8 @@ const Header = ({ english, setEnglish }) => {
             <Image
               src="/assets/node click expand traced.png"
               alt="click"
-              width={200}
-              height={100}
+              width={150}
+              height={80}
               className="mx-auto "
             />
             <p>
@@ -144,23 +144,23 @@ const Header = ({ english, setEnglish }) => {
             <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
           </>
         ) : (
-          <div className="space-y-2 text-right">
+          <div className="space-y-0 text-right">
             <p>
               <b>كيفية الإستكشاف</b>
             </p>
             <p>
-              .تظهر الخريطة الذهنية جزئيًا عند فتح الصفحة، استكشافكم سوف يظهر الباقي. "الكرات" الحمراء هي نقاط انطلاقنا
+              تظهر الخريطة الذهنية جزئيًا عند فتح الصفحة، استكشافكم سوف يظهر الباقي. "الكرات" الحمراء هي نقاط انطلاقنا
             </p>
             <p>غطوا على كرة لفتح أو تسكير أطفالها</p>
             <Image
               src="/assets/node click expand traced.png"
               alt="click"
-              width={200}
-              height={100}
+              width={150}
+              height={80}
               className="mx-auto "
             />
             <p>دوروا حول الخريطة للتحرك في الفضاء</p>
-            <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
+            <Image src="/assets/figure rotate traced.png" alt="click" width={150} height={80} className="mx-auto " />
           </div>
         )
 
@@ -193,7 +193,6 @@ const Header = ({ english, setEnglish }) => {
             <p>ضعوا علامة في المربعات □ لاختيار مرحلة العملية المراد استكشافها.</p>
             <p>إضغط فوق ⓘ لإعادة فتح مربع الحوار هذا</p>
             <p>
-              إضغط ⏵ لفتح قناة ال
               <a
                 className="ml-1 text-blue-600"
                 href="https://www.youtube.com/@ramichahine8875/videos"
@@ -202,7 +201,8 @@ const Header = ({ english, setEnglish }) => {
               >
                 Youtube Channel
               </a>
-              .
+              إضغط ⏵ لفتح قناة ال
+              
             </p>
           </div>
         )
@@ -312,7 +312,7 @@ const Header = ({ english, setEnglish }) => {
               This page is a visual attempt to communicate the quirkiness of such a practice. It invites you to explore
               the methodological framework we developed for it and discover all the operations building up the play
               between the facilitator, the group and the system at different stages of the process:
-              <b>the pre-session planning, the in-session facilitation and the post-session reflection.</b>
+              <b> the pre-session planning, the in-session facilitation and the post-session reflection.</b>
             </p>
             <p>
               It is complemented by videos of all experience on our
@@ -350,7 +350,7 @@ const Header = ({ english, setEnglish }) => {
               </a>
             </p>
             <p>
-              بدعم من 
+              بدعم من
               <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
             </p>
           </div>
@@ -413,7 +413,6 @@ const Header = ({ english, setEnglish }) => {
             <Image src="/assets/zoom out traced.png" alt="rotate" width={200} height={100} className="mx-auto " />
             <p>إضغط فوق ⓘ لإعادة فتح مربع الحوار هذا</p>
             <p>
-              إضغط ⏵ لفتح قناة ال
               <a
                 className="ml-1 text-blue-600"
                 href="https://www.youtube.com/@ramichahine8875/videos"
@@ -422,7 +421,7 @@ const Header = ({ english, setEnglish }) => {
               >
                 Youtube Channel
               </a>
-              .
+              إضغط ⏵ لفتح قناة ال .
             </p>
           </div>
         )
