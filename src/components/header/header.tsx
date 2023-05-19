@@ -593,8 +593,8 @@ const Header = ({ english, setEnglish }) => {
         <a href="https://www.youtube.com/@ramichahine8875/videos" target="_blank" rel="noreferrer">
           <svg
             fill="#FFFFFF"
-            width="15px"
-            height="15px"
+            width="20px"
+            height="20px"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             data-name="Layer 1"
