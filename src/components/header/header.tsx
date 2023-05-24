@@ -101,15 +101,14 @@ const Header = ({ english, setEnglish }) => {
             </p>
             <p>
               <a
-                className="ml-1 text-blue-600 mr-1"
+                className="ml-1 mr-1 text-blue-600"
                 href="https://www.youtube.com/@ramichahine8875/videos"
                 target="_blank"
                 rel="noreferrer"
               >
                 YouTube
               </a>
-              يتم استكمالها بمقاطع فيديو لجميع التجارب على القناة
-              الخاصة بنا. إضغط هنا
+              يتم استكمالها بمقاطع فيديو لجميع التجارب على القناة الخاصة بنا. إضغط هنا
             </p>
             <p>
               :بدعم من
@@ -202,7 +201,6 @@ const Header = ({ english, setEnglish }) => {
                 Youtube Channel
               </a>
               إضغط ⏵ لفتح قناة ال
-              
             </p>
           </div>
         )
@@ -230,6 +228,10 @@ const Header = ({ english, setEnglish }) => {
                 rami.o.chahine@gmail.com
               </a>
             </p>
+            <p>
+              Youtube:
+            <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">Collective Creation Games</a>
+            </p>
           </>
         ) : (
           <div className="space-y-2 text-right">
@@ -251,6 +253,10 @@ const Header = ({ english, setEnglish }) => {
               <a className="ml-1 text-blue-600" href="mailto:rami.o.chahine@gmail.com">
                 rami.o.chahine@gmail.com
               </a>
+            </p>
+            <p>
+              Youtube:
+            <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">Collective Creation Games</a>
             </p>
           </div>
         )
@@ -448,6 +454,10 @@ const Header = ({ english, setEnglish }) => {
               <a className="ml-1 text-blue-600" href="mailto:rami.o.chahine@gmail.com">
                 rami.o.chahine@gmail.com
               </a>
+            </p>{' '}
+            <p>
+              Youtube:
+            <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">Collective Creation Games</a>
             </p>
           </>
         ) : (
@@ -470,6 +480,10 @@ const Header = ({ english, setEnglish }) => {
               <a className="ml-1 text-blue-600" href="mailto:rami.o.chahine@gmail.com">
                 rami.o.chahine@gmail.com
               </a>
+            </p>
+            <p>
+              Youtube:
+            <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">Collective Creation Games</a>
             </p>
           </div>
         )
@@ -592,7 +606,7 @@ const Header = ({ english, setEnglish }) => {
         )}
         <a href="https://www.youtube.com/@ramichahine8875/videos" target="_blank" rel="noreferrer">
           <svg
-            fill="#FFFFFF"
+            fill="#FF0000"
             width="20px"
             height="20px"
             viewBox="0 0 24 24"
