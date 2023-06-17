@@ -2,13 +2,8 @@
 @tailwind utilities;
 
 @import './_reset.scss';
-@import './_fonts.scss';
-@import './_colors.scss';
-@import './_easings.scss';
 @import './_functions.scss';
-@import './_layout.scss';
 @import './_font-style.scss';
-@import './_themes.scss';
 
 :root {
   --header-height: #{mobile-vw(58px)};

@@ -355,7 +355,7 @@ export const ForceGraph = ({ englishData, arabicData, isEnglish }) => {
           linkSource="source"
           linkTarget="target"
           // CONTAINER
-          backgroundColor="#101010"
+          backgroundColor="rgb(23 23 23)"
           showNavInfo={false}
           // NODES
           nodeRelSize={10}

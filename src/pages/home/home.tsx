@@ -14,10 +14,10 @@ export default function Home() {
 
   // Handle the error state
   if (englishDataError || arabicDataError)
-    return <div className="flex items-center justify-center bg-black text-white">Failed to load</div>
+    return <div className="flex items-center h-full justify-center bg-neutral-900 text-white">Failed to load</div>
   // Handle the loading state
   if (!englishData || !arabicData)
-    return <div className="flex items-center justify-center bg-black text-white">Loading...</div>
+    return <div className="flex items-center h-full justify-center bg-neutral-900 text-white"></div>
 
   englishData = JSON.parse(englishData)
   arabicData = JSON.parse(arabicData)
@@ -28,7 +28,7 @@ export default function Home() {
       {/* @ts-ignore */}
       <>
         <Header english={english} setEnglish={setEnglish} />
-        <ForceGraph englishData={englishData} arabicData={arabicData} isEnglish={english}/>
+        <ForceGraph englishData={englishData} arabicData={arabicData} isEnglish={english} />
       </>
     </Layout>
   )
