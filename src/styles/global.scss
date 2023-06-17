@@ -4,6 +4,7 @@
 @import './_reset.scss';
 @import './_functions.scss';
 @import './_font-style.scss';
+@import './_variables.scss';
 
 :root {
   --header-height: #{mobile-vw(58px)};

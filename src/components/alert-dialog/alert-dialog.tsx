@@ -24,7 +24,7 @@ const AlertDialog = (props: AlertDialogProps) => {
           width="25"
           height="25"
           viewBox="0 0 15 15"
-          fill="#242424"
+          fill="background-color: rgb(23 23 23)"
           xmlns="http://www.w3.org/2000/svg"
           className="cursor-pointer"
         >

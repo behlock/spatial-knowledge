@@ -17,13 +17,13 @@ const Checkbox = (props: CheckboxProps) => {
         checked={props.checked}
         onCheckedChange={props.onCheckedChange}
         className={clsx(
-          'flex h-3 w-3 items-center justify-center rounded',
-          'radix-state-checked:bg-orange-600 radix-state-unchecked:bg-gray-100 dark:radix-state-unchecked:bg-gray-800',
-          'focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-75'
+          'flex h-3 w-3 mt-0.5 items-center justify-center rounded',
+          'radix-state-checked:bg-gray-200  radix-state-unchecked:bg-gray-200',
+          'focus:outline-none '
         )}
       >
         <CheckboxPrimitive.Indicator>
-          <CheckIcon className="h-4 w-4 self-center text-white" />
+          <CheckIcon className="h-4 w-4 self-center text-black" />
         </CheckboxPrimitive.Indicator>
       </CheckboxPrimitive.Root>
 

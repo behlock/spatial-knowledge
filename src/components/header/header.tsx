@@ -598,7 +598,7 @@ const Header = ({ english, setEnglish }) => {
 
   return (
     <>
-      <header className="z-20 w-fit bg-neutral-900 text-white">
+      <header className="z-20 w-fit  text-white">
         <div className="z-20 mb-2 mr-8 flex flex-row flex-wrap space-x-2 font-extrabold">
           <Link href="/">{isMobile ? <h3>Collective Creation Games</h3> : <h3>Collective Creation Games</h3>}</Link>
         </div>
@@ -617,7 +617,7 @@ const Header = ({ english, setEnglish }) => {
         )}
         <a href="https://www.youtube.com/@ramichahine8875/videos" target="_blank" rel="noreferrer">
           <svg
-            fill="#242424"
+            fill="rgb(23 23 23)"
             width="30px"
             height="30px"
             viewBox="0 0 24 24"

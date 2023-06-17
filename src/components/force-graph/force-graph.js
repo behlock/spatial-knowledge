@@ -300,10 +300,10 @@ export const ForceGraph = ({ englishData, arabicData, isEnglish }) => {
   return (
     <>
       {!isMobile && (
-        <div className="z-50 mt-2 mb-2 mr-2 flex h-full w-full flex-row">
+        <div className="flex h-full w-fit flex-row z-50 mt-2 mb-2 mr-2">
           {phases.map((phase) => {
             return (
-              <div className="mr-3 flex flex-row" key={phase}>
+              <div className="flex flex-row mr-3" key={phase}>
                 <Checkbox
                   label={phase}
                   checked={selectedTags.includes(phase)}
