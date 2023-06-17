@@ -604,7 +604,7 @@ const Header = ({ english, setEnglish }) => {
           <Link href="/">{isMobile ? <h3>Collective Creation Games</h3> : <h3>Collective Creation Games</h3>}</Link>
         </div>
       </header>
-      <div className="fixed top-6 right-5 z-20 mb-2 p-1 ml-8 flex flex-col items-center justify-center space-y-2 rounded-lg bg-white ">
+      <div className="fixed top-5 right-5 z-20 mb-2 p-1 ml-8 flex flex-col items-center justify-center space-y-2 rounded-lg bg-white ">
         {cookies.showDialog && (
           <AlertDialog
             isOpen={cookies.showDialog === 'true'}
