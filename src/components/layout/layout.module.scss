@@ -1,11 +1,11 @@
 .layout {
-  background: black;
+  background: #101010;
   color: var(--theme-secondary);
   display: flex;
   padding: 20px;
 
   .main {
-    background: black;
+    background: #101010;
     overflow: hidden;
     flex-grow: 1;
     flex-direction: column;
