@@ -230,7 +230,9 @@ const Header = ({ english, setEnglish }) => {
             </p>
             <p>
               Youtube:
-            <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">Collective Creation Games</a>
+              <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">
+                Collective Creation Games
+              </a>
             </p>
           </>
         ) : (
@@ -256,7 +258,9 @@ const Header = ({ english, setEnglish }) => {
             </p>
             <p>
               Youtube:
-            <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">Collective Creation Games</a>
+              <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">
+                Collective Creation Games
+              </a>
             </p>
           </div>
         )
@@ -457,7 +461,9 @@ const Header = ({ english, setEnglish }) => {
             </p>{' '}
             <p>
               Youtube:
-            <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">Collective Creation Games</a>
+              <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">
+                Collective Creation Games
+              </a>
             </p>
           </>
         ) : (
@@ -483,7 +489,9 @@ const Header = ({ english, setEnglish }) => {
             </p>
             <p>
               Youtube:
-            <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">Collective Creation Games</a>
+              <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">
+                Collective Creation Games
+              </a>
             </p>
           </div>
         )
@@ -591,12 +599,12 @@ const Header = ({ english, setEnglish }) => {
 
   return (
     <>
-    <header className="z-20 w-fit">
-      <div className="z-20 mb-2 mr-8 flex flex-row flex-wrap space-x-2 font-extrabold">
-        <Link href="/">{isMobile ? <h3>Collective Creation Games</h3> : <h3>Collective Creation Games</h3>}</Link>
-      </div>
-    </header>
-      <div className="fixed z-20 top-6 right-5 mb-2 ml-8 flex flex-col space-y-3 items-center">
+      <header className="z-20 w-fit">
+        <div className="z-20 mb-2 mr-8 flex flex-row flex-wrap space-x-2 font-extrabold">
+          <Link href="/">{isMobile ? <h3>Collective Creation Games</h3> : <h3>Collective Creation Games</h3>}</Link>
+        </div>
+      </header>
+      <div className="fixed top-6 right-5 z-20 mb-2 p-1 ml-8 flex flex-col items-center justify-center space-y-2 rounded-lg bg-white ">
         {cookies.showDialog && (
           <AlertDialog
             isOpen={cookies.showDialog === 'true'}
@@ -610,9 +618,9 @@ const Header = ({ english, setEnglish }) => {
         )}
         <a href="https://www.youtube.com/@ramichahine8875/videos" target="_blank" rel="noreferrer">
           <svg
-            fill="#FF0000"
-            width="20px"
-            height="20px"
+            fill="#242424"
+            width="30px"
+            height="30px"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
             data-name="Layer 1"
