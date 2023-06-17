@@ -70,16 +70,25 @@ const AlertDialog = (props: AlertDialogProps) => {
               )}
             >
               <button
-                className="absolute top-3.5 right-0 mb-4 flex items-center space-x-2 px-20 py-8 align-middle"
+                className="absolute top-3.5 right-0 mb-4 flex items-center space-x-2 px-4 py-8 align-middle"
                 onClick={() => {
                   props.changeLanguage()
                 }}
               >
-                <GlobeIcon className="h-4 w-4" />
-                <text className="text-sm">{props.language}</text>
+                { props.language == 'English' ? (
+                  <>
+                  <GlobeIcon className="h-4 w-4" />
+                  <text className="text-sm">{props.language}</text>
+                  </>
+                ) : (
+                  <>
+                  <text className="text-sm">{props.language}</text>
+                  <GlobeIcon className="h-4 w-4" />
+                  </>
+                )}
               </button>
               <AlertDialogPrimitive.Cancel asChild>
-                <button className="absolute top-0 right-0 p-8 focus:outline-none">
+                <button className="absolute top-0 right-0 px-4 py-1 focus:outline-none">
                   <Cross1Icon />
                 </button>
               </AlertDialogPrimitive.Cancel>
