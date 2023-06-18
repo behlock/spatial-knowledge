@@ -10,7 +10,6 @@ const Link = forwardRef(({ href, children, className, scroll, shallow, ...props 
   }
 
   const isProtocol = useMemo(() => href?.startsWith('mailto:') || href?.startsWith('tel:'), [href])
-
   const isAnchor = useMemo(() => href?.startsWith('#'), [href])
   const isExternal = useMemo(() => href?.startsWith('http'), [href])
 

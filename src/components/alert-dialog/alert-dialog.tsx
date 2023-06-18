@@ -1,17 +1,21 @@
+import { clsx } from 'clsx'
+import Image from 'next/image'
+import { Fragment, useState } from 'react'
+
 import { Transition } from '@headlessui/react'
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog'
-import { Cross1Icon, GlobeIcon } from '@radix-ui/react-icons'
-import { clsx } from 'clsx'
-import { Fragment, useState } from 'react'
+import { ArrowLeftIcon, ArrowRightIcon, Cross1Icon, GlobeIcon } from '@radix-ui/react-icons'
+
+import Button from '@/components/button'
+import { Language, isEnglish, changeLanguage} from '@/modules/language'
 
 interface AlertDialogProps {
   isOpen?: boolean
-  pageNumber?: number
-  language?: string
-  changeLanguage?: any
-  content: any
-  previousButton?: any
-  forwardButton: any
+  isMobile?: boolean
+  language: Language
+  setLanguage: (language: Language) => void
+  pageNumber: number
+  setPageNumber: (pageNumber: number) => void
 }
 
 const AlertDialog = (props: AlertDialogProps) => {
@@ -72,18 +76,18 @@ const AlertDialog = (props: AlertDialogProps) => {
               <button
                 className="absolute top-3.5 right-0 mb-4 flex items-center space-x-2 px-4 py-8 align-middle"
                 onClick={() => {
-                  props.changeLanguage()
+                  props.setLanguage(changeLanguage(props.language))
                 }}
               >
-                { props.language == 'English' ? (
+                {isEnglish(props.language) ? (
                   <>
-                  <GlobeIcon className="h-4 w-4" />
-                  <text className="text-sm">{props.language}</text>
+                    <GlobeIcon className="h-4 w-4" />
+                    <text className="text-sm">{changeLanguage(props.language)}</text>
                   </>
                 ) : (
                   <>
-                  <text className="text-sm">{props.language}</text>
-                  <GlobeIcon className="h-4 w-4" />
+                    <text className="text-sm">{changeLanguage(props.language)}</text>
+                    <GlobeIcon className="h-4 w-4" />
                   </>
                 )}
               </button>
@@ -96,13 +100,17 @@ const AlertDialog = (props: AlertDialogProps) => {
                 What is Collective Creation Games?
               </AlertDialogPrimitive.Title>
               <AlertDialogPrimitive.Description className="mt-2 space-y-4 whitespace-pre-wrap text-sm font-normal text-gray-700">
-                {props.content}
+                {props.isMobile
+                  ? mobileContent(props.pageNumber, props.language)
+                  : desktopContent(props.pageNumber, props.language)}
               </AlertDialogPrimitive.Description>
 
               <div className="mt-4 flex flex-row align-middle">
                 <div className="flex flex-grow flex-row justify-start">
-                  {props.previousButton ? (
-                    <div className="mr-3 flex flex-row items-center">{props.previousButton}</div>
+                  {previousPageButton(props.pageNumber, props.setPageNumber) ? (
+                    <div className="mr-3 flex flex-row items-center">
+                      {previousPageButton(props.pageNumber, props.setPageNumber)}
+                    </div>
                   ) : (
                     <></>
                   )}
@@ -111,7 +119,9 @@ const AlertDialog = (props: AlertDialogProps) => {
                   </div>
                 </div>
                 <div className="flex flex-row justify-end">
-                  <div className="flex flex-row items-center">{props.forwardButton}</div>
+                  <div className="flex flex-row items-center">
+                    {forwardPageButton(props.pageNumber, props.setPageNumber)}
+                  </div>
                 </div>
               </div>
             </AlertDialogPrimitive.Content>
@@ -120,6 +130,506 @@ const AlertDialog = (props: AlertDialogProps) => {
       </AlertDialogPrimitive.Portal>
     </AlertDialogPrimitive.Root>
   )
+}
+
+const previousPageButton = (pageNumber: number, setPageNumber: (pageNumber: number) => void) => {
+  switch (pageNumber) {
+    case 1:
+      return null
+
+    default:
+      return (
+        <Button onClick={() => setPageNumber(pageNumber - 1)}>
+          <ArrowLeftIcon className="h-5 w-5" />
+        </Button>
+      )
+  }
+}
+
+const forwardPageButton = (pageNumber: number, setPageNumber: (pageNumber: number) => void) => {
+  switch (pageNumber) {
+    case 6:
+      return (
+        <AlertDialogPrimitive.Action
+          className={clsx(
+            'inline-flex select-none justify-center rounded-md px-4 py-2 text-sm font-medium',
+            'bg-neutral-900 text-white',
+            'border border-transparent',
+            'focus:outline-none'
+          )}
+        >
+          Start Exploring
+        </AlertDialogPrimitive.Action>
+      )
+
+    default:
+      return (
+        <Button onClick={() => setPageNumber(pageNumber + 1)}>
+          <ArrowRightIcon className="h-5 w-5" />
+        </Button>
+      )
+  }
+}
+
+const desktopContent = (pageNumber: number, language: Language) => {
+  switch (pageNumber) {
+    case 1:
+      return isEnglish(language) ? (
+        <>
+          <p>
+            <b>Collective Creation Games</b> create situations of emancipation where groups of people collaborate in
+            giving shape to their collective imagination, motion and inspiration.
+          </p>
+          <p>
+            These experiences take the form of interventions, installations and workshops. They engage our spontaneity,
+            intuition and will to explore in order to draw us into a state of creative flow.
+          </p>
+        </>
+      ) : (
+        <div className="space-y-2 text-right">
+          <p>
+            تخلق ألعاب الإبداع الجماعي مواقف من التحرر حيث تتعاون مجموعات من الناس في تشكيل خيالهم الجماعي، حركتهم
+            وإلهامهم
+          </p>
+          <p>
+            تأخذ هذه التجارب شكل مداخلات وتركيبات وورش عمل. تفعّل من عبرها عفويّتنا وحدسنا وإرادتنا في الاستكشاف، من أجل
+            جذبنا إلى حالة من التدفق والإنسجام الإبداعي
+          </p>
+        </div>
+      )
+
+    case 2:
+      return isEnglish(language) ? (
+        <p>
+          Between 2021 and 2022, the <b>Pedagogy of Games</b> program was co-developed with 3 groups of youth. Combining
+          arts research and critical pedagogy, all sessions were context specific, inclusive and creative. We played,
+          designed the systems of interaction and critically reflected on the dynamics emerging from these experiences.
+        </p>
+      ) : (
+        <div className="space-y-2 text-right">
+          بين عامي 2021 و 2022 تم تطوير برنامج "بيداغوجيا اللعب" بالتعاون مع ثلاث مجموعات شبابيّة. عبر دمج طرق البحث
+          الفنّي والتعلّم النقدي ، كانت الجلسات عبارة عن عمليات إبداعية، متكيّفة بالموقف وشاملة لقدرات الجميع. حيث
+          .لعبنا، صممنا أنظمة تفاعلاتنا، وفكّرنا نقديّاً بالديناميكيات الناشئة عن هذه التجارب
+        </div>
+      )
+
+    case 3:
+      return isEnglish(language) ? (
+        <>
+          <p>
+            This page is a visual means to communicate the quirkiness of this practice. It invites you to explore the
+            methodological framework we developed for it and discover all the operations building up the play between
+            the facilitator, the group and the system at different stages of the process:
+            <b> the Pre-session planning, the In-session facilitation and the Post-session reflection.</b>
+          </p>
+          <p>
+            It is complemented by videos of the entire experience on our
+            <a
+              className="ml-1 text-blue-600"
+              href="https://www.youtube.com/@ramichahine8875/videos"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Youtube Channel
+            </a>
+            .
+          </p>
+          <p>
+            With the support of:
+            <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
+          </p>
+        </>
+      ) : (
+        <div className="space-y-2 text-right">
+          <p>
+            هذه الصفحة هي وسيلة مرئية للتعبير عن خصوصيّة هذه الممارسة. تدعوك لاستكشاف الإطار المنهجي الذي قمنا بتطويره،
+            واكتشاف جميع العمليات التي تبني اللعب بين الميسر والمجموعة والنظام في مراحل مختلفة من العملية: .التخطيط ما
+            قبل الجلسة، التيسير أثناء الجلسة و انعكاس ما بعد الجلسة
+          </p>
+          <p>
+            <a
+              className="ml-1 mr-1 text-blue-600"
+              href="https://www.youtube.com/@ramichahine8875/videos"
+              target="_blank"
+              rel="noreferrer"
+            >
+              YouTube
+            </a>
+            يتم استكمالها بمقاطع فيديو لجميع التجارب على القناة الخاصة بنا. إضغط هنا
+          </p>
+          <p>
+            :بدعم من
+            <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
+          </p>
+        </div>
+      )
+
+    case 4:
+      return isEnglish(language) ? (
+        <>
+          <p>
+            <b>How to navigate it:</b>
+          </p>
+          <p>The map is partially visible when you first open the page so that your exploration reveals the rest.</p>
+          <p>
+            The <text className="text-red-500">Red Balls</text> are our starting points.
+            <b> Click</b> on a ball, to reveal or collapse its leaves.
+          </p>
+
+          <Image src="/assets/node click expand traced.png" alt="click" width={150} height={80} className="mx-auto " />
+          <p>
+            <b>Rotate</b> around the map to move in space.
+          </p>
+          <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
+        </>
+      ) : (
+        <div className="space-y-0 text-right">
+          <p>
+            <b>كيفية الإستكشاف</b>
+          </p>
+          <p>
+            تظهر الخريطة الذهنية جزئيًا عند فتح الصفحة، استكشافكم سوف يظهر الباقي. "الكرات" الحمراء هي نقاط انطلاقنا
+          </p>
+          <p>غطوا على كرة لفتح أو تسكير أطفالها</p>
+          <Image src="/assets/node click expand traced.png" alt="click" width={150} height={80} className="mx-auto " />
+          <p>دوروا حول الخريطة للتحرك في الفضاء</p>
+          <Image src="/assets/figure rotate traced.png" alt="click" width={150} height={80} className="mx-auto " />
+        </div>
+      )
+
+    case 5:
+      return isEnglish(language) ? (
+        <>
+          <p>
+            <b>Zoom</b> in for reading, <b>Zoom out</b> to allow easier movement in space.
+          </p>
+          <Image src="/assets/zoom out traced.png" alt="rotate" width={200} height={100} className="mx-auto " />
+          <p>Check boxes □ to choose the stage of the process to explore.</p>
+          <p>Click on ⓘ to re-open this dialog box.</p>
+          <p>
+            Click on ⏵ to open our
+            <a
+              className="ml-1 text-blue-600"
+              href="https://www.youtube.com/@ramichahine8875/videos"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Youtube Channel
+            </a>
+            .
+          </p>
+        </>
+      ) : (
+        <div className="space-y-2 text-right">
+          <p>كبّرواالنص للقراءة ، و صغّروا لتسهيل الحركة بالفضاء</p>
+          <Image src="/assets/zoom out traced.png" alt="rotate" width={200} height={100} className="mx-auto " />
+          <p>ضعوا علامة في المربعات □ لاختيار مرحلة العملية المراد استكشافها.</p>
+          <p>إضغط فوق ⓘ لإعادة فتح مربع الحوار هذا</p>
+          <p>
+            <a
+              className="ml-1 text-blue-600"
+              href="https://www.youtube.com/@ramichahine8875/videos"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Youtube Channel
+            </a>
+            إضغط ⏵ لفتح قناة ال
+          </p>
+        </div>
+      )
+
+    case 6:
+      return isEnglish(language) ? (
+        <>
+          <p>
+            <b>Contact us</b>
+          </p>
+          <p>
+            If your endeavor is related to <b>individuals creating, experimenting, designing and learning together</b>{' '}
+            then we can surely collaborate. Get in touch, let's have a chat and develop the appropriate Collective
+            creation game for the situation.
+          </p>
+          <p>
+            Phone:
+            <a className="ml-1 text-blue-600" href="tel:+961 3 593660">
+              +961 3 593660
+            </a>
+          </p>
+          <p>
+            Email:
+            <a className="ml-1 text-blue-600" href="mailto:rami.o.chahine@gmail.com">
+              rami.o.chahine@gmail.com
+            </a>
+          </p>
+          <p>
+            Youtube:
+            <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">
+              Collective Creation Games
+            </a>
+          </p>
+        </>
+      ) : (
+        <div className="space-y-2 text-right">
+          <p>
+            <b>اتصلوا بنا</b>
+          </p>
+          <p>
+            إذا كان سعيكم مرتبطًا بأفراد تخلق ،تجرّب ،تصمّم وتطوّر فهمها سويّةً ، فيمكننا بالتأكيد التعاون. تواصلوا معنا
+            ، فالنتحدث ونطور لعبة إبداع جماعي تناسب ألموقف
+          </p>
+          <p>
+            Phone:
+            <a className="ml-1 text-blue-600" href="tel:+961 3 593660">
+              +961 3 593660
+            </a>
+          </p>
+          <p>
+            Email:
+            <a className="ml-1 text-blue-600" href="mailto:rami.o.chahine@gmail.com">
+              rami.o.chahine@gmail.com
+            </a>
+          </p>
+          <p>
+            Youtube:
+            <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">
+              Collective Creation Games
+            </a>
+          </p>
+        </div>
+      )
+  }
+}
+
+const mobileContent = (pageNumber: number, language: Language) => {
+  switch (pageNumber) {
+    case 1:
+      return isEnglish(language) ? (
+        <>
+          <p>
+            Disclaimer: For compatibility and ease of navigation on mobile, only parts of the functionalities are
+            enabled.
+          </p>
+          <p>
+            <b>Collective Creation Games (CCG)</b> create situations of emancipation where groups of people collaborate
+            in giving shape to their collective imagination, motion and inspiration.
+          </p>
+          <p>
+            These experiences take the form of interventions, installations or workshops. They engage our spontaneity,
+            intuition and will to explore in order to draw us into a state of creative flow.
+          </p>
+        </>
+      ) : (
+        <div className="space-y-2 text-right">
+          <p>
+            تخلق ألعاب الإبداع الجماعي مواقف من التحرر حيث تتعاون مجموعات من الناس في تشكيل خيالهم الجماعي، حركتهم
+            وإلهامهم
+          </p>
+          <p>
+            تأخذ هذه التجارب شكل مداخلات وتركيبات وورش عمل. تفعّل من عبرها عفويّتنا وحدسنا وإرادتنا في الاستكشاف، من أجل
+            جذبنا إلى حالة من التدفق والإنسجام الإبداعي
+          </p>
+          <p>ملاحظة: من أجل تسهيل التنقل ، إضطرّينا إلى تمكين فقط جزء من الوظائف على هاتفكم</p>
+        </div>
+      )
+
+    case 2:
+      return isEnglish(language) ? (
+        <p>
+          Between 2021 and 2022 the <b>Pedagogy of games</b> program was co-developed with 3 groups of youth.Combining
+          arts research and critical pedagogy, all sessions were context specific, inclusive, creative processes, where
+          we played, designed the systems of interaction and critically reflected on the dynamics emerging from these
+          experiences.
+        </p>
+      ) : (
+        <div className="space-y-2 text-right">
+          بين عامي 2021 و 2022 تم تطوير برنامج "بيداغوجيا اللعب" بالتعاون مع ثلاث مجموعات شبابيّة. عبر دمج طرق البحث
+          الفنّي والتعلّم النقدي ، كانت الجلسات عبارة عن عمليات إبداعية، متكيّفة بالموقف وشاملة لقدرات الجميع. حيث
+          لعبنا، صممنا أنظمة تفاعلاتنا، وفكّرنا نقديّاً بالديناميكيات الناشئة عن هذه التجارب
+        </div>
+      )
+
+    case 3:
+      return isEnglish(language) ? (
+        <>
+          <p>
+            This page is a visual attempt to communicate the quirkiness of such a practice. It invites you to explore
+            the methodological framework we developed for it and discover all the operations building up the play
+            between the facilitator, the group and the system at different stages of the process:
+            <b> the pre-session planning, the in-session facilitation and the post-session reflection.</b>
+          </p>
+          <p>
+            It is complemented by videos of all experience on our
+            <a
+              className="ml-1 text-blue-600"
+              href="https://www.youtube.com/@ramichahine8875/videos"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Youtube Channel
+            </a>
+            .
+          </p>
+          <p>
+            With the support of:
+            <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
+          </p>
+        </>
+      ) : (
+        <div className="space-y-1 text-right">
+          <p>
+            هذه الصفحة هي وسيلة مرئية للتعبير عن خصوصيّة هذه الممارسة. تدعوك لاستكشاف الإطار المنهجي الذي قمنا بتطويره،
+            واكتشاف جميع العمليات التي تبني اللعب بين الميسر والمجموعة والنظام في مراحل مختلفة من العملية: التخطيط ما
+            قبل الجلسة، التيسير أثناء الجلسة و انعكاس ما بعد الجلسة
+          </p>
+          <p>
+            يتم استكمالها بمقاطع فيديو لجميع التجارب على القناة الخاصة بنا
+            <a
+              className="ml-1 text-blue-600"
+              href="https://www.youtube.com/@ramichahine8875/videos"
+              target="_blank"
+              rel="noreferrer"
+            >
+              إضغط هنا
+            </a>
+          </p>
+          <p>
+            بدعم من
+            <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
+          </p>
+        </div>
+      )
+
+    case 4:
+      return isEnglish(language) ? (
+        <>
+          <p>
+            For compatibility and ease of navigation purposes, only part of the functionalities are enabled on your
+            phone. Only the operations required <b>"during the session"</b> are visible. For a complete experience of
+            exploration, please access the page on a desktop.
+          </p>
+          <p>
+            <b>How to navigate it:</b>
+          </p>
+          <p>
+            <b>Rotate</b> around the map to move in space.
+          </p>
+          <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
+        </>
+      ) : (
+        <div className="space-y-2 text-right">
+          <p>
+            من أجل تسهيل التنقل ، إضطرّينا إلى تمكين فقط جزء من الوظائف على هاتفك. تظهر فقط العمليات في "أثناء الجلسة".
+            للحصول على تجربة استكشاف كاملة، يرجى الوصول صفحتنا على جهاز كمبيوتر
+          </p>
+          <p>
+            <b>كيفية الإستكشاف</b>
+          </p>
+          <p>دوروا حول الخريطة للتحرك في الفضاء</p>
+          <Image src="/assets/figure rotate traced.png" alt="click" width={200} height={100} className="mx-auto " />
+        </div>
+      )
+
+    case 5:
+      return isEnglish(language) ? (
+        <>
+          <p>
+            <b>Zoom</b> in for reading, <b>zoom out</b> to allow easier movement in space.
+          </p>
+          <Image src="/assets/zoom out traced.png" alt="rotate" width={200} height={100} className="mx-auto " />
+          <p>Click on ⓘ to re-open this dialog box.</p>
+          <p>
+            Click on ⏵ to open our
+            <a
+              className="ml-1 text-blue-600"
+              href="https://www.youtube.com/@ramichahine8875/videos"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Youtube Channel
+            </a>
+            .
+          </p>
+        </>
+      ) : (
+        <div className="space-y-2 text-right">
+          <p>كبّرواالنص للقراءة ، و صغّروا لتسهيل الحركة بالفضاء</p>
+          <Image src="/assets/zoom out traced.png" alt="rotate" width={200} height={100} className="mx-auto " />
+          <p>إضغط فوق ⓘ لإعادة فتح مربع الحوار هذا</p>
+          <p>
+            <a
+              className="ml-1 text-blue-600"
+              href="https://www.youtube.com/@ramichahine8875/videos"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Youtube Channel
+            </a>
+            إضغط ⏵ لفتح قناة ال .
+          </p>
+        </div>
+      )
+
+    case 6:
+      return isEnglish(language) ? (
+        <>
+          <p>
+            <b>Contact us</b>
+          </p>
+          <p>
+            If your endeavor is related to <b>individuals creating, designing, experimenting and learning together</b>{' '}
+            then we can surely collaborate. Get in touch, let's have a chat and develop the appropriate Collective
+            creation game for the situation.
+          </p>
+          <p>
+            Phone:
+            <a className="ml-1 text-blue-600" href="tel:+961 3 593660">
+              +961 3 593660
+            </a>
+          </p>
+          <p>
+            Email:
+            <a className="ml-1 text-blue-600" href="mailto:rami.o.chahine@gmail.com">
+              rami.o.chahine@gmail.com
+            </a>
+          </p>{' '}
+          <p>
+            Youtube:
+            <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">
+              Collective Creation Games
+            </a>
+          </p>
+        </>
+      ) : (
+        <div className="space-y-2 text-right">
+          <p>
+            <b>اتصلوا بنا</b>
+          </p>
+          <p>
+            إذا كان سعيكم مرتبطًا بأفراد تخلق ،تجرّب ،تصمّم وتطوّر فهمها سويّةً ، فيمكننا بالتأكيد التعاون. تواصلوا معنا
+            ، فالنتحدث ونطور لعبة إبداع جماعي تناسب ألموقف
+          </p>
+          <p>
+            Phone:
+            <a className="ml-1 text-blue-600" href="tel:+961 3 593660">
+              +961 3 593660
+            </a>
+          </p>
+          <p>
+            Email:
+            <a className="ml-1 text-blue-600" href="mailto:rami.o.chahine@gmail.com">
+              rami.o.chahine@gmail.com
+            </a>
+          </p>
+          <p>
+            Youtube:
+            <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">
+              Collective Creation Games
+            </a>
+          </p>
+        </div>
+      )
+  }
 }
 
 export default AlertDialog

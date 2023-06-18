@@ -1,3 +1,3 @@
-import Header from './button'
+import Button from './button'
 
-export default Header
+export default Button
