@@ -1,4 +1,6 @@
-const arabicHardcodedDefaultVisibleNodesIds = [
+const arabicPhases = ['ما قبل الجلسة', 'خلال الجلسة', 'ما بعد الجلسة']
+
+const arabicDefaultVisibleNodesIds = [
   'المرحلة',
   'خلال الجلسة',
   'خلال تدخل الشارع',
@@ -608,4 +610,4 @@ const arabicDuringSessionNodesIds = [
   'لا بجوز أن يتحدى منطق اللعبة',
 ]
 
-export { arabicDuringSessionNodesIds ,arabicHardcodedDefaultVisibleNodesIds }
+export { arabicPhases,arabicDefaultVisibleNodesIds, arabicDuringSessionNodesIds }

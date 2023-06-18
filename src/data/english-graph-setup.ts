@@ -1,4 +1,6 @@
-const englishHardcodedDefaultVisibleNodesIds = [
+const englishPhases = ['Pre-session', 'During session', 'Post-session']
+
+const englishDefaultVisibleNodesIds = [
   'Trace back  course of \n the session',
   'Who designed the game?',
   'Self-reflection on \n facilitator role',
@@ -672,4 +674,4 @@ const englishDuringSessionNodesIds = [
   'Cannot challenge logic \n of the game',
 ]
 
-export {englishHardcodedDefaultVisibleNodesIds,englishDuringSessionNodesIds  }
+export { englishPhases, englishDefaultVisibleNodesIds, englishDuringSessionNodesIds }
