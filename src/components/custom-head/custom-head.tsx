@@ -4,7 +4,7 @@ import NextHead from 'next/head'
 function CustomHead({
   title = 'Collective Creation Games',
   // TODO: Fill image in for SEO
-  image = { url: 'https://collectivecreationgames/image.svg' },
+  image = { url: 'https://collectivecreationgames/seo-image.svg' },
   description = 'Collective Creation Games',
   keywords = [] as string[],
 }) {

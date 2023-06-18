@@ -7,6 +7,5 @@ export default async function handler(
 ) {
   const jsonDirectory = path.join(process.cwd(), 'src', 'data')
   const fileContents = await fs.readFile(jsonDirectory + '/english-nodes.json', 'utf8')
-  // Return the content of the data file in json format
   res.status(200).json(fileContents)
 }

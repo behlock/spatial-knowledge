@@ -1,7 +1,7 @@
 {
   "name": "collectivecreationgames",
   "short_name": "ccg",
-  "description": "Collective Creation Games experiments",
+  "description": "Collective Creation Games",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -16,7 +16,7 @@
       "purpose": "any"
     }
   ],
-  "theme_color": "#4160ff",
+  "theme_color": "#093308",
   "background_color": "#000000",
   "start_url": "/",
   "scope": ".",

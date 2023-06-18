@@ -8,14 +8,15 @@ import Layout from '@/components/layout'
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 export default function Home() {
-  let { data: englishData, error: englishDataError } = useSWR('/api/englishData', fetcher)
-  let { data: arabicData, error: arabicDataError } = useSWR('/api/arabicData', fetcher)
   const [english, setEnglish] = useState(true)
 
-  // Handle the error state
+  let { data: englishData, error: englishDataError } = useSWR('/api/englishData', fetcher)
+  let { data: arabicData, error: arabicDataError } = useSWR('/api/arabicData', fetcher)
+  
+  // Error state
   if (englishDataError || arabicDataError)
     return <div className="flex items-center h-full justify-center bg-neutral-900 text-white">Failed to load</div>
-  // Handle the loading state
+  // Loading state
   if (!englishData || !arabicData)
     return <div className="flex items-center h-full justify-center bg-neutral-900 text-white"></div>
 
