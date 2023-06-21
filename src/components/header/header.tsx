@@ -27,7 +27,7 @@ const Header = ({ language, setLanguage }) => {
       <header className="z-20 w-fit  text-white">
         <div className="z-20 mb-2 mr-8 flex flex-row flex-wrap space-x-2 font-extrabold">
           <Link href="/">
-            <h3>Collective Creation Games</h3>
+            <h2>Collective Creation Games</h2>
           </Link>
         </div>
       </header>
