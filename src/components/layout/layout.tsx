@@ -1,9 +1,4 @@
 import CustomHead from '@/components/custom-head/custom-head'
-import dynamic from 'next/dynamic'
-
-const Header = dynamic(() => import('@/components/header'), {
-  ssr: false,
-})
 
 function Layout({
   seo = {
