@@ -7,13 +7,13 @@ import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog'
 import { ArrowLeftIcon, ArrowRightIcon, Cross1Icon, GlobeIcon } from '@radix-ui/react-icons'
 
 import Button from '@/components/button'
-import { Language, isEnglish, changeLanguage} from '@/modules/language'
+// import { Language, isEnglish, changeLanguage} from '@/modules/language'
 
 interface AlertDialogProps {
   isOpen?: boolean
   isMobile?: boolean
-  language: Language
-  setLanguage: (language: Language) => void
+  // language: Language
+  // setLanguage: (language: Language) => void
   pageNumber: number
   setPageNumber: (pageNumber: number) => void
 }
@@ -73,7 +73,7 @@ const AlertDialog = (props: AlertDialogProps) => {
                 'flex flex-col space-y-4'
               )}
             >
-              <button
+              {/* <button
                 className="absolute top-3.5 right-0 mb-4 flex items-center space-x-2 px-4 py-8 align-middle"
                 onClick={() => {
                   props.setLanguage(changeLanguage(props.language))
@@ -90,9 +90,9 @@ const AlertDialog = (props: AlertDialogProps) => {
                     <GlobeIcon className="h-4 w-4" />
                   </>
                 )}
-              </button>
+              </button> */}
               <AlertDialogPrimitive.Cancel asChild>
-                <button className="absolute top-0 right-0 px-4 py-1 focus:outline-none">
+                <button className="absolute top-4 right-0 px-4 py-1 focus:outline-none">
                   <Cross1Icon />
                 </button>
               </AlertDialogPrimitive.Cancel>
@@ -101,8 +101,8 @@ const AlertDialog = (props: AlertDialogProps) => {
               </AlertDialogPrimitive.Title>
               <AlertDialogPrimitive.Description className="mt-2 space-y-4 whitespace-pre-wrap text-sm font-normal text-gray-700">
                 {props.isMobile
-                  ? mobileContent(props.pageNumber, props.language)
-                  : desktopContent(props.pageNumber, props.language)}
+                  ? mobileContent(props.pageNumber)
+                  : desktopContent(props.pageNumber)}
               </AlertDialogPrimitive.Description>
 
               <div className="mt-4 flex flex-row align-middle">
@@ -171,10 +171,12 @@ const forwardPageButton = (pageNumber: number, setPageNumber: (pageNumber: numbe
   }
 }
 
-const desktopContent = (pageNumber: number, language: Language) => {
+// const desktopContent = (pageNumber: number, language: Language) => {
+  const desktopContent = (pageNumber: number) => {
   switch (pageNumber) {
     case 1:
-      return isEnglish(language) ? (
+      // return isEnglish(language) ? (
+      return true ? (
         <>
           <p>
             <b>Collective Creation Games</b> create situations of emancipation where groups of people collaborate in
@@ -199,7 +201,8 @@ const desktopContent = (pageNumber: number, language: Language) => {
       )
 
     case 2:
-      return isEnglish(language) ? (
+      // return isEnglish(language) ? (
+      return true ? (
         <p>
           Between 2021 and 2022, the <b>Pedagogy of Games</b> program was co-developed with 3 groups of youth. Combining
           arts research and critical pedagogy, all sessions were context specific, inclusive and creative. We played,
@@ -214,7 +217,8 @@ const desktopContent = (pageNumber: number, language: Language) => {
       )
 
     case 3:
-      return isEnglish(language) ? (
+      // return isEnglish(language) ? (
+      return true ? (
         <>
           <p>
             This page is a visual means to communicate the quirkiness of this practice. It invites you to explore the
@@ -265,7 +269,8 @@ const desktopContent = (pageNumber: number, language: Language) => {
       )
 
     case 4:
-      return isEnglish(language) ? (
+      // return isEnglish(language) ? (
+      return true ? (
         <>
           <p>
             <b>How to navigate it:</b>
@@ -298,7 +303,8 @@ const desktopContent = (pageNumber: number, language: Language) => {
       )
 
     case 5:
-      return isEnglish(language) ? (
+      // return isEnglish(language) ? (
+      return true ? (
         <>
           <p>
             <b>Zoom</b> in for reading, <b>Zoom out</b> to allow easier movement in space.
@@ -340,7 +346,8 @@ const desktopContent = (pageNumber: number, language: Language) => {
       )
 
     case 6:
-      return isEnglish(language) ? (
+      // return isEnglish(language) ? (
+      return true ? (
         <>
           <p>
             <b>Contact us</b>
@@ -401,10 +408,12 @@ const desktopContent = (pageNumber: number, language: Language) => {
   }
 }
 
-const mobileContent = (pageNumber: number, language: Language) => {
+// const mobileContent = (pageNumber: number, language: Language) => {
+const mobileContent = (pageNumber: number) => {
   switch (pageNumber) {
     case 1:
-      return isEnglish(language) ? (
+      // return isEnglish(language) ? (
+      return true ? (
         <>
           <p>
             Disclaimer: For compatibility and ease of navigation on mobile, only parts of the functionalities are
@@ -434,7 +443,8 @@ const mobileContent = (pageNumber: number, language: Language) => {
       )
 
     case 2:
-      return isEnglish(language) ? (
+      // return isEnglish(language) ? (
+      return true ? (
         <p>
           Between 2021 and 2022 the <b>Pedagogy of games</b> program was co-developed with 3 groups of youth.Combining
           arts research and critical pedagogy, all sessions were context specific, inclusive, creative processes, where
@@ -450,7 +460,8 @@ const mobileContent = (pageNumber: number, language: Language) => {
       )
 
     case 3:
-      return isEnglish(language) ? (
+      // return isEnglish(language) ? (
+      return true ? (
         <>
           <p>
             This page is a visual attempt to communicate the quirkiness of such a practice. It invites you to explore
@@ -501,7 +512,8 @@ const mobileContent = (pageNumber: number, language: Language) => {
       )
 
     case 4:
-      return isEnglish(language) ? (
+      // return isEnglish(language) ? (
+      return true ? (
         <>
           <p>
             For compatibility and ease of navigation purposes, only part of the functionalities are enabled on your
@@ -531,7 +543,8 @@ const mobileContent = (pageNumber: number, language: Language) => {
       )
 
     case 5:
-      return isEnglish(language) ? (
+      // return isEnglish(language) ? (
+      return true ? (
         <>
           <p>
             <b>Zoom</b> in for reading, <b>zoom out</b> to allow easier movement in space.
@@ -571,7 +584,8 @@ const mobileContent = (pageNumber: number, language: Language) => {
       )
 
     case 6:
-      return isEnglish(language) ? (
+      // return isEnglish(language) ? (
+      return true ? (
         <>
           <p>
             <b>Contact us</b>

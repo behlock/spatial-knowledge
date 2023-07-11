@@ -36,8 +36,8 @@ const Header = ({ language, setLanguage }) => {
           <AlertDialog
             isOpen={cookies.showDialog === 'true'}
             isMobile={isMobile}
-            language={language}
-            setLanguage={setLanguage}
+            // language={language}
+            // setLanguage={setLanguage}
             pageNumber={pageNumber}
             setPageNumber={setPageNumber}
           />
