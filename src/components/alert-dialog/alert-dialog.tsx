@@ -55,7 +55,7 @@ const AlertDialog = (props: AlertDialogProps) => {
               forceMount
               className={clsx(
                 'fixed z-50',
-                'h-[50vh] w-[95vw] max-w-xl rounded-lg p-10 md:w-full',
+                'h-[70vh] w-[95vw] max-w-xl rounded-lg p-10 md:w-full',
                 'left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%]',
                 'bg-gray-100 opacity-90',
                 'focus:outline-none',
