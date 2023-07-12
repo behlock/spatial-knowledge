@@ -39,7 +39,8 @@ export default function Home() {
   useEffect(() => {
     if (graphData.nodes.length === 0) return
     setSelectedTags([])
-    setPhases(isEnglish(language) ? englishPhases : arabicPhases)
+    // setPhases(isEnglish(language) ? englishPhases : arabicPhases)
+    setPhases(englishPhases)
 
     const defaultVisibleNodesIds = isEnglish(language) ? englishDefaultVisibleNodesIds : arabicDefaultVisibleNodesIds
     setDefaultVisibleNodes(graphData.nodes.filter((node: any) => defaultVisibleNodesIds.includes(node.id)))

@@ -112,9 +112,9 @@ export const ForceGraph = (props) => {
             return (
               <div className="mr-3 flex flex-row" key={phase}>
                 <Checkbox
-                  label={phase}
-                  checked={props.selectedTags.includes(phase)}
-                  onCheckedChange={() => selectTag(phase, props.selectedTags, props.setSelectedTags)}
+                  label={phase.label}
+                  checked={props.selectedTags.includes(phase.official)}
+                  onCheckedChange={() => selectTag(phase.official, props.selectedTags, props.setSelectedTags)}
                 />
               </div>
             )

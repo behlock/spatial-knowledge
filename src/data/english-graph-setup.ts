@@ -1,4 +1,21 @@
-const englishPhases = ['Pre-session', 'During session', 'Post-session']
+const englishPhases = [
+  {
+    label: 'Creative Process',
+    official: 'The creative process, materials, chaos and time',
+  },
+  {
+    label: 'Game Design',
+    official: 'Game design and systems thinking',
+  },
+  {
+    label: 'Collectivity & Individuality',
+    official: 'Collectivity, individuality and social psychology',
+  },
+  {
+    label: 'Reflection & Learning',
+    official: 'Facilitation, reflection and learning',
+  },
+]
 
 const englishDefaultVisibleNodesIds = [
   'Trace back  course of \n the session',
@@ -674,4 +691,4 @@ const englishDuringSessionNodesIds = [
   'Cannot challenge logic \n of the game',
 ]
 
-export { englishPhases, englishDefaultVisibleNodesIds, englishDuringSessionNodesIds }
+export { englishDefaultVisibleNodesIds, englishDuringSessionNodesIds, englishPhases }
