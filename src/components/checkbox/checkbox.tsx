@@ -23,13 +23,13 @@ const Checkbox = (props: CheckboxProps) => {
         )}
       >
         <CheckboxPrimitive.Indicator>
-          <CheckIcon className="h-5 w-5 self-center text-black" />
+          <CheckIcon className="h-4 w-4 self-center text-black" />
         </CheckboxPrimitive.Indicator>
       </CheckboxPrimitive.Root>
 
       <LabelPrimitive.Label
         htmlFor="c1"
-        className="ml-2 select-none text-s text-gray-300"
+        className="ml-1 select-none text-s text-gray-300"
         onClick={() => props.onCheckedChange(!props.checked)}
       >
         {props.label}

@@ -80,9 +80,9 @@ const AlertDialog = (props: AlertDialogProps) => {
                   </>
                 )}
               </button> */}
-              <div className="flex h-fit flex-row justify-center items-center">
+              <div className="flex h-fit flex-row items-center justify-center">
                 <AlertDialogPrimitive.Title className="h-fit text-lg font-bold text-gray-900">
-                  {props.title}
+                  {pageTitle(props.section, props.title, props.pageNumber)}
                 </AlertDialogPrimitive.Title>
                 <AlertDialogPrimitive.Cancel asChild onClick={() => props.setPageNumber(1)}>
                   <button className="flex  w-fit flex-auto justify-end  focus:outline-none">
@@ -90,7 +90,7 @@ const AlertDialog = (props: AlertDialogProps) => {
                   </button>
                 </AlertDialogPrimitive.Cancel>
               </div>
-              <AlertDialogPrimitive.Description className="color-white h-30 space-pre-wrap flex flex-grow flex-col justify-center space-y-4 align-middle text-sm font-normal text-gray-700 ">
+              <AlertDialogPrimitive.Description className="color-white space-pre-wrap flex flex-grow flex-col justify-center space-y-4 align-middle text-sm font-normal text-gray-700 ">
                 {/* {props.isMobile ? mobileContent(props.pageNumber) : desktopContent(props.pageNumber)} */}
                 {content(props.pageNumber, props.section)}
               </AlertDialogPrimitive.Description>
@@ -139,7 +139,11 @@ const previousPageButton = (pageNumber: number, setPageNumber: (pageNumber: numb
   }
 }
 
-const forwardPageButton = (pageNumber: number, setPageNumber: (pageNumber: number) => void, totalPages: number | undefined) => {
+const forwardPageButton = (
+  pageNumber: number,
+  setPageNumber: (pageNumber: number) => void,
+  totalPages: number | undefined
+) => {
   switch (pageNumber) {
     case totalPages:
       return (
@@ -173,6 +177,21 @@ const legendEntry = (color: string, text: string) => (
     <text className="text-left align-baseline">{text}</text>
   </div>
 )
+
+const pageTitle = (section: string, title: string, pageNumber: number) => {
+  switch (section) {
+    case 'howto':
+      switch (pageNumber) {
+        case 2:
+          return 'Legend'
+
+        default:
+          return title
+      }
+    default:
+      return title
+  }
+}
 
 // const mobileContent = (pageNumber: number, language: Language) => {
 const content = (pageNumber: number, section: string) => {
@@ -245,7 +264,7 @@ const content = (pageNumber: number, section: string) => {
               </p>
               <p>With the support of:</p>
               <p>
-                <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
+                <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-2 flex" />
               </p>
             </>
           ) : (
@@ -283,14 +302,14 @@ const content = (pageNumber: number, section: string) => {
             <>
               <div className="mt-4 flex flex-row">
                 <div className="flex flex-grow flex-col items-center">
-                  <Image src="/assets/check-boxes.svg" alt="check-boxes" width={100} height={60} className="mx-auto " />
+                  <Image src="/assets/check-boxes.svg" alt="check-boxes" width={180} height={60} className="mx-auto " />
                   Select
                 </div>
                 <div className="flex flex-grow flex-col items-center">
                   <Image
                     src="/assets/node-click-expand.svg"
                     alt="node-click-expand"
-                    width={110}
+                    width={150}
                     height={60}
                     className="mx-auto "
                   />
@@ -302,19 +321,19 @@ const content = (pageNumber: number, section: string) => {
                   <Image
                     src="/assets/figure-rotate.svg"
                     alt="figure-rotate"
-                    width={120}
+                    width={190}
                     height={60}
                     className="mx-auto "
                   />
                   Rotate
                 </div>
                 <div className="flex flex-grow flex-col items-center">
-                  <Image src="/assets/taskbar.svg" alt="taskbar" width={100} height={60} className="mx-auto " />
+                  <Image src="/assets/taskbar.svg" alt="taskbar" width={200} height={60} className="mx-auto " />
                   Find info
                 </div>
               </div>
               <div className="flex flex-grow flex-col items-center">
-                <Image src="/assets/zoom-out.svg" alt="zoom-out" width={100} height={60} className="mx-auto " />
+                <Image src="/assets/zoom-out.svg" alt="zoom-out" width={150} height={60} className="mx-auto " />
                 Zoom in/out
               </div>
             </>
@@ -342,7 +361,7 @@ const content = (pageNumber: number, section: string) => {
         case 1:
           return (
             <>
-              <Image src="/assets/profile-pic.jpg" alt="profile-pic" width={250} height={180} className="mx-auto mt-2" />
+              <Image src="/assets/profile-pic.jpg" alt="profile-pic" width={450} height={180} className="mx-auto mt-2" />
               <p>
                 Rami Chahine is a Lebanese creator and visual, game and street artist born in 1987 in Beirut. He holds a
                 BA in business from the American University of Beirut and a Bachelor’s in Product Design from Académie
@@ -358,24 +377,22 @@ const content = (pageNumber: number, section: string) => {
         case 2:
           return (
             <>
-              <p className='mb-8'>Five main drives have guided this research:</p>
+              <p className="mb-8">Five main drives have guided this research:</p>
               <ul className="flex flex-col space-y-4">
-                <li> 
-                ✱ The will to setup profound, transformational experiences for people</li>
+                <li>✱ The will to setup profound, transformational experiences for people</li>
                 <li>
-                ✱ The observation that creative thinking cannot be taught like a technique, it is rather ignited by
+                  ✱ The observation that creative thinking cannot be taught like a technique, it is rather ignited by
                   providing it with adequate situations for its emergence
                 </li>
 
                 <li>
-                ✱ The need to develop ways which facilitate the process of creating together, and bypass its usual
+                  ✱ The need to develop ways which facilitate the process of creating together, and bypass its usual
                   challenges
                 </li>
-                <li>
-                  ✱ The quest to create while playing with nature</li>
+                <li>✱ The quest to create while playing with nature</li>
 
                 <li>
-                ✱ The idea that such collective creative practices can grow our capacities for critical reflection,
+                  ✱ The idea that such collective creative practices can grow our capacities for critical reflection,
                   systems thinking and collaboration
                 </li>
               </ul>
@@ -394,7 +411,8 @@ const content = (pageNumber: number, section: string) => {
                 Zayraqoun street performance collective. .
               </p>
               <p>
-              He taught Visual Arts at the International College in 2018/19 and has since been developing the method of "Collective Creation Games"
+                He taught Visual Arts at the International College in 2018/19 and has since been developing the method
+                of "Collective Creation Games"
               </p>
               <p>
                 He now provides it as a service in the form of workshops or consultancies for educational and social
@@ -432,6 +450,12 @@ const content = (pageNumber: number, section: string) => {
             Youtube:
             <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">
               Collective Creation Games
+            </a>
+          </p>
+          <p>
+            Instagram:
+            <a className="ml-1 text-blue-600" href="https://www.instagram.com/ramichahine.atwork/">
+              @ramichahine.atwork
             </a>
           </p>
         </>

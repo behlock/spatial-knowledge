@@ -110,10 +110,10 @@ const Header = ({ language, setLanguage }) => {
           </Link>
         </div>
       </header>
-      <div className="fixed right-5 top-5 z-20 mb-2 ml-8 flex flex-col items-center justify-center space-y-2 rounded-lg bg-white p-1 ">
+      <div className="fixed right-5 top-14 z-20 mb-2 ml-8 flex flex-col items-center justify-center space-y-2 rounded-lg bg-white p-1 ">
         {cookies.showDialog && (
           <AlertDialog
-            isOpen={cookies.showDialog === 'true'}
+            isOpen={false}
             isMobile={isMobile}
             // language={language}
             // setLanguage={setLanguage}
@@ -142,13 +142,13 @@ const Header = ({ language, setLanguage }) => {
           {steeringWheelIcon}
         </AlertDialog>
         <AlertDialog
-          isOpen={cookies.showDialog === 'true'}
+          isOpen={false}
           isMobile={isMobile}
           // language={language}
           // setLanguage={setLanguage}
           pageNumber={aboutPageNumber}
           setPageNumber={setAboutPageNumber}
-          title={'Rami Chahine'}
+          title={'About the Artist'}
           section={'profile'}
           hasPages={true}
           totalPages={3}
@@ -156,7 +156,7 @@ const Header = ({ language, setLanguage }) => {
           {personIcon}
         </AlertDialog>
         <AlertDialog
-          isOpen={cookies.showDialog === 'true'}
+          isOpen={false}
           isMobile={isMobile}
           // language={language}
           // setLanguage={setLanguage}

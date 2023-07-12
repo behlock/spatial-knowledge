@@ -4,7 +4,7 @@ const englishPhases = [
     official: 'The creative process, materials, chaos and time',
   },
   {
-    label: 'Game Design',
+    label: 'Systems Thinking',
     official: 'Game design and systems thinking',
   },
   {
@@ -12,7 +12,7 @@ const englishPhases = [
     official: 'Collectivity, individuality and social psychology',
   },
   {
-    label: 'Reflection & Learning',
+    label: 'Critical Reflection',
     official: 'Facilitation, reflection and learning',
   },
 ]
