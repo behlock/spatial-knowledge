@@ -27,7 +27,7 @@ const AlertDialog = (props: AlertDialogProps) => {
   let [isOpen, setIsOpen] = useState(props.isOpen)
 
   return (
-    <AlertDialogPrimitive.Root open={isOpen} onOpenChange={setIsOpen}>
+    <AlertDialogPrimitive.Root open={isOpen} onOpenChange={setIsOpen}  >
       <AlertDialogPrimitive.Trigger asChild>{props.children}</AlertDialogPrimitive.Trigger>
       <AlertDialogPrimitive.Portal forceMount>
         <Transition.Root show={isOpen}>
@@ -55,7 +55,7 @@ const AlertDialog = (props: AlertDialogProps) => {
               forceMount
               className={clsx(
                 'fixed z-50',
-                'h-[70vh] w-[95vw] max-w-xl rounded-lg p-10 md:w-full',
+                'h-fit w-[95vw] max-w-xl rounded-lg p-10 md:w-full',
                 'left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%]',
                 'bg-gray-100 opacity-90',
                 'focus:outline-none',
@@ -90,7 +90,7 @@ const AlertDialog = (props: AlertDialogProps) => {
                   </button>
                 </AlertDialogPrimitive.Cancel>
               </div>
-              <AlertDialogPrimitive.Description className="color-white space-pre-wrap flex flex-grow flex-col justify-center space-y-4 align-middle text-sm font-normal text-gray-700 ">
+              <AlertDialogPrimitive.Description className="color-white space-pre-wrap flex flex-grow flex-col justify-center space-y-4 mt-4 mb-4 align-middle text-sm font-normal text-gray-700 ">
                 {/* {props.isMobile ? mobileContent(props.pageNumber) : desktopContent(props.pageNumber)} */}
                 {content(props.pageNumber, props.section)}
               </AlertDialogPrimitive.Description>
