@@ -1,6 +1,6 @@
 import * as TooltipPrimitive from '@radix-ui/react-tooltip'
 
-function Tooltip({ children, content, ...props }) {
+function Tooltip({ children, content, ...props }: { children: React.ReactNode, content: React.ReactNode}) {
   return (
     <TooltipPrimitive.Provider>
       <TooltipPrimitive.Root>
@@ -9,11 +9,11 @@ function Tooltip({ children, content, ...props }) {
           side="top"
           align="center"
           style={{ background: 'rgb(23 23 23)' }}
-          className="text-white p-1 rounded"
+          className="rounded p-1 text-white"
           {...props}
         >
           {content}
-          <TooltipPrimitive.Arrow width={11} height={5} className='mb-2' />
+          <TooltipPrimitive.Arrow width={11} height={5} className="mb-2" />
         </TooltipPrimitive.Content>
       </TooltipPrimitive.Root>
     </TooltipPrimitive.Provider>
