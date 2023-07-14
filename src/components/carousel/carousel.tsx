@@ -15,6 +15,7 @@ const ImagesCarousel = () => {
       transitionSpeed={2}
       hasMediaButton={false}
       hasSizeButton={false}
+      hasIndexBoard={false}
       // hasCaptions={'bottom'}
       // shouldMaximizeOnClick={true}
       // shouldMinimizeOnClick={true}
