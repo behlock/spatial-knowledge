@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { useCookies } from 'react-cookie'
 
 import AlertDialog from '@/components/alert-dialog'
-import * as Tooltip from '@radix-ui/react-tooltip';
+import Tooltip from '@/components/tooltip'
 import useDeviceDetect from '@/hooks/useDeviceDetect'
 
 // @ts-ignore
@@ -113,65 +113,84 @@ const Header = ({ language, setLanguage }) => {
       </header>
       <div className="fixed right-5 top-14 z-20 mb-2 ml-8 flex flex-col items-center justify-center space-y-2 rounded-lg bg-white p-1 ">
         {cookies.showDialog && (
-          <AlertDialog
-            isOpen={false}
-            isMobile={isMobile}
-            // language={language}
-            // setLanguage={setLanguage}
-            pageNumber={infoPageNumber}
-            setPageNumber={setInfoPageNumber}
-            title={'What is Collective Creation Games?'}
-            section={'info'}
-            hasPages={true}
-            totalPages={3}
-          >
-            {infoIcon}
-          </AlertDialog>
+          <Tooltip content={'About the project'}>
+            <span tabIndex={0}>
+              <AlertDialog
+                isOpen={false}
+                isMobile={isMobile}
+                // language={language}
+                // setLanguage={setLanguage}
+                pageNumber={infoPageNumber}
+                setPageNumber={setInfoPageNumber}
+                title={'What is Collective Creation Games?'}
+                section={'info'}
+                hasPages={true}
+                totalPages={3}
+              >
+                {infoIcon}
+              </AlertDialog>
+            </span>
+          </Tooltip>
         )}
-        <AlertDialog
-          isOpen={cookies.showDialog === 'true'}
-          isMobile={isMobile}
-          // language={language}
-          // setLanguage={setLanguage}
-          pageNumber={howToPageNumber}
-          setPageNumber={setHowToPageNumber}
-          title={'Welcome to Collective Creation Games'}
-          section={'howto'}
-          hasPages={true}
-          totalPages={2}
-        >
-          {steeringWheelIcon}
-        </AlertDialog>
-        <AlertDialog
-          isOpen={false}
-          isMobile={isMobile}
-          // language={language}
-          // setLanguage={setLanguage}
-          pageNumber={aboutPageNumber}
-          setPageNumber={setAboutPageNumber}
-          title={'About the Artist'}
-          section={'profile'}
-          hasPages={true}
-          totalPages={3}
-        >
-          {personIcon}
-        </AlertDialog>
-        <AlertDialog
-          isOpen={false}
-          isMobile={isMobile}
-          // language={language}
-          // setLanguage={setLanguage}
-          pageNumber={infoPageNumber}
-          setPageNumber={setInfoPageNumber}
-          title={'Contact'}
-          section={'contact'}
-          hasPages={false}
-        >
-          {phoneIcon}
-        </AlertDialog>
-        <a href="https://www.youtube.com/@ramichahine8875/videos" target="_blank" rel="noreferrer">
-          {youtubeIcon}
-        </a>
+        <Tooltip content={'Navigation'}>
+          <span tabIndex={0}>
+            <AlertDialog
+              isOpen={cookies.showDialog === 'true'}
+              isMobile={isMobile}
+              // language={language}
+              // setLanguage={setLanguage}
+              pageNumber={howToPageNumber}
+              setPageNumber={setHowToPageNumber}
+              title={'Welcome to Collective Creation Games'}
+              section={'howto'}
+              hasPages={true}
+              totalPages={2}
+            >
+              {steeringWheelIcon}
+            </AlertDialog>
+          </span>
+        </Tooltip>
+        <Tooltip content={'Profile'}>
+          <span tabIndex={0}>
+            <AlertDialog
+              isOpen={false}
+              isMobile={isMobile}
+              // language={language}
+              // setLanguage={setLanguage}
+              pageNumber={aboutPageNumber}
+              setPageNumber={setAboutPageNumber}
+              title={'About the Artist'}
+              section={'profile'}
+              hasPages={true}
+              totalPages={3}
+            >
+              {personIcon}
+            </AlertDialog>
+          </span>
+        </Tooltip>
+        <Tooltip content={'Contact'}>
+          <span tabIndex={0}>
+            <AlertDialog
+              isOpen={false}
+              isMobile={isMobile}
+              // language={language}
+              // setLanguage={setLanguage}
+              pageNumber={infoPageNumber}
+              setPageNumber={setInfoPageNumber}
+              title={'Contact'}
+              section={'contact'}
+              hasPages={false}
+            >
+              {phoneIcon}
+            </AlertDialog>
+          </span>
+        </Tooltip>
+
+        <Tooltip content={'Youtube'}>
+          <a href="https://www.youtube.com/@ramichahine8875/videos" target="_blank" rel="noreferrer">
+            {youtubeIcon}
+          </a>
+        </Tooltip>
       </div>
     </>
   )

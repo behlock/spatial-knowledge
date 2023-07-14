@@ -114,6 +114,7 @@ export const ForceGraph = (props) => {
                   label={phase.label}
                   checked={props.selectedTags.includes(phase.official)}
                   onCheckedChange={() => selectTag(phase.official, props.selectedTags, props.setSelectedTags)}
+                  key={phase.label}
                 />
               )
             })}
