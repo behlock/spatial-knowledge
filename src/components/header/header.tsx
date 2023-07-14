@@ -125,7 +125,7 @@ const Header = ({ language, setLanguage }) => {
                 title={'What is Collective Creation Games?'}
                 section={'info'}
                 hasPages={true}
-                totalPages={3}
+                totalPages={4}
               >
                 {infoIcon}
               </AlertDialog>
@@ -185,7 +185,6 @@ const Header = ({ language, setLanguage }) => {
             </AlertDialog>
           </span>
         </Tooltip>
-
         <Tooltip content={'Youtube'}>
           <a href="https://www.youtube.com/@ramichahine8875/videos" target="_blank" rel="noreferrer">
             {youtubeIcon}

@@ -7,6 +7,7 @@ import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog'
 import { ArrowLeftIcon, ArrowRightIcon, Cross1Icon } from '@radix-ui/react-icons'
 
 import Button from '@/components/button'
+import ImagesCarousel from '@/components/carousel'
 // import { Language, isEnglish, changeLanguage} from '@/modules/language'
 
 interface AlertDialogProps {
@@ -27,7 +28,7 @@ const AlertDialog = (props: AlertDialogProps) => {
   let [isOpen, setIsOpen] = useState(props.isOpen)
 
   return (
-    <AlertDialogPrimitive.Root open={isOpen} onOpenChange={setIsOpen}  >
+    <AlertDialogPrimitive.Root open={isOpen} onOpenChange={setIsOpen}>
       <AlertDialogPrimitive.Trigger asChild>{props.children}</AlertDialogPrimitive.Trigger>
       <AlertDialogPrimitive.Portal forceMount>
         <Transition.Root show={isOpen}>
@@ -90,7 +91,7 @@ const AlertDialog = (props: AlertDialogProps) => {
                   </button>
                 </AlertDialogPrimitive.Cancel>
               </div>
-              <AlertDialogPrimitive.Description className="color-white space-pre-wrap flex flex-grow flex-col justify-center space-y-4 mt-4 mb-4 align-middle text-sm font-normal text-gray-700 ">
+              <AlertDialogPrimitive.Description className="color-white space-pre-wrap mb-4 mt-4 flex flex-grow flex-col justify-center space-y-4 align-middle text-sm font-normal text-gray-700 ">
                 {/* {props.isMobile ? mobileContent(props.pageNumber) : desktopContent(props.pageNumber)} */}
                 {content(props.pageNumber, props.section)}
               </AlertDialogPrimitive.Description>
@@ -292,6 +293,9 @@ const content = (pageNumber: number, section: string) => {
             </div>
           )
 
+        case 4:
+          return <ImagesCarousel />
+
         default:
           return null
       }
@@ -361,7 +365,13 @@ const content = (pageNumber: number, section: string) => {
         case 1:
           return (
             <>
-              <Image src="/assets/profile-pic.jpg" alt="profile-pic" width={450} height={180} className="mx-auto mt-2" />
+              <Image
+                src="/assets/profile-pic.jpg"
+                alt="profile-pic"
+                width={450}
+                height={180}
+                className="mx-auto mt-2"
+              />
               <p>
                 Rami Chahine is a Lebanese creator and visual, game and street artist born in 1987 in Beirut. He holds a
                 BA in business from the American University of Beirut and a Bachelor’s in Product Design from Académie
