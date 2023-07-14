@@ -21,6 +21,7 @@
     "@radix-ui/react-select": "^1.2.0",
     "@radix-ui/react-slider": "^1.1.0",
     "@radix-ui/react-switch": "^1.0.1",
+    "@radix-ui/react-tooltip": "^1.0.6",
     "@react-three/drei": "^9.56.15",
     "@react-three/fiber": "^8.10.4",
     "@types/three": "^0.149.0",

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useCookies } from 'react-cookie'
 
 import AlertDialog from '@/components/alert-dialog'
+import * as Tooltip from '@radix-ui/react-tooltip';
 import useDeviceDetect from '@/hooks/useDeviceDetect'
 
 // @ts-ignore

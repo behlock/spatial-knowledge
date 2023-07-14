@@ -17,19 +17,19 @@ const Checkbox = (props: CheckboxProps) => {
         checked={props.checked}
         onCheckedChange={props.onCheckedChange}
         className={clsx(
-          'flex h-4 w-4 mt-1 items-center justify-center rounded',
+          'flex h-3 w-3 items-center justify-center rounded',
           'radix-state-checked:bg-gray-200  radix-state-unchecked:bg-gray-200',
           'focus:outline-none '
         )}
       >
         <CheckboxPrimitive.Indicator>
-          <CheckIcon className="h-4 w-4 self-center text-black" />
+          <CheckIcon className="h-3 w-3 self-center text-black" />
         </CheckboxPrimitive.Indicator>
       </CheckboxPrimitive.Root>
 
       <LabelPrimitive.Label
         htmlFor="c1"
-        className="ml-1 select-none text-s text-gray-300"
+        className="ml-1 select-none text-xs justify-center align-middle text-gray-300"
         onClick={() => props.onCheckedChange(!props.checked)}
       >
         {props.label}

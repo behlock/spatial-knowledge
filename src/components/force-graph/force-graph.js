@@ -107,26 +107,24 @@ export const ForceGraph = (props) => {
   return (
     <>
       {!props.isMobile && (
-        <div className="z-50 mb-2 mr-2 mt-2 flex h-full w-fit flex-row">
-          {props.phases.map((phase) => {
-            return (
-              <div className="mr-3 flex flex-row" key={phase}>
+        <div className="z-50 mb-2 mr-2 mt-2 flex space-x-2 h-full w-fit flex-row items-center justify-center align-middle">
+            {props.phases.map((phase) => {
+              return (
                 <Checkbox
                   label={phase.label}
                   checked={props.selectedTags.includes(phase.official)}
                   onCheckedChange={() => selectTag(phase.official, props.selectedTags, props.setSelectedTags)}
                 />
-              </div>
-            )
-          })}
-          <Checkbox
-            label={props.revealCheckboxLabel}
-            checked={props.isRevealed}
-            onCheckedChange={() => {
-              props.setIsRevealed(!props.isRevealed)
-            }}
-          />
-        </div>
+              )
+            })}
+            <Checkbox
+              label={props.revealCheckboxLabel}
+              checked={props.isRevealed}
+              onCheckedChange={() => {
+                props.setIsRevealed(!props.isRevealed)
+              }}
+            />
+          </div>
       )}
       <div className="fixed left-0 top-0 z-10 flex h-full w-full flex-col align-middle">
         <ForceGraph3D
