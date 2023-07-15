@@ -210,6 +210,15 @@ const content = (pageNumber: number, section: string, isMobile: boolean | undefi
                 These experiences take the form of interventions, installations and workshops. They engage our
                 spontaneity, intuition and will to explore in order to draw us into a state of creative flow.
               </p>
+              <p>
+                Between 2021 and 2022, the <b>Pedagogy of Games</b> program was co-developed with 3 groups of youth.
+                Combining arts research and critical pedagogy, all sessions were context specific, inclusive and
+                creative experiences.
+              </p>
+              <p>
+                We played, designed the systems of interaction and critically reflected on the dynamics emerging from
+                these experiences.
+              </p>
             </>
           ) : (
             <div className="space-y-2 text-right">
@@ -225,27 +234,6 @@ const content = (pageNumber: number, section: string, isMobile: boolean | undefi
           )
 
         case 2:
-          return true ? (
-            <>
-              <p>
-                Between 2021 and 2022, the <b>Pedagogy of Games</b> program was co-developed with 3 groups of youth.
-                Combining arts research and critical pedagogy, all sessions were context specific, inclusive and
-                creative experiences.
-              </p>
-              <p>
-                We played, designed the systems of interaction and critically reflected on the dynamics emerging from
-                these experiences.
-              </p>
-            </>
-          ) : (
-            <div className="space-y-2 text-right">
-              بين عامي 2021 و 2022 تم تطوير برنامج "بيداغوجيا اللعب" بالتعاون مع ثلاث مجموعات شبابيّة. عبر دمج طرق البحث
-              الفنّي والتعلّم النقدي ، كانت الجلسات عبارة عن عمليات إبداعية، متكيّفة بالموقف وشاملة لقدرات الجميع. حيث
-              .لعبنا، صممنا أنظمة تفاعلاتنا، وفكّرنا نقديّاً بالديناميكيات الناشئة عن هذه التجارب
-            </div>
-          )
-
-        case 3:
           return true ? (
             <>
               <p>

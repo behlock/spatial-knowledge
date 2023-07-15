@@ -130,7 +130,7 @@ const Header = ({ language, setLanguage }) => {
                 title={'What is Collective Creation Games?'}
                 section={'info'}
                 hasPages={true}
-                totalPages={3}
+                totalPages={2}
               >
                 {infoIcon}
               </AlertDialog>
