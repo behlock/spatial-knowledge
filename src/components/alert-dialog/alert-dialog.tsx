@@ -230,7 +230,7 @@ const content = (pageNumber: number, section: string) => {
               <p>
                 Between 2021 and 2022, the <b>Pedagogy of Games</b> program was co-developed with 3 groups of youth.
                 Combining arts research and critical pedagogy, all sessions were context specific, inclusive and
-                creative.
+                creative experiences.
               </p>
               <p>
                 We played, designed the systems of interaction and critically reflected on the dynamics emerging from
@@ -293,9 +293,6 @@ const content = (pageNumber: number, section: string) => {
             </div>
           )
 
-        case 4:
-          return <ImagesCarousel />
-
         default:
           return null
       }
@@ -331,6 +328,8 @@ const content = (pageNumber: number, section: string) => {
                   />
                   Rotate
                 </div>
+                <text className='text-center'>Explore the mindmap</text>
+                
                 <div className="flex flex-grow flex-col items-center">
                   <Image src="/assets/taskbar.svg" alt="taskbar" width={200} height={60} className="mx-auto " />
                   Find info
@@ -368,8 +367,8 @@ const content = (pageNumber: number, section: string) => {
               <Image
                 src="/assets/profile-pic.jpg"
                 alt="profile-pic"
-                width={450}
-                height={180}
+                width={250}
+                height={120}
                 className="mx-auto mt-2"
               />
               <p>
@@ -430,46 +429,49 @@ const content = (pageNumber: number, section: string) => {
               </p>
             </>
           )
+
+        case 4:
+          return (
+            <>
+              <p>
+                If your endeavor is related to individuals learning, thinking, designing, trying or creating together
+                then we can surely collaborate. Get in touch and share the theme you are working on so that we can
+                together develop the appropriate Collective Creation Game(s) for the situation.
+              </p>
+              <p>
+                It can take the form of a consultancy, a short intervention (15mins to 1hr), a workshop (1 to 6 days) or
+                a program (long term).
+              </p>
+              <p>
+                Phone:
+                <a className="ml-1 text-blue-600" href="tel:+961 3 593660">
+                  +961 3 593660
+                </a>
+              </p>
+              <p>
+                Email:
+                <a className="ml-1 text-blue-600" href="mailto:rami.o.chahine@gmail.com">
+                  rami.o.chahine@gmail.com
+                </a>
+              </p>
+              <p>
+                Youtube:
+                <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">
+                  Collective Creation Games
+                </a>
+              </p>
+              <p>
+                Instagram:
+                <a className="ml-1 text-blue-600" href="https://www.instagram.com/ramichahine.atwork/">
+                  @ramichahine.atwork
+                </a>
+              </p>
+            </>
+          )
       }
 
-    case 'contact':
-      return (
-        <>
-          <p>
-            If your endeavor is related to individuals learning, thinking, designing, trying or creating together then
-            we can surely collaborate. Get in touch and share the theme you are working on so that we can together
-            develop the appropriate Collective Creation Game(s) for the situation.
-          </p>
-          <p>
-            It can take the form of a consultancy, a short intervention (15mins to 1hr), a workshop (1 to 6 days) or a
-            program (long term).
-          </p>
-          <p>
-            Phone:
-            <a className="ml-1 text-blue-600" href="tel:+961 3 593660">
-              +961 3 593660
-            </a>
-          </p>
-          <p>
-            Email:
-            <a className="ml-1 text-blue-600" href="mailto:rami.o.chahine@gmail.com">
-              rami.o.chahine@gmail.com
-            </a>
-          </p>
-          <p>
-            Youtube:
-            <a className="ml-1 text-blue-600" href="https://www.youtube.com/@ramichahine8875/videos">
-              Collective Creation Games
-            </a>
-          </p>
-          <p>
-            Instagram:
-            <a className="ml-1 text-blue-600" href="https://www.instagram.com/ramichahine.atwork/">
-              @ramichahine.atwork
-            </a>
-          </p>
-        </>
-      )
+    case 'pictures':
+      return <ImagesCarousel />
 
     default:
       return <></>

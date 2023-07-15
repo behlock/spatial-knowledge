@@ -2,7 +2,7 @@ import Carousel from 'react-gallery-carousel'
 import 'react-gallery-carousel/dist/index.css'
 
 const ImagesCarousel = () => {
-  const images = Array.from({ length: 9 }, (x, i) => i + 1).map((number) => ({
+  const images = Array.from({ length: 18 }, (x, i) => i + 1).map((number) => ({
     src: `/assets/carousel/${number}.jpg`,
     // @ts-ignore
     // alt: CAPTIONS[number],
