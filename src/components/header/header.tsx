@@ -167,7 +167,7 @@ const Header = ({ language, setLanguage }) => {
               title={'About the Creative Worker'}
               section={'profile'}
               hasPages={true}
-              totalPages={4}
+              totalPages={2}
             >
               {personIcon}
             </AlertDialog>

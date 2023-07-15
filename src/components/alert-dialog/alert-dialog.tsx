@@ -382,13 +382,19 @@ const content = (pageNumber: number, section: string, isMobile: boolean | undefi
                 className="mx-auto mt-2"
               />
               <p>
-                Rami Chahine is a Lebanese creator and visual, game and street artist born in 1987 in Beirut. He holds a
-                BA in business from the American University of Beirut and a Bachelor’s in Product Design from Académie
-                Libanaise des Beaux-Arts.
+                Rami Chahine (1987, Lebanon) has developed experimental painting processes, built installations, painted
+                murals, designed a drawing pouch, designed art games, made street interventions inviting all passersby
+                to participate in creation, and co-founded the Zayraqoun street performance collective.
               </p>
               <p>
-                He's been developing his principles of creation since 2012 balancing collectivity and individuality,
-                control and embrace, chaos and order, human action and natural growth.
+                He taught Visual Arts at the International College in 2018/19 and has since been developing the method
+                of "Collective Creation Games". Using games to provide the adequate fertile grounds for the emergence of
+                creative, systems thinking and critical reflection.
+              </p>
+              <p>
+                He now provides it as a service in the form of workshops or consultancies for educational and social
+                endeavors and researchers aiming to engage people in collective creative actions. Rami holds a B.A in
+                business administration from AUB, and a B.A in product design from ALBA.
               </p>
             </>
           )
@@ -396,66 +402,16 @@ const content = (pageNumber: number, section: string, isMobile: boolean | undefi
         case 2:
           return (
             <>
-              <p className="mb-8">Five main drives have guided this research:</p>
-              <ul className="flex flex-col space-y-4">
-                <li>✱ The will to setup profound, transformational experiences for people</li>
-                <li>
-                  ✱ The observation that creative thinking cannot be taught like a technique, it is rather ignited by
-                  providing it with adequate situations for its emergence
-                </li>
-
-                <li>
-                  ✱ The need to develop ways which facilitate the process of creating together, and bypass its usual
-                  challenges
-                </li>
-                <li>✱ The quest to create while playing with nature</li>
-
-                <li>
-                  ✱ The idea that such collective creative practices can grow our capacities for critical reflection,
-                  systems thinking and collaboration
-                </li>
-              </ul>
-            </>
-          )
-
-        case 3:
-          return (
-            <>
-              {/* <p>
-                What he’s been doing:
-              </p> */}
               <p>
-                Rami has developed experimental painting processes, built installations, painted murals, designed art
-                games, made street interventions inviting all passersby to participate in creation, and co-founded the
-                Zayraqoun street performance collective. .
-              </p>
-              <p>
-                He taught Visual Arts at the International College in 2018/19 and has since been developing the method
-                of "Collective Creation Games"
-              </p>
-              <p>
-                He now provides it as a service in the form of workshops or consultancies for educational and social
-                endeavors and researchers aiming to engage people in collective creative actions.
-              </p>
-            </>
-          )
-
-        case 4:
-          return (
-            <>
-              <p>
-                If your endeavor is related to individuals learning, thinking, designing, trying or creating together
-                then we can surely collaborate. Get in touch and share the theme you are working on so that we can
-                together develop the appropriate Collective Creation Game(s) for the situation.
-              </p>
-              <p>
-                It can take the form of a consultancy, a short intervention (15mins to 1hr), a workshop (1 to 6 days) or
-                a program (long term).
+                If your endeavor is related to individuals learning, trying and creating together then we can
+                collaborate. Get in touch, share the theme you are working on and together we can develop the
+                appropriate Collective creation game(s) for the situation.It can take the form of: A consultancy, a
+                short intervention (From 15 mins to 1hr), a workshop (From 1 to 6 days) or a program (Long term).
               </p>
               <p>
                 Phone:
                 <a className="ml-1 text-blue-600" href="tel:+961 3 593660">
-                  +961 3 593660
+                  +9613593660
                 </a>
               </p>
               <p>
@@ -475,6 +431,10 @@ const content = (pageNumber: number, section: string, isMobile: boolean | undefi
                 <a className="ml-1 text-blue-600" href="https://www.instagram.com/ramichahine.atwork/">
                   @ramichahine.atwork
                 </a>
+              </p>
+              <p>
+                Sustaining myself is important, but creating such experiences with people in the streets is equally so.
+                Therefore part of the fee of any commissioned project will be used to fund street interventions.
               </p>
             </>
           )
