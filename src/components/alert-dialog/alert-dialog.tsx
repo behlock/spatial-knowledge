@@ -375,14 +375,14 @@ const content = (pageNumber: number, section: string, isMobile: boolean | undefi
                 to participate in creation, and co-founded the Zayraqoun street performance collective.
               </p>
               <p>
-                He taught Visual Arts at the International College in 2018/19 and has since been developing the method
-                of "Collective Creation Games". Using games to provide the adequate fertile grounds for the emergence of
+                Rami holds a B.A in business administration from AUB, and a B.A in product design from ALBA. He taught
+                Visual Arts at the International College in 2018/19 and has since been developing the method of
+                "Collective Creation Games": using games to provide the adequate fertile grounds for the emergence of
                 creative, systems thinking and critical reflection.
               </p>
               <p>
                 He now provides it as a service in the form of workshops or consultancies for educational and social
-                endeavors and researchers aiming to engage people in collective creative actions. Rami holds a B.A in
-                business administration from AUB, and a B.A in product design from ALBA.
+                endeavors and researchers aiming to engage people in collective creative actions.
               </p>
             </>
           )
