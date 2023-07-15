@@ -8,7 +8,11 @@ import useDeviceDetect from '@/hooks/useDeviceDetect'
 import { Language, isEnglish } from '@/modules/language'
 
 import { arabicDefaultVisibleNodesIds, arabicDuringSessionNodesIds, arabicPhases } from '@/data/arabic-graph-setup'
-import { englishDefaultVisibleNodesIds, englishDuringSessionNodesIds, englishPhases } from '@/data/english-graph-setup'
+import {
+  englishDefaultVisibleNodesIds,
+  englishCreativeProcessNodesIds,
+  englishPhases,
+} from '@/data/english-graph-setup'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
@@ -45,12 +49,12 @@ export default function Home() {
     const defaultVisibleNodesIds = isEnglish(language) ? englishDefaultVisibleNodesIds : arabicDefaultVisibleNodesIds
     setDefaultVisibleNodes(graphData.nodes.filter((node: any) => defaultVisibleNodesIds.includes(node.id)))
 
-    const duringSessionNodesIds = isEnglish(language) ? englishDuringSessionNodesIds : arabicDuringSessionNodesIds
+    const duringSessionNodesIds = isEnglish(language) ? englishCreativeProcessNodesIds : arabicDuringSessionNodesIds
     setDuringSessionNodes(graphData.nodes.filter((node: any) => duringSessionNodesIds.includes(node.id)))
 
     setVisibleNodesIds(isMobile ? duringSessionNodesIds : defaultVisibleNodesIds)
   }, [language, graphData])
-  
+
   useEffect(() => {
     if (isRevealed) {
       setCompleteSetOfNodes(graphData.nodes)
@@ -66,7 +70,7 @@ export default function Home() {
   // Error state
   if (englishDataError || arabicDataError)
     return (
-      <div className="flex h-full items-center justify-center bg-neutral-900 text-white text-sm">
+      <div className="flex h-full items-center justify-center bg-neutral-900 text-sm text-white">
         An unexpected error occurred, please try refreshing the page. If the error persists, reach out to us at
         rami.o.chahine@gmail.com
       </div>

@@ -58,7 +58,7 @@ const AlertDialog = (props: AlertDialogProps) => {
                 'fixed z-50',
                 'h-fit w-[95vw] max-w-xl rounded-lg p-10 md:w-full',
                 'left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%]',
-                'bg-gray-100 opacity-90',
+                'bg-gray-100',
                 'focus:outline-none',
                 'flex flex-col px-8'
               )}
@@ -93,7 +93,7 @@ const AlertDialog = (props: AlertDialogProps) => {
               </div>
               <AlertDialogPrimitive.Description className="color-white space-pre-wrap mb-4 mt-4 flex flex-grow flex-col justify-center space-y-4 align-middle text-sm font-normal text-gray-700 ">
                 {/* {props.isMobile ? mobileContent(props.pageNumber) : desktopContent(props.pageNumber)} */}
-                {content(props.pageNumber, props.section)}
+                {content(props.pageNumber, props.section, props.isMobile)}
               </AlertDialogPrimitive.Description>
               <div className="flex flex-row justify-end align-bottom">
                 {props.hasPages ? (
@@ -195,7 +195,7 @@ const pageTitle = (section: string, title: string, pageNumber: number) => {
 }
 
 // const mobileContent = (pageNumber: number, language: Language) => {
-const content = (pageNumber: number, section: string) => {
+const content = (pageNumber: number, section: string, isMobile: boolean) => {
   switch (section) {
     case 'info':
       switch (pageNumber) {
@@ -302,20 +302,30 @@ const content = (pageNumber: number, section: string) => {
           return (
             <>
               <div className="mt-4 flex flex-row">
-                <div className="flex flex-grow flex-col items-center">
-                  <Image src="/assets/check-boxes.svg" alt="check-boxes" width={180} height={60} className="mx-auto " />
-                  Select
-                </div>
-                <div className="flex flex-grow flex-col items-center">
-                  <Image
-                    src="/assets/node-click-expand.svg"
-                    alt="node-click-expand"
-                    width={150}
-                    height={60}
-                    className="mx-auto "
-                  />
-                  Expand/Collapse
-                </div>
+                {!isMobile && (
+                  <div className="flex flex-grow flex-col items-center">
+                    <Image
+                      src="/assets/check-boxes.svg"
+                      alt="check-boxes"
+                      width={180}
+                      height={60}
+                      className="mx-auto "
+                    />
+                    Select
+                  </div>
+                )}
+                {!isMobile && (
+                  <div className="flex flex-grow flex-col items-center">
+                    <Image
+                      src="/assets/node-click-expand.svg"
+                      alt="node-click-expand"
+                      width={150}
+                      height={60}
+                      className="mx-auto "
+                    />
+                    Expand/Collapse
+                  </div>
+                )}
               </div>
               <div className="flex flex-row">
                 <div className="flex flex-grow flex-col items-center">
@@ -328,8 +338,8 @@ const content = (pageNumber: number, section: string) => {
                   />
                   Rotate
                 </div>
-                <text className='text-center'>Explore the mindmap</text>
-                
+                <text className="text-center">Explore the mindmap</text>
+
                 <div className="flex flex-grow flex-col items-center">
                   <Image src="/assets/taskbar.svg" alt="taskbar" width={200} height={60} className="mx-auto " />
                   Find info
