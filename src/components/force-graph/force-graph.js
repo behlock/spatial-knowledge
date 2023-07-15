@@ -131,7 +131,7 @@ export const ForceGraph = (props) => {
         <ForceGraph3D
           // RENDERING
           extraRenderers={extraRenderers}
-          d3AlphaDecay={0}
+          d3AlphaDecay={0.03}
           // DATA
           graphData={props.graphData}
           nodeId="id"
