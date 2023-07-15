@@ -195,7 +195,7 @@ const pageTitle = (section: string, title: string, pageNumber: number) => {
 }
 
 // const mobileContent = (pageNumber: number, language: Language) => {
-const content = (pageNumber: number, section: string, isMobile: boolean) => {
+const content = (pageNumber: number, section: string, isMobile: boolean | undefined) => {
   switch (section) {
     case 'info':
       switch (pageNumber) {
