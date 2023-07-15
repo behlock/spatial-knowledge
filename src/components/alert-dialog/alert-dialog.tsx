@@ -365,24 +365,24 @@ const content = (pageNumber: number, section: string, isMobile: boolean | undefi
               <Image
                 src="/assets/profile-pic.jpg"
                 alt="profile-pic"
-                width={250}
-                height={120}
+                width={180}
+                height={100}
                 className="mx-auto mt-2"
               />
               <p>
                 Rami Chahine (1987, Lebanon) has developed experimental painting processes, built installations, painted
-                murals, designed a drawing pouch, designed art games, made street interventions inviting all passersby
+                murals, designed a sketching pouch, designed art games, made street interventions inviting all passersby
                 to participate in creation, and co-founded the Zayraqoun street performance collective.
               </p>
               <p>
-                Rami holds a B.A in business administration from AUB, and a B.A in product design from ALBA. He taught
-                Visual Arts at the International College in 2018/19 and has since been developing the method of
-                "Collective Creation Games": using games to provide the adequate fertile grounds for the emergence of
+                He taught Visual Arts at the International College in 2018/19 and has since been developing the method
+                of "Collective Creation Games": using games to provide the adequate fertile grounds for the emergence of
                 creative, systems thinking and critical reflection.
               </p>
               <p>
                 He now provides it as a service in the form of workshops or consultancies for educational and social
-                endeavors and researchers aiming to engage people in collective creative actions.
+                endeavors and researchers aiming to engage people in collective creative actions. Rami holds a B.A in
+                business administration from AUB, and a B.A in product design from ALBA.
               </p>
             </>
           )
