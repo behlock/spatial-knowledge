@@ -326,7 +326,7 @@ const content = (pageNumber: number, section: string, isMobile: boolean | undefi
                   />
                   Rotate
                 </div>
-                <text className="text-center">Explore the mindmap</text>
+                <text className="text-center pt-20">Explore the mindmap</text>
 
                 <div className="flex flex-grow flex-col items-center">
                   <Image src="/assets/taskbar.svg" alt="taskbar" width={200} height={60} className="mx-auto " />
