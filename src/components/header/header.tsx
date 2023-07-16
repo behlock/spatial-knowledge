@@ -140,7 +140,8 @@ const Header = ({ language, setLanguage }) => {
         <Tooltip content={'Navigation'}>
           <span tabIndex={0}>
             <AlertDialog
-              isOpen={cookies.showDialog === 'true'}
+              // isOpen={cookies.showDialog === 'true'}
+              isOpen={true}
               isMobile={isMobile}
               // language={language}
               // setLanguage={setLanguage}
