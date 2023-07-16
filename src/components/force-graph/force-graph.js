@@ -166,7 +166,7 @@ export const ForceGraph = (props) => {
           // LINKS
           linkWidth={(link) => {
             if (props.clickedNodes.includes(link.source.id)) {
-              return 2
+              return 3
             } else {
               return 1
             }
