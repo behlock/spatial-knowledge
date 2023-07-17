@@ -289,25 +289,24 @@ const content = (pageNumber: number, section: string, isMobile: boolean | undefi
         case 1:
           return (
             <>
-              <div className="mt-4 flex flex-row">
                 {!isMobile && (
-                  <div className="flex flex-grow flex-col items-center">
+                  <div className="flex flex-grow flex-col items-center w-fit pl-10 pt-3">
                     <Image
                       src="/assets/check-boxes.svg"
                       alt="check-boxes"
-                      width={180}
+                      width={110}
                       height={60}
-                      className="mx-auto "
                     />
                     Select
                   </div>
                 )}
+              <div className="mt-4 flex flex-row">
                 {!isMobile && (
                   <div className="flex flex-grow flex-col items-center">
                     <Image
                       src="/assets/node-click-expand.svg"
                       alt="node-click-expand"
-                      width={150}
+                      width={130}
                       height={60}
                       className="mx-auto "
                     />
@@ -320,21 +319,21 @@ const content = (pageNumber: number, section: string, isMobile: boolean | undefi
                   <Image
                     src="/assets/figure-rotate.svg"
                     alt="figure-rotate"
-                    width={190}
+                    width={120}
                     height={60}
                     className="mx-auto "
                   />
                   Rotate
                 </div>
-                <text className="text-center pt-20">Explore the mindmap</text>
+                <text className="text-center pt-10">Explore the mindmap</text>
 
                 <div className="flex flex-grow flex-col items-center">
-                  <Image src="/assets/taskbar.svg" alt="taskbar" width={200} height={60} className="mx-auto " />
+                  <Image src="/assets/taskbar.svg" alt="taskbar" width={120} height={60} className="mx-auto " />
                   Find info
                 </div>
               </div>
               <div className="flex flex-grow flex-col items-center">
-                <Image src="/assets/zoom-out.svg" alt="zoom-out" width={150} height={60} className="mx-auto " />
+                <Image src="/assets/zoom-out.svg" alt="zoom-out" width={110} height={60} className="mx-auto " />
                 Zoom in/out
               </div>
             </>
