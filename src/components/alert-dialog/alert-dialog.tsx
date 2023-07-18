@@ -1,6 +1,6 @@
 import { clsx } from 'clsx'
 import Image from 'next/image'
-import { Fragment, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 
 import { Transition } from '@headlessui/react'
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog'
@@ -18,14 +18,17 @@ interface AlertDialogProps {
   // setLanguage: (language: Language) => void
   pageNumber: number
   setPageNumber: (pageNumber: number) => void
-  title: string
   section: string
-  hasPages: boolean
-  totalPages?: number
+  onImagesClick?: () => void
 }
 
 const AlertDialog = (props: AlertDialogProps) => {
   let [isOpen, setIsOpen] = useState(props.isOpen)
+  let [section, setSection] = useState(props.section)
+
+  useEffect(() => {
+    setSection(props.section)
+  }, [isOpen])
 
   return (
     <AlertDialogPrimitive.Root open={isOpen} onOpenChange={setIsOpen}>
@@ -83,7 +86,7 @@ const AlertDialog = (props: AlertDialogProps) => {
               </button> */}
               <div className="flex h-fit flex-row items-center justify-center">
                 <AlertDialogPrimitive.Title className="h-fit text-lg font-bold text-gray-900">
-                  {pageTitle(props.section, props.title, props.pageNumber)}
+                  {pageTitle(section, props.pageNumber)}
                 </AlertDialogPrimitive.Title>
                 <AlertDialogPrimitive.Cancel asChild onClick={() => props.setPageNumber(1)}>
                   <button className="flex  w-fit flex-auto justify-end  focus:outline-none">
@@ -93,10 +96,10 @@ const AlertDialog = (props: AlertDialogProps) => {
               </div>
               <AlertDialogPrimitive.Description className="color-white space-pre-wrap mb-4 mt-4 flex flex-grow flex-col justify-center space-y-4 align-middle text-sm font-normal text-gray-700 ">
                 {/* {props.isMobile ? mobileContent(props.pageNumber) : desktopContent(props.pageNumber)} */}
-                {content(props.pageNumber, props.section, props.isMobile)}
+                {content(props.pageNumber, section, setSection, props.isMobile)}
               </AlertDialogPrimitive.Description>
               <div className="flex flex-row justify-end align-bottom">
-                {props.hasPages ? (
+                {numberOfPages(section) != 0 ? (
                   <>
                     <div className="flex flex-row justify-start">
                       {previousPageButton(props.pageNumber, props.setPageNumber) ? (
@@ -111,7 +114,7 @@ const AlertDialog = (props: AlertDialogProps) => {
                       </div> */}
                     </div>
                     <div className="flex h-fit w-fit  flex-auto justify-end ">
-                      {forwardPageButton(props.pageNumber, props.setPageNumber, props.totalPages)}
+                      {forwardPageButton(props.pageNumber, props.setPageNumber, numberOfPages(section))}
                     </div>
                   </>
                 ) : (
@@ -179,23 +182,60 @@ const legendEntry = (color: string, text: string) => (
   </div>
 )
 
-const pageTitle = (section: string, title: string, pageNumber: number) => {
+const pageTitle = (section: string, pageNumber: number) => {
   switch (section) {
+    case 'info':
+      return 'What is Collective Creation Games?'
+
     case 'howto':
       switch (pageNumber) {
         case 2:
           return 'Legend'
 
         default:
-          return title
+          return 'Welcome to Collective Creation Games'
       }
+
+    case 'profile':
+      switch (pageNumber) {
+        case 2:
+          return 'Contact'
+
+        default:
+          return 'About the Creative Worker'
+      }
+
+    case 'pictures':
+      return 'Pictures'
+
     default:
-      return title
+      return ''
+  }
+}
+
+const numberOfPages = (section: string) => {
+  switch (section) {
+    case 'info':
+      return 2
+
+    case 'howto':
+      return 2
+
+    case 'profile':
+      return 2
+
+    default:
+      return 0
   }
 }
 
 // const mobileContent = (pageNumber: number, language: Language) => {
-const content = (pageNumber: number, section: string, isMobile: boolean | undefined) => {
+const content = (
+  pageNumber: number,
+  section: string,
+  setSection: (s: string) => void,
+  isMobile: boolean | undefined
+) => {
   switch (section) {
     case 'info':
       switch (pageNumber) {
@@ -237,17 +277,20 @@ const content = (pageNumber: number, section: string, isMobile: boolean | undefi
           return true ? (
             <>
               <p>
-                This page is a visual means to communicate the quirkiness of this practice. It invites you to explore
-                the methodological framework we developed for it and discover all the operations building up the play
-                between the facilitator, the group and the system at different stages of the process. It is complemented
-                by videos of the entire experience on our
+                This page is a tool to visualize the ongoing development of this methodology. You are invited to
+                discover all operations at play between the facilitator, the group and the system at different stages of
+                the process. To see it in action, check out{' '}
+                <text className=" cursor-pointer text-blue-600" onClick={() => setSection('pictures')}>
+                  our pictures
+                </text>
+                , and
                 <a
                   className="ml-1 text-blue-600"
                   href="https://www.youtube.com/@ramichahine8875/videos"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Youtube Channel
+                  videos
                 </a>
                 .
               </p>
@@ -289,17 +332,12 @@ const content = (pageNumber: number, section: string, isMobile: boolean | undefi
         case 1:
           return (
             <>
-                {!isMobile && (
-                  <div className="flex flex-grow flex-col items-center w-fit pl-10 pt-3">
-                    <Image
-                      src="/assets/check-boxes.svg"
-                      alt="check-boxes"
-                      width={110}
-                      height={60}
-                    />
-                    Select
-                  </div>
-                )}
+              {!isMobile && (
+                <div className="flex w-fit flex-grow flex-col items-center pl-10 pt-3">
+                  <Image src="/assets/check-boxes.svg" alt="check-boxes" width={110} height={60} />
+                  Select
+                </div>
+              )}
               <div className="mt-4 flex flex-row">
                 {!isMobile && (
                   <div className="flex flex-grow flex-col items-center">
@@ -325,7 +363,7 @@ const content = (pageNumber: number, section: string, isMobile: boolean | undefi
                   />
                   Rotate
                 </div>
-                <text className="text-center pt-10">Explore the mindmap</text>
+                <text className="pt-10 text-center">Explore the mindmap</text>
 
                 <div className="flex flex-grow flex-col items-center">
                   <Image src="/assets/taskbar.svg" alt="taskbar" width={120} height={60} className="mx-auto " />

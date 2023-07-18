@@ -9,19 +9,19 @@ const ImagesCarousel = () => {
   }))
 
   return (
-    <Carousel
-      images={images}
-      style={{ height: 300}}
-      transitionSpeed={2}
-      hasMediaButton={false}
-      hasSizeButton={false}
-      hasIndexBoard={false}
-      // hasCaptions={'bottom'}
-      // shouldMaximizeOnClick={true}
-      // shouldMinimizeOnClick={true}
-      shouldLazyLoad={true}
-      // className="mr-4"
-    />
+      <Carousel
+        images={images}
+        style={{ height: 300 }}
+        transitionSpeed={2}
+        hasMediaButton={false}
+        hasSizeButton={false}
+        hasIndexBoard={false}
+        // hasCaptions={'bottom'}
+        // shouldMaximizeOnClick={true}
+        // shouldMinimizeOnClick={true}
+        shouldLazyLoad={true}
+        // className="mr-4"
+      />
   )
 }
 

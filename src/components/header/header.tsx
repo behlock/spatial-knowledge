@@ -127,10 +127,7 @@ const Header = ({ language, setLanguage }) => {
                 // setLanguage={setLanguage}
                 pageNumber={infoPageNumber}
                 setPageNumber={setInfoPageNumber}
-                title={'What is Collective Creation Games?'}
                 section={'info'}
-                hasPages={true}
-                totalPages={2}
               >
                 {infoIcon}
               </AlertDialog>
@@ -147,10 +144,7 @@ const Header = ({ language, setLanguage }) => {
               // setLanguage={setLanguage}
               pageNumber={howToPageNumber}
               setPageNumber={setHowToPageNumber}
-              title={'Welcome to Collective Creation Games'}
               section={'howto'}
-              hasPages={true}
-              totalPages={2}
             >
               {steeringWheelIcon}
             </AlertDialog>
@@ -165,10 +159,7 @@ const Header = ({ language, setLanguage }) => {
               // setLanguage={setLanguage}
               pageNumber={aboutPageNumber}
               setPageNumber={setAboutPageNumber}
-              title={'About the Creative Worker'}
               section={'profile'}
-              hasPages={true}
-              totalPages={2}
             >
               {personIcon}
             </AlertDialog>
@@ -183,9 +174,7 @@ const Header = ({ language, setLanguage }) => {
               // setLanguage={setLanguage}
               pageNumber={infoPageNumber}
               setPageNumber={setInfoPageNumber}
-              title={'Pictures'}
               section={'pictures'}
-              hasPages={false}
             >
               {imageIcon}
             </AlertDialog>
