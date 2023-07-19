@@ -398,7 +398,7 @@ const content = (
       switch (pageNumber) {
         case 1:
           return (
-            <>
+            <div className="flex flex-col items-center space-y-2 text-s">
               <Image
                 src="/assets/profile-pic.jpg"
                 alt="profile-pic"
@@ -421,7 +421,7 @@ const content = (
                 endeavors and researchers aiming to engage people in collective creative actions. Rami holds a B.A in
                 business administration from AUB, and a B.A in product design from ALBA.
               </p>
-            </>
+            </div>
           )
 
         case 2:
