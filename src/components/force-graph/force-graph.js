@@ -12,11 +12,24 @@ const ForceGraph3D = dynamic(() => import('react-force-graph-3d'), {
 //MAIN
 export const ForceGraph = (props) => {
   const [extraRenderers, setExtraRenderers] = useState([])
+  const [alphaDecay, setAlphaDecay] = useState(0.1)
 
   // RENDERING
   useEffect(() => {
     setExtraRenderers([new CSS2DRenderer()])
   }, [])
+
+  useEffect(() => {
+    const setDecay = () => {
+      setAlphaDecay(1)
+    }
+
+    const timeToWaitInMilliseconds = 2000;
+    const timeoutId = setTimeout(setDecay, timeToWaitInMilliseconds);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
+
 
   // CHILDREN
   const getNodeChildren = (nodeId) =>
@@ -131,7 +144,7 @@ export const ForceGraph = (props) => {
         <ForceGraph3D
           // RENDERING
           extraRenderers={extraRenderers}
-          d3AlphaDecay={0.03}
+          d3AlphaDecay={alphaDecay}
           // DATA
           graphData={props.graphData}
           nodeId="id"
