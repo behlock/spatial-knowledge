@@ -296,7 +296,7 @@ const content = (
               </p>
               <p>With the support of:</p>
               <p>
-                <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-2 flex" />
+                <Image src="/assets/AFAC.jpg" alt="AFAC" width={100} height={50} className="mx-auto mt-2 flex" />
               </p>
             </>
           ) : (
@@ -319,7 +319,7 @@ const content = (
               </p>
               <p>
                 :بدعم من
-                <Image src="/assets/AFAC.png" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
+                <Image src="/assets/AFAC.jpg" alt="AFAC" width={100} height={50} className="mx-auto mt-4 flex" />
               </p>
             </div>
           )
