@@ -24,7 +24,7 @@ export const ForceGraph = (props) => {
       setAlphaDecay(1)
     }
 
-    const timeToWaitInMilliseconds = 2000;
+    const timeToWaitInMilliseconds = isMobile ? 5000 : 2000
     const timeoutId = setTimeout(setDecay, timeToWaitInMilliseconds);
 
     return () => clearTimeout(timeoutId);
