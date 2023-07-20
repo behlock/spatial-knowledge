@@ -339,7 +339,6 @@ const content = (
                 </div>
               )}
               <div className="mt-4 flex flex-row">
-                {!isMobile && (
                   <div className="flex flex-grow flex-col items-center">
                     <Image
                       src="/assets/node-click-expand.svg"
@@ -350,7 +349,6 @@ const content = (
                     />
                     Expand/Collapse
                   </div>
-                )}
               </div>
               <div className="flex flex-row">
                 <div className="flex flex-grow flex-col items-center">
