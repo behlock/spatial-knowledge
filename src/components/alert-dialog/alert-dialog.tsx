@@ -331,9 +331,9 @@ const content = (
       switch (pageNumber) {
         case 1:
           return (
-            <>
+            <div className='flex flex-col space-y-1'>
               {!isMobile && (
-                <div className="flex w-fit flex-grow flex-col items-center pl-10 pt-3">
+                <div className="flex w-fit flex-grow flex-col items-center pl-10 pt-2">
                   <Image src="/assets/check-boxes.svg" alt="check-boxes" width={110} height={60} />
                   Select
                 </div>
@@ -344,8 +344,8 @@ const content = (
                     <Image
                       src="/assets/node-click-expand.svg"
                       alt="node-click-expand"
-                      width={170}
-                      height={90}
+                      width={160}
+                      height={70}
                       className="mx-auto "
                     />
                     Expand/Collapse
@@ -357,8 +357,8 @@ const content = (
                   <Image
                     src="/assets/figure-rotate.svg"
                     alt="figure-rotate"
-                    width={120}
-                    height={60}
+                    width={100}
+                    height={50}
                     className="mx-auto "
                   />
                   Rotate
@@ -366,7 +366,7 @@ const content = (
                 <text className="pt-10 text-center">Explore the mindmap</text>
 
                 <div className="flex flex-grow flex-col items-center">
-                  <Image src="/assets/taskbar.svg" alt="taskbar" width={120} height={60} className="mx-auto " />
+                  <Image src="/assets/taskbar.svg" alt="taskbar" width={100} height={50} className="mx-auto " />
                   Find info
                 </div>
               </div>
@@ -374,7 +374,7 @@ const content = (
                 <Image src="/assets/zoom-out.svg" alt="zoom-out" width={150} height={80} className="mx-auto " />
                 Zoom in/out
               </div>
-            </>
+            </div>
           )
         case 2:
           return (
