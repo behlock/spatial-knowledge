@@ -344,8 +344,8 @@ const content = (
                     <Image
                       src="/assets/node-click-expand.svg"
                       alt="node-click-expand"
-                      width={130}
-                      height={60}
+                      width={170}
+                      height={90}
                       className="mx-auto "
                     />
                     Expand/Collapse
@@ -371,7 +371,7 @@ const content = (
                 </div>
               </div>
               <div className="flex flex-grow flex-col items-center">
-                <Image src="/assets/zoom-out.svg" alt="zoom-out" width={110} height={60} className="mx-auto " />
+                <Image src="/assets/zoom-out.svg" alt="zoom-out" width={150} height={80} className="mx-auto " />
                 Zoom in/out
               </div>
             </>
