@@ -331,7 +331,7 @@ const content = (
       switch (pageNumber) {
         case 1:
           return (
-            <div className='flex flex-col space-y-1'>
+            <div className="flex flex-col space-y-1">
               {!isMobile && (
                 <div className="flex w-fit flex-grow flex-col items-center pl-10 pt-2">
                   <Image src="/assets/check-boxes.svg" alt="check-boxes" width={110} height={60} />
@@ -339,16 +339,16 @@ const content = (
                 </div>
               )}
               <div className="mt-4 flex flex-row">
-                  <div className="flex flex-grow flex-col items-center">
-                    <Image
-                      src="/assets/node-click-expand.svg"
-                      alt="node-click-expand"
-                      width={ isMobile ? 70 : 160 }
-                      height={ isMobile ? 60 : 70 }
-                      className="mx-auto "
-                    />
-                    Expand/Collapse
-                  </div>
+                <div className="flex flex-grow flex-col items-center">
+                  <Image
+                    src="/assets/node-click-expand.svg"
+                    alt="node-click-expand"
+                    width={isMobile ? 100 : 160}
+                    height={isMobile ? 60 : 70}
+                    className="mx-auto "
+                  />
+                  Expand/Collapse
+                </div>
               </div>
               <div className="flex flex-row">
                 <div className="flex flex-grow flex-col items-center">
@@ -369,7 +369,13 @@ const content = (
                 </div>
               </div>
               <div className="flex flex-grow flex-col items-center">
-                <Image src="/assets/zoom-out.svg" alt="zoom-out" width={150} height={80} className="mx-auto " />
+                <Image
+                  src="/assets/zoom-out.svg"
+                  alt="zoom-out"
+                  width={isMobile ? 100 : 160}
+                  height={isMobile ? 60 : 70}
+                  className="mx-auto "
+                />
                 Zoom in/out
               </div>
             </div>
@@ -396,7 +402,7 @@ const content = (
       switch (pageNumber) {
         case 1:
           return (
-            <div className="flex flex-col items-center space-y-2 text-s">
+            <div className="text-s flex flex-col items-center space-y-2">
               <Image
                 src="/assets/profile-pic.jpg"
                 alt="profile-pic"
