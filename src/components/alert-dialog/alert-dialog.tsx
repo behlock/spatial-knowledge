@@ -343,8 +343,8 @@ const content = (
                     <Image
                       src="/assets/node-click-expand.svg"
                       alt="node-click-expand"
-                      width={160}
-                      height={70}
+                      width={ isMobile ? 70 : 160 }
+                      height={ isMobile ? 60 : 70 }
                       className="mx-auto "
                     />
                     Expand/Collapse
