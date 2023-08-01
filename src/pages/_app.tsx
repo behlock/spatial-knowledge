@@ -7,13 +7,7 @@ import '@/styles/global.scss'
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Script
-        src="https://stats-peach-alpha.vercel.app/api/stats.js"
-        onLoad={() => {
-          // @ts-ignore
-          collect('page_view')
-        }}
-      />
+      <Script src="https://stats-peach-alpha.vercel.app/api/stats.js" />
       <CookiesProvider>
         <Component {...pageProps} />
       </CookiesProvider>
