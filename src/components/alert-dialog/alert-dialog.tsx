@@ -334,7 +334,7 @@ const content = (
             <div className="flex flex-col space-y-1">
               {!isMobile && (
                 <div className="flex w-fit flex-grow flex-col items-center pl-10 pt-2">
-                  <Image src="/assets/check-boxes.svg" alt="check-boxes" width={80} height={40} />
+                  <Image src="/assets/check-boxes.svg" alt="check-boxes" width={110} height={70} />
                   Select
                 </div>
               )}
