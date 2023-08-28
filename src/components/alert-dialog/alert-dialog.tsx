@@ -334,11 +334,11 @@ const content = (
             <div className="flex flex-col space-y-1">
               {!isMobile && (
                 <div className="flex w-fit flex-grow flex-col items-center pl-10 pt-2">
-                  <Image src="/assets/check-boxes.svg" alt="check-boxes" width={100} height={50} />
+                  <Image src="/assets/check-boxes.svg" alt="check-boxes" width={80} height={40} />
                   Select
                 </div>
               )}
-              <div className="mt-4 flex flex-row">
+              <div className="mt-2 flex flex-row">
                 <div className="flex flex-grow flex-col items-center">
                   <Image
                     src="/assets/node-click-expand.svg"
@@ -361,7 +361,10 @@ const content = (
                   />
                   Rotate
                 </div>
-                <text className="pt-10 text-center">Click and connect the dots to discover our method</text>
+                <div className="flex flex-col pt-10 text-center font-bold">
+                  <text>Click and connect the dots </text>
+                  <text>to discover our method</text>
+                </div>
 
                 <div className="flex flex-grow flex-col items-center">
                   <Image src="/assets/taskbar.svg" alt="taskbar" width={100} height={50} className="mx-auto " />
