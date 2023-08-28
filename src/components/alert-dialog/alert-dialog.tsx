@@ -334,7 +334,7 @@ const content = (
             <div className="flex flex-col space-y-1">
               {!isMobile && (
                 <div className="flex w-fit flex-grow flex-col items-center pl-10 pt-2">
-                  <Image src="/assets/check-boxes.svg" alt="check-boxes" width={110} height={60} />
+                  <Image src="/assets/check-boxes.svg" alt="check-boxes" width={100} height={50} />
                   Select
                 </div>
               )}
@@ -361,7 +361,7 @@ const content = (
                   />
                   Rotate
                 </div>
-                <text className="pt-10 text-center">Explore the mindmap</text>
+                <text className="pt-10 text-center">Click and connect the dots to discover our method</text>
 
                 <div className="flex flex-grow flex-col items-center">
                   <Image src="/assets/taskbar.svg" alt="taskbar" width={100} height={50} className="mx-auto " />
