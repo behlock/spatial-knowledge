@@ -361,8 +361,8 @@ const content = (
                   />
                   Rotate
                 </div>
-                <div className="flex flex-col pt-10 text-center font-bold">
-                  <text>Click and connect the dots </text>
+                <div className="flex flex-col pt-10 text-center">
+                  <text>Click & connect the dots </text>
                   <text>to discover our method</text>
                 </div>
 
