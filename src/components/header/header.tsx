@@ -118,7 +118,7 @@ const Header = ({ language, setLanguage }) => {
       </header>
       <div className="fixed right-5 top-14 z-20 mb-2 ml-8 flex flex-col items-center justify-center space-y-2 rounded-lg bg-white p-1 ">
         {cookies.showDialog && (
-          <Tooltip content={'About the project'}>
+          <Tooltip content={'About'}>
             <span tabIndex={0}>
               <AlertDialog
                 isOpen={false}
