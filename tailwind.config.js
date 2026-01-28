@@ -4,7 +4,7 @@ module.exports = {
   content: ['./src/**/*.{html,js,ts,tsx}'],
   theme: {
     fontFamily: {
-      mono: ['JetBrains Mono', 'SF Mono', 'Consolas', 'monospace'],
+      sans: ['Inter', 'system-ui', 'sans-serif'],
     },
     fontSize: {
       'xs': ['10px', { lineHeight: '1.2' }],
