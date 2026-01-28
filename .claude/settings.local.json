@@ -10,7 +10,8 @@
       "Bash(npm show:*)",
       "Bash(ls:*)",
       "Bash(npx next lint:*)",
-      "Bash(gh pr list:*)"
+      "Bash(gh pr list:*)",
+      "Bash(npm ls:*)"
     ]
   }
 }
