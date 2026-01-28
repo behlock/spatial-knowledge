@@ -1,10 +1,16 @@
+// Sass modules must be first
+@use './reset';
+@use './functions' as *;
+@use './font-style';
+@use './variables' as *;
+@use './design-tokens';
+
+// Tailwind directives
 @tailwind base;
+@tailwind components;
 @tailwind utilities;
 
-@import './_reset.scss';
-@import './_functions.scss';
-@import './_font-style.scss';
-@import './_variables.scss';
+// Font is loaded via _document.tsx with preconnect for better performance
 
 :root {
   --header-height: #{mobile-vw(58px)};
@@ -15,9 +21,9 @@
 }
 
 html {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--theme-primary);
-  color: #111;
+  font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
   scrollbar-width: thin;
 
   &.nav {
@@ -32,6 +38,8 @@ body {
 
 body {
   min-height: 100vh;
+  font-size: 12px;
+  line-height: 1.4;
 }
 
 a,
@@ -42,11 +50,12 @@ textarea,
 select {
   color: inherit;
   cursor: pointer;
+  font-family: inherit;
 }
 
 *::selection {
-  background-color: var(--theme-secondary);
-  color: var(--theme-primary);
+  background-color: hsl(var(--foreground));
+  color: hsl(var(--background));
 }
 
 svg.icon {
@@ -63,9 +72,102 @@ svg.icon {
   }
 }
 
+// Teenage Engineering Panel Style
+.te-panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(var(--panel-blur));
+  -webkit-backdrop-filter: blur(var(--panel-blur));
+  border-radius: 2px;
+}
+
+// Bracket prefix utility
+.bracket-prefix {
+  &::before {
+    content: '[';
+    opacity: 0.6;
+  }
+  &::after {
+    content: ']';
+    opacity: 0.6;
+  }
+}
+
+// Section number styling
+.section-number {
+  font-variant-numeric: tabular-nums;
+  font-size: 10px;
+  opacity: 0.6;
+
+  &::before {
+    content: '[';
+  }
+  &::after {
+    content: ']';
+  }
+}
+
+// Dashed border utility
+.border-dashed-subtle {
+  border-style: dashed;
+  border-color: hsl(var(--border));
+}
+
+// TE button base style
+.te-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  background: transparent;
+  border: 1px solid hsl(var(--border));
+  border-radius: 2px;
+  color: hsl(var(--foreground));
+  transition: all 0.15s ease;
+
+  &:hover {
+    background: hsl(var(--secondary));
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+// TE checkbox bracket style
+.te-checkbox {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  user-select: none;
+
+  .te-checkbox-indicator {
+    color: hsl(var(--muted-foreground));
+
+    &[data-state="checked"] {
+      color: hsl(var(--foreground));
+    }
+  }
+
+  .te-checkbox-label {
+    color: hsl(var(--muted-foreground));
+    transition: color 0.15s ease;
+  }
+
+  &:hover .te-checkbox-label {
+    color: hsl(var(--foreground));
+  }
+}
+
+// Decorate link style (preserved from original)
 .decorate {
   position: relative;
-  color: var(--green);
+  color: hsl(var(--foreground));
   transition: color 0.95s cubic-bezier(0.19, 1, 0.22, 1);
 
   &:before {

@@ -1,0 +1,78 @@
+// Teenage Engineering Design Tokens
+// HSL-based CSS variables for theming
+
+:root {
+  // Dark mode as default (matching current app)
+  --background: 0 0% 9%; // hsl(0, 0%, 9%) - #171717 equivalent
+  --foreground: 0 0% 95%; // hsl(0, 0%, 95%) - light gray text
+
+  --card: 0 0% 12%; // slightly lighter than background
+  --card-foreground: 0 0% 95%;
+
+  --popover: 0 0% 12%;
+  --popover-foreground: 0 0% 95%;
+
+  --primary: 0 0% 95%;
+  --primary-foreground: 0 0% 9%;
+
+  --secondary: 0 0% 18%;
+  --secondary-foreground: 0 0% 95%;
+
+  --muted: 0 0% 18%;
+  --muted-foreground: 0 0% 60%;
+
+  --accent: 0 0% 18%;
+  --accent-foreground: 0 0% 95%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 95%;
+
+  --border: 0 0% 25%;
+  --input: 0 0% 18%;
+  --ring: 0 0% 60%;
+
+  // Spacing scale (compact)
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  // Panel styling
+  --panel-bg: hsla(0, 0%, 12%, 0.85);
+  --panel-border: hsla(0, 0%, 25%, 0.5);
+  --panel-blur: 12px;
+}
+
+// Light mode override (if needed in future)
+.light {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 9%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 9%;
+
+  --primary: 0 0% 9%;
+  --primary-foreground: 0 0% 95%;
+
+  --secondary: 0 0% 95%;
+  --secondary-foreground: 0 0% 9%;
+
+  --muted: 0 0% 95%;
+  --muted-foreground: 0 0% 40%;
+
+  --accent: 0 0% 95%;
+  --accent-foreground: 0 0% 9%;
+
+  --border: 0 0% 85%;
+  --input: 0 0% 95%;
+  --ring: 0 0% 40%;
+
+  --panel-bg: hsla(0, 0%, 100%, 0.85);
+  --panel-border: hsla(0, 0%, 85%, 0.5);
+}
