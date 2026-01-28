@@ -11,8 +11,8 @@ function Layout({
   return (
     <>
       <CustomHead {...seo} />
-      <div className="flex bg-neutral-900 p-5">
-        <main className="flex flex-grow flex-col overflow-hidden bg-neutral-900">{children}</main>
+      <div className="flex bg-background p-4 font-mono">
+        <main className="flex flex-grow flex-col overflow-hidden bg-background text-foreground">{children}</main>
       </div>
     </>
   )

@@ -64,8 +64,21 @@ export default function Home() {
   }, [isRevealed, isMobile, defaultVisibleNodes])
 
   // FETCH DATA
-  let { data: englishData, error: englishDataError } = useSWR('/api/englishData', fetcher)
-  let { data: arabicData, error: arabicDataError } = useSWR('/api/arabicData', fetcher)
+  const { data: englishData, error: englishDataError } = useSWR('/api/englishData', fetcher)
+  const { data: arabicData, error: arabicDataError } = useSWR('/api/arabicData', fetcher)
+
+  // Parse data in useEffect to avoid setting state during render
+  useEffect(() => {
+    if (englishData && !englishGraphData.nodes.length) {
+      setEnglishGraphData(JSON.parse(englishData))
+    }
+  }, [englishData, englishGraphData.nodes.length])
+
+  useEffect(() => {
+    if (arabicData && !arabicGraphData.nodes.length) {
+      setArabicGraphData(JSON.parse(arabicData))
+    }
+  }, [arabicData, arabicGraphData.nodes.length])
 
   // Error state
   if (englishDataError || arabicDataError)
@@ -78,13 +91,6 @@ export default function Home() {
   // Loading state
   if (!englishData || !arabicData)
     return <div className="flex h-full items-center justify-center bg-neutral-900 text-white"></div>
-
-  if (!englishGraphData.nodes.length) {
-    setEnglishGraphData(JSON.parse(englishData))
-  }
-  if (!arabicGraphData.nodes.length) {
-    setArabicGraphData(JSON.parse(arabicData))
-  }
 
   return (
     // @ts-ignore

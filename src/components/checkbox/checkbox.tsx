@@ -1,6 +1,4 @@
-import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
-import { CheckIcon } from '@radix-ui/react-icons'
-import * as LabelPrimitive from '@radix-ui/react-label'
+import React from 'react'
 import { clsx } from 'clsx'
 
 interface CheckboxProps {
@@ -9,33 +7,30 @@ interface CheckboxProps {
   onCheckedChange: (checked: boolean) => void
 }
 
-const Checkbox = (props: CheckboxProps) => {
+const Checkbox = React.memo((props: CheckboxProps) => {
   return (
-    <>
-      <CheckboxPrimitive.Root
-        id={`c-${props.label}`}
-        checked={props.checked}
-        onCheckedChange={props.onCheckedChange}
-        className={clsx(
-          'flex h-3 w-3 items-center justify-center rounded',
-          'radix-state-checked:bg-gray-200  radix-state-unchecked:bg-gray-200',
-          'focus:outline-none '
-        )}
+    <button
+      type="button"
+      role="checkbox"
+      aria-checked={props.checked}
+      onClick={() => props.onCheckedChange(!props.checked)}
+      className={clsx(
+        'te-checkbox',
+        'inline-flex items-center gap-1',
+        'focus:outline-none focus-visible:ring-1 focus-visible:ring-ring'
+      )}
+    >
+      <span
+        className="te-checkbox-indicator"
+        data-state={props.checked ? 'checked' : 'unchecked'}
       >
-        <CheckboxPrimitive.Indicator>
-          <CheckIcon className="h-3 w-3 self-center text-black" />
-        </CheckboxPrimitive.Indicator>
-      </CheckboxPrimitive.Root>
-
-      <LabelPrimitive.Label
-        htmlFor="c1"
-        className="ml-1 select-none text-xs justify-center align-middle text-gray-300"
-        onClick={() => props.onCheckedChange(!props.checked)}
-      >
-        {props.label}
-      </LabelPrimitive.Label>
-    </>
+        {props.checked ? '[-]' : '[x]'}
+      </span>
+      <span className="te-checkbox-label">{props.label}</span>
+    </button>
   )
-}
+})
+
+Checkbox.displayName = 'Checkbox'
 
 export default Checkbox

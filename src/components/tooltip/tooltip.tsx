@@ -1,22 +1,28 @@
 import * as TooltipPrimitive from '@radix-ui/react-tooltip'
+import { clsx } from 'clsx'
 
-function Tooltip({ children, content, ...props }: { children: React.ReactNode, content: React.ReactNode}) {
+function Tooltip({ children, content, ...props }: { children: React.ReactNode; content: React.ReactNode }) {
   return (
-    <TooltipPrimitive.Provider>
-      <TooltipPrimitive.Root>
-        <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
+    <TooltipPrimitive.Root>
+      <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
+      <TooltipPrimitive.Portal>
         <TooltipPrimitive.Content
-          side="top"
+          side="left"
           align="center"
-          style={{ background: 'rgb(23 23 23)' }}
-          className="rounded p-1 text-white"
+          sideOffset={8}
+          className={clsx(
+            'te-panel px-2 py-1',
+            'text-xs font-mono text-foreground',
+            'animate-in fade-in-0 slide-in-from-right-1',
+            'data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:slide-out-to-right-1',
+            'z-50'
+          )}
           {...props}
         >
           {content}
-          <TooltipPrimitive.Arrow width={11} height={5} className="mb-2" />
         </TooltipPrimitive.Content>
-      </TooltipPrimitive.Root>
-    </TooltipPrimitive.Provider>
+      </TooltipPrimitive.Portal>
+    </TooltipPrimitive.Root>
   )
 }
 
