@@ -2,4 +2,4 @@
 
 visualise knowledge through 3d force graphs
 
-filter. explore. connect
+![graph](/assets/graph.png?raw=true "graph")
