@@ -118,12 +118,12 @@ const ForceGraphComponent = (props) => {
         grandchildrenIds = [node.id]
       }
       const grandchildrenSet = new Set(grandchildrenIds)
-      props.setVisibleNodesIds(props.visibleNodesIds.filter((id) => !grandchildrenSet.has(id)))
-      props.setClickedNodes(
-        props.clickedNodes.filter((id) => !grandchildrenSet.has(id) && id !== node.id)
+      props.setVisibleNodesIds((prev) => prev.filter((id) => !grandchildrenSet.has(id)))
+      props.setClickedNodes((prev) =>
+        prev.filter((id) => !grandchildrenSet.has(id) && id !== node.id)
       )
     },
-    [getAllDescendantIds, props.visibleNodesIds, props.clickedNodes, props.setVisibleNodesIds, props.setClickedNodes]
+    [getAllDescendantIds, props.setVisibleNodesIds, props.setClickedNodes]
   )
 
   const undimNodeAndChildren = useCallback(
@@ -133,10 +133,10 @@ const ForceGraphComponent = (props) => {
         childrenIds = [node.id]
       }
 
-      props.setVisibleNodesIds(props.visibleNodesIds.concat(childrenIds))
-      props.setClickedNodes(props.clickedNodes.concat(node.id))
+      props.setVisibleNodesIds((prev) => prev.concat(childrenIds))
+      props.setClickedNodes((prev) => prev.concat(node.id))
     },
-    [getNodeChildrenIds, props.visibleNodesIds, props.clickedNodes, props.setVisibleNodesIds, props.setClickedNodes]
+    [getNodeChildrenIds, props.setVisibleNodesIds, props.setClickedNodes]
   )
 
   const handleNodeClick = useCallback(
@@ -151,9 +151,7 @@ const ForceGraphComponent = (props) => {
   )
 
   // Memoized ForceGraph3D callback props
-  const nodeVal = useCallback((node) => {
-    node.group
-  }, [])
+  const nodeVal = useCallback((node) => node.group, [])
 
   const nodeThreeObject = useCallback(
     (node) => {

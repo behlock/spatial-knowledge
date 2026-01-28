@@ -72,14 +72,6 @@ const Header = ({ language, setLanguage }: HeaderProps) => {
             Pictures
           </span>
         </AlertDialog>
-        <a
-          href="https://www.youtube.com/@ramichahine8875/videos"
-          target="_blank"
-          rel="noreferrer"
-          className="text-xs font-mono text-muted-foreground hover:text-foreground transition-colors cursor-pointer block"
-        >
-          Youtube
-        </a>
       </div>
     </>
   )

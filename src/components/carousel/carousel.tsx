@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { clsx } from 'clsx'
 
 const TOTAL_IMAGES = 18
@@ -15,6 +15,22 @@ const ImagesCarousel = () => {
   const goToNext = useCallback(() => {
     setCurrentIndex((prev) => (prev === TOTAL_IMAGES - 1 ? 0 : prev + 1))
   }, [])
+
+  // Keyboard navigation for arrow keys
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault()
+        goToPrevious()
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault()
+        goToNext()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [goToPrevious, goToNext])
 
   return (
     <div className="flex flex-col gap-3">

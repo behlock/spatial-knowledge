@@ -1,6 +1,5 @@
 import { clsx } from 'clsx'
-import Image from 'next/image'
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useCallback, useEffect, useState } from 'react'
 
 import { Transition } from '@headlessui/react'
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog'
@@ -28,8 +27,37 @@ const AlertDialog = (props: AlertDialogProps) => {
 
   const totalPages = numberOfPages(section)
 
+  // Handle dialog close - reset page number
+  const handleOpenChange = useCallback(
+    (open: boolean) => {
+      setIsOpen(open)
+      if (!open) {
+        props.setPageNumber(1)
+      }
+    },
+    [props.setPageNumber]
+  )
+
+  // Keyboard navigation for arrow keys
+  useEffect(() => {
+    if (!isOpen) return
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft' && props.pageNumber > 1) {
+        e.preventDefault()
+        props.setPageNumber(props.pageNumber - 1)
+      } else if (e.key === 'ArrowRight' && props.pageNumber < totalPages) {
+        e.preventDefault()
+        props.setPageNumber(props.pageNumber + 1)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [isOpen, props.pageNumber, totalPages, props.setPageNumber])
+
   return (
-    <AlertDialogPrimitive.Root open={isOpen} onOpenChange={setIsOpen}>
+    <AlertDialogPrimitive.Root open={isOpen} onOpenChange={handleOpenChange}>
       <AlertDialogPrimitive.Trigger asChild>{props.children}</AlertDialogPrimitive.Trigger>
       <AlertDialogPrimitive.Portal forceMount>
         <Transition.Root show={isOpen}>
@@ -69,9 +97,9 @@ const AlertDialog = (props: AlertDialogProps) => {
                 <AlertDialogPrimitive.Title className="text-base font-mono text-foreground">
                   {pageTitle(section, props.pageNumber)}
                 </AlertDialogPrimitive.Title>
-                <AlertDialogPrimitive.Cancel asChild onClick={() => props.setPageNumber(1)}>
+                <AlertDialogPrimitive.Cancel asChild>
                   <button className="text-xs font-mono text-muted-foreground hover:text-foreground transition-colors focus:outline-none">
-                    [x]
+                    [esc]
                   </button>
                 </AlertDialogPrimitive.Cancel>
               </div>
@@ -146,7 +174,7 @@ const pageTitle = (section: string, pageNumber: number) => {
           return 'Legend'
 
         default:
-          return 'Welcome to Collective Creation Games'
+          return 'Collective Creation Games'
       }
 
     case 'profile':
@@ -235,7 +263,7 @@ const content = (
                   target="_blank"
                   rel="noreferrer"
                 >
-                  videos
+                  videos ↗
                 </a>
                 .
               </p>
@@ -249,48 +277,14 @@ const content = (
       switch (pageNumber) {
         case 1:
           return (
-            <div className="flex flex-col space-y-4">
-              {!isMobile && (
-                <div className="flex flex-col items-center">
-                  <Image src="/assets/check-boxes.svg" alt="check-boxes" width={90} height={60} className="invert" />
-                  <span className="text-xs mt-1">Select</span>
-                </div>
-              )}
-              <div className="flex flex-col items-center">
-                <Image
-                  src="/assets/node-click-expand.svg"
-                  alt="node-click-expand"
-                  width={isMobile ? 100 : 140}
-                  height={isMobile ? 60 : 70}
-                  className="invert"
-                />
-                <span className="text-xs mt-1">Expand/Collapse</span>
-              </div>
-              <div className="flex justify-between items-start">
-                <div className="flex flex-col items-center">
-                  <Image src="/assets/figure-rotate.svg" alt="figure-rotate" width={80} height={50} className="invert" />
-                  <span className="text-xs mt-1">Rotate</span>
-                </div>
-                <div className="flex flex-col items-center text-center px-2">
-                  <span className="text-xs">Click & connect the dots</span>
-                  <span className="text-xs">to discover our method</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <Image src="/assets/taskbar.svg" alt="taskbar" width={80} height={50} className="invert" />
-                  <span className="text-xs mt-1">Find info</span>
-                </div>
-              </div>
-              <div className="flex flex-col items-center">
-                <Image
-                  src="/assets/zoom-out.svg"
-                  alt="zoom-out"
-                  width={isMobile ? 100 : 140}
-                  height={isMobile ? 60 : 70}
-                  className="invert"
-                />
-                <span className="text-xs mt-1">Zoom in/out</span>
-              </div>
-            </div>
+            <ul className="space-y-2 text-sm">
+              <li>• Click a node to expand or collapse it</li>
+              <li>• Drag to rotate the view</li>
+              <li>• Scroll or pinch to zoom in/out</li>
+              <li>• Click menu items on the right to find info</li>
+              {!isMobile && <li>• Drag to select multiple nodes</li>}
+              <li className="text-foreground">• Click & connect the dots to discover our method</li>
+            </ul>
           )
         case 2:
           return (
@@ -357,7 +351,7 @@ const content = (
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Collective Creation Games
+                    Collective Creation Games ↗
                   </a>
                 </p>
                 <p>
