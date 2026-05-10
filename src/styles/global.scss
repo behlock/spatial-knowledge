@@ -5,10 +5,9 @@
 @use './variables' as *;
 @use './design-tokens';
 
-// Tailwind directives
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+// Tailwind v4: single import + JS config reference
+@import 'tailwindcss';
+@config '../../tailwind.config.js';
 
 // Font is loaded via _document.tsx with preconnect for better performance
 
