@@ -1,4 +1,4 @@
-import { NextSeo } from 'next-seo'
+import { generateNextSeo } from 'next-seo/pages'
 import NextHead from 'next/head'
 
 function CustomHead({
@@ -38,28 +38,29 @@ function CustomHead({
         {/* END FAVICON */}
 
         <title>{title}</title>
-      </NextHead>
-      <NextSeo
-        title={title}
-        description={description}
-        openGraph={{
+
+        {generateNextSeo({
           title,
           description,
-          type: 'website',
-          locale: 'en_UK',
-          images: [
-            {
-              url: image.url,
-              width: 1200,
-              height: 630,
-              alt: title,
-            },
-          ],
-          defaultImageWidth: 1200,
-          defaultImageHeight: 630,
-          site_name: '',
-        }}
-      />
+          openGraph: {
+            title,
+            description,
+            type: 'website',
+            locale: 'en_UK',
+            images: [
+              {
+                url: image.url,
+                width: 1200,
+                height: 630,
+                alt: title,
+              },
+            ],
+            defaultImageWidth: 1200,
+            defaultImageHeight: 630,
+            site_name: '',
+          },
+        })}
+      </NextHead>
     </>
   )
 }
