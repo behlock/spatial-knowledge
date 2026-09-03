@@ -1,6 +1,6 @@
 # Collective Creation Games
 
-Visualise knowledge through 3D force graphs.
+Interactive 3D Knowledge Bases.
 
 ![graph](assets/graph.png)
 
@@ -30,17 +30,3 @@ npm run build
 ```
 
 Other scripts: `npm run format` rewrites files with Prettier, `npm run clean` removes `.next` and `node_modules`.
-
-## Layout
-
-```
-src/
-  components/   force-graph, graph-controls, checkbox, layout, custom-head, home
-  data/         node JSON + curated visible-node lists per language
-  hooks/        useDeviceDetect, useGraphVisibility
-  lib/          pure graph helpers (children index, descendants)
-  modules/      language enum and helpers
-  pages/        _app, _document, index, api/graph/[locale]
-  styles/       globals.css (Tailwind v4 theme + design tokens)
-  types/        GraphNode / GraphLink / GraphData
-```

@@ -9,7 +9,7 @@ interface LayoutProps {
 
 const DEFAULT_SEO: CustomHeadProps = {
   title: 'Collective Creation Games',
-  description: 'Space to share experiments',
+  description: 'Interactive 3D Knowledge Bases',
   keywords: ['Collective Creation Games', 'Rami Chahine', 'Walid Behlock'],
 }
 
