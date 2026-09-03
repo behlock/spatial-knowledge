@@ -31,20 +31,6 @@ npm run build
 
 Other scripts: `npm run format` rewrites files with Prettier, `npm run clean` removes `.next` and `node_modules`.
 
-### Environment
-
-| Variable                         | Purpose                                                        |
-| -------------------------------- | -------------------------------------------------------------- |
-| `NEXT_PUBLIC_STATS_TRACKING_URL` | Optional analytics script URL. Nothing is injected when unset. |
-
-## Stack
-
-- [Next.js](https://nextjs.org) (Pages Router, Turbopack) and React 19
-- [Tailwind CSS v4](https://tailwindcss.com), tokens in `src/styles/globals.css`
-- [react-force-graph-3d](https://github.com/vasturiano/react-force-graph) on [three.js](https://threejs.org), labels via `three-spritetext`
-- [SWR](https://swr.vercel.app) for data fetching
-- Deployed on Vercel
-
 ## Layout
 
 ```
@@ -58,7 +44,3 @@ src/
   styles/       globals.css (Tailwind v4 theme + design tokens)
   types/        GraphNode / GraphLink / GraphData
 ```
-
-## Credits
-
-Rami Chahine and Walid Behlock.
