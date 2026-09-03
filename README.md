@@ -1,7 +1,5 @@
 # Spatial Knowledge
 
-Interactive 3D Knowledge Bases.
-
 ![graph](assets/graph.png)
 
 A single-page site that renders a knowledge base as an interactive 3D graph. Live at [collectivecreationgames.com](https://collectivecreationgames.com).
