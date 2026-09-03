@@ -85,7 +85,7 @@ const englishDefaultVisibleNodesIds = [
   'What material are we using?',
   "What's the game like?",
   'Program flow and strategy',
-  'Look at synthesis from previous session',
+  'Look at synthesis from \n previous session',
   'Actively wander, be receptive',
   'Plan the session',
   'Decide on introductory \n questions and explanations',

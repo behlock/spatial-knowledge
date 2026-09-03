@@ -1,21 +1,25 @@
-import CustomHead from '@/components/custom-head/custom-head'
+import type { ReactNode } from 'react'
 
-function Layout({
-  seo = {
-    title: 'Collective Creation Games',
-    description: 'Space to share experiments',
-    keywords: ['Collective Creation Games', 'Rami Chahine', 'Walid Behlock'],
-  },
-  children = null,
-}) {
+import CustomHead, { type CustomHeadProps } from '@/components/custom-head'
+
+interface LayoutProps {
+  seo?: CustomHeadProps
+  children?: ReactNode
+}
+
+const DEFAULT_SEO: CustomHeadProps = {
+  title: 'Collective Creation Games',
+  description: 'Space to share experiments',
+  keywords: ['Collective Creation Games', 'Rami Chahine', 'Walid Behlock'],
+}
+
+export default function Layout({ seo = DEFAULT_SEO, children }: LayoutProps) {
   return (
     <>
       <CustomHead {...seo} />
-      <div className="flex bg-background p-4 font-mono">
-        <main className="flex flex-grow flex-col overflow-hidden bg-background text-foreground">{children}</main>
+      <div className="bg-background flex p-4 font-mono">
+        <main className="bg-background text-foreground flex grow flex-col overflow-hidden">{children}</main>
       </div>
     </>
   )
 }
-
-export default Layout

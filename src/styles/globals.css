@@ -1,0 +1,176 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Design tokens (dark by default, `.light` overrides). */
+:root {
+  --background: hsl(0 0% 9%);
+  --foreground: hsl(0 0% 95%);
+  --card: hsl(0 0% 12%);
+  --card-foreground: hsl(0 0% 95%);
+  --popover: hsl(0 0% 12%);
+  --popover-foreground: hsl(0 0% 95%);
+  --primary: hsl(0 0% 95%);
+  --primary-foreground: hsl(0 0% 9%);
+  --secondary: hsl(0 0% 18%);
+  --secondary-foreground: hsl(0 0% 95%);
+  --muted: hsl(0 0% 18%);
+  --muted-foreground: hsl(0 0% 60%);
+  --accent: hsl(0 0% 18%);
+  --accent-foreground: hsl(0 0% 95%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 95%);
+  --border: hsl(0 0% 25%);
+  --input: hsl(0 0% 18%);
+  --ring: hsl(0 0% 60%);
+
+  --panel-bg: hsl(0 0% 12% / 0.85);
+  --panel-border: hsl(0 0% 25% / 0.5);
+  --panel-blur: 12px;
+}
+
+.light {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(0 0% 9%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(0 0% 9%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(0 0% 9%);
+  --primary: hsl(0 0% 9%);
+  --primary-foreground: hsl(0 0% 95%);
+  --secondary: hsl(0 0% 95%);
+  --secondary-foreground: hsl(0 0% 9%);
+  --muted: hsl(0 0% 95%);
+  --muted-foreground: hsl(0 0% 40%);
+  --accent: hsl(0 0% 95%);
+  --accent-foreground: hsl(0 0% 9%);
+  --border: hsl(0 0% 85%);
+  --input: hsl(0 0% 95%);
+  --ring: hsl(0 0% 40%);
+
+  --panel-bg: hsl(0 0% 100% / 0.85);
+  --panel-border: hsl(0 0% 85% / 0.5);
+}
+
+/* Static theme: compact type scale, 2px radii, 4px spacing unit. */
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --text-xs: 10px;
+  --text-xs--line-height: 1.2;
+  --text-sm: 11px;
+  --text-sm--line-height: 1.4;
+  --text-base: 12px;
+  --text-base--line-height: 1.4;
+  --text-lg: 14px;
+  --text-lg--line-height: 1.4;
+  --text-xl: 16px;
+  --text-xl--line-height: 1.4;
+  --text-2xl: 18px;
+  --text-2xl--line-height: 1.3;
+
+  --radius-*: initial;
+  --radius: 2px;
+  --radius-xs: 2px;
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+
+  --spacing: 4px;
+
+  --blur-panel: 12px;
+}
+
+/* Colour utilities resolve the runtime variables, so `.light` scopes keep working. */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    background-color: var(--background);
+    color: var(--foreground);
+    scrollbar-width: thin;
+  }
+
+  html.light {
+    color-scheme: light;
+  }
+
+  html,
+  body {
+    overscroll-behavior: none;
+  }
+
+  body {
+    min-height: 100vh;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  a,
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background-color: var(--foreground);
+    color: var(--background);
+  }
+}
+
+@layer components {
+  /* Translucent panel used for floating controls. */
+  .te-panel {
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    backdrop-filter: blur(var(--panel-blur));
+    border-radius: 2px;
+  }
+
+  /* Bracket-style checkbox: [x] unchecked, [-] checked. */
+  .te-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    user-select: none;
+  }
+
+  .te-checkbox-indicator {
+    color: var(--muted-foreground);
+  }
+
+  .te-checkbox-indicator[data-state='checked'] {
+    color: var(--foreground);
+  }
+
+  .te-checkbox-label {
+    color: var(--muted-foreground);
+    transition: color 0.15s ease;
+  }
+
+  .te-checkbox:hover .te-checkbox-label {
+    color: var(--foreground);
+  }
+}

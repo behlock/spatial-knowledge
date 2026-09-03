@@ -497,7 +497,7 @@ const arabicDuringSessionNodesIds = [
   'يسهل القبول والتدفق',
   'يمكن للقوانين مواجهة \n النكسات المحتملة للتواصل اللفظي',
   'تحديات الكلام \n توفّر امكانيّات لعب كثيرة',
-  'بدون أحكام جمالي',
+  'بدون أحكام جمالية',
   'اقتراح أفكار عندما يكون ذلك ممكنًا',
   'المساعدة في استخدام الأدوات',
   'ضع اللاعبين المتكاملين معًا',
@@ -610,4 +610,4 @@ const arabicDuringSessionNodesIds = [
   'لا بجوز أن يتحدى منطق اللعبة',
 ]
 
-export { arabicPhases,arabicDefaultVisibleNodesIds, arabicDuringSessionNodesIds }
+export { arabicPhases, arabicDefaultVisibleNodesIds, arabicDuringSessionNodesIds }

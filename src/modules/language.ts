@@ -3,14 +3,14 @@ enum Language {
   Arabic = 'العربية',
 }
 
-const isEnglish = (language: Language): boolean => language === Language.English;
-const isArabic = (language: Language): boolean => language === Language.Arabic;
+type Locale = 'en' | 'ar'
 
-const changeLanguage = (language: Language): Language => {
-  if (isEnglish(language)) {
-    return Language.Arabic;
-  }
-  return Language.English;
-};
+const isEnglish = (language: Language): boolean => language === Language.English
+const isArabic = (language: Language): boolean => language === Language.Arabic
 
-export { Language, isEnglish, isArabic, changeLanguage};
+const localeOf = (language: Language): Locale => (isEnglish(language) ? 'en' : 'ar')
+
+const changeLanguage = (language: Language): Language => (isEnglish(language) ? Language.Arabic : Language.English)
+
+export { Language, changeLanguage, isArabic, isEnglish, localeOf }
+export type { Locale }

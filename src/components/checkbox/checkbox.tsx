@@ -1,5 +1,4 @@
-import React from 'react'
-import { clsx } from 'clsx'
+import { memo } from 'react'
 
 interface CheckboxProps {
   label: string
@@ -7,30 +6,23 @@ interface CheckboxProps {
   onCheckedChange: (checked: boolean) => void
 }
 
-const Checkbox = React.memo((props: CheckboxProps) => {
+function CheckboxComponent({ label, checked, onCheckedChange }: CheckboxProps) {
   return (
     <button
       type="button"
       role="checkbox"
-      aria-checked={props.checked}
-      onClick={() => props.onCheckedChange(!props.checked)}
-      className={clsx(
-        'te-checkbox',
-        'inline-flex items-center gap-1',
-        'focus:outline-none focus-visible:ring-1 focus-visible:ring-ring'
-      )}
+      aria-checked={checked}
+      onClick={() => onCheckedChange(!checked)}
+      className="te-checkbox focus-visible:ring-ring focus:outline-none focus-visible:ring-1"
     >
-      <span
-        className="te-checkbox-indicator"
-        data-state={props.checked ? 'checked' : 'unchecked'}
-      >
-        {props.checked ? '[-]' : '[x]'}
+      <span className="te-checkbox-indicator" data-state={checked ? 'checked' : 'unchecked'}>
+        {checked ? '[-]' : '[x]'}
       </span>
-      <span className="te-checkbox-label">{props.label}</span>
+      <span className="te-checkbox-label">{label}</span>
     </button>
   )
-})
+}
 
-Checkbox.displayName = 'Checkbox'
+const Checkbox = memo(CheckboxComponent)
 
 export default Checkbox

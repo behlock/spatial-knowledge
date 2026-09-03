@@ -1,7 +1,7 @@
 {
-  "name": "collectivecreationgames",
-  "short_name": "ccg",
-  "description": "Collective Creation Games experiments",
+  "name": "Collective Creation Games",
+  "short_name": "CCG",
+  "description": "Visualise knowledge through 3D force graphs",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -16,10 +16,9 @@
       "purpose": "any"
     }
   ],
-  "theme_color": "#4160ff",
-  "background_color": "#000000",
+  "theme_color": "#171717",
+  "background_color": "#171717",
   "start_url": "/",
-  "scope": ".",
-  "display": "standalone",
-  "orientation": "portrait"
+  "scope": "/",
+  "display": "standalone"
 }

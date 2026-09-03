@@ -1,68 +1,48 @@
-import { generateNextSeo } from 'next-seo/pages'
-import NextHead from 'next/head'
+import Head from 'next/head'
 
-function CustomHead({
-  title = 'Collective Creation Games',
-  // TODO: Fill image in for SEO
-  image = { url: 'https://collectivecreationgames/seo-image.svg' },
-  description = 'Collective Creation Games',
-  keywords = [] as string[],
-}) {
-  return (
-    <>
-      <NextHead>
-        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+export const SITE_URL = 'https://collectivecreationgames.com'
 
-        <meta name="robots" content={process.env.NODE_ENV !== 'development' ? 'index,follow' : 'noindex,nofollow'} />
-        <meta name="googlebot" content={process.env.NODE_ENV !== 'development' ? 'index,follow' : 'noindex,nofollow'} />
-
-        <meta name="keywords" content={keywords && keywords.length ? keywords.join(',') : ''} />
-        <meta name="author" content="Walid Behlock" />
-        <meta name="referrer" content="no-referrer" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta httpEquiv="x-dns-prefetch-control" content="off" />
-        <meta httpEquiv="Window-Target" content="_value" />
-        <meta name="geo.region" content="US" />
-
-        {/* START FAVICON */}
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
-        <meta name="msapplication-TileColor" content="#000000" />
-        <meta name="theme-color" content="#000000" />
-        <link rel="icon" href="/favicon.ico" />
-
-        {/* END FAVICON */}
-
-        <title>{title}</title>
-
-        {generateNextSeo({
-          title,
-          description,
-          openGraph: {
-            title,
-            description,
-            type: 'website',
-            locale: 'en_UK',
-            images: [
-              {
-                url: image.url,
-                width: 1200,
-                height: 630,
-                alt: title,
-              },
-            ],
-            defaultImageWidth: 1200,
-            defaultImageHeight: 630,
-            site_name: '',
-          },
-        })}
-      </NextHead>
-    </>
-  )
+export interface CustomHeadProps {
+  title?: string
+  description?: string
+  keywords?: string[]
+  /** Absolute URL of the social preview image (1200×630). */
+  imageUrl?: string
 }
 
-export default CustomHead
+const ROBOTS = process.env.NODE_ENV === 'production' ? 'index,follow' : 'noindex,nofollow'
+
+export default function CustomHead({
+  title = 'Collective Creation Games',
+  description = 'Collective Creation Games',
+  keywords = [],
+  // TODO: replace the placeholder with a real 1200×630 raster image; most platforms ignore SVG previews.
+  imageUrl = `${SITE_URL}/seo-image.svg`,
+}: CustomHeadProps) {
+  return (
+    <Head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      {keywords.length > 0 && <meta name="keywords" content={keywords.join(',')} />}
+      <meta name="author" content="Walid Behlock" />
+      <meta name="robots" content={ROBOTS} />
+      <meta name="format-detection" content="telephone=no" />
+      <link rel="canonical" href={`${SITE_URL}/`} />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={`${SITE_URL}/`} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:locale" content="en_GB" />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={title} />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={imageUrl} />
+    </Head>
+  )
+}
