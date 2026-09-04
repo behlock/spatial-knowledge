@@ -2,6 +2,7 @@ import { memo } from 'react'
 
 interface CheckboxProps {
   label: string
+  /** True when the thing the label names is active or shown. */
   checked: boolean
   onCheckedChange: (checked: boolean) => void
 }
@@ -16,7 +17,7 @@ function CheckboxComponent({ label, checked, onCheckedChange }: CheckboxProps) {
       className="te-checkbox focus-visible:ring-ring focus:outline-none focus-visible:ring-1"
     >
       <span className="te-checkbox-indicator" data-state={checked ? 'checked' : 'unchecked'}>
-        {checked ? '[-]' : '[x]'}
+        {checked ? '[x]' : '[-]'}
       </span>
       <span className="te-checkbox-label">{label}</span>
     </button>

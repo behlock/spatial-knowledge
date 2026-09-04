@@ -13,8 +13,8 @@ export interface CustomHeadProps {
 const ROBOTS = process.env.NODE_ENV === 'production' ? 'index,follow' : 'noindex,nofollow'
 
 export default function CustomHead({
-  title = 'Collective Creation Games',
-  description = 'Collective Creation Games',
+  title = 'Spatial Knowledge',
+  description = 'Interactive 3D Knowledge Bases',
   keywords = [],
   // TODO: replace the placeholder with a real 1200×630 raster image; most platforms ignore SVG previews.
   imageUrl = `${SITE_URL}/seo-image.svg`,

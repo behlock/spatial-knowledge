@@ -25,12 +25,12 @@ export default function GraphControls({
         <Checkbox
           key={phase.official}
           label={phase.label}
-          checked={hiddenTags.includes(phase.official)}
+          checked={!hiddenTags.includes(phase.official)}
           onCheckedChange={() => onToggleTag(phase.official)}
         />
       ))}
       <div className="bg-border h-4 w-px" />
-      <Checkbox label={revealLabel} checked={!isRevealed} onCheckedChange={onToggleReveal} />
+      <Checkbox label={revealLabel} checked={isRevealed} onCheckedChange={onToggleReveal} />
     </div>
   )
 }

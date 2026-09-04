@@ -8,9 +8,9 @@ interface LayoutProps {
 }
 
 const DEFAULT_SEO: CustomHeadProps = {
-  title: 'Collective Creation Games',
+  title: 'Spatial Knowledge',
   description: 'Interactive 3D Knowledge Bases',
-  keywords: ['Collective Creation Games', 'Rami Chahine', 'Walid Behlock'],
+  keywords: ['Spatial Knowledge', 'Collective Creation Games', 'Rami Chahine', 'Walid Behlock'],
 }
 
 export default function Layout({ seo = DEFAULT_SEO, children }: LayoutProps) {

@@ -4,16 +4,10 @@ import useSWRImmutable from 'swr/immutable'
 import ForceGraph from '@/components/force-graph'
 import GraphControls from '@/components/graph-controls'
 import Layout from '@/components/layout'
-import { arabicDefaultVisibleNodesIds, arabicDuringSessionNodesIds } from '@/data/arabic-graph-setup'
-import {
-  englishCreativeProcessNodesIds,
-  englishDefaultVisibleNodesIds,
-  englishPhases,
-} from '@/data/english-graph-setup'
+import { defaultVisibleNodeIds, mobileVisibleNodeIds, phases } from '@/data/graph-setup'
 import useDeviceDetect from '@/hooks/useDeviceDetect'
 import useGraphVisibility from '@/hooks/useGraphVisibility'
 import { buildChildrenIndex } from '@/lib/graph'
-import { Language, isEnglish, localeOf } from '@/modules/language'
 import type { GraphData } from '@/types/graph'
 
 const EMPTY_GRAPH: GraphData = { nodes: [], links: [] }
@@ -27,35 +21,26 @@ async function fetchGraph(url: string): Promise<GraphData> {
 
 export default function Home() {
   const { isMobile } = useDeviceDetect()
-  const [language] = useState(Language.English)
   const [hiddenTags, setHiddenTags] = useState<string[]>([])
   const [isRevealed, setIsRevealed] = useState(false)
 
-  // Only the active language is fetched; the data is static so never revalidate it.
-  const { data: graphData, error } = useSWRImmutable(`/api/graph/${localeOf(language)}`, fetchGraph)
+  // The data is static, so fetch it once and never revalidate.
+  const { data: graphData, error } = useSWRImmutable('/api/graph', fetchGraph)
 
   const childrenIndex = useMemo(() => (graphData ? buildChildrenIndex(graphData.links) : EMPTY_INDEX), [graphData])
 
   // Nodes shown before any expansion: a curated subset, or everything once revealed.
   const baseNodeIds = useMemo(() => {
     if (!graphData) return []
-    const english = isEnglish(language)
-    const curated = isMobile
-      ? english
-        ? englishCreativeProcessNodesIds
-        : arabicDuringSessionNodesIds
-      : english
-        ? englishDefaultVisibleNodesIds
-        : arabicDefaultVisibleNodesIds
-    const curatedSet = new Set(curated)
+    const curated = new Set(isMobile ? mobileVisibleNodeIds : defaultVisibleNodeIds)
     const hidden = new Set(hiddenTags)
     return graphData.nodes
-      .filter((node) => isRevealed || curatedSet.has(node.id))
+      .filter((node) => isRevealed || curated.has(node.id))
       .filter((node) => !node.tags?.some((tag) => hidden.has(tag)))
       .map((node) => node.id)
-  }, [graphData, language, isMobile, isRevealed, hiddenTags])
+  }, [graphData, isMobile, isRevealed, hiddenTags])
 
-  const { visibleNodeIds, clickedNodeIds, clickedNodeIdSet, toggleNode } = useGraphVisibility(
+  const { visibleNodeIds, clickedNodeIds, highlightedNodeId, toggleNode } = useGraphVisibility(
     baseNodeIds,
     childrenIndex,
   )
@@ -68,7 +53,7 @@ export default function Home() {
 
   if (error) {
     return (
-      <div className="flex h-full items-center justify-center bg-neutral-900 text-sm text-white">
+      <div className="flex min-h-screen items-center justify-center p-4 text-center text-sm">
         An unexpected error occurred, please try refreshing the page. If the error persists, reach out to us at
         rami.o.chahine@gmail.com
       </div>
@@ -79,19 +64,19 @@ export default function Home() {
     <Layout>
       {!isMobile && (
         <GraphControls
-          phases={englishPhases}
+          phases={phases}
           hiddenTags={hiddenTags}
           onToggleTag={toggleTag}
           isRevealed={isRevealed}
           onToggleReveal={toggleReveal}
-          revealLabel={isEnglish(language) ? 'Reveal' : 'كشف'}
+          revealLabel="Reveal"
         />
       )}
       <ForceGraph
         graphData={graphData ?? EMPTY_GRAPH}
         visibleNodeIds={visibleNodeIds}
-        clickedNodeIds={clickedNodeIdSet}
-        highlightedNodeId={clickedNodeIds[0]}
+        clickedNodeIds={clickedNodeIds}
+        highlightedNodeId={highlightedNodeId}
         onNodeClick={isMobile ? undefined : toggleNode}
       />
     </Layout>

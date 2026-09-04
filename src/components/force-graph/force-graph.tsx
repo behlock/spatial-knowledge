@@ -53,6 +53,13 @@ function ForceGraphComponent({
 }: ForceGraphProps) {
   const nodeVisibility = useCallback((node: AnyNode) => visibleNodeIds.has(nodeIdOf(node)), [visibleNodeIds])
 
+  // The library only hides nodes, not the links attached to them, so filter those here too.
+  const linkVisibility = useCallback(
+    (link: AnyLink) =>
+      visibleNodeIds.has(linkEndpointId(link.source)) && visibleNodeIds.has(linkEndpointId(link.target)),
+    [visibleNodeIds],
+  )
+
   const nodeColor = useCallback(
     (node: AnyNode) => {
       if (highlightedNodeId !== undefined && nodeIdOf(node) === highlightedNodeId) return HIGHLIGHT_NODE_COLOR
@@ -92,6 +99,7 @@ function ForceGraphComponent({
         nodeOpacity={0.5}
         nodeResolution={32}
         onNodeClick={onNodeClick ? handleNodeClick : undefined}
+        linkVisibility={linkVisibility}
         linkWidth={linkWidth}
         linkColor={linkColor}
         linkOpacity={0.5}
