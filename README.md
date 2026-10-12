@@ -2,8 +2,6 @@
 
 ![graph](assets/graph.png)
 
-A single-page site that renders a knowledge base as an interactive 3D graph. Live at [collectivecreationgames.com](https://collectivecreationgames.com).
-
 ## How to use
 
 - Drag to rotate the graph, scroll to zoom, right-drag to pan.
